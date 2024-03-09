@@ -1,0 +1,10 @@
+[workspace]
+resolver = "1"
+members = [
+    "libhca",
+    "libufm",
+    "ufmcli",
+    "lshca",
+]
+
+
