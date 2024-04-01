@@ -1,7 +1,7 @@
-use ufmclient::{UFMConfig, UFMError};
+use libufm::{UFMConfig, UFMError};
 
 pub async fn run(conf: UFMConfig, pkey: &String) -> Result<(), UFMError> {
-    let ufm = ufmclient::connect(conf)?;
+    let ufm = libufm::connect(conf)?;
     let p = ufm.get_partition(pkey).await?;
     let ps = ufm.list_port(p.pkey).await?;
 

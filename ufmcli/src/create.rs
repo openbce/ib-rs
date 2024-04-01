@@ -1,4 +1,4 @@
-use ufmclient::{
+use libufm::{
     Partition, PartitionKey, PartitionQoS, PortConfig, PortMembership, UFMConfig, UFMError,
 };
 
@@ -14,7 +14,7 @@ pub struct CreateOptions {
 }
 
 pub async fn run(conf: UFMConfig, opt: &CreateOptions) -> Result<(), UFMError> {
-    let ufm = ufmclient::connect(conf)?;
+    let ufm = libufm::connect(conf)?;
 
     let mut pbs = vec![];
     for g in &opt.guids {

@@ -20,5 +20,3 @@ libudev = "0.3"
 color-eyre = "0.6"
 tracing = "*"
 tracing-subscriber = "0.3"
-
-

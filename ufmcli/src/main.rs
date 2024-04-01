@@ -1,5 +1,5 @@
 use clap::{Parser, Subcommand};
-use ufmclient::{UFMConfig, UFMError};
+use libufm::{UFMConfig, UFMError};
 
 mod create;
 mod delete;
