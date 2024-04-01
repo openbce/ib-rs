@@ -21,9 +21,7 @@ use std::ptr::NonNull;
 use libudev::Device;
 
 use super::utils::{get_property, get_sysattr};
-use super::wrappers::ibverbs::{
-    self, ibv_device, ibv_device_attr,
-};
+use super::wrappers::ibverbs::{self, ibv_device, ibv_device_attr};
 
 #[derive(Clone)]
 pub struct PciDevice {

@@ -12,7 +12,7 @@ readme = "../README.md"
 hyper = { version = "0.14", features = ["full"] }
 
 hyper-rustls = "0.24"
-tokio-rustls = { version = "0.24", features = ["dangerous_configuration"] }
+tokio-rustls = { version = "0.24" }
 hyper-timeout = "0.4"
 
 serde = { version = "1.0", features = ["derive"] }
@@ -23,3 +23,6 @@ thiserror = "1.0"
 url = { version = "2", features = ["serde"] }
 
 log = { version = "0.4", features = ["std", "serde"] }
+
+rustls-pemfile = "1.0"
+webpki-roots = "0.26"

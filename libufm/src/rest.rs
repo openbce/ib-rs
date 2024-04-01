@@ -8,29 +8,9 @@ use hyper::http::StatusCode;
 use hyper::{Body, Client, Method, Uri};
 use hyper_rustls::HttpsConnector;
 use hyper_timeout::TimeoutConnector;
-use std::time::SystemTime;
 use thiserror::Error;
 use tokio_rustls::rustls;
-use tokio_rustls::rustls::client::{ServerCertVerified, ServerCertVerifier};
-use tokio_rustls::rustls::{ClientConfig, ServerName};
-
-struct NoCertificateVerification;
-
-impl ServerCertVerifier for NoCertificateVerification {
-    fn verify_server_cert(
-        &self,
-        _end_entity: &rustls::Certificate,
-        _intermediates: &[rustls::Certificate],
-        _server_name: &ServerName,
-        _scts: &mut dyn Iterator<Item = &[u8]>,
-        _ocsp_response: &[u8],
-        _now: SystemTime,
-    ) -> Result<ServerCertVerified, rustls::Error> {
-        #[cfg(not(test))]
-        println!("IGNORING SERVER CERT, Please ensure that I am removed to actually validate TLS.");
-        Ok(ServerCertVerified::assertion())
-    }
-}
+use tokio_rustls::rustls::ClientConfig;
 
 const REST_TIME_OUT: Duration = Duration::from_secs(10);
 
@@ -126,9 +106,21 @@ impl RestClient {
         http_connector.set_read_timeout(Some(REST_TIME_OUT));
         http_connector.set_write_timeout(Some(REST_TIME_OUT));
 
+        // Setup TLS root for Rest connection.
+        let mut root_store = rustls::RootCertStore::empty();
+        root_store
+            .roots
+            .extend(webpki_roots::TLS_SERVER_ROOTS.iter().map(|ta| {
+                rustls::OwnedTrustAnchor::from_subject_spki_name_constraints(
+                    ta.subject.to_vec(),
+                    ta.subject_public_key_info.to_vec(),
+                    ta.name_constraints.clone().map(|nc| nc.to_vec()),
+                )
+            }));
+
         let config = ClientConfig::builder()
             .with_safe_defaults()
-            .with_custom_certificate_verifier(std::sync::Arc::new(NoCertificateVerification))
+            .with_root_certificates(root_store)
             .with_no_client_auth();
 
         let mut https_connector = TimeoutConnector::new(
