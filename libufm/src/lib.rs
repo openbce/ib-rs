@@ -4,11 +4,11 @@ use serde::{Deserialize, Serialize};
 use thiserror::Error;
 use url::Url;
 
-use self::port::{PhysicalPort, Port, VirtualPort};
 use self::rest::{RestClient, RestClientConfig, RestError, RestScheme};
+use self::types::{Configuration, PhysicalPort, Port, VirtualPort};
 
-mod port;
 mod rest;
+mod types;
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct PartitionQoS {
@@ -216,6 +216,13 @@ pub fn connect(conf: UFMConfig) -> Result<Ufm, UFMError> {
 }
 
 impl Ufm {
+    pub async fn get_configuration(&self) -> Result<Configuration, UFMError> {
+        let path = String::from("/app/ufm_config");
+        let config = self.client.get(&path).await?;
+
+        Ok(config)
+    }
+
     pub async fn bind_ports(&self, p: Partition, ports: Vec<PortConfig>) -> Result<(), UFMError> {
         let path = String::from("/resources/pkeys");
 

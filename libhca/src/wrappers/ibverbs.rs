@@ -14519,6 +14519,8 @@ pub const IB_UVERBS_ACCESS_MW_BIND: ib_uverbs_access_flags = 16;
 pub const IB_UVERBS_ACCESS_ZERO_BASED: ib_uverbs_access_flags = 32;
 pub const IB_UVERBS_ACCESS_ON_DEMAND: ib_uverbs_access_flags = 64;
 pub const IB_UVERBS_ACCESS_HUGETLB: ib_uverbs_access_flags = 128;
+pub const IB_UVERBS_ACCESS_FLUSH_GLOBAL: ib_uverbs_access_flags = 256;
+pub const IB_UVERBS_ACCESS_FLUSH_PERSISTENT: ib_uverbs_access_flags = 512;
 pub const IB_UVERBS_ACCESS_RELAXED_ORDERING: ib_uverbs_access_flags = 1048576;
 pub const IB_UVERBS_ACCESS_OPTIONAL_RANGE: ib_uverbs_access_flags = 1072693248;
 pub type ib_uverbs_access_flags = ::std::os::raw::c_uint;
@@ -15120,6 +15122,8 @@ pub const RDMA_DRIVER_HFI1: rdma_driver_id = 15;
 pub const RDMA_DRIVER_QIB: rdma_driver_id = 16;
 pub const RDMA_DRIVER_EFA: rdma_driver_id = 17;
 pub const RDMA_DRIVER_SIW: rdma_driver_id = 18;
+pub const RDMA_DRIVER_ERDMA: rdma_driver_id = 19;
+pub const RDMA_DRIVER_MANA: rdma_driver_id = 20;
 pub type rdma_driver_id = ::std::os::raw::c_uint;
 pub const IB_UVERBS_GID_TYPE_IB: ib_uverbs_gid_type = 0;
 pub const IB_UVERBS_GID_TYPE_ROCE_V1: ib_uverbs_gid_type = 1;
@@ -17351,6 +17355,8 @@ pub mod ibv_wc_opcode {
     pub const IBV_WC_BIND_MW: Type = 5;
     pub const IBV_WC_LOCAL_INV: Type = 6;
     pub const IBV_WC_TSO: Type = 7;
+    pub const IBV_WC_FLUSH: Type = 8;
+    pub const IBV_WC_ATOMIC_WRITE: Type = 9;
     pub const IBV_WC_RECV: Type = 128;
     pub const IBV_WC_RECV_RDMA_WITH_IMM: Type = 129;
     pub const IBV_WC_TM_ADD: Type = 130;
@@ -17665,6 +17671,12 @@ impl ibv_access_flags {
 }
 impl ibv_access_flags {
     pub const IBV_ACCESS_HUGETLB: ibv_access_flags = ibv_access_flags(128);
+}
+impl ibv_access_flags {
+    pub const IBV_ACCESS_FLUSH_GLOBAL: ibv_access_flags = ibv_access_flags(256);
+}
+impl ibv_access_flags {
+    pub const IBV_ACCESS_FLUSH_PERSISTENT: ibv_access_flags = ibv_access_flags(512);
 }
 impl ibv_access_flags {
     pub const IBV_ACCESS_RELAXED_ORDERING: ibv_access_flags = ibv_access_flags(1048576);
@@ -19342,6 +19354,8 @@ pub const IBV_QP_EX_WITH_LOCAL_INV: ibv_qp_create_send_ops_flags = 128;
 pub const IBV_QP_EX_WITH_BIND_MW: ibv_qp_create_send_ops_flags = 256;
 pub const IBV_QP_EX_WITH_SEND_WITH_INV: ibv_qp_create_send_ops_flags = 512;
 pub const IBV_QP_EX_WITH_TSO: ibv_qp_create_send_ops_flags = 1024;
+pub const IBV_QP_EX_WITH_FLUSH: ibv_qp_create_send_ops_flags = 2048;
+pub const IBV_QP_EX_WITH_ATOMIC_WRITE: ibv_qp_create_send_ops_flags = 4096;
 pub type ibv_qp_create_send_ops_flags = ::std::os::raw::c_uint;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -19803,6 +19817,11 @@ impl ::std::ops::BitAndAssign for ibv_qp_attr_mask {
 #[repr(transparent)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub struct ibv_qp_attr_mask(pub ::std::os::raw::c_uint);
+pub const IBV_QUERY_QP_DATA_IN_ORDER_RETURN_CAPS: ibv_query_qp_data_in_order_flags = 1;
+pub type ibv_query_qp_data_in_order_flags = ::std::os::raw::c_uint;
+pub const IBV_QUERY_QP_DATA_IN_ORDER_WHOLE_MSG: ibv_query_qp_data_in_order_caps = 1;
+pub const IBV_QUERY_QP_DATA_IN_ORDER_ALIGNED_128_BYTES: ibv_query_qp_data_in_order_caps = 2;
+pub type ibv_query_qp_data_in_order_caps = ::std::os::raw::c_uint;
 pub mod ibv_qp_state {
     pub type Type = ::std::os::raw::c_uint;
     pub const IBV_QPS_RESET: Type = 0;
@@ -20210,6 +20229,8 @@ pub mod ibv_wr_opcode {
     pub const IBV_WR_SEND_WITH_INV: Type = 9;
     pub const IBV_WR_TSO: Type = 10;
     pub const IBV_WR_DRIVER1: Type = 11;
+    pub const IBV_WR_FLUSH: Type = 14;
+    pub const IBV_WR_ATOMIC_WRITE: Type = 15;
 }
 impl ibv_send_flags {
     pub const IBV_SEND_FENCE: ibv_send_flags = ibv_send_flags(1);
@@ -20255,6 +20276,12 @@ impl ::std::ops::BitAndAssign for ibv_send_flags {
 #[repr(transparent)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub struct ibv_send_flags(pub ::std::os::raw::c_uint);
+pub const IBV_FLUSH_GLOBAL: ibv_placement_type = 1;
+pub const IBV_FLUSH_PERSISTENT: ibv_placement_type = 2;
+pub type ibv_placement_type = ::std::os::raw::c_uint;
+pub const IBV_FLUSH_RANGE: ibv_selectivity_level = 0;
+pub const IBV_FLUSH_MR: ibv_selectivity_level = 1;
+pub type ibv_selectivity_level = ::std::os::raw::c_uint;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct ibv_data_buf {
@@ -21943,6 +21970,24 @@ pub struct ibv_qp_ex {
     pub wr_complete:
         ::std::option::Option<unsafe extern "C" fn(qp: *mut ibv_qp_ex) -> ::std::os::raw::c_int>,
     pub wr_abort: ::std::option::Option<unsafe extern "C" fn(qp: *mut ibv_qp_ex)>,
+    pub wr_atomic_write: ::std::option::Option<
+        unsafe extern "C" fn(
+            qp: *mut ibv_qp_ex,
+            rkey: u32,
+            remote_addr: u64,
+            atomic_wr: *const ::std::os::raw::c_void,
+        ),
+    >,
+    pub wr_flush: ::std::option::Option<
+        unsafe extern "C" fn(
+            qp: *mut ibv_qp_ex,
+            rkey: u32,
+            remote_addr: u64,
+            len: usize,
+            type_: u8,
+            level: u8,
+        ),
+    >,
 }
 #[test]
 fn bindgen_test_layout_ibv_qp_ex() {
@@ -21950,7 +21995,7 @@ fn bindgen_test_layout_ibv_qp_ex() {
     let ptr = UNINIT.as_ptr();
     assert_eq!(
         ::std::mem::size_of::<ibv_qp_ex>(),
-        344usize,
+        360usize,
         concat!("Size of: ", stringify!(ibv_qp_ex))
     );
     assert_eq!(
@@ -22196,6 +22241,26 @@ fn bindgen_test_layout_ibv_qp_ex() {
             stringify!(ibv_qp_ex),
             "::",
             stringify!(wr_abort)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).wr_atomic_write) as usize - ptr as usize },
+        344usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_qp_ex),
+            "::",
+            stringify!(wr_atomic_write)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).wr_flush) as usize - ptr as usize },
+        352usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_qp_ex),
+            "::",
+            stringify!(wr_flush)
         )
     );
 }

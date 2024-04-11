@@ -102,3 +102,14 @@ pub struct VirtualPort {
     pub virtual_port_state: String,
     pub port_guid: String,
 }
+
+#[derive(Serialize, Deserialize, Debug)]
+pub struct Configuration {
+    pub subnet_prefix: String,
+    pub m_key: String,
+    pub m_key_per_port: bool,
+    pub sm_key: String,
+    pub sa_key: String,
+    pub log_file: String,
+    pub qos: i32,
+}
