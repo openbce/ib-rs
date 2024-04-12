@@ -123,36 +123,50 @@ fn list_ib_ports() -> io::Result<HashMap<String, Vec<IbPort>>> {
                     return Err(io::Error::last_os_error());
                 };
 
-                let guid_ptr = alloc::alloc(Layout::new::<ibv_gid>()) as *mut ibv_gid;
+                let gid_ptr = alloc::alloc(Layout::new::<ibv_gid>()) as *mut ibv_gid;
                 defer! {
-                    alloc::dealloc(guid_ptr as *mut u8, Layout::new::<ibv_gid>());
+                    alloc::dealloc(gid_ptr as *mut u8, Layout::new::<ibv_gid>());
                 };
 
-                if ibv_query_gid(ctx, i, 0, guid_ptr) != 0 {
+                if ibv_query_gid(ctx, i, 0, gid_ptr) != 0 {
                     return Err(io::Error::last_os_error());
                 };
 
                 let link_type = IbPortLinkType::try_from((*port_attr_ptr).link_layer)?;
 
-                let guid = match link_type {
-                    IbPortLinkType::Ethernet => None,
-                    IbPortLinkType::Infiniband => Some(format!(
-                        "{:02x}{:02x}:{:02x}{:02x}:{:02x}{:02x}:{:02x}{:02x}",
-                        (*guid_ptr).raw[8],
-                        (*guid_ptr).raw[9],
-                        (*guid_ptr).raw[10],
-                        (*guid_ptr).raw[11],
-                        (*guid_ptr).raw[12],
-                        (*guid_ptr).raw[13],
-                        (*guid_ptr).raw[14],
-                        (*guid_ptr).raw[15]
-                    )),
+                let (subnet, guid) = match link_type {
+                    IbPortLinkType::Ethernet => (None, None),
+                    IbPortLinkType::Infiniband => (
+                        Some(format!(
+                            "{:02x}{:02x}:{:02x}{:02x}:{:02x}{:02x}:{:02x}{:02x}",
+                            (*gid_ptr).raw[0],
+                            (*gid_ptr).raw[1],
+                            (*gid_ptr).raw[2],
+                            (*gid_ptr).raw[3],
+                            (*gid_ptr).raw[4],
+                            (*gid_ptr).raw[5],
+                            (*gid_ptr).raw[6],
+                            (*gid_ptr).raw[7]
+                        )),
+                        Some(format!(
+                            "{:02x}{:02x}:{:02x}{:02x}:{:02x}{:02x}:{:02x}{:02x}",
+                            (*gid_ptr).raw[8],
+                            (*gid_ptr).raw[9],
+                            (*gid_ptr).raw[10],
+                            (*gid_ptr).raw[11],
+                            (*gid_ptr).raw[12],
+                            (*gid_ptr).raw[13],
+                            (*gid_ptr).raw[14],
+                            (*gid_ptr).raw[15]
+                        )),
+                    ),
                 };
 
                 ports.push(IbPort {
                     port_num: i,
                     lid: (*port_attr_ptr).lid,
                     link_type,
+                    subnet,
                     guid,
                     state: IbPortState::try_from((*port_attr_ptr).state)?,
                     phys_state: IbPortPhysState::try_from((*port_attr_ptr).phys_state)?,

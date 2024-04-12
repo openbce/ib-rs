@@ -36,19 +36,20 @@ async fn main() -> Result<(), color_eyre::Report> {
         println!();
 
         println!(
-            "    {:<15}{:<15}{:<25}{:<25}{:<15}{:<15}{:<15}{:<15}",
-            "Name", "Slot", "Node GUID", "Port GUID", "LID", "LinkType", "State", "PhysState"
+            "    {:<15}{:<15}{:<25}{:<25}{:<15}{:<15}{:<15}{:<15}{:<15}",
+            "Name", "Slot", "Node GUID", "Port GUID", "LID", "Subnet", "LinkType", "State", "PhysState"
         );
 
         for dev in hca.ib_devices {
             for port in dev.ib_ports {
                 println!(
-                    "    {:<15}{:<15}{:<25}{:<25}{:<15}{:<15}{:<15}{:<15}",
+                    "    {:<15}{:<15}{:<25}{:<25}{:<15}{:<15}{:<15}{:<15}{:<15}",
                     dev.name,
                     dev.slot_name,
                     dev.node_guid,
                     port.guid.unwrap_or("-".to_string()),
                     port.lid,
+                    port.subnet.unwrap_or("-".to_string()),
                     port.link_type.to_string(),
                     port.state.to_string(),
                     port.phys_state.to_string(),

@@ -172,6 +172,7 @@ impl TryFrom<u8> for IbPortPhysState {
 pub struct IbPort {
     pub port_num: u8,
     pub guid: Option<String>,
+    pub subnet: Option<String>,
     pub lid: u16,
     pub link_type: IbPortLinkType,
     pub state: IbPortState,
