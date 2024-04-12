@@ -217,7 +217,7 @@ pub fn connect(conf: UFMConfig) -> Result<Ufm, UFMError> {
 
 impl Ufm {
     pub async fn get_configuration(&self) -> Result<Configuration, UFMError> {
-        let path = String::from("/app/ufm_config");
+        let path = String::from("/app/smconf");
         let config = self.client.get(&path).await?;
 
         Ok(config)
