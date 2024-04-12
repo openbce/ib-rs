@@ -3,6 +3,7 @@ use libufm::{UFMConfig, UFMError};
 
 mod create;
 mod delete;
+mod info;
 mod list;
 mod version;
 mod view;
@@ -37,6 +38,8 @@ enum Commands {
     List,
     /// Get the version of UFM
     Version,
+    /// Get the configuration information of UFM
+    Info,
     /// Delete the partition
     Delete {
         /// The pkey of the partition to delete
@@ -82,6 +85,7 @@ async fn main() -> Result<(), UFMError> {
     match &opt.command {
         Some(Commands::Delete { pkey }) => delete::run(conf, pkey).await?,
         Some(Commands::Version) => version::run(conf).await?,
+        Some(Commands::Info) => info::run(conf).await?,
         Some(Commands::List) => list::run(conf).await?,
         Some(Commands::View { pkey }) => view::run(conf, pkey).await?,
         Some(Commands::Create {
