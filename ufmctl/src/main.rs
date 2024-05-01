@@ -1,4 +1,5 @@
 use clap::{Parser, Subcommand};
+
 use libufm::{UFMConfig, UFMError};
 
 mod create;
@@ -9,7 +10,7 @@ mod version;
 mod view;
 
 #[derive(Parser)]
-#[command(name = "ufm")]
+#[command(name = "ufmctl")]
 #[command(author = "Klaus Ma <klaus@xflops.cn>")]
 #[command(version = "0.1.0")]
 #[command(about = "UFM command line", long_about = None)]

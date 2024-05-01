@@ -14,73 +14,35 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-use ::libhca;
+use clap::{Parser, Subcommand};
 
-// use libudev::Device;
+mod list;
+
+#[derive(Parser)]
+#[command(name = "hcactl")]
+#[command(author = "Klaus Ma <klaus@xflops.cn>")]
+#[command(version = "0.1.0")]
+#[command(about = "HCA command line", long_about = None)]
+struct Options {
+    #[clap(subcommand)]
+    command: Option<Commands>,
+}
+
+#[derive(Subcommand)]
+enum Commands {
+    /// List all HCAs
+    List,
+}
 
 #[tokio::main]
 async fn main() -> Result<(), color_eyre::Report> {
     color_eyre::install()?;
 
-    let hcas = libhca::list_pci_devices()?;
+    let opt: Options = Options::parse();
 
-    for hca in hcas {
-        println!("----------------------------------------------");
-
-        println!("{:<15}: {}", "ID", hca.subsys_id);
-        println!("{:<15}: {}", "Model", hca.model_name);
-        println!("{:<15}: {}", "Vendor", hca.vendor_name);
-        println!("{:<15}: {}", "FW", hca.fw_ver);
-        println!("{:<15}: {}", "Board", hca.board_id);
-
-        println!();
-
-        println!(
-            "    {:<15}{:<15}{:<25}{:<25}{:<15}{:<15}{:<15}{:<15}{:<15}",
-            "Name", "Slot", "Node GUID", "Port GUID", "LID", "Subnet", "LinkType", "State", "PhysState"
-        );
-
-        for dev in hca.ib_devices {
-            for port in dev.ib_ports {
-                println!(
-                    "    {:<15}{:<15}{:<25}{:<25}{:<15}{:<15}{:<15}{:<15}{:<15}",
-                    dev.name,
-                    dev.slot_name,
-                    dev.node_guid,
-                    port.guid.unwrap_or("-".to_string()),
-                    port.lid,
-                    port.subnet.unwrap_or("-".to_string()),
-                    port.link_type.to_string(),
-                    port.state.to_string(),
-                    port.phys_state.to_string(),
-                );
-            }
-        }
-
-        println!();
-        println!();
+    match &opt.command {
+        Some(Commands::List) => list::run()?,
+        None => {}
     }
-
-    //    let context = libudev::Context::new()?;
-    //
-    //    let device_debug_log = |device: &Device| {
-    //        //        let device = device.parent().unwrap();
-    //        println!("SysPath - {:?}", device.syspath());
-    //        for p in device.properties() {
-    //            println!("Property - {:?} - {:?}", p.name(), p.value());
-    //        }
-    //        for a in device.attributes() {
-    //            println!("attribute - {:?} - {:?}", a.name(), a.value());
-    //        }
-    //    };
-    //
-    //    let mut enumerator = libudev::Enumerator::new(&context)?;
-    //    enumerator.match_subsystem("pci")?;
-    //    let devices = enumerator.scan_devices()?;
-    //
-    //    for device in devices {
-    //        device_debug_log(&device);
-    //    }
-
     Ok(())
 }
