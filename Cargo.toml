@@ -1,10 +1,12 @@
 [workspace]
 resolver = "1"
 members = [
+    # HCA command line
     "libhca",
+    "hcactl",
+    # UFM command line
     "libufm",
-    "ufmcli",
-    "lshca",
+    "ufmctl",
 ]
 
 

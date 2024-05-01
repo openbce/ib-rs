@@ -34,7 +34,7 @@ use std::{io, vec};
 use numeric_cast::NumericCast;
 use scopeguard::defer;
 
-use wrappers::ibverbs::{
+use wrappers::ib::{
     ibv_close_device, ibv_device_attr, ibv_free_device_list, ibv_get_device_list, ibv_gid,
     ibv_open_device, ibv_port_attr, ibv_query_device, ibv_query_gid, ibv_query_port,
 };

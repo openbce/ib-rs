@@ -216,9 +216,9 @@ checksum = "98cc8fbded0c607b7ba9dd60cd98df59af97e84d24e49c8557331cfc26d301ce"
 
 [[package]]
 name = "color-eyre"
-version = "0.6.2"
+version = "0.6.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5a667583cca8c4f8436db8de46ea8233c42a7d9ae424a82d338f2e4675229204"
+checksum = "55146f5e46f237f7423d74111267d4597b59b0dad0ffaf7303bce9945d843ad5"
 dependencies = [
  "backtrace",
  "color-spantrace",
@@ -419,6 +419,21 @@ name = "hashbrown"
 version = "0.14.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "290f1a1d9242c78d09ce40a5e87e7554ee637af1351968159f4952f028f75604"
+
+[[package]]
+name = "hcactl"
+version = "0.1.0"
+dependencies = [
+ "color-eyre",
+ "env_logger",
+ "libhca",
+ "libudev",
+ "log",
+ "tokio",
+ "tracing",
+ "tracing-subscriber",
+ "uname",
+]
 
 [[package]]
 name = "heck"
@@ -674,21 +689,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "90ed8c1e510134f979dbc4f070f87d4313098b704861a105fe34231c70a3901c"
 dependencies = [
  "serde",
-]
-
-[[package]]
-name = "lshca"
-version = "0.1.0"
-dependencies = [
- "color-eyre",
- "env_logger",
- "libhca",
- "libudev",
- "log",
- "tokio",
- "tracing",
- "tracing-subscriber",
- "uname",
 ]
 
 [[package]]
@@ -1340,7 +1340,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e421abadd41a4225275504ea4d6566923418b7f05506fbc9c0fe86ba7396114b"
 
 [[package]]
-name = "ufmcli"
+name = "ufmctl"
 version = "0.1.0"
 dependencies = [
  "clap",

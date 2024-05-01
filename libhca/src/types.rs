@@ -21,7 +21,7 @@ use std::ptr::NonNull;
 use libudev::Device;
 
 use super::utils::{get_property, get_sysattr};
-use super::wrappers::ibverbs::{self, ibv_device, ibv_device_attr};
+use super::wrappers::ib::{self, ibv_device, ibv_device_attr};
 
 #[derive(Clone)]
 pub struct PciDevice {
@@ -129,9 +129,9 @@ impl TryFrom<u32> for IbPortState {
     type Error = io::Error;
     fn try_from(v: u32) -> io::Result<Self> {
         match v {
-            ibverbs::ibv_port_state::IBV_PORT_INIT => Ok(Self::Initializing),
-            ibverbs::ibv_port_state::IBV_PORT_ACTIVE => Ok(Self::Active),
-            ibverbs::ibv_port_state::IBV_PORT_DOWN => Ok(Self::Down),
+            ib::ibv_port_state::IBV_PORT_INIT => Ok(Self::Initializing),
+            ib::ibv_port_state::IBV_PORT_ACTIVE => Ok(Self::Active),
+            ib::ibv_port_state::IBV_PORT_DOWN => Ok(Self::Down),
 
             _ => Err(io::Error::last_os_error()),
         }

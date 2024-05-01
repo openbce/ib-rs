@@ -9,7 +9,7 @@ fn main() {
 
     // Build binding builder
     let bindings = bindgen::Builder::default()
-        .header("wrappers/ibverbs.h")
+        .header("wrappers/ib.h")
         .blocklist_type("u8")
         .blocklist_type("u16")
         .blocklist_type("u32")
@@ -41,7 +41,7 @@ fn main() {
     // Write the bindings to the src/pci.rs file.
     let out_path = PathBuf::from("src/wrappers".to_string());
     bindings
-        .write_to_file(out_path.join("ibverbs.rs"))
+        .write_to_file(out_path.join("ib.rs"))
         .expect("Couldn't write bindings!");
 
     // Build binding builder

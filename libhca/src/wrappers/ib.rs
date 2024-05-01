@@ -395,6 +395,775 @@ pub const ETHERNET_LL_SIZE: u32 = 6;
 pub const IB_ROCE_UDP_ENCAP_VALID_PORT_MIN: u32 = 49152;
 pub const IB_ROCE_UDP_ENCAP_VALID_PORT_MAX: u32 = 65535;
 pub const IB_GRH_FLOWLABEL_MASK: u32 = 1048575;
+pub const IBV_PATH_RECORD_REVERSIBLE: u32 = 128;
+pub const IBV_PATH_FLAG_GMP: u32 = 1;
+pub const IBV_PATH_FLAG_PRIMARY: u32 = 2;
+pub const IBV_PATH_FLAG_ALTERNATE: u32 = 4;
+pub const IBV_PATH_FLAG_OUTBOUND: u32 = 8;
+pub const IBV_PATH_FLAG_INBOUND: u32 = 16;
+pub const IBV_PATH_FLAG_INBOUND_REVERSE: u32 = 32;
+pub const IBV_PATH_FLAG_BIDIRECTIONAL: u32 = 40;
+pub const _STDLIB_H: u32 = 1;
+pub const WNOHANG: u32 = 1;
+pub const WUNTRACED: u32 = 2;
+pub const WSTOPPED: u32 = 2;
+pub const WEXITED: u32 = 4;
+pub const WCONTINUED: u32 = 8;
+pub const WNOWAIT: u32 = 16777216;
+pub const __WNOTHREAD: u32 = 536870912;
+pub const __WALL: u32 = 1073741824;
+pub const __WCLONE: u32 = 2147483648;
+pub const __W_CONTINUED: u32 = 65535;
+pub const __WCOREFLAG: u32 = 128;
+pub const __HAVE_FLOAT128: u32 = 0;
+pub const __HAVE_DISTINCT_FLOAT128: u32 = 0;
+pub const __HAVE_FLOAT64X: u32 = 1;
+pub const __HAVE_FLOAT64X_LONG_DOUBLE: u32 = 1;
+pub const __HAVE_FLOAT16: u32 = 0;
+pub const __HAVE_FLOAT32: u32 = 1;
+pub const __HAVE_FLOAT64: u32 = 1;
+pub const __HAVE_FLOAT32X: u32 = 1;
+pub const __HAVE_FLOAT128X: u32 = 0;
+pub const __HAVE_DISTINCT_FLOAT16: u32 = 0;
+pub const __HAVE_DISTINCT_FLOAT32: u32 = 0;
+pub const __HAVE_DISTINCT_FLOAT64: u32 = 0;
+pub const __HAVE_DISTINCT_FLOAT32X: u32 = 0;
+pub const __HAVE_DISTINCT_FLOAT64X: u32 = 0;
+pub const __HAVE_DISTINCT_FLOAT128X: u32 = 0;
+pub const __HAVE_FLOATN_NOT_TYPEDEF: u32 = 0;
+pub const __ldiv_t_defined: u32 = 1;
+pub const __lldiv_t_defined: u32 = 1;
+pub const RAND_MAX: u32 = 2147483647;
+pub const EXIT_FAILURE: u32 = 1;
+pub const EXIT_SUCCESS: u32 = 0;
+pub const _ALLOCA_H: u32 = 1;
+pub const _STDIO_H: u32 = 1;
+pub const __GNUC_VA_LIST: u32 = 1;
+pub const _____fpos_t_defined: u32 = 1;
+pub const ____mbstate_t_defined: u32 = 1;
+pub const _____fpos64_t_defined: u32 = 1;
+pub const ____FILE_defined: u32 = 1;
+pub const __FILE_defined: u32 = 1;
+pub const __struct_FILE_defined: u32 = 1;
+pub const _IO_EOF_SEEN: u32 = 16;
+pub const _IO_ERR_SEEN: u32 = 32;
+pub const _IO_USER_LOCK: u32 = 32768;
+pub const _IOFBF: u32 = 0;
+pub const _IOLBF: u32 = 1;
+pub const _IONBF: u32 = 2;
+pub const BUFSIZ: u32 = 8192;
+pub const EOF: i32 = -1;
+pub const SEEK_SET: u32 = 0;
+pub const SEEK_CUR: u32 = 1;
+pub const SEEK_END: u32 = 2;
+pub const P_tmpdir: &[u8; 5] = b"/tmp\0";
+pub const _BITS_STDIO_LIM_H: u32 = 1;
+pub const L_tmpnam: u32 = 20;
+pub const TMP_MAX: u32 = 238328;
+pub const FILENAME_MAX: u32 = 4096;
+pub const L_ctermid: u32 = 9;
+pub const FOPEN_MAX: u32 = 16;
+pub const _UNISTD_H: u32 = 1;
+pub const _POSIX_VERSION: u32 = 200809;
+pub const __POSIX2_THIS_VERSION: u32 = 200809;
+pub const _POSIX2_VERSION: u32 = 200809;
+pub const _POSIX2_C_VERSION: u32 = 200809;
+pub const _POSIX2_C_BIND: u32 = 200809;
+pub const _POSIX2_C_DEV: u32 = 200809;
+pub const _POSIX2_SW_DEV: u32 = 200809;
+pub const _POSIX2_LOCALEDEF: u32 = 200809;
+pub const _XOPEN_VERSION: u32 = 700;
+pub const _XOPEN_XCU_VERSION: u32 = 4;
+pub const _XOPEN_XPG2: u32 = 1;
+pub const _XOPEN_XPG3: u32 = 1;
+pub const _XOPEN_XPG4: u32 = 1;
+pub const _XOPEN_UNIX: u32 = 1;
+pub const _XOPEN_ENH_I18N: u32 = 1;
+pub const _XOPEN_LEGACY: u32 = 1;
+pub const _BITS_POSIX_OPT_H: u32 = 1;
+pub const _POSIX_JOB_CONTROL: u32 = 1;
+pub const _POSIX_SAVED_IDS: u32 = 1;
+pub const _POSIX_PRIORITY_SCHEDULING: u32 = 200809;
+pub const _POSIX_SYNCHRONIZED_IO: u32 = 200809;
+pub const _POSIX_FSYNC: u32 = 200809;
+pub const _POSIX_MAPPED_FILES: u32 = 200809;
+pub const _POSIX_MEMLOCK: u32 = 200809;
+pub const _POSIX_MEMLOCK_RANGE: u32 = 200809;
+pub const _POSIX_MEMORY_PROTECTION: u32 = 200809;
+pub const _POSIX_CHOWN_RESTRICTED: u32 = 0;
+pub const _POSIX_VDISABLE: u8 = 0u8;
+pub const _POSIX_NO_TRUNC: u32 = 1;
+pub const _XOPEN_REALTIME: u32 = 1;
+pub const _XOPEN_REALTIME_THREADS: u32 = 1;
+pub const _XOPEN_SHM: u32 = 1;
+pub const _POSIX_THREADS: u32 = 200809;
+pub const _POSIX_REENTRANT_FUNCTIONS: u32 = 1;
+pub const _POSIX_THREAD_SAFE_FUNCTIONS: u32 = 200809;
+pub const _POSIX_THREAD_PRIORITY_SCHEDULING: u32 = 200809;
+pub const _POSIX_THREAD_ATTR_STACKSIZE: u32 = 200809;
+pub const _POSIX_THREAD_ATTR_STACKADDR: u32 = 200809;
+pub const _POSIX_THREAD_PRIO_INHERIT: u32 = 200809;
+pub const _POSIX_THREAD_PRIO_PROTECT: u32 = 200809;
+pub const _POSIX_THREAD_ROBUST_PRIO_INHERIT: u32 = 200809;
+pub const _POSIX_THREAD_ROBUST_PRIO_PROTECT: i32 = -1;
+pub const _POSIX_SEMAPHORES: u32 = 200809;
+pub const _POSIX_REALTIME_SIGNALS: u32 = 200809;
+pub const _POSIX_ASYNCHRONOUS_IO: u32 = 200809;
+pub const _POSIX_ASYNC_IO: u32 = 1;
+pub const _LFS_ASYNCHRONOUS_IO: u32 = 1;
+pub const _POSIX_PRIORITIZED_IO: u32 = 200809;
+pub const _LFS64_ASYNCHRONOUS_IO: u32 = 1;
+pub const _LFS_LARGEFILE: u32 = 1;
+pub const _LFS64_LARGEFILE: u32 = 1;
+pub const _LFS64_STDIO: u32 = 1;
+pub const _POSIX_SHARED_MEMORY_OBJECTS: u32 = 200809;
+pub const _POSIX_CPUTIME: u32 = 0;
+pub const _POSIX_THREAD_CPUTIME: u32 = 0;
+pub const _POSIX_REGEXP: u32 = 1;
+pub const _POSIX_READER_WRITER_LOCKS: u32 = 200809;
+pub const _POSIX_SHELL: u32 = 1;
+pub const _POSIX_TIMEOUTS: u32 = 200809;
+pub const _POSIX_SPIN_LOCKS: u32 = 200809;
+pub const _POSIX_SPAWN: u32 = 200809;
+pub const _POSIX_TIMERS: u32 = 200809;
+pub const _POSIX_BARRIERS: u32 = 200809;
+pub const _POSIX_MESSAGE_PASSING: u32 = 200809;
+pub const _POSIX_THREAD_PROCESS_SHARED: u32 = 200809;
+pub const _POSIX_MONOTONIC_CLOCK: u32 = 0;
+pub const _POSIX_CLOCK_SELECTION: u32 = 200809;
+pub const _POSIX_ADVISORY_INFO: u32 = 200809;
+pub const _POSIX_IPV6: u32 = 200809;
+pub const _POSIX_RAW_SOCKETS: u32 = 200809;
+pub const _POSIX2_CHAR_TERM: u32 = 200809;
+pub const _POSIX_SPORADIC_SERVER: i32 = -1;
+pub const _POSIX_THREAD_SPORADIC_SERVER: i32 = -1;
+pub const _POSIX_TRACE: i32 = -1;
+pub const _POSIX_TRACE_EVENT_FILTER: i32 = -1;
+pub const _POSIX_TRACE_INHERIT: i32 = -1;
+pub const _POSIX_TRACE_LOG: i32 = -1;
+pub const _POSIX_TYPED_MEMORY_OBJECTS: i32 = -1;
+pub const _POSIX_V7_LPBIG_OFFBIG: i32 = -1;
+pub const _POSIX_V6_LPBIG_OFFBIG: i32 = -1;
+pub const _XBS5_LPBIG_OFFBIG: i32 = -1;
+pub const _POSIX_V7_LP64_OFF64: u32 = 1;
+pub const _POSIX_V6_LP64_OFF64: u32 = 1;
+pub const _XBS5_LP64_OFF64: u32 = 1;
+pub const __ILP32_OFF32_CFLAGS: &[u8; 5] = b"-m32\0";
+pub const __ILP32_OFF32_LDFLAGS: &[u8; 5] = b"-m32\0";
+pub const __ILP32_OFFBIG_CFLAGS: &[u8; 48] = b"-m32 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64\0";
+pub const __ILP32_OFFBIG_LDFLAGS: &[u8; 5] = b"-m32\0";
+pub const __LP64_OFF64_CFLAGS: &[u8; 5] = b"-m64\0";
+pub const __LP64_OFF64_LDFLAGS: &[u8; 5] = b"-m64\0";
+pub const STDIN_FILENO: u32 = 0;
+pub const STDOUT_FILENO: u32 = 1;
+pub const STDERR_FILENO: u32 = 2;
+pub const R_OK: u32 = 4;
+pub const W_OK: u32 = 2;
+pub const X_OK: u32 = 1;
+pub const F_OK: u32 = 0;
+pub const L_SET: u32 = 0;
+pub const L_INCR: u32 = 1;
+pub const L_XTND: u32 = 2;
+pub const _GETOPT_POSIX_H: u32 = 1;
+pub const _GETOPT_CORE_H: u32 = 1;
+pub const F_ULOCK: u32 = 0;
+pub const F_LOCK: u32 = 1;
+pub const F_TLOCK: u32 = 2;
+pub const F_TEST: u32 = 3;
+pub const _BYTESWAP_H: u32 = 1;
+pub const _INTTYPES_H: u32 = 1;
+pub const ____gwchar_t_defined: u32 = 1;
+pub const __PRI64_PREFIX: &[u8; 2] = b"l\0";
+pub const __PRIPTR_PREFIX: &[u8; 2] = b"l\0";
+pub const PRId8: &[u8; 2] = b"d\0";
+pub const PRId16: &[u8; 2] = b"d\0";
+pub const PRId32: &[u8; 2] = b"d\0";
+pub const PRId64: &[u8; 3] = b"ld\0";
+pub const PRIdLEAST8: &[u8; 2] = b"d\0";
+pub const PRIdLEAST16: &[u8; 2] = b"d\0";
+pub const PRIdLEAST32: &[u8; 2] = b"d\0";
+pub const PRIdLEAST64: &[u8; 3] = b"ld\0";
+pub const PRIdFAST8: &[u8; 2] = b"d\0";
+pub const PRIdFAST16: &[u8; 3] = b"ld\0";
+pub const PRIdFAST32: &[u8; 3] = b"ld\0";
+pub const PRIdFAST64: &[u8; 3] = b"ld\0";
+pub const PRIi8: &[u8; 2] = b"i\0";
+pub const PRIi16: &[u8; 2] = b"i\0";
+pub const PRIi32: &[u8; 2] = b"i\0";
+pub const PRIi64: &[u8; 3] = b"li\0";
+pub const PRIiLEAST8: &[u8; 2] = b"i\0";
+pub const PRIiLEAST16: &[u8; 2] = b"i\0";
+pub const PRIiLEAST32: &[u8; 2] = b"i\0";
+pub const PRIiLEAST64: &[u8; 3] = b"li\0";
+pub const PRIiFAST8: &[u8; 2] = b"i\0";
+pub const PRIiFAST16: &[u8; 3] = b"li\0";
+pub const PRIiFAST32: &[u8; 3] = b"li\0";
+pub const PRIiFAST64: &[u8; 3] = b"li\0";
+pub const PRIo8: &[u8; 2] = b"o\0";
+pub const PRIo16: &[u8; 2] = b"o\0";
+pub const PRIo32: &[u8; 2] = b"o\0";
+pub const PRIo64: &[u8; 3] = b"lo\0";
+pub const PRIoLEAST8: &[u8; 2] = b"o\0";
+pub const PRIoLEAST16: &[u8; 2] = b"o\0";
+pub const PRIoLEAST32: &[u8; 2] = b"o\0";
+pub const PRIoLEAST64: &[u8; 3] = b"lo\0";
+pub const PRIoFAST8: &[u8; 2] = b"o\0";
+pub const PRIoFAST16: &[u8; 3] = b"lo\0";
+pub const PRIoFAST32: &[u8; 3] = b"lo\0";
+pub const PRIoFAST64: &[u8; 3] = b"lo\0";
+pub const PRIu8: &[u8; 2] = b"u\0";
+pub const PRIu16: &[u8; 2] = b"u\0";
+pub const PRIu32: &[u8; 2] = b"u\0";
+pub const PRIu64: &[u8; 3] = b"lu\0";
+pub const PRIuLEAST8: &[u8; 2] = b"u\0";
+pub const PRIuLEAST16: &[u8; 2] = b"u\0";
+pub const PRIuLEAST32: &[u8; 2] = b"u\0";
+pub const PRIuLEAST64: &[u8; 3] = b"lu\0";
+pub const PRIuFAST8: &[u8; 2] = b"u\0";
+pub const PRIuFAST16: &[u8; 3] = b"lu\0";
+pub const PRIuFAST32: &[u8; 3] = b"lu\0";
+pub const PRIuFAST64: &[u8; 3] = b"lu\0";
+pub const PRIx8: &[u8; 2] = b"x\0";
+pub const PRIx16: &[u8; 2] = b"x\0";
+pub const PRIx32: &[u8; 2] = b"x\0";
+pub const PRIx64: &[u8; 3] = b"lx\0";
+pub const PRIxLEAST8: &[u8; 2] = b"x\0";
+pub const PRIxLEAST16: &[u8; 2] = b"x\0";
+pub const PRIxLEAST32: &[u8; 2] = b"x\0";
+pub const PRIxLEAST64: &[u8; 3] = b"lx\0";
+pub const PRIxFAST8: &[u8; 2] = b"x\0";
+pub const PRIxFAST16: &[u8; 3] = b"lx\0";
+pub const PRIxFAST32: &[u8; 3] = b"lx\0";
+pub const PRIxFAST64: &[u8; 3] = b"lx\0";
+pub const PRIX8: &[u8; 2] = b"X\0";
+pub const PRIX16: &[u8; 2] = b"X\0";
+pub const PRIX32: &[u8; 2] = b"X\0";
+pub const PRIX64: &[u8; 3] = b"lX\0";
+pub const PRIXLEAST8: &[u8; 2] = b"X\0";
+pub const PRIXLEAST16: &[u8; 2] = b"X\0";
+pub const PRIXLEAST32: &[u8; 2] = b"X\0";
+pub const PRIXLEAST64: &[u8; 3] = b"lX\0";
+pub const PRIXFAST8: &[u8; 2] = b"X\0";
+pub const PRIXFAST16: &[u8; 3] = b"lX\0";
+pub const PRIXFAST32: &[u8; 3] = b"lX\0";
+pub const PRIXFAST64: &[u8; 3] = b"lX\0";
+pub const PRIdMAX: &[u8; 3] = b"ld\0";
+pub const PRIiMAX: &[u8; 3] = b"li\0";
+pub const PRIoMAX: &[u8; 3] = b"lo\0";
+pub const PRIuMAX: &[u8; 3] = b"lu\0";
+pub const PRIxMAX: &[u8; 3] = b"lx\0";
+pub const PRIXMAX: &[u8; 3] = b"lX\0";
+pub const PRIdPTR: &[u8; 3] = b"ld\0";
+pub const PRIiPTR: &[u8; 3] = b"li\0";
+pub const PRIoPTR: &[u8; 3] = b"lo\0";
+pub const PRIuPTR: &[u8; 3] = b"lu\0";
+pub const PRIxPTR: &[u8; 3] = b"lx\0";
+pub const PRIXPTR: &[u8; 3] = b"lX\0";
+pub const SCNd8: &[u8; 4] = b"hhd\0";
+pub const SCNd16: &[u8; 3] = b"hd\0";
+pub const SCNd32: &[u8; 2] = b"d\0";
+pub const SCNd64: &[u8; 3] = b"ld\0";
+pub const SCNdLEAST8: &[u8; 4] = b"hhd\0";
+pub const SCNdLEAST16: &[u8; 3] = b"hd\0";
+pub const SCNdLEAST32: &[u8; 2] = b"d\0";
+pub const SCNdLEAST64: &[u8; 3] = b"ld\0";
+pub const SCNdFAST8: &[u8; 4] = b"hhd\0";
+pub const SCNdFAST16: &[u8; 3] = b"ld\0";
+pub const SCNdFAST32: &[u8; 3] = b"ld\0";
+pub const SCNdFAST64: &[u8; 3] = b"ld\0";
+pub const SCNi8: &[u8; 4] = b"hhi\0";
+pub const SCNi16: &[u8; 3] = b"hi\0";
+pub const SCNi32: &[u8; 2] = b"i\0";
+pub const SCNi64: &[u8; 3] = b"li\0";
+pub const SCNiLEAST8: &[u8; 4] = b"hhi\0";
+pub const SCNiLEAST16: &[u8; 3] = b"hi\0";
+pub const SCNiLEAST32: &[u8; 2] = b"i\0";
+pub const SCNiLEAST64: &[u8; 3] = b"li\0";
+pub const SCNiFAST8: &[u8; 4] = b"hhi\0";
+pub const SCNiFAST16: &[u8; 3] = b"li\0";
+pub const SCNiFAST32: &[u8; 3] = b"li\0";
+pub const SCNiFAST64: &[u8; 3] = b"li\0";
+pub const SCNu8: &[u8; 4] = b"hhu\0";
+pub const SCNu16: &[u8; 3] = b"hu\0";
+pub const SCNu32: &[u8; 2] = b"u\0";
+pub const SCNu64: &[u8; 3] = b"lu\0";
+pub const SCNuLEAST8: &[u8; 4] = b"hhu\0";
+pub const SCNuLEAST16: &[u8; 3] = b"hu\0";
+pub const SCNuLEAST32: &[u8; 2] = b"u\0";
+pub const SCNuLEAST64: &[u8; 3] = b"lu\0";
+pub const SCNuFAST8: &[u8; 4] = b"hhu\0";
+pub const SCNuFAST16: &[u8; 3] = b"lu\0";
+pub const SCNuFAST32: &[u8; 3] = b"lu\0";
+pub const SCNuFAST64: &[u8; 3] = b"lu\0";
+pub const SCNo8: &[u8; 4] = b"hho\0";
+pub const SCNo16: &[u8; 3] = b"ho\0";
+pub const SCNo32: &[u8; 2] = b"o\0";
+pub const SCNo64: &[u8; 3] = b"lo\0";
+pub const SCNoLEAST8: &[u8; 4] = b"hho\0";
+pub const SCNoLEAST16: &[u8; 3] = b"ho\0";
+pub const SCNoLEAST32: &[u8; 2] = b"o\0";
+pub const SCNoLEAST64: &[u8; 3] = b"lo\0";
+pub const SCNoFAST8: &[u8; 4] = b"hho\0";
+pub const SCNoFAST16: &[u8; 3] = b"lo\0";
+pub const SCNoFAST32: &[u8; 3] = b"lo\0";
+pub const SCNoFAST64: &[u8; 3] = b"lo\0";
+pub const SCNx8: &[u8; 4] = b"hhx\0";
+pub const SCNx16: &[u8; 3] = b"hx\0";
+pub const SCNx32: &[u8; 2] = b"x\0";
+pub const SCNx64: &[u8; 3] = b"lx\0";
+pub const SCNxLEAST8: &[u8; 4] = b"hhx\0";
+pub const SCNxLEAST16: &[u8; 3] = b"hx\0";
+pub const SCNxLEAST32: &[u8; 2] = b"x\0";
+pub const SCNxLEAST64: &[u8; 3] = b"lx\0";
+pub const SCNxFAST8: &[u8; 4] = b"hhx\0";
+pub const SCNxFAST16: &[u8; 3] = b"lx\0";
+pub const SCNxFAST32: &[u8; 3] = b"lx\0";
+pub const SCNxFAST64: &[u8; 3] = b"lx\0";
+pub const SCNdMAX: &[u8; 3] = b"ld\0";
+pub const SCNiMAX: &[u8; 3] = b"li\0";
+pub const SCNoMAX: &[u8; 3] = b"lo\0";
+pub const SCNuMAX: &[u8; 3] = b"lu\0";
+pub const SCNxMAX: &[u8; 3] = b"lx\0";
+pub const SCNdPTR: &[u8; 3] = b"ld\0";
+pub const SCNiPTR: &[u8; 3] = b"li\0";
+pub const SCNoPTR: &[u8; 3] = b"lo\0";
+pub const SCNuPTR: &[u8; 3] = b"lu\0";
+pub const SCNxPTR: &[u8; 3] = b"lx\0";
+pub const _ARPA_INET_H: u32 = 1;
+pub const _NETINET_IN_H: u32 = 1;
+pub const _SYS_SOCKET_H: u32 = 1;
+pub const __iovec_defined: u32 = 1;
+pub const PF_UNSPEC: u32 = 0;
+pub const PF_LOCAL: u32 = 1;
+pub const PF_UNIX: u32 = 1;
+pub const PF_FILE: u32 = 1;
+pub const PF_INET: u32 = 2;
+pub const PF_AX25: u32 = 3;
+pub const PF_IPX: u32 = 4;
+pub const PF_APPLETALK: u32 = 5;
+pub const PF_NETROM: u32 = 6;
+pub const PF_BRIDGE: u32 = 7;
+pub const PF_ATMPVC: u32 = 8;
+pub const PF_X25: u32 = 9;
+pub const PF_INET6: u32 = 10;
+pub const PF_ROSE: u32 = 11;
+pub const PF_DECnet: u32 = 12;
+pub const PF_NETBEUI: u32 = 13;
+pub const PF_SECURITY: u32 = 14;
+pub const PF_KEY: u32 = 15;
+pub const PF_NETLINK: u32 = 16;
+pub const PF_ROUTE: u32 = 16;
+pub const PF_PACKET: u32 = 17;
+pub const PF_ASH: u32 = 18;
+pub const PF_ECONET: u32 = 19;
+pub const PF_ATMSVC: u32 = 20;
+pub const PF_RDS: u32 = 21;
+pub const PF_SNA: u32 = 22;
+pub const PF_IRDA: u32 = 23;
+pub const PF_PPPOX: u32 = 24;
+pub const PF_WANPIPE: u32 = 25;
+pub const PF_LLC: u32 = 26;
+pub const PF_IB: u32 = 27;
+pub const PF_MPLS: u32 = 28;
+pub const PF_CAN: u32 = 29;
+pub const PF_TIPC: u32 = 30;
+pub const PF_BLUETOOTH: u32 = 31;
+pub const PF_IUCV: u32 = 32;
+pub const PF_RXRPC: u32 = 33;
+pub const PF_ISDN: u32 = 34;
+pub const PF_PHONET: u32 = 35;
+pub const PF_IEEE802154: u32 = 36;
+pub const PF_CAIF: u32 = 37;
+pub const PF_ALG: u32 = 38;
+pub const PF_NFC: u32 = 39;
+pub const PF_VSOCK: u32 = 40;
+pub const PF_KCM: u32 = 41;
+pub const PF_QIPCRTR: u32 = 42;
+pub const PF_SMC: u32 = 43;
+pub const PF_XDP: u32 = 44;
+pub const PF_MCTP: u32 = 45;
+pub const PF_MAX: u32 = 46;
+pub const AF_UNSPEC: u32 = 0;
+pub const AF_LOCAL: u32 = 1;
+pub const AF_UNIX: u32 = 1;
+pub const AF_FILE: u32 = 1;
+pub const AF_INET: u32 = 2;
+pub const AF_AX25: u32 = 3;
+pub const AF_IPX: u32 = 4;
+pub const AF_APPLETALK: u32 = 5;
+pub const AF_NETROM: u32 = 6;
+pub const AF_BRIDGE: u32 = 7;
+pub const AF_ATMPVC: u32 = 8;
+pub const AF_X25: u32 = 9;
+pub const AF_INET6: u32 = 10;
+pub const AF_ROSE: u32 = 11;
+pub const AF_DECnet: u32 = 12;
+pub const AF_NETBEUI: u32 = 13;
+pub const AF_SECURITY: u32 = 14;
+pub const AF_KEY: u32 = 15;
+pub const AF_NETLINK: u32 = 16;
+pub const AF_ROUTE: u32 = 16;
+pub const AF_PACKET: u32 = 17;
+pub const AF_ASH: u32 = 18;
+pub const AF_ECONET: u32 = 19;
+pub const AF_ATMSVC: u32 = 20;
+pub const AF_RDS: u32 = 21;
+pub const AF_SNA: u32 = 22;
+pub const AF_IRDA: u32 = 23;
+pub const AF_PPPOX: u32 = 24;
+pub const AF_WANPIPE: u32 = 25;
+pub const AF_LLC: u32 = 26;
+pub const AF_IB: u32 = 27;
+pub const AF_MPLS: u32 = 28;
+pub const AF_CAN: u32 = 29;
+pub const AF_TIPC: u32 = 30;
+pub const AF_BLUETOOTH: u32 = 31;
+pub const AF_IUCV: u32 = 32;
+pub const AF_RXRPC: u32 = 33;
+pub const AF_ISDN: u32 = 34;
+pub const AF_PHONET: u32 = 35;
+pub const AF_IEEE802154: u32 = 36;
+pub const AF_CAIF: u32 = 37;
+pub const AF_ALG: u32 = 38;
+pub const AF_NFC: u32 = 39;
+pub const AF_VSOCK: u32 = 40;
+pub const AF_KCM: u32 = 41;
+pub const AF_QIPCRTR: u32 = 42;
+pub const AF_SMC: u32 = 43;
+pub const AF_XDP: u32 = 44;
+pub const AF_MCTP: u32 = 45;
+pub const AF_MAX: u32 = 46;
+pub const SOL_RAW: u32 = 255;
+pub const SOL_DECNET: u32 = 261;
+pub const SOL_X25: u32 = 262;
+pub const SOL_PACKET: u32 = 263;
+pub const SOL_ATM: u32 = 264;
+pub const SOL_AAL: u32 = 265;
+pub const SOL_IRDA: u32 = 266;
+pub const SOL_NETBEUI: u32 = 267;
+pub const SOL_LLC: u32 = 268;
+pub const SOL_DCCP: u32 = 269;
+pub const SOL_NETLINK: u32 = 270;
+pub const SOL_TIPC: u32 = 271;
+pub const SOL_RXRPC: u32 = 272;
+pub const SOL_PPPOL2TP: u32 = 273;
+pub const SOL_BLUETOOTH: u32 = 274;
+pub const SOL_PNPIPE: u32 = 275;
+pub const SOL_RDS: u32 = 276;
+pub const SOL_IUCV: u32 = 277;
+pub const SOL_CAIF: u32 = 278;
+pub const SOL_ALG: u32 = 279;
+pub const SOL_NFC: u32 = 280;
+pub const SOL_KCM: u32 = 281;
+pub const SOL_TLS: u32 = 282;
+pub const SOL_XDP: u32 = 283;
+pub const SOMAXCONN: u32 = 4096;
+pub const _BITS_SOCKADDR_H: u32 = 1;
+pub const _SS_SIZE: u32 = 128;
+pub const FIOSETOWN: u32 = 35073;
+pub const SIOCSPGRP: u32 = 35074;
+pub const FIOGETOWN: u32 = 35075;
+pub const SIOCGPGRP: u32 = 35076;
+pub const SIOCATMARK: u32 = 35077;
+pub const SIOCGSTAMP_OLD: u32 = 35078;
+pub const SIOCGSTAMPNS_OLD: u32 = 35079;
+pub const SOL_SOCKET: u32 = 1;
+pub const SO_DEBUG: u32 = 1;
+pub const SO_REUSEADDR: u32 = 2;
+pub const SO_TYPE: u32 = 3;
+pub const SO_ERROR: u32 = 4;
+pub const SO_DONTROUTE: u32 = 5;
+pub const SO_BROADCAST: u32 = 6;
+pub const SO_SNDBUF: u32 = 7;
+pub const SO_RCVBUF: u32 = 8;
+pub const SO_SNDBUFFORCE: u32 = 32;
+pub const SO_RCVBUFFORCE: u32 = 33;
+pub const SO_KEEPALIVE: u32 = 9;
+pub const SO_OOBINLINE: u32 = 10;
+pub const SO_NO_CHECK: u32 = 11;
+pub const SO_PRIORITY: u32 = 12;
+pub const SO_LINGER: u32 = 13;
+pub const SO_BSDCOMPAT: u32 = 14;
+pub const SO_REUSEPORT: u32 = 15;
+pub const SO_PASSCRED: u32 = 16;
+pub const SO_PEERCRED: u32 = 17;
+pub const SO_RCVLOWAT: u32 = 18;
+pub const SO_SNDLOWAT: u32 = 19;
+pub const SO_RCVTIMEO_OLD: u32 = 20;
+pub const SO_SNDTIMEO_OLD: u32 = 21;
+pub const SO_SECURITY_AUTHENTICATION: u32 = 22;
+pub const SO_SECURITY_ENCRYPTION_TRANSPORT: u32 = 23;
+pub const SO_SECURITY_ENCRYPTION_NETWORK: u32 = 24;
+pub const SO_BINDTODEVICE: u32 = 25;
+pub const SO_ATTACH_FILTER: u32 = 26;
+pub const SO_DETACH_FILTER: u32 = 27;
+pub const SO_GET_FILTER: u32 = 26;
+pub const SO_PEERNAME: u32 = 28;
+pub const SO_ACCEPTCONN: u32 = 30;
+pub const SO_PEERSEC: u32 = 31;
+pub const SO_PASSSEC: u32 = 34;
+pub const SO_MARK: u32 = 36;
+pub const SO_PROTOCOL: u32 = 38;
+pub const SO_DOMAIN: u32 = 39;
+pub const SO_RXQ_OVFL: u32 = 40;
+pub const SO_WIFI_STATUS: u32 = 41;
+pub const SCM_WIFI_STATUS: u32 = 41;
+pub const SO_PEEK_OFF: u32 = 42;
+pub const SO_NOFCS: u32 = 43;
+pub const SO_LOCK_FILTER: u32 = 44;
+pub const SO_SELECT_ERR_QUEUE: u32 = 45;
+pub const SO_BUSY_POLL: u32 = 46;
+pub const SO_MAX_PACING_RATE: u32 = 47;
+pub const SO_BPF_EXTENSIONS: u32 = 48;
+pub const SO_INCOMING_CPU: u32 = 49;
+pub const SO_ATTACH_BPF: u32 = 50;
+pub const SO_DETACH_BPF: u32 = 27;
+pub const SO_ATTACH_REUSEPORT_CBPF: u32 = 51;
+pub const SO_ATTACH_REUSEPORT_EBPF: u32 = 52;
+pub const SO_CNX_ADVICE: u32 = 53;
+pub const SCM_TIMESTAMPING_OPT_STATS: u32 = 54;
+pub const SO_MEMINFO: u32 = 55;
+pub const SO_INCOMING_NAPI_ID: u32 = 56;
+pub const SO_COOKIE: u32 = 57;
+pub const SCM_TIMESTAMPING_PKTINFO: u32 = 58;
+pub const SO_PEERGROUPS: u32 = 59;
+pub const SO_ZEROCOPY: u32 = 60;
+pub const SO_TXTIME: u32 = 61;
+pub const SCM_TXTIME: u32 = 61;
+pub const SO_BINDTOIFINDEX: u32 = 62;
+pub const SO_TIMESTAMP_OLD: u32 = 29;
+pub const SO_TIMESTAMPNS_OLD: u32 = 35;
+pub const SO_TIMESTAMPING_OLD: u32 = 37;
+pub const SO_TIMESTAMP_NEW: u32 = 63;
+pub const SO_TIMESTAMPNS_NEW: u32 = 64;
+pub const SO_TIMESTAMPING_NEW: u32 = 65;
+pub const SO_RCVTIMEO_NEW: u32 = 66;
+pub const SO_SNDTIMEO_NEW: u32 = 67;
+pub const SO_DETACH_REUSEPORT_BPF: u32 = 68;
+pub const SO_PREFER_BUSY_POLL: u32 = 69;
+pub const SO_BUSY_POLL_BUDGET: u32 = 70;
+pub const SO_NETNS_COOKIE: u32 = 71;
+pub const SO_BUF_LOCK: u32 = 72;
+pub const SO_TIMESTAMP: u32 = 29;
+pub const SO_TIMESTAMPNS: u32 = 35;
+pub const SO_TIMESTAMPING: u32 = 37;
+pub const SO_RCVTIMEO: u32 = 20;
+pub const SO_SNDTIMEO: u32 = 21;
+pub const SCM_TIMESTAMP: u32 = 29;
+pub const SCM_TIMESTAMPNS: u32 = 35;
+pub const SCM_TIMESTAMPING: u32 = 37;
+pub const __osockaddr_defined: u32 = 1;
+pub const __USE_KERNEL_IPV6_DEFS: u32 = 0;
+pub const IP_OPTIONS: u32 = 4;
+pub const IP_HDRINCL: u32 = 3;
+pub const IP_TOS: u32 = 1;
+pub const IP_TTL: u32 = 2;
+pub const IP_RECVOPTS: u32 = 6;
+pub const IP_RETOPTS: u32 = 7;
+pub const IP_MULTICAST_IF: u32 = 32;
+pub const IP_MULTICAST_TTL: u32 = 33;
+pub const IP_MULTICAST_LOOP: u32 = 34;
+pub const IP_ADD_MEMBERSHIP: u32 = 35;
+pub const IP_DROP_MEMBERSHIP: u32 = 36;
+pub const IP_UNBLOCK_SOURCE: u32 = 37;
+pub const IP_BLOCK_SOURCE: u32 = 38;
+pub const IP_ADD_SOURCE_MEMBERSHIP: u32 = 39;
+pub const IP_DROP_SOURCE_MEMBERSHIP: u32 = 40;
+pub const IP_MSFILTER: u32 = 41;
+pub const MCAST_JOIN_GROUP: u32 = 42;
+pub const MCAST_BLOCK_SOURCE: u32 = 43;
+pub const MCAST_UNBLOCK_SOURCE: u32 = 44;
+pub const MCAST_LEAVE_GROUP: u32 = 45;
+pub const MCAST_JOIN_SOURCE_GROUP: u32 = 46;
+pub const MCAST_LEAVE_SOURCE_GROUP: u32 = 47;
+pub const MCAST_MSFILTER: u32 = 48;
+pub const IP_MULTICAST_ALL: u32 = 49;
+pub const IP_UNICAST_IF: u32 = 50;
+pub const MCAST_EXCLUDE: u32 = 0;
+pub const MCAST_INCLUDE: u32 = 1;
+pub const IP_ROUTER_ALERT: u32 = 5;
+pub const IP_PKTINFO: u32 = 8;
+pub const IP_PKTOPTIONS: u32 = 9;
+pub const IP_PMTUDISC: u32 = 10;
+pub const IP_MTU_DISCOVER: u32 = 10;
+pub const IP_RECVERR: u32 = 11;
+pub const IP_RECVTTL: u32 = 12;
+pub const IP_RECVTOS: u32 = 13;
+pub const IP_MTU: u32 = 14;
+pub const IP_FREEBIND: u32 = 15;
+pub const IP_IPSEC_POLICY: u32 = 16;
+pub const IP_XFRM_POLICY: u32 = 17;
+pub const IP_PASSSEC: u32 = 18;
+pub const IP_TRANSPARENT: u32 = 19;
+pub const IP_ORIGDSTADDR: u32 = 20;
+pub const IP_RECVORIGDSTADDR: u32 = 20;
+pub const IP_MINTTL: u32 = 21;
+pub const IP_NODEFRAG: u32 = 22;
+pub const IP_CHECKSUM: u32 = 23;
+pub const IP_BIND_ADDRESS_NO_PORT: u32 = 24;
+pub const IP_RECVFRAGSIZE: u32 = 25;
+pub const IP_RECVERR_RFC4884: u32 = 26;
+pub const IP_PMTUDISC_DONT: u32 = 0;
+pub const IP_PMTUDISC_WANT: u32 = 1;
+pub const IP_PMTUDISC_DO: u32 = 2;
+pub const IP_PMTUDISC_PROBE: u32 = 3;
+pub const IP_PMTUDISC_INTERFACE: u32 = 4;
+pub const IP_PMTUDISC_OMIT: u32 = 5;
+pub const SOL_IP: u32 = 0;
+pub const IP_DEFAULT_MULTICAST_TTL: u32 = 1;
+pub const IP_DEFAULT_MULTICAST_LOOP: u32 = 1;
+pub const IP_MAX_MEMBERSHIPS: u32 = 20;
+pub const IPV6_ADDRFORM: u32 = 1;
+pub const IPV6_2292PKTINFO: u32 = 2;
+pub const IPV6_2292HOPOPTS: u32 = 3;
+pub const IPV6_2292DSTOPTS: u32 = 4;
+pub const IPV6_2292RTHDR: u32 = 5;
+pub const IPV6_2292PKTOPTIONS: u32 = 6;
+pub const IPV6_CHECKSUM: u32 = 7;
+pub const IPV6_2292HOPLIMIT: u32 = 8;
+pub const IPV6_NEXTHOP: u32 = 9;
+pub const IPV6_AUTHHDR: u32 = 10;
+pub const IPV6_UNICAST_HOPS: u32 = 16;
+pub const IPV6_MULTICAST_IF: u32 = 17;
+pub const IPV6_MULTICAST_HOPS: u32 = 18;
+pub const IPV6_MULTICAST_LOOP: u32 = 19;
+pub const IPV6_JOIN_GROUP: u32 = 20;
+pub const IPV6_LEAVE_GROUP: u32 = 21;
+pub const IPV6_ROUTER_ALERT: u32 = 22;
+pub const IPV6_MTU_DISCOVER: u32 = 23;
+pub const IPV6_MTU: u32 = 24;
+pub const IPV6_RECVERR: u32 = 25;
+pub const IPV6_V6ONLY: u32 = 26;
+pub const IPV6_JOIN_ANYCAST: u32 = 27;
+pub const IPV6_LEAVE_ANYCAST: u32 = 28;
+pub const IPV6_MULTICAST_ALL: u32 = 29;
+pub const IPV6_ROUTER_ALERT_ISOLATE: u32 = 30;
+pub const IPV6_RECVERR_RFC4884: u32 = 31;
+pub const IPV6_IPSEC_POLICY: u32 = 34;
+pub const IPV6_XFRM_POLICY: u32 = 35;
+pub const IPV6_HDRINCL: u32 = 36;
+pub const IPV6_RECVPKTINFO: u32 = 49;
+pub const IPV6_PKTINFO: u32 = 50;
+pub const IPV6_RECVHOPLIMIT: u32 = 51;
+pub const IPV6_HOPLIMIT: u32 = 52;
+pub const IPV6_RECVHOPOPTS: u32 = 53;
+pub const IPV6_HOPOPTS: u32 = 54;
+pub const IPV6_RTHDRDSTOPTS: u32 = 55;
+pub const IPV6_RECVRTHDR: u32 = 56;
+pub const IPV6_RTHDR: u32 = 57;
+pub const IPV6_RECVDSTOPTS: u32 = 58;
+pub const IPV6_DSTOPTS: u32 = 59;
+pub const IPV6_RECVPATHMTU: u32 = 60;
+pub const IPV6_PATHMTU: u32 = 61;
+pub const IPV6_DONTFRAG: u32 = 62;
+pub const IPV6_RECVTCLASS: u32 = 66;
+pub const IPV6_TCLASS: u32 = 67;
+pub const IPV6_AUTOFLOWLABEL: u32 = 70;
+pub const IPV6_ADDR_PREFERENCES: u32 = 72;
+pub const IPV6_MINHOPCOUNT: u32 = 73;
+pub const IPV6_ORIGDSTADDR: u32 = 74;
+pub const IPV6_RECVORIGDSTADDR: u32 = 74;
+pub const IPV6_TRANSPARENT: u32 = 75;
+pub const IPV6_UNICAST_IF: u32 = 76;
+pub const IPV6_RECVFRAGSIZE: u32 = 77;
+pub const IPV6_FREEBIND: u32 = 78;
+pub const IPV6_ADD_MEMBERSHIP: u32 = 20;
+pub const IPV6_DROP_MEMBERSHIP: u32 = 21;
+pub const IPV6_RXHOPOPTS: u32 = 54;
+pub const IPV6_RXDSTOPTS: u32 = 59;
+pub const IPV6_PMTUDISC_DONT: u32 = 0;
+pub const IPV6_PMTUDISC_WANT: u32 = 1;
+pub const IPV6_PMTUDISC_DO: u32 = 2;
+pub const IPV6_PMTUDISC_PROBE: u32 = 3;
+pub const IPV6_PMTUDISC_INTERFACE: u32 = 4;
+pub const IPV6_PMTUDISC_OMIT: u32 = 5;
+pub const SOL_IPV6: u32 = 41;
+pub const SOL_ICMPV6: u32 = 58;
+pub const IPV6_RTHDR_LOOSE: u32 = 0;
+pub const IPV6_RTHDR_STRICT: u32 = 1;
+pub const IPV6_RTHDR_TYPE_0: u32 = 0;
+pub const IN_CLASSA_NET: u32 = 4278190080;
+pub const IN_CLASSA_NSHIFT: u32 = 24;
+pub const IN_CLASSA_HOST: u32 = 16777215;
+pub const IN_CLASSA_MAX: u32 = 128;
+pub const IN_CLASSB_NET: u32 = 4294901760;
+pub const IN_CLASSB_NSHIFT: u32 = 16;
+pub const IN_CLASSB_HOST: u32 = 65535;
+pub const IN_CLASSB_MAX: u32 = 65536;
+pub const IN_CLASSC_NET: u32 = 4294967040;
+pub const IN_CLASSC_NSHIFT: u32 = 8;
+pub const IN_CLASSC_HOST: u32 = 255;
+pub const IN_LOOPBACKNET: u32 = 127;
+pub const INET_ADDRSTRLEN: u32 = 16;
+pub const INET6_ADDRSTRLEN: u32 = 46;
+pub const IB_MAD_RPC_VERSION_MASK: u32 = 3840;
+pub const IB_MAD_RPC_VERSION1: u32 = 256;
+pub const IB_SUBNET_PATH_HOPS_MAX: u32 = 64;
+pub const IB_DEFAULT_SUBN_PREFIX: i64 = -108086391056891904;
+pub const IB_DEFAULT_QP1_QKEY: u32 = 2147549184;
+pub const IB_MAD_SIZE: u32 = 256;
+pub const IB_SMP_DATA_OFFS: u32 = 64;
+pub const IB_SMP_DATA_SIZE: u32 = 64;
+pub const IB_VENDOR_RANGE1_DATA_OFFS: u32 = 24;
+pub const IB_VENDOR_RANGE1_DATA_SIZE: u32 = 232;
+pub const IB_VENDOR_RANGE2_DATA_OFFS: u32 = 40;
+pub const IB_VENDOR_RANGE2_DATA_SIZE: u32 = 216;
+pub const IB_SA_DATA_SIZE: u32 = 200;
+pub const IB_SA_DATA_OFFS: u32 = 56;
+pub const IB_PC_DATA_OFFS: u32 = 64;
+pub const IB_PC_DATA_SZ: u32 = 192;
+pub const IB_SA_MCM_RECSZ: u32 = 53;
+pub const IB_SA_PR_RECSZ: u32 = 64;
+pub const IB_SA_NR_RECSZ: u32 = 108;
+pub const IB_SA_GIR_RECSZ: u32 = 72;
+pub const IB_BM_DATA_OFFS: u32 = 64;
+pub const IB_BM_DATA_SZ: u32 = 192;
+pub const IB_BM_BKEY_OFFS: u32 = 24;
+pub const IB_BM_BKEY_AND_DATA_SZ: u32 = 232;
+pub const IB_CC_DATA_OFFS: u32 = 64;
+pub const IB_CC_DATA_SZ: u32 = 192;
+pub const IB_CC_LOG_DATA_OFFS: u32 = 32;
+pub const IB_CC_LOG_DATA_SZ: u32 = 224;
+pub const IB_OPENIB_OUI: u32 = 5125;
+pub const IB_FIELD_NAME_LEN: u32 = 32;
+pub const IB_MIN_UCAST_LID: u32 = 1;
+pub const IB_MAX_UCAST_LID: u32 = 49151;
+pub const IB_MIN_MCAST_LID: u32 = 49152;
+pub const IB_MAX_MCAST_LID: u32 = 65534;
+pub const MAD_DEF_RETRIES: u32 = 3;
+pub const MAD_DEF_TIMEOUT_MS: u32 = 1000;
+pub const UMAD_MAX_DEVICES: u32 = 32;
+pub const UMAD_ANY_PORT: u32 = 0;
+pub const IB_UMAD_ABI_VERSION: u32 = 5;
+pub const IB_UMAD_ABI_DIR: &[u8; 26] = b"/sys/class/infiniband_mad\0";
+pub const IB_UMAD_ABI_FILE: &[u8; 12] = b"abi_version\0";
+pub const IB_IOCTL_MAGIC: u32 = 27;
+pub const UMAD_CA_NAME_LEN: u32 = 20;
+pub const UMAD_CA_MAX_PORTS: u32 = 10;
+pub const UMAD_CA_MAX_AGENTS: u32 = 32;
+pub const SYS_INFINIBAND: &[u8; 22] = b"/sys/class/infiniband\0";
+pub const SYS_INFINIBAND_MAD: &[u8; 26] = b"/sys/class/infiniband_mad\0";
+pub const SYS_IB_MAD_PORT: &[u8; 5] = b"port\0";
+pub const SYS_IB_MAD_DEV: &[u8; 6] = b"ibdev\0";
+pub const UMAD_MAX_PORTS: u32 = 64;
+pub const SYS_CA_PORTS_DIR: &[u8; 6] = b"ports\0";
+pub const SYS_NODE_TYPE: &[u8; 10] = b"node_type\0";
+pub const SYS_CA_FW_VERS: &[u8; 7] = b"fw_ver\0";
+pub const SYS_CA_HW_VERS: &[u8; 7] = b"hw_rev\0";
+pub const SYS_CA_TYPE: &[u8; 9] = b"hca_type\0";
+pub const SYS_CA_NODE_GUID: &[u8; 10] = b"node_guid\0";
+pub const SYS_CA_SYS_GUID: &[u8; 15] = b"sys_image_guid\0";
+pub const SYS_PORT_LMC: &[u8; 15] = b"lid_mask_count\0";
+pub const SYS_PORT_SMLID: &[u8; 7] = b"sm_lid\0";
+pub const SYS_PORT_SMSL: &[u8; 6] = b"sm_sl\0";
+pub const SYS_PORT_LID: &[u8; 4] = b"lid\0";
+pub const SYS_PORT_STATE: &[u8; 6] = b"state\0";
+pub const SYS_PORT_PHY_STATE: &[u8; 11] = b"phys_state\0";
+pub const SYS_PORT_CAPMASK: &[u8; 9] = b"cap_mask\0";
+pub const SYS_PORT_RATE: &[u8; 5] = b"rate\0";
+pub const SYS_PORT_GUID: &[u8; 10] = b"port_guid\0";
+pub const SYS_PORT_GID: &[u8; 7] = b"gids/0\0";
+pub const SYS_PORT_LINK_LAYER: &[u8; 11] = b"link_layer\0";
 pub type __u_char = ::std::os::raw::c_uchar;
 pub type __u_short = ::std::os::raw::c_ushort;
 pub type __u_int = ::std::os::raw::c_uint;
@@ -27158,6 +27927,9481 @@ extern "C" {
     pub fn ibv_query_ece(qp: *mut ibv_qp, ece: *mut ibv_ece) -> ::std::os::raw::c_int;
 }
 #[repr(C)]
+#[derive(Copy, Clone)]
+pub struct ibv_sa_path_rec {
+    pub dgid: ibv_gid,
+    pub sgid: ibv_gid,
+    pub dlid: __be16,
+    pub slid: __be16,
+    pub raw_traffic: ::std::os::raw::c_int,
+    pub flow_label: __be32,
+    pub hop_limit: u8,
+    pub traffic_class: u8,
+    pub reversible: ::std::os::raw::c_int,
+    pub numb_path: u8,
+    pub pkey: __be16,
+    pub sl: u8,
+    pub mtu_selector: u8,
+    pub mtu: u8,
+    pub rate_selector: u8,
+    pub rate: u8,
+    pub packet_life_time_selector: u8,
+    pub packet_life_time: u8,
+    pub preference: u8,
+}
+#[test]
+fn bindgen_test_layout_ibv_sa_path_rec() {
+    const UNINIT: ::std::mem::MaybeUninit<ibv_sa_path_rec> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<ibv_sa_path_rec>(),
+        64usize,
+        concat!("Size of: ", stringify!(ibv_sa_path_rec))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<ibv_sa_path_rec>(),
+        8usize,
+        concat!("Alignment of ", stringify!(ibv_sa_path_rec))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).dgid) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_sa_path_rec),
+            "::",
+            stringify!(dgid)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).sgid) as usize - ptr as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_sa_path_rec),
+            "::",
+            stringify!(sgid)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).dlid) as usize - ptr as usize },
+        32usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_sa_path_rec),
+            "::",
+            stringify!(dlid)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).slid) as usize - ptr as usize },
+        34usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_sa_path_rec),
+            "::",
+            stringify!(slid)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).raw_traffic) as usize - ptr as usize },
+        36usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_sa_path_rec),
+            "::",
+            stringify!(raw_traffic)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).flow_label) as usize - ptr as usize },
+        40usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_sa_path_rec),
+            "::",
+            stringify!(flow_label)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).hop_limit) as usize - ptr as usize },
+        44usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_sa_path_rec),
+            "::",
+            stringify!(hop_limit)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).traffic_class) as usize - ptr as usize },
+        45usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_sa_path_rec),
+            "::",
+            stringify!(traffic_class)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).reversible) as usize - ptr as usize },
+        48usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_sa_path_rec),
+            "::",
+            stringify!(reversible)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).numb_path) as usize - ptr as usize },
+        52usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_sa_path_rec),
+            "::",
+            stringify!(numb_path)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).pkey) as usize - ptr as usize },
+        54usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_sa_path_rec),
+            "::",
+            stringify!(pkey)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).sl) as usize - ptr as usize },
+        56usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_sa_path_rec),
+            "::",
+            stringify!(sl)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).mtu_selector) as usize - ptr as usize },
+        57usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_sa_path_rec),
+            "::",
+            stringify!(mtu_selector)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).mtu) as usize - ptr as usize },
+        58usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_sa_path_rec),
+            "::",
+            stringify!(mtu)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).rate_selector) as usize - ptr as usize },
+        59usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_sa_path_rec),
+            "::",
+            stringify!(rate_selector)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).rate) as usize - ptr as usize },
+        60usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_sa_path_rec),
+            "::",
+            stringify!(rate)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).packet_life_time_selector) as usize - ptr as usize },
+        61usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_sa_path_rec),
+            "::",
+            stringify!(packet_life_time_selector)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).packet_life_time) as usize - ptr as usize },
+        62usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_sa_path_rec),
+            "::",
+            stringify!(packet_life_time)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).preference) as usize - ptr as usize },
+        63usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_sa_path_rec),
+            "::",
+            stringify!(preference)
+        )
+    );
+}
+impl Default for ibv_sa_path_rec {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub struct ibv_sa_mcmember_rec {
+    pub mgid: ibv_gid,
+    pub port_gid: ibv_gid,
+    pub qkey: u32,
+    pub mlid: u16,
+    pub mtu_selector: u8,
+    pub mtu: u8,
+    pub traffic_class: u8,
+    pub pkey: u16,
+    pub rate_selector: u8,
+    pub rate: u8,
+    pub packet_life_time_selector: u8,
+    pub packet_life_time: u8,
+    pub sl: u8,
+    pub flow_label: u32,
+    pub hop_limit: u8,
+    pub scope: u8,
+    pub join_state: u8,
+    pub proxy_join: ::std::os::raw::c_int,
+}
+#[test]
+fn bindgen_test_layout_ibv_sa_mcmember_rec() {
+    const UNINIT: ::std::mem::MaybeUninit<ibv_sa_mcmember_rec> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<ibv_sa_mcmember_rec>(),
+        64usize,
+        concat!("Size of: ", stringify!(ibv_sa_mcmember_rec))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<ibv_sa_mcmember_rec>(),
+        8usize,
+        concat!("Alignment of ", stringify!(ibv_sa_mcmember_rec))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).mgid) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_sa_mcmember_rec),
+            "::",
+            stringify!(mgid)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).port_gid) as usize - ptr as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_sa_mcmember_rec),
+            "::",
+            stringify!(port_gid)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).qkey) as usize - ptr as usize },
+        32usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_sa_mcmember_rec),
+            "::",
+            stringify!(qkey)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).mlid) as usize - ptr as usize },
+        36usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_sa_mcmember_rec),
+            "::",
+            stringify!(mlid)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).mtu_selector) as usize - ptr as usize },
+        38usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_sa_mcmember_rec),
+            "::",
+            stringify!(mtu_selector)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).mtu) as usize - ptr as usize },
+        39usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_sa_mcmember_rec),
+            "::",
+            stringify!(mtu)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).traffic_class) as usize - ptr as usize },
+        40usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_sa_mcmember_rec),
+            "::",
+            stringify!(traffic_class)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).pkey) as usize - ptr as usize },
+        42usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_sa_mcmember_rec),
+            "::",
+            stringify!(pkey)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).rate_selector) as usize - ptr as usize },
+        44usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_sa_mcmember_rec),
+            "::",
+            stringify!(rate_selector)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).rate) as usize - ptr as usize },
+        45usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_sa_mcmember_rec),
+            "::",
+            stringify!(rate)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).packet_life_time_selector) as usize - ptr as usize },
+        46usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_sa_mcmember_rec),
+            "::",
+            stringify!(packet_life_time_selector)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).packet_life_time) as usize - ptr as usize },
+        47usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_sa_mcmember_rec),
+            "::",
+            stringify!(packet_life_time)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).sl) as usize - ptr as usize },
+        48usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_sa_mcmember_rec),
+            "::",
+            stringify!(sl)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).flow_label) as usize - ptr as usize },
+        52usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_sa_mcmember_rec),
+            "::",
+            stringify!(flow_label)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).hop_limit) as usize - ptr as usize },
+        56usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_sa_mcmember_rec),
+            "::",
+            stringify!(hop_limit)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).scope) as usize - ptr as usize },
+        57usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_sa_mcmember_rec),
+            "::",
+            stringify!(scope)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).join_state) as usize - ptr as usize },
+        58usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_sa_mcmember_rec),
+            "::",
+            stringify!(join_state)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).proxy_join) as usize - ptr as usize },
+        60usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_sa_mcmember_rec),
+            "::",
+            stringify!(proxy_join)
+        )
+    );
+}
+impl Default for ibv_sa_mcmember_rec {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub struct ibv_sa_service_rec {
+    pub id: u64,
+    pub gid: ibv_gid,
+    pub pkey: u16,
+    pub lease: u32,
+    pub key: [u8; 16usize],
+    pub name: [u8; 64usize],
+    pub data8: [u8; 16usize],
+    pub data16: [u16; 8usize],
+    pub data32: [u32; 4usize],
+    pub data64: [u64; 2usize],
+}
+#[test]
+fn bindgen_test_layout_ibv_sa_service_rec() {
+    const UNINIT: ::std::mem::MaybeUninit<ibv_sa_service_rec> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<ibv_sa_service_rec>(),
+        176usize,
+        concat!("Size of: ", stringify!(ibv_sa_service_rec))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<ibv_sa_service_rec>(),
+        8usize,
+        concat!("Alignment of ", stringify!(ibv_sa_service_rec))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).id) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_sa_service_rec),
+            "::",
+            stringify!(id)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).gid) as usize - ptr as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_sa_service_rec),
+            "::",
+            stringify!(gid)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).pkey) as usize - ptr as usize },
+        24usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_sa_service_rec),
+            "::",
+            stringify!(pkey)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).lease) as usize - ptr as usize },
+        28usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_sa_service_rec),
+            "::",
+            stringify!(lease)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).key) as usize - ptr as usize },
+        32usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_sa_service_rec),
+            "::",
+            stringify!(key)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).name) as usize - ptr as usize },
+        48usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_sa_service_rec),
+            "::",
+            stringify!(name)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).data8) as usize - ptr as usize },
+        112usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_sa_service_rec),
+            "::",
+            stringify!(data8)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).data16) as usize - ptr as usize },
+        128usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_sa_service_rec),
+            "::",
+            stringify!(data16)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).data32) as usize - ptr as usize },
+        144usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_sa_service_rec),
+            "::",
+            stringify!(data32)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).data64) as usize - ptr as usize },
+        160usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_sa_service_rec),
+            "::",
+            stringify!(data64)
+        )
+    );
+}
+impl Default for ibv_sa_service_rec {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub struct ibv_path_record {
+    pub service_id: __be64,
+    pub dgid: ibv_gid,
+    pub sgid: ibv_gid,
+    pub dlid: __be16,
+    pub slid: __be16,
+    pub flowlabel_hoplimit: __be32,
+    pub tclass: u8,
+    pub reversible_numpath: u8,
+    pub pkey: __be16,
+    pub qosclass_sl: __be16,
+    pub mtu: u8,
+    pub rate: u8,
+    pub packetlifetime: u8,
+    pub preference: u8,
+    pub reserved: [u8; 6usize],
+}
+#[test]
+fn bindgen_test_layout_ibv_path_record() {
+    const UNINIT: ::std::mem::MaybeUninit<ibv_path_record> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<ibv_path_record>(),
+        64usize,
+        concat!("Size of: ", stringify!(ibv_path_record))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<ibv_path_record>(),
+        8usize,
+        concat!("Alignment of ", stringify!(ibv_path_record))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).service_id) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_path_record),
+            "::",
+            stringify!(service_id)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).dgid) as usize - ptr as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_path_record),
+            "::",
+            stringify!(dgid)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).sgid) as usize - ptr as usize },
+        24usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_path_record),
+            "::",
+            stringify!(sgid)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).dlid) as usize - ptr as usize },
+        40usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_path_record),
+            "::",
+            stringify!(dlid)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).slid) as usize - ptr as usize },
+        42usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_path_record),
+            "::",
+            stringify!(slid)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).flowlabel_hoplimit) as usize - ptr as usize },
+        44usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_path_record),
+            "::",
+            stringify!(flowlabel_hoplimit)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).tclass) as usize - ptr as usize },
+        48usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_path_record),
+            "::",
+            stringify!(tclass)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).reversible_numpath) as usize - ptr as usize },
+        49usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_path_record),
+            "::",
+            stringify!(reversible_numpath)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).pkey) as usize - ptr as usize },
+        50usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_path_record),
+            "::",
+            stringify!(pkey)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).qosclass_sl) as usize - ptr as usize },
+        52usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_path_record),
+            "::",
+            stringify!(qosclass_sl)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).mtu) as usize - ptr as usize },
+        54usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_path_record),
+            "::",
+            stringify!(mtu)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).rate) as usize - ptr as usize },
+        55usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_path_record),
+            "::",
+            stringify!(rate)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).packetlifetime) as usize - ptr as usize },
+        56usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_path_record),
+            "::",
+            stringify!(packetlifetime)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).preference) as usize - ptr as usize },
+        57usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_path_record),
+            "::",
+            stringify!(preference)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).reserved) as usize - ptr as usize },
+        58usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_path_record),
+            "::",
+            stringify!(reserved)
+        )
+    );
+}
+impl Default for ibv_path_record {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub struct ibv_path_data {
+    pub flags: u32,
+    pub reserved: u32,
+    pub path: ibv_path_record,
+}
+#[test]
+fn bindgen_test_layout_ibv_path_data() {
+    const UNINIT: ::std::mem::MaybeUninit<ibv_path_data> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<ibv_path_data>(),
+        72usize,
+        concat!("Size of: ", stringify!(ibv_path_data))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<ibv_path_data>(),
+        8usize,
+        concat!("Alignment of ", stringify!(ibv_path_data))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).flags) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_path_data),
+            "::",
+            stringify!(flags)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).reserved) as usize - ptr as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_path_data),
+            "::",
+            stringify!(reserved)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).path) as usize - ptr as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ibv_path_data),
+            "::",
+            stringify!(path)
+        )
+    );
+}
+impl Default for ibv_path_data {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+pub type _Float32 = f32;
+pub type _Float64 = f64;
+pub type _Float32x = f64;
+pub type _Float64x = u128;
+#[repr(C)]
+#[derive(Debug, Default, Copy, Clone)]
+pub struct div_t {
+    pub quot: ::std::os::raw::c_int,
+    pub rem: ::std::os::raw::c_int,
+}
+#[test]
+fn bindgen_test_layout_div_t() {
+    const UNINIT: ::std::mem::MaybeUninit<div_t> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<div_t>(),
+        8usize,
+        concat!("Size of: ", stringify!(div_t))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<div_t>(),
+        4usize,
+        concat!("Alignment of ", stringify!(div_t))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).quot) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(div_t),
+            "::",
+            stringify!(quot)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).rem) as usize - ptr as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(div_t),
+            "::",
+            stringify!(rem)
+        )
+    );
+}
+#[repr(C)]
+#[derive(Debug, Default, Copy, Clone)]
+pub struct ldiv_t {
+    pub quot: ::std::os::raw::c_long,
+    pub rem: ::std::os::raw::c_long,
+}
+#[test]
+fn bindgen_test_layout_ldiv_t() {
+    const UNINIT: ::std::mem::MaybeUninit<ldiv_t> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<ldiv_t>(),
+        16usize,
+        concat!("Size of: ", stringify!(ldiv_t))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<ldiv_t>(),
+        8usize,
+        concat!("Alignment of ", stringify!(ldiv_t))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).quot) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ldiv_t),
+            "::",
+            stringify!(quot)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).rem) as usize - ptr as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ldiv_t),
+            "::",
+            stringify!(rem)
+        )
+    );
+}
+#[repr(C)]
+#[derive(Debug, Default, Copy, Clone)]
+pub struct lldiv_t {
+    pub quot: ::std::os::raw::c_longlong,
+    pub rem: ::std::os::raw::c_longlong,
+}
+#[test]
+fn bindgen_test_layout_lldiv_t() {
+    const UNINIT: ::std::mem::MaybeUninit<lldiv_t> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<lldiv_t>(),
+        16usize,
+        concat!("Size of: ", stringify!(lldiv_t))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<lldiv_t>(),
+        8usize,
+        concat!("Alignment of ", stringify!(lldiv_t))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).quot) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(lldiv_t),
+            "::",
+            stringify!(quot)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).rem) as usize - ptr as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(lldiv_t),
+            "::",
+            stringify!(rem)
+        )
+    );
+}
+extern "C" {
+    pub fn __ctype_get_mb_cur_max() -> usize;
+}
+extern "C" {
+    pub fn atof(__nptr: *const ::std::os::raw::c_char) -> f64;
+}
+extern "C" {
+    pub fn atoi(__nptr: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn atol(__nptr: *const ::std::os::raw::c_char) -> ::std::os::raw::c_long;
+}
+extern "C" {
+    pub fn atoll(__nptr: *const ::std::os::raw::c_char) -> ::std::os::raw::c_longlong;
+}
+extern "C" {
+    pub fn strtod(
+        __nptr: *const ::std::os::raw::c_char,
+        __endptr: *mut *mut ::std::os::raw::c_char,
+    ) -> f64;
+}
+extern "C" {
+    pub fn strtof(
+        __nptr: *const ::std::os::raw::c_char,
+        __endptr: *mut *mut ::std::os::raw::c_char,
+    ) -> f32;
+}
+extern "C" {
+    pub fn strtold(
+        __nptr: *const ::std::os::raw::c_char,
+        __endptr: *mut *mut ::std::os::raw::c_char,
+    ) -> u128;
+}
+extern "C" {
+    pub fn strtol(
+        __nptr: *const ::std::os::raw::c_char,
+        __endptr: *mut *mut ::std::os::raw::c_char,
+        __base: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_long;
+}
+extern "C" {
+    pub fn strtoul(
+        __nptr: *const ::std::os::raw::c_char,
+        __endptr: *mut *mut ::std::os::raw::c_char,
+        __base: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_ulong;
+}
+extern "C" {
+    pub fn strtoq(
+        __nptr: *const ::std::os::raw::c_char,
+        __endptr: *mut *mut ::std::os::raw::c_char,
+        __base: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_longlong;
+}
+extern "C" {
+    pub fn strtouq(
+        __nptr: *const ::std::os::raw::c_char,
+        __endptr: *mut *mut ::std::os::raw::c_char,
+        __base: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_ulonglong;
+}
+extern "C" {
+    pub fn strtoll(
+        __nptr: *const ::std::os::raw::c_char,
+        __endptr: *mut *mut ::std::os::raw::c_char,
+        __base: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_longlong;
+}
+extern "C" {
+    pub fn strtoull(
+        __nptr: *const ::std::os::raw::c_char,
+        __endptr: *mut *mut ::std::os::raw::c_char,
+        __base: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_ulonglong;
+}
+extern "C" {
+    pub fn l64a(__n: ::std::os::raw::c_long) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn a64l(__s: *const ::std::os::raw::c_char) -> ::std::os::raw::c_long;
+}
+extern "C" {
+    pub fn random() -> ::std::os::raw::c_long;
+}
+extern "C" {
+    pub fn srandom(__seed: ::std::os::raw::c_uint);
+}
+extern "C" {
+    pub fn initstate(
+        __seed: ::std::os::raw::c_uint,
+        __statebuf: *mut ::std::os::raw::c_char,
+        __statelen: usize,
+    ) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn setstate(__statebuf: *mut ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct random_data {
+    pub fptr: *mut i32,
+    pub rptr: *mut i32,
+    pub state: *mut i32,
+    pub rand_type: ::std::os::raw::c_int,
+    pub rand_deg: ::std::os::raw::c_int,
+    pub rand_sep: ::std::os::raw::c_int,
+    pub end_ptr: *mut i32,
+}
+#[test]
+fn bindgen_test_layout_random_data() {
+    const UNINIT: ::std::mem::MaybeUninit<random_data> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<random_data>(),
+        48usize,
+        concat!("Size of: ", stringify!(random_data))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<random_data>(),
+        8usize,
+        concat!("Alignment of ", stringify!(random_data))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).fptr) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(random_data),
+            "::",
+            stringify!(fptr)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).rptr) as usize - ptr as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(random_data),
+            "::",
+            stringify!(rptr)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).state) as usize - ptr as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(random_data),
+            "::",
+            stringify!(state)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).rand_type) as usize - ptr as usize },
+        24usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(random_data),
+            "::",
+            stringify!(rand_type)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).rand_deg) as usize - ptr as usize },
+        28usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(random_data),
+            "::",
+            stringify!(rand_deg)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).rand_sep) as usize - ptr as usize },
+        32usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(random_data),
+            "::",
+            stringify!(rand_sep)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).end_ptr) as usize - ptr as usize },
+        40usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(random_data),
+            "::",
+            stringify!(end_ptr)
+        )
+    );
+}
+impl Default for random_data {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+extern "C" {
+    pub fn random_r(__buf: *mut random_data, __result: *mut i32) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn srandom_r(
+        __seed: ::std::os::raw::c_uint,
+        __buf: *mut random_data,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn initstate_r(
+        __seed: ::std::os::raw::c_uint,
+        __statebuf: *mut ::std::os::raw::c_char,
+        __statelen: usize,
+        __buf: *mut random_data,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn setstate_r(
+        __statebuf: *mut ::std::os::raw::c_char,
+        __buf: *mut random_data,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn rand() -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn srand(__seed: ::std::os::raw::c_uint);
+}
+extern "C" {
+    pub fn rand_r(__seed: *mut ::std::os::raw::c_uint) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn drand48() -> f64;
+}
+extern "C" {
+    pub fn erand48(__xsubi: *mut ::std::os::raw::c_ushort) -> f64;
+}
+extern "C" {
+    pub fn lrand48() -> ::std::os::raw::c_long;
+}
+extern "C" {
+    pub fn nrand48(__xsubi: *mut ::std::os::raw::c_ushort) -> ::std::os::raw::c_long;
+}
+extern "C" {
+    pub fn mrand48() -> ::std::os::raw::c_long;
+}
+extern "C" {
+    pub fn jrand48(__xsubi: *mut ::std::os::raw::c_ushort) -> ::std::os::raw::c_long;
+}
+extern "C" {
+    pub fn srand48(__seedval: ::std::os::raw::c_long);
+}
+extern "C" {
+    pub fn seed48(__seed16v: *mut ::std::os::raw::c_ushort) -> *mut ::std::os::raw::c_ushort;
+}
+extern "C" {
+    pub fn lcong48(__param: *mut ::std::os::raw::c_ushort);
+}
+#[repr(C)]
+#[derive(Debug, Default, Copy, Clone)]
+pub struct drand48_data {
+    pub __x: [::std::os::raw::c_ushort; 3usize],
+    pub __old_x: [::std::os::raw::c_ushort; 3usize],
+    pub __c: ::std::os::raw::c_ushort,
+    pub __init: ::std::os::raw::c_ushort,
+    pub __a: ::std::os::raw::c_ulonglong,
+}
+#[test]
+fn bindgen_test_layout_drand48_data() {
+    const UNINIT: ::std::mem::MaybeUninit<drand48_data> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<drand48_data>(),
+        24usize,
+        concat!("Size of: ", stringify!(drand48_data))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<drand48_data>(),
+        8usize,
+        concat!("Alignment of ", stringify!(drand48_data))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).__x) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(drand48_data),
+            "::",
+            stringify!(__x)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).__old_x) as usize - ptr as usize },
+        6usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(drand48_data),
+            "::",
+            stringify!(__old_x)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).__c) as usize - ptr as usize },
+        12usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(drand48_data),
+            "::",
+            stringify!(__c)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).__init) as usize - ptr as usize },
+        14usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(drand48_data),
+            "::",
+            stringify!(__init)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).__a) as usize - ptr as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(drand48_data),
+            "::",
+            stringify!(__a)
+        )
+    );
+}
+extern "C" {
+    pub fn drand48_r(__buffer: *mut drand48_data, __result: *mut f64) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn erand48_r(
+        __xsubi: *mut ::std::os::raw::c_ushort,
+        __buffer: *mut drand48_data,
+        __result: *mut f64,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn lrand48_r(
+        __buffer: *mut drand48_data,
+        __result: *mut ::std::os::raw::c_long,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn nrand48_r(
+        __xsubi: *mut ::std::os::raw::c_ushort,
+        __buffer: *mut drand48_data,
+        __result: *mut ::std::os::raw::c_long,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn mrand48_r(
+        __buffer: *mut drand48_data,
+        __result: *mut ::std::os::raw::c_long,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn jrand48_r(
+        __xsubi: *mut ::std::os::raw::c_ushort,
+        __buffer: *mut drand48_data,
+        __result: *mut ::std::os::raw::c_long,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn srand48_r(
+        __seedval: ::std::os::raw::c_long,
+        __buffer: *mut drand48_data,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn seed48_r(
+        __seed16v: *mut ::std::os::raw::c_ushort,
+        __buffer: *mut drand48_data,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn lcong48_r(
+        __param: *mut ::std::os::raw::c_ushort,
+        __buffer: *mut drand48_data,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn malloc(__size: ::std::os::raw::c_ulong) -> *mut ::std::os::raw::c_void;
+}
+extern "C" {
+    pub fn calloc(
+        __nmemb: ::std::os::raw::c_ulong,
+        __size: ::std::os::raw::c_ulong,
+    ) -> *mut ::std::os::raw::c_void;
+}
+extern "C" {
+    pub fn realloc(
+        __ptr: *mut ::std::os::raw::c_void,
+        __size: ::std::os::raw::c_ulong,
+    ) -> *mut ::std::os::raw::c_void;
+}
+extern "C" {
+    pub fn free(__ptr: *mut ::std::os::raw::c_void);
+}
+extern "C" {
+    pub fn reallocarray(
+        __ptr: *mut ::std::os::raw::c_void,
+        __nmemb: usize,
+        __size: usize,
+    ) -> *mut ::std::os::raw::c_void;
+}
+extern "C" {
+    pub fn alloca(__size: ::std::os::raw::c_ulong) -> *mut ::std::os::raw::c_void;
+}
+extern "C" {
+    pub fn valloc(__size: usize) -> *mut ::std::os::raw::c_void;
+}
+extern "C" {
+    pub fn posix_memalign(
+        __memptr: *mut *mut ::std::os::raw::c_void,
+        __alignment: usize,
+        __size: usize,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn aligned_alloc(
+        __alignment: ::std::os::raw::c_ulong,
+        __size: ::std::os::raw::c_ulong,
+    ) -> *mut ::std::os::raw::c_void;
+}
+extern "C" {
+    pub fn abort() -> !;
+}
+extern "C" {
+    pub fn atexit(__func: ::std::option::Option<unsafe extern "C" fn()>) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn at_quick_exit(
+        __func: ::std::option::Option<unsafe extern "C" fn()>,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn on_exit(
+        __func: ::std::option::Option<
+            unsafe extern "C" fn(
+                __status: ::std::os::raw::c_int,
+                __arg: *mut ::std::os::raw::c_void,
+            ),
+        >,
+        __arg: *mut ::std::os::raw::c_void,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn exit(__status: ::std::os::raw::c_int) -> !;
+}
+extern "C" {
+    pub fn quick_exit(__status: ::std::os::raw::c_int) -> !;
+}
+extern "C" {
+    pub fn _Exit(__status: ::std::os::raw::c_int) -> !;
+}
+extern "C" {
+    pub fn getenv(__name: *const ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn putenv(__string: *mut ::std::os::raw::c_char) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn setenv(
+        __name: *const ::std::os::raw::c_char,
+        __value: *const ::std::os::raw::c_char,
+        __replace: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn unsetenv(__name: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn clearenv() -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn mktemp(__template: *mut ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn mkstemp(__template: *mut ::std::os::raw::c_char) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn mkstemps(
+        __template: *mut ::std::os::raw::c_char,
+        __suffixlen: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn mkdtemp(__template: *mut ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn system(__command: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn realpath(
+        __name: *const ::std::os::raw::c_char,
+        __resolved: *mut ::std::os::raw::c_char,
+    ) -> *mut ::std::os::raw::c_char;
+}
+pub type __compar_fn_t = ::std::option::Option<
+    unsafe extern "C" fn(
+        arg1: *const ::std::os::raw::c_void,
+        arg2: *const ::std::os::raw::c_void,
+    ) -> ::std::os::raw::c_int,
+>;
+extern "C" {
+    pub fn bsearch(
+        __key: *const ::std::os::raw::c_void,
+        __base: *const ::std::os::raw::c_void,
+        __nmemb: usize,
+        __size: usize,
+        __compar: __compar_fn_t,
+    ) -> *mut ::std::os::raw::c_void;
+}
+extern "C" {
+    pub fn qsort(
+        __base: *mut ::std::os::raw::c_void,
+        __nmemb: usize,
+        __size: usize,
+        __compar: __compar_fn_t,
+    );
+}
+extern "C" {
+    pub fn abs(__x: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn labs(__x: ::std::os::raw::c_long) -> ::std::os::raw::c_long;
+}
+extern "C" {
+    pub fn llabs(__x: ::std::os::raw::c_longlong) -> ::std::os::raw::c_longlong;
+}
+extern "C" {
+    pub fn div(__numer: ::std::os::raw::c_int, __denom: ::std::os::raw::c_int) -> div_t;
+}
+extern "C" {
+    pub fn ldiv(__numer: ::std::os::raw::c_long, __denom: ::std::os::raw::c_long) -> ldiv_t;
+}
+extern "C" {
+    pub fn lldiv(
+        __numer: ::std::os::raw::c_longlong,
+        __denom: ::std::os::raw::c_longlong,
+    ) -> lldiv_t;
+}
+extern "C" {
+    pub fn ecvt(
+        __value: f64,
+        __ndigit: ::std::os::raw::c_int,
+        __decpt: *mut ::std::os::raw::c_int,
+        __sign: *mut ::std::os::raw::c_int,
+    ) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn fcvt(
+        __value: f64,
+        __ndigit: ::std::os::raw::c_int,
+        __decpt: *mut ::std::os::raw::c_int,
+        __sign: *mut ::std::os::raw::c_int,
+    ) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn gcvt(
+        __value: f64,
+        __ndigit: ::std::os::raw::c_int,
+        __buf: *mut ::std::os::raw::c_char,
+    ) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn qecvt(
+        __value: u128,
+        __ndigit: ::std::os::raw::c_int,
+        __decpt: *mut ::std::os::raw::c_int,
+        __sign: *mut ::std::os::raw::c_int,
+    ) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn qfcvt(
+        __value: u128,
+        __ndigit: ::std::os::raw::c_int,
+        __decpt: *mut ::std::os::raw::c_int,
+        __sign: *mut ::std::os::raw::c_int,
+    ) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn qgcvt(
+        __value: u128,
+        __ndigit: ::std::os::raw::c_int,
+        __buf: *mut ::std::os::raw::c_char,
+    ) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn ecvt_r(
+        __value: f64,
+        __ndigit: ::std::os::raw::c_int,
+        __decpt: *mut ::std::os::raw::c_int,
+        __sign: *mut ::std::os::raw::c_int,
+        __buf: *mut ::std::os::raw::c_char,
+        __len: usize,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn fcvt_r(
+        __value: f64,
+        __ndigit: ::std::os::raw::c_int,
+        __decpt: *mut ::std::os::raw::c_int,
+        __sign: *mut ::std::os::raw::c_int,
+        __buf: *mut ::std::os::raw::c_char,
+        __len: usize,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn qecvt_r(
+        __value: u128,
+        __ndigit: ::std::os::raw::c_int,
+        __decpt: *mut ::std::os::raw::c_int,
+        __sign: *mut ::std::os::raw::c_int,
+        __buf: *mut ::std::os::raw::c_char,
+        __len: usize,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn qfcvt_r(
+        __value: u128,
+        __ndigit: ::std::os::raw::c_int,
+        __decpt: *mut ::std::os::raw::c_int,
+        __sign: *mut ::std::os::raw::c_int,
+        __buf: *mut ::std::os::raw::c_char,
+        __len: usize,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn mblen(__s: *const ::std::os::raw::c_char, __n: usize) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn mbtowc(
+        __pwc: *mut wchar_t,
+        __s: *const ::std::os::raw::c_char,
+        __n: usize,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn wctomb(__s: *mut ::std::os::raw::c_char, __wchar: wchar_t) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn mbstowcs(__pwcs: *mut wchar_t, __s: *const ::std::os::raw::c_char, __n: usize) -> usize;
+}
+extern "C" {
+    pub fn wcstombs(__s: *mut ::std::os::raw::c_char, __pwcs: *const wchar_t, __n: usize) -> usize;
+}
+extern "C" {
+    pub fn rpmatch(__response: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn getsubopt(
+        __optionp: *mut *mut ::std::os::raw::c_char,
+        __tokens: *const *mut ::std::os::raw::c_char,
+        __valuep: *mut *mut ::std::os::raw::c_char,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn getloadavg(__loadavg: *mut f64, __nelem: ::std::os::raw::c_int)
+        -> ::std::os::raw::c_int;
+}
+pub type va_list = __builtin_va_list;
+pub type __gnuc_va_list = __builtin_va_list;
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub struct __mbstate_t {
+    pub __count: ::std::os::raw::c_int,
+    pub __value: __mbstate_t__bindgen_ty_1,
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union __mbstate_t__bindgen_ty_1 {
+    pub __wch: ::std::os::raw::c_uint,
+    pub __wchb: [::std::os::raw::c_char; 4usize],
+}
+#[test]
+fn bindgen_test_layout___mbstate_t__bindgen_ty_1() {
+    const UNINIT: ::std::mem::MaybeUninit<__mbstate_t__bindgen_ty_1> =
+        ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<__mbstate_t__bindgen_ty_1>(),
+        4usize,
+        concat!("Size of: ", stringify!(__mbstate_t__bindgen_ty_1))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<__mbstate_t__bindgen_ty_1>(),
+        4usize,
+        concat!("Alignment of ", stringify!(__mbstate_t__bindgen_ty_1))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).__wch) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__mbstate_t__bindgen_ty_1),
+            "::",
+            stringify!(__wch)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).__wchb) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__mbstate_t__bindgen_ty_1),
+            "::",
+            stringify!(__wchb)
+        )
+    );
+}
+impl Default for __mbstate_t__bindgen_ty_1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+#[test]
+fn bindgen_test_layout___mbstate_t() {
+    const UNINIT: ::std::mem::MaybeUninit<__mbstate_t> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<__mbstate_t>(),
+        8usize,
+        concat!("Size of: ", stringify!(__mbstate_t))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<__mbstate_t>(),
+        4usize,
+        concat!("Alignment of ", stringify!(__mbstate_t))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).__count) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__mbstate_t),
+            "::",
+            stringify!(__count)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).__value) as usize - ptr as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__mbstate_t),
+            "::",
+            stringify!(__value)
+        )
+    );
+}
+impl Default for __mbstate_t {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub struct _G_fpos_t {
+    pub __pos: __off_t,
+    pub __state: __mbstate_t,
+}
+#[test]
+fn bindgen_test_layout__G_fpos_t() {
+    const UNINIT: ::std::mem::MaybeUninit<_G_fpos_t> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<_G_fpos_t>(),
+        16usize,
+        concat!("Size of: ", stringify!(_G_fpos_t))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<_G_fpos_t>(),
+        8usize,
+        concat!("Alignment of ", stringify!(_G_fpos_t))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).__pos) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_G_fpos_t),
+            "::",
+            stringify!(__pos)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).__state) as usize - ptr as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_G_fpos_t),
+            "::",
+            stringify!(__state)
+        )
+    );
+}
+impl Default for _G_fpos_t {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+pub type __fpos_t = _G_fpos_t;
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub struct _G_fpos64_t {
+    pub __pos: __off64_t,
+    pub __state: __mbstate_t,
+}
+#[test]
+fn bindgen_test_layout__G_fpos64_t() {
+    const UNINIT: ::std::mem::MaybeUninit<_G_fpos64_t> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<_G_fpos64_t>(),
+        16usize,
+        concat!("Size of: ", stringify!(_G_fpos64_t))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<_G_fpos64_t>(),
+        8usize,
+        concat!("Alignment of ", stringify!(_G_fpos64_t))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).__pos) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_G_fpos64_t),
+            "::",
+            stringify!(__pos)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).__state) as usize - ptr as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_G_fpos64_t),
+            "::",
+            stringify!(__state)
+        )
+    );
+}
+impl Default for _G_fpos64_t {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+pub type __fpos64_t = _G_fpos64_t;
+pub type __FILE = _IO_FILE;
+pub type FILE = _IO_FILE;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct _IO_marker {
+    _unused: [u8; 0],
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct _IO_codecvt {
+    _unused: [u8; 0],
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct _IO_wide_data {
+    _unused: [u8; 0],
+}
+pub type _IO_lock_t = ::std::os::raw::c_void;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct _IO_FILE {
+    pub _flags: ::std::os::raw::c_int,
+    pub _IO_read_ptr: *mut ::std::os::raw::c_char,
+    pub _IO_read_end: *mut ::std::os::raw::c_char,
+    pub _IO_read_base: *mut ::std::os::raw::c_char,
+    pub _IO_write_base: *mut ::std::os::raw::c_char,
+    pub _IO_write_ptr: *mut ::std::os::raw::c_char,
+    pub _IO_write_end: *mut ::std::os::raw::c_char,
+    pub _IO_buf_base: *mut ::std::os::raw::c_char,
+    pub _IO_buf_end: *mut ::std::os::raw::c_char,
+    pub _IO_save_base: *mut ::std::os::raw::c_char,
+    pub _IO_backup_base: *mut ::std::os::raw::c_char,
+    pub _IO_save_end: *mut ::std::os::raw::c_char,
+    pub _markers: *mut _IO_marker,
+    pub _chain: *mut _IO_FILE,
+    pub _fileno: ::std::os::raw::c_int,
+    pub _flags2: ::std::os::raw::c_int,
+    pub _old_offset: __off_t,
+    pub _cur_column: ::std::os::raw::c_ushort,
+    pub _vtable_offset: ::std::os::raw::c_schar,
+    pub _shortbuf: [::std::os::raw::c_char; 1usize],
+    pub _lock: *mut _IO_lock_t,
+    pub _offset: __off64_t,
+    pub _codecvt: *mut _IO_codecvt,
+    pub _wide_data: *mut _IO_wide_data,
+    pub _freeres_list: *mut _IO_FILE,
+    pub _freeres_buf: *mut ::std::os::raw::c_void,
+    pub __pad5: usize,
+    pub _mode: ::std::os::raw::c_int,
+    pub _unused2: [::std::os::raw::c_char; 20usize],
+}
+#[test]
+fn bindgen_test_layout__IO_FILE() {
+    const UNINIT: ::std::mem::MaybeUninit<_IO_FILE> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<_IO_FILE>(),
+        216usize,
+        concat!("Size of: ", stringify!(_IO_FILE))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<_IO_FILE>(),
+        8usize,
+        concat!("Alignment of ", stringify!(_IO_FILE))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr)._flags) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_flags)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr)._IO_read_ptr) as usize - ptr as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_IO_read_ptr)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr)._IO_read_end) as usize - ptr as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_IO_read_end)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr)._IO_read_base) as usize - ptr as usize },
+        24usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_IO_read_base)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr)._IO_write_base) as usize - ptr as usize },
+        32usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_IO_write_base)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr)._IO_write_ptr) as usize - ptr as usize },
+        40usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_IO_write_ptr)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr)._IO_write_end) as usize - ptr as usize },
+        48usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_IO_write_end)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr)._IO_buf_base) as usize - ptr as usize },
+        56usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_IO_buf_base)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr)._IO_buf_end) as usize - ptr as usize },
+        64usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_IO_buf_end)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr)._IO_save_base) as usize - ptr as usize },
+        72usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_IO_save_base)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr)._IO_backup_base) as usize - ptr as usize },
+        80usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_IO_backup_base)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr)._IO_save_end) as usize - ptr as usize },
+        88usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_IO_save_end)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr)._markers) as usize - ptr as usize },
+        96usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_markers)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr)._chain) as usize - ptr as usize },
+        104usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_chain)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr)._fileno) as usize - ptr as usize },
+        112usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_fileno)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr)._flags2) as usize - ptr as usize },
+        116usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_flags2)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr)._old_offset) as usize - ptr as usize },
+        120usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_old_offset)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr)._cur_column) as usize - ptr as usize },
+        128usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_cur_column)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr)._vtable_offset) as usize - ptr as usize },
+        130usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_vtable_offset)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr)._shortbuf) as usize - ptr as usize },
+        131usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_shortbuf)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr)._lock) as usize - ptr as usize },
+        136usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_lock)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr)._offset) as usize - ptr as usize },
+        144usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_offset)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr)._codecvt) as usize - ptr as usize },
+        152usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_codecvt)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr)._wide_data) as usize - ptr as usize },
+        160usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_wide_data)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr)._freeres_list) as usize - ptr as usize },
+        168usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_freeres_list)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr)._freeres_buf) as usize - ptr as usize },
+        176usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_freeres_buf)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).__pad5) as usize - ptr as usize },
+        184usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(__pad5)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr)._mode) as usize - ptr as usize },
+        192usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_mode)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr)._unused2) as usize - ptr as usize },
+        196usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_unused2)
+        )
+    );
+}
+impl Default for _IO_FILE {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+pub type fpos_t = __fpos_t;
+extern "C" {
+    pub static mut stdin: *mut FILE;
+}
+extern "C" {
+    pub static mut stdout: *mut FILE;
+}
+extern "C" {
+    pub static mut stderr: *mut FILE;
+}
+extern "C" {
+    pub fn remove(__filename: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn rename(
+        __old: *const ::std::os::raw::c_char,
+        __new: *const ::std::os::raw::c_char,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn renameat(
+        __oldfd: ::std::os::raw::c_int,
+        __old: *const ::std::os::raw::c_char,
+        __newfd: ::std::os::raw::c_int,
+        __new: *const ::std::os::raw::c_char,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn fclose(__stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn tmpfile() -> *mut FILE;
+}
+extern "C" {
+    pub fn tmpnam(arg1: *mut ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn tmpnam_r(__s: *mut ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn tempnam(
+        __dir: *const ::std::os::raw::c_char,
+        __pfx: *const ::std::os::raw::c_char,
+    ) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn fflush(__stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn fflush_unlocked(__stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn fopen(
+        __filename: *const ::std::os::raw::c_char,
+        __modes: *const ::std::os::raw::c_char,
+    ) -> *mut FILE;
+}
+extern "C" {
+    pub fn freopen(
+        __filename: *const ::std::os::raw::c_char,
+        __modes: *const ::std::os::raw::c_char,
+        __stream: *mut FILE,
+    ) -> *mut FILE;
+}
+extern "C" {
+    pub fn fdopen(__fd: ::std::os::raw::c_int, __modes: *const ::std::os::raw::c_char)
+        -> *mut FILE;
+}
+extern "C" {
+    pub fn fmemopen(
+        __s: *mut ::std::os::raw::c_void,
+        __len: usize,
+        __modes: *const ::std::os::raw::c_char,
+    ) -> *mut FILE;
+}
+extern "C" {
+    pub fn open_memstream(
+        __bufloc: *mut *mut ::std::os::raw::c_char,
+        __sizeloc: *mut usize,
+    ) -> *mut FILE;
+}
+extern "C" {
+    pub fn setbuf(__stream: *mut FILE, __buf: *mut ::std::os::raw::c_char);
+}
+extern "C" {
+    pub fn setvbuf(
+        __stream: *mut FILE,
+        __buf: *mut ::std::os::raw::c_char,
+        __modes: ::std::os::raw::c_int,
+        __n: usize,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn setbuffer(__stream: *mut FILE, __buf: *mut ::std::os::raw::c_char, __size: usize);
+}
+extern "C" {
+    pub fn setlinebuf(__stream: *mut FILE);
+}
+extern "C" {
+    pub fn fprintf(
+        __stream: *mut FILE,
+        __format: *const ::std::os::raw::c_char,
+        ...
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn printf(__format: *const ::std::os::raw::c_char, ...) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn sprintf(
+        __s: *mut ::std::os::raw::c_char,
+        __format: *const ::std::os::raw::c_char,
+        ...
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn vfprintf(
+        __s: *mut FILE,
+        __format: *const ::std::os::raw::c_char,
+        __arg: *mut __va_list_tag,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn vprintf(
+        __format: *const ::std::os::raw::c_char,
+        __arg: *mut __va_list_tag,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn vsprintf(
+        __s: *mut ::std::os::raw::c_char,
+        __format: *const ::std::os::raw::c_char,
+        __arg: *mut __va_list_tag,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn snprintf(
+        __s: *mut ::std::os::raw::c_char,
+        __maxlen: ::std::os::raw::c_ulong,
+        __format: *const ::std::os::raw::c_char,
+        ...
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn vsnprintf(
+        __s: *mut ::std::os::raw::c_char,
+        __maxlen: ::std::os::raw::c_ulong,
+        __format: *const ::std::os::raw::c_char,
+        __arg: *mut __va_list_tag,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn vdprintf(
+        __fd: ::std::os::raw::c_int,
+        __fmt: *const ::std::os::raw::c_char,
+        __arg: *mut __va_list_tag,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn dprintf(
+        __fd: ::std::os::raw::c_int,
+        __fmt: *const ::std::os::raw::c_char,
+        ...
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn fscanf(
+        __stream: *mut FILE,
+        __format: *const ::std::os::raw::c_char,
+        ...
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn scanf(__format: *const ::std::os::raw::c_char, ...) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn sscanf(
+        __s: *const ::std::os::raw::c_char,
+        __format: *const ::std::os::raw::c_char,
+        ...
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}__isoc99_fscanf"]
+    pub fn fscanf1(
+        __stream: *mut FILE,
+        __format: *const ::std::os::raw::c_char,
+        ...
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}__isoc99_scanf"]
+    pub fn scanf1(__format: *const ::std::os::raw::c_char, ...) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}__isoc99_sscanf"]
+    pub fn sscanf1(
+        __s: *const ::std::os::raw::c_char,
+        __format: *const ::std::os::raw::c_char,
+        ...
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn vfscanf(
+        __s: *mut FILE,
+        __format: *const ::std::os::raw::c_char,
+        __arg: *mut __va_list_tag,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn vscanf(
+        __format: *const ::std::os::raw::c_char,
+        __arg: *mut __va_list_tag,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn vsscanf(
+        __s: *const ::std::os::raw::c_char,
+        __format: *const ::std::os::raw::c_char,
+        __arg: *mut __va_list_tag,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}__isoc99_vfscanf"]
+    pub fn vfscanf1(
+        __s: *mut FILE,
+        __format: *const ::std::os::raw::c_char,
+        __arg: *mut __va_list_tag,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}__isoc99_vscanf"]
+    pub fn vscanf1(
+        __format: *const ::std::os::raw::c_char,
+        __arg: *mut __va_list_tag,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}__isoc99_vsscanf"]
+    pub fn vsscanf1(
+        __s: *const ::std::os::raw::c_char,
+        __format: *const ::std::os::raw::c_char,
+        __arg: *mut __va_list_tag,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn fgetc(__stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn getc(__stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn getchar() -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn getc_unlocked(__stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn getchar_unlocked() -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn fgetc_unlocked(__stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn fputc(__c: ::std::os::raw::c_int, __stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn putc(__c: ::std::os::raw::c_int, __stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn putchar(__c: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn fputc_unlocked(__c: ::std::os::raw::c_int, __stream: *mut FILE)
+        -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn putc_unlocked(__c: ::std::os::raw::c_int, __stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn putchar_unlocked(__c: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn getw(__stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn putw(__w: ::std::os::raw::c_int, __stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn fgets(
+        __s: *mut ::std::os::raw::c_char,
+        __n: ::std::os::raw::c_int,
+        __stream: *mut FILE,
+    ) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn __getdelim(
+        __lineptr: *mut *mut ::std::os::raw::c_char,
+        __n: *mut usize,
+        __delimiter: ::std::os::raw::c_int,
+        __stream: *mut FILE,
+    ) -> __ssize_t;
+}
+extern "C" {
+    pub fn getdelim(
+        __lineptr: *mut *mut ::std::os::raw::c_char,
+        __n: *mut usize,
+        __delimiter: ::std::os::raw::c_int,
+        __stream: *mut FILE,
+    ) -> __ssize_t;
+}
+extern "C" {
+    pub fn getline(
+        __lineptr: *mut *mut ::std::os::raw::c_char,
+        __n: *mut usize,
+        __stream: *mut FILE,
+    ) -> __ssize_t;
+}
+extern "C" {
+    pub fn fputs(__s: *const ::std::os::raw::c_char, __stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn puts(__s: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn ungetc(__c: ::std::os::raw::c_int, __stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn fread(
+        __ptr: *mut ::std::os::raw::c_void,
+        __size: ::std::os::raw::c_ulong,
+        __n: ::std::os::raw::c_ulong,
+        __stream: *mut FILE,
+    ) -> ::std::os::raw::c_ulong;
+}
+extern "C" {
+    pub fn fwrite(
+        __ptr: *const ::std::os::raw::c_void,
+        __size: ::std::os::raw::c_ulong,
+        __n: ::std::os::raw::c_ulong,
+        __s: *mut FILE,
+    ) -> ::std::os::raw::c_ulong;
+}
+extern "C" {
+    pub fn fread_unlocked(
+        __ptr: *mut ::std::os::raw::c_void,
+        __size: usize,
+        __n: usize,
+        __stream: *mut FILE,
+    ) -> usize;
+}
+extern "C" {
+    pub fn fwrite_unlocked(
+        __ptr: *const ::std::os::raw::c_void,
+        __size: usize,
+        __n: usize,
+        __stream: *mut FILE,
+    ) -> usize;
+}
+extern "C" {
+    pub fn fseek(
+        __stream: *mut FILE,
+        __off: ::std::os::raw::c_long,
+        __whence: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn ftell(__stream: *mut FILE) -> ::std::os::raw::c_long;
+}
+extern "C" {
+    pub fn rewind(__stream: *mut FILE);
+}
+extern "C" {
+    pub fn fseeko(
+        __stream: *mut FILE,
+        __off: __off_t,
+        __whence: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn ftello(__stream: *mut FILE) -> __off_t;
+}
+extern "C" {
+    pub fn fgetpos(__stream: *mut FILE, __pos: *mut fpos_t) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn fsetpos(__stream: *mut FILE, __pos: *const fpos_t) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn clearerr(__stream: *mut FILE);
+}
+extern "C" {
+    pub fn feof(__stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn ferror(__stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn clearerr_unlocked(__stream: *mut FILE);
+}
+extern "C" {
+    pub fn feof_unlocked(__stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn ferror_unlocked(__stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn perror(__s: *const ::std::os::raw::c_char);
+}
+extern "C" {
+    pub fn fileno(__stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn fileno_unlocked(__stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn pclose(__stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn popen(
+        __command: *const ::std::os::raw::c_char,
+        __modes: *const ::std::os::raw::c_char,
+    ) -> *mut FILE;
+}
+extern "C" {
+    pub fn ctermid(__s: *mut ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn flockfile(__stream: *mut FILE);
+}
+extern "C" {
+    pub fn ftrylockfile(__stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn funlockfile(__stream: *mut FILE);
+}
+extern "C" {
+    pub fn __uflow(arg1: *mut FILE) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn __overflow(arg1: *mut FILE, arg2: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+}
+pub type useconds_t = __useconds_t;
+pub type socklen_t = __socklen_t;
+extern "C" {
+    pub fn access(
+        __name: *const ::std::os::raw::c_char,
+        __type: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn faccessat(
+        __fd: ::std::os::raw::c_int,
+        __file: *const ::std::os::raw::c_char,
+        __type: ::std::os::raw::c_int,
+        __flag: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn lseek(
+        __fd: ::std::os::raw::c_int,
+        __offset: __off_t,
+        __whence: ::std::os::raw::c_int,
+    ) -> __off_t;
+}
+extern "C" {
+    pub fn close(__fd: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn closefrom(__lowfd: ::std::os::raw::c_int);
+}
+extern "C" {
+    pub fn read(
+        __fd: ::std::os::raw::c_int,
+        __buf: *mut ::std::os::raw::c_void,
+        __nbytes: usize,
+    ) -> isize;
+}
+extern "C" {
+    pub fn write(
+        __fd: ::std::os::raw::c_int,
+        __buf: *const ::std::os::raw::c_void,
+        __n: usize,
+    ) -> isize;
+}
+extern "C" {
+    pub fn pread(
+        __fd: ::std::os::raw::c_int,
+        __buf: *mut ::std::os::raw::c_void,
+        __nbytes: usize,
+        __offset: __off_t,
+    ) -> isize;
+}
+extern "C" {
+    pub fn pwrite(
+        __fd: ::std::os::raw::c_int,
+        __buf: *const ::std::os::raw::c_void,
+        __n: usize,
+        __offset: __off_t,
+    ) -> isize;
+}
+extern "C" {
+    pub fn pipe(__pipedes: *mut ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn alarm(__seconds: ::std::os::raw::c_uint) -> ::std::os::raw::c_uint;
+}
+extern "C" {
+    pub fn sleep(__seconds: ::std::os::raw::c_uint) -> ::std::os::raw::c_uint;
+}
+extern "C" {
+    pub fn ualarm(__value: __useconds_t, __interval: __useconds_t) -> __useconds_t;
+}
+extern "C" {
+    pub fn usleep(__useconds: __useconds_t) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn pause() -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn chown(
+        __file: *const ::std::os::raw::c_char,
+        __owner: __uid_t,
+        __group: __gid_t,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn fchown(
+        __fd: ::std::os::raw::c_int,
+        __owner: __uid_t,
+        __group: __gid_t,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn lchown(
+        __file: *const ::std::os::raw::c_char,
+        __owner: __uid_t,
+        __group: __gid_t,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn fchownat(
+        __fd: ::std::os::raw::c_int,
+        __file: *const ::std::os::raw::c_char,
+        __owner: __uid_t,
+        __group: __gid_t,
+        __flag: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn chdir(__path: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn fchdir(__fd: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn getcwd(__buf: *mut ::std::os::raw::c_char, __size: usize)
+        -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn getwd(__buf: *mut ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn dup(__fd: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn dup2(__fd: ::std::os::raw::c_int, __fd2: ::std::os::raw::c_int)
+        -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub static mut __environ: *mut *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn execve(
+        __path: *const ::std::os::raw::c_char,
+        __argv: *const *mut ::std::os::raw::c_char,
+        __envp: *const *mut ::std::os::raw::c_char,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn fexecve(
+        __fd: ::std::os::raw::c_int,
+        __argv: *const *mut ::std::os::raw::c_char,
+        __envp: *const *mut ::std::os::raw::c_char,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn execv(
+        __path: *const ::std::os::raw::c_char,
+        __argv: *const *mut ::std::os::raw::c_char,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn execle(
+        __path: *const ::std::os::raw::c_char,
+        __arg: *const ::std::os::raw::c_char,
+        ...
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn execl(
+        __path: *const ::std::os::raw::c_char,
+        __arg: *const ::std::os::raw::c_char,
+        ...
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn execvp(
+        __file: *const ::std::os::raw::c_char,
+        __argv: *const *mut ::std::os::raw::c_char,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn execlp(
+        __file: *const ::std::os::raw::c_char,
+        __arg: *const ::std::os::raw::c_char,
+        ...
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn nice(__inc: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn _exit(__status: ::std::os::raw::c_int) -> !;
+}
+pub const _PC_LINK_MAX: _bindgen_ty_18 = 0;
+pub const _PC_MAX_CANON: _bindgen_ty_18 = 1;
+pub const _PC_MAX_INPUT: _bindgen_ty_18 = 2;
+pub const _PC_NAME_MAX: _bindgen_ty_18 = 3;
+pub const _PC_PATH_MAX: _bindgen_ty_18 = 4;
+pub const _PC_PIPE_BUF: _bindgen_ty_18 = 5;
+pub const _PC_CHOWN_RESTRICTED: _bindgen_ty_18 = 6;
+pub const _PC_NO_TRUNC: _bindgen_ty_18 = 7;
+pub const _PC_VDISABLE: _bindgen_ty_18 = 8;
+pub const _PC_SYNC_IO: _bindgen_ty_18 = 9;
+pub const _PC_ASYNC_IO: _bindgen_ty_18 = 10;
+pub const _PC_PRIO_IO: _bindgen_ty_18 = 11;
+pub const _PC_SOCK_MAXBUF: _bindgen_ty_18 = 12;
+pub const _PC_FILESIZEBITS: _bindgen_ty_18 = 13;
+pub const _PC_REC_INCR_XFER_SIZE: _bindgen_ty_18 = 14;
+pub const _PC_REC_MAX_XFER_SIZE: _bindgen_ty_18 = 15;
+pub const _PC_REC_MIN_XFER_SIZE: _bindgen_ty_18 = 16;
+pub const _PC_REC_XFER_ALIGN: _bindgen_ty_18 = 17;
+pub const _PC_ALLOC_SIZE_MIN: _bindgen_ty_18 = 18;
+pub const _PC_SYMLINK_MAX: _bindgen_ty_18 = 19;
+pub const _PC_2_SYMLINKS: _bindgen_ty_18 = 20;
+pub type _bindgen_ty_18 = ::std::os::raw::c_uint;
+pub const _SC_ARG_MAX: _bindgen_ty_19 = 0;
+pub const _SC_CHILD_MAX: _bindgen_ty_19 = 1;
+pub const _SC_CLK_TCK: _bindgen_ty_19 = 2;
+pub const _SC_NGROUPS_MAX: _bindgen_ty_19 = 3;
+pub const _SC_OPEN_MAX: _bindgen_ty_19 = 4;
+pub const _SC_STREAM_MAX: _bindgen_ty_19 = 5;
+pub const _SC_TZNAME_MAX: _bindgen_ty_19 = 6;
+pub const _SC_JOB_CONTROL: _bindgen_ty_19 = 7;
+pub const _SC_SAVED_IDS: _bindgen_ty_19 = 8;
+pub const _SC_REALTIME_SIGNALS: _bindgen_ty_19 = 9;
+pub const _SC_PRIORITY_SCHEDULING: _bindgen_ty_19 = 10;
+pub const _SC_TIMERS: _bindgen_ty_19 = 11;
+pub const _SC_ASYNCHRONOUS_IO: _bindgen_ty_19 = 12;
+pub const _SC_PRIORITIZED_IO: _bindgen_ty_19 = 13;
+pub const _SC_SYNCHRONIZED_IO: _bindgen_ty_19 = 14;
+pub const _SC_FSYNC: _bindgen_ty_19 = 15;
+pub const _SC_MAPPED_FILES: _bindgen_ty_19 = 16;
+pub const _SC_MEMLOCK: _bindgen_ty_19 = 17;
+pub const _SC_MEMLOCK_RANGE: _bindgen_ty_19 = 18;
+pub const _SC_MEMORY_PROTECTION: _bindgen_ty_19 = 19;
+pub const _SC_MESSAGE_PASSING: _bindgen_ty_19 = 20;
+pub const _SC_SEMAPHORES: _bindgen_ty_19 = 21;
+pub const _SC_SHARED_MEMORY_OBJECTS: _bindgen_ty_19 = 22;
+pub const _SC_AIO_LISTIO_MAX: _bindgen_ty_19 = 23;
+pub const _SC_AIO_MAX: _bindgen_ty_19 = 24;
+pub const _SC_AIO_PRIO_DELTA_MAX: _bindgen_ty_19 = 25;
+pub const _SC_DELAYTIMER_MAX: _bindgen_ty_19 = 26;
+pub const _SC_MQ_OPEN_MAX: _bindgen_ty_19 = 27;
+pub const _SC_MQ_PRIO_MAX: _bindgen_ty_19 = 28;
+pub const _SC_VERSION: _bindgen_ty_19 = 29;
+pub const _SC_PAGESIZE: _bindgen_ty_19 = 30;
+pub const _SC_RTSIG_MAX: _bindgen_ty_19 = 31;
+pub const _SC_SEM_NSEMS_MAX: _bindgen_ty_19 = 32;
+pub const _SC_SEM_VALUE_MAX: _bindgen_ty_19 = 33;
+pub const _SC_SIGQUEUE_MAX: _bindgen_ty_19 = 34;
+pub const _SC_TIMER_MAX: _bindgen_ty_19 = 35;
+pub const _SC_BC_BASE_MAX: _bindgen_ty_19 = 36;
+pub const _SC_BC_DIM_MAX: _bindgen_ty_19 = 37;
+pub const _SC_BC_SCALE_MAX: _bindgen_ty_19 = 38;
+pub const _SC_BC_STRING_MAX: _bindgen_ty_19 = 39;
+pub const _SC_COLL_WEIGHTS_MAX: _bindgen_ty_19 = 40;
+pub const _SC_EQUIV_CLASS_MAX: _bindgen_ty_19 = 41;
+pub const _SC_EXPR_NEST_MAX: _bindgen_ty_19 = 42;
+pub const _SC_LINE_MAX: _bindgen_ty_19 = 43;
+pub const _SC_RE_DUP_MAX: _bindgen_ty_19 = 44;
+pub const _SC_CHARCLASS_NAME_MAX: _bindgen_ty_19 = 45;
+pub const _SC_2_VERSION: _bindgen_ty_19 = 46;
+pub const _SC_2_C_BIND: _bindgen_ty_19 = 47;
+pub const _SC_2_C_DEV: _bindgen_ty_19 = 48;
+pub const _SC_2_FORT_DEV: _bindgen_ty_19 = 49;
+pub const _SC_2_FORT_RUN: _bindgen_ty_19 = 50;
+pub const _SC_2_SW_DEV: _bindgen_ty_19 = 51;
+pub const _SC_2_LOCALEDEF: _bindgen_ty_19 = 52;
+pub const _SC_PII: _bindgen_ty_19 = 53;
+pub const _SC_PII_XTI: _bindgen_ty_19 = 54;
+pub const _SC_PII_SOCKET: _bindgen_ty_19 = 55;
+pub const _SC_PII_INTERNET: _bindgen_ty_19 = 56;
+pub const _SC_PII_OSI: _bindgen_ty_19 = 57;
+pub const _SC_POLL: _bindgen_ty_19 = 58;
+pub const _SC_SELECT: _bindgen_ty_19 = 59;
+pub const _SC_UIO_MAXIOV: _bindgen_ty_19 = 60;
+pub const _SC_IOV_MAX: _bindgen_ty_19 = 60;
+pub const _SC_PII_INTERNET_STREAM: _bindgen_ty_19 = 61;
+pub const _SC_PII_INTERNET_DGRAM: _bindgen_ty_19 = 62;
+pub const _SC_PII_OSI_COTS: _bindgen_ty_19 = 63;
+pub const _SC_PII_OSI_CLTS: _bindgen_ty_19 = 64;
+pub const _SC_PII_OSI_M: _bindgen_ty_19 = 65;
+pub const _SC_T_IOV_MAX: _bindgen_ty_19 = 66;
+pub const _SC_THREADS: _bindgen_ty_19 = 67;
+pub const _SC_THREAD_SAFE_FUNCTIONS: _bindgen_ty_19 = 68;
+pub const _SC_GETGR_R_SIZE_MAX: _bindgen_ty_19 = 69;
+pub const _SC_GETPW_R_SIZE_MAX: _bindgen_ty_19 = 70;
+pub const _SC_LOGIN_NAME_MAX: _bindgen_ty_19 = 71;
+pub const _SC_TTY_NAME_MAX: _bindgen_ty_19 = 72;
+pub const _SC_THREAD_DESTRUCTOR_ITERATIONS: _bindgen_ty_19 = 73;
+pub const _SC_THREAD_KEYS_MAX: _bindgen_ty_19 = 74;
+pub const _SC_THREAD_STACK_MIN: _bindgen_ty_19 = 75;
+pub const _SC_THREAD_THREADS_MAX: _bindgen_ty_19 = 76;
+pub const _SC_THREAD_ATTR_STACKADDR: _bindgen_ty_19 = 77;
+pub const _SC_THREAD_ATTR_STACKSIZE: _bindgen_ty_19 = 78;
+pub const _SC_THREAD_PRIORITY_SCHEDULING: _bindgen_ty_19 = 79;
+pub const _SC_THREAD_PRIO_INHERIT: _bindgen_ty_19 = 80;
+pub const _SC_THREAD_PRIO_PROTECT: _bindgen_ty_19 = 81;
+pub const _SC_THREAD_PROCESS_SHARED: _bindgen_ty_19 = 82;
+pub const _SC_NPROCESSORS_CONF: _bindgen_ty_19 = 83;
+pub const _SC_NPROCESSORS_ONLN: _bindgen_ty_19 = 84;
+pub const _SC_PHYS_PAGES: _bindgen_ty_19 = 85;
+pub const _SC_AVPHYS_PAGES: _bindgen_ty_19 = 86;
+pub const _SC_ATEXIT_MAX: _bindgen_ty_19 = 87;
+pub const _SC_PASS_MAX: _bindgen_ty_19 = 88;
+pub const _SC_XOPEN_VERSION: _bindgen_ty_19 = 89;
+pub const _SC_XOPEN_XCU_VERSION: _bindgen_ty_19 = 90;
+pub const _SC_XOPEN_UNIX: _bindgen_ty_19 = 91;
+pub const _SC_XOPEN_CRYPT: _bindgen_ty_19 = 92;
+pub const _SC_XOPEN_ENH_I18N: _bindgen_ty_19 = 93;
+pub const _SC_XOPEN_SHM: _bindgen_ty_19 = 94;
+pub const _SC_2_CHAR_TERM: _bindgen_ty_19 = 95;
+pub const _SC_2_C_VERSION: _bindgen_ty_19 = 96;
+pub const _SC_2_UPE: _bindgen_ty_19 = 97;
+pub const _SC_XOPEN_XPG2: _bindgen_ty_19 = 98;
+pub const _SC_XOPEN_XPG3: _bindgen_ty_19 = 99;
+pub const _SC_XOPEN_XPG4: _bindgen_ty_19 = 100;
+pub const _SC_CHAR_BIT: _bindgen_ty_19 = 101;
+pub const _SC_CHAR_MAX: _bindgen_ty_19 = 102;
+pub const _SC_CHAR_MIN: _bindgen_ty_19 = 103;
+pub const _SC_INT_MAX: _bindgen_ty_19 = 104;
+pub const _SC_INT_MIN: _bindgen_ty_19 = 105;
+pub const _SC_LONG_BIT: _bindgen_ty_19 = 106;
+pub const _SC_WORD_BIT: _bindgen_ty_19 = 107;
+pub const _SC_MB_LEN_MAX: _bindgen_ty_19 = 108;
+pub const _SC_NZERO: _bindgen_ty_19 = 109;
+pub const _SC_SSIZE_MAX: _bindgen_ty_19 = 110;
+pub const _SC_SCHAR_MAX: _bindgen_ty_19 = 111;
+pub const _SC_SCHAR_MIN: _bindgen_ty_19 = 112;
+pub const _SC_SHRT_MAX: _bindgen_ty_19 = 113;
+pub const _SC_SHRT_MIN: _bindgen_ty_19 = 114;
+pub const _SC_UCHAR_MAX: _bindgen_ty_19 = 115;
+pub const _SC_UINT_MAX: _bindgen_ty_19 = 116;
+pub const _SC_ULONG_MAX: _bindgen_ty_19 = 117;
+pub const _SC_USHRT_MAX: _bindgen_ty_19 = 118;
+pub const _SC_NL_ARGMAX: _bindgen_ty_19 = 119;
+pub const _SC_NL_LANGMAX: _bindgen_ty_19 = 120;
+pub const _SC_NL_MSGMAX: _bindgen_ty_19 = 121;
+pub const _SC_NL_NMAX: _bindgen_ty_19 = 122;
+pub const _SC_NL_SETMAX: _bindgen_ty_19 = 123;
+pub const _SC_NL_TEXTMAX: _bindgen_ty_19 = 124;
+pub const _SC_XBS5_ILP32_OFF32: _bindgen_ty_19 = 125;
+pub const _SC_XBS5_ILP32_OFFBIG: _bindgen_ty_19 = 126;
+pub const _SC_XBS5_LP64_OFF64: _bindgen_ty_19 = 127;
+pub const _SC_XBS5_LPBIG_OFFBIG: _bindgen_ty_19 = 128;
+pub const _SC_XOPEN_LEGACY: _bindgen_ty_19 = 129;
+pub const _SC_XOPEN_REALTIME: _bindgen_ty_19 = 130;
+pub const _SC_XOPEN_REALTIME_THREADS: _bindgen_ty_19 = 131;
+pub const _SC_ADVISORY_INFO: _bindgen_ty_19 = 132;
+pub const _SC_BARRIERS: _bindgen_ty_19 = 133;
+pub const _SC_BASE: _bindgen_ty_19 = 134;
+pub const _SC_C_LANG_SUPPORT: _bindgen_ty_19 = 135;
+pub const _SC_C_LANG_SUPPORT_R: _bindgen_ty_19 = 136;
+pub const _SC_CLOCK_SELECTION: _bindgen_ty_19 = 137;
+pub const _SC_CPUTIME: _bindgen_ty_19 = 138;
+pub const _SC_THREAD_CPUTIME: _bindgen_ty_19 = 139;
+pub const _SC_DEVICE_IO: _bindgen_ty_19 = 140;
+pub const _SC_DEVICE_SPECIFIC: _bindgen_ty_19 = 141;
+pub const _SC_DEVICE_SPECIFIC_R: _bindgen_ty_19 = 142;
+pub const _SC_FD_MGMT: _bindgen_ty_19 = 143;
+pub const _SC_FIFO: _bindgen_ty_19 = 144;
+pub const _SC_PIPE: _bindgen_ty_19 = 145;
+pub const _SC_FILE_ATTRIBUTES: _bindgen_ty_19 = 146;
+pub const _SC_FILE_LOCKING: _bindgen_ty_19 = 147;
+pub const _SC_FILE_SYSTEM: _bindgen_ty_19 = 148;
+pub const _SC_MONOTONIC_CLOCK: _bindgen_ty_19 = 149;
+pub const _SC_MULTI_PROCESS: _bindgen_ty_19 = 150;
+pub const _SC_SINGLE_PROCESS: _bindgen_ty_19 = 151;
+pub const _SC_NETWORKING: _bindgen_ty_19 = 152;
+pub const _SC_READER_WRITER_LOCKS: _bindgen_ty_19 = 153;
+pub const _SC_SPIN_LOCKS: _bindgen_ty_19 = 154;
+pub const _SC_REGEXP: _bindgen_ty_19 = 155;
+pub const _SC_REGEX_VERSION: _bindgen_ty_19 = 156;
+pub const _SC_SHELL: _bindgen_ty_19 = 157;
+pub const _SC_SIGNALS: _bindgen_ty_19 = 158;
+pub const _SC_SPAWN: _bindgen_ty_19 = 159;
+pub const _SC_SPORADIC_SERVER: _bindgen_ty_19 = 160;
+pub const _SC_THREAD_SPORADIC_SERVER: _bindgen_ty_19 = 161;
+pub const _SC_SYSTEM_DATABASE: _bindgen_ty_19 = 162;
+pub const _SC_SYSTEM_DATABASE_R: _bindgen_ty_19 = 163;
+pub const _SC_TIMEOUTS: _bindgen_ty_19 = 164;
+pub const _SC_TYPED_MEMORY_OBJECTS: _bindgen_ty_19 = 165;
+pub const _SC_USER_GROUPS: _bindgen_ty_19 = 166;
+pub const _SC_USER_GROUPS_R: _bindgen_ty_19 = 167;
+pub const _SC_2_PBS: _bindgen_ty_19 = 168;
+pub const _SC_2_PBS_ACCOUNTING: _bindgen_ty_19 = 169;
+pub const _SC_2_PBS_LOCATE: _bindgen_ty_19 = 170;
+pub const _SC_2_PBS_MESSAGE: _bindgen_ty_19 = 171;
+pub const _SC_2_PBS_TRACK: _bindgen_ty_19 = 172;
+pub const _SC_SYMLOOP_MAX: _bindgen_ty_19 = 173;
+pub const _SC_STREAMS: _bindgen_ty_19 = 174;
+pub const _SC_2_PBS_CHECKPOINT: _bindgen_ty_19 = 175;
+pub const _SC_V6_ILP32_OFF32: _bindgen_ty_19 = 176;
+pub const _SC_V6_ILP32_OFFBIG: _bindgen_ty_19 = 177;
+pub const _SC_V6_LP64_OFF64: _bindgen_ty_19 = 178;
+pub const _SC_V6_LPBIG_OFFBIG: _bindgen_ty_19 = 179;
+pub const _SC_HOST_NAME_MAX: _bindgen_ty_19 = 180;
+pub const _SC_TRACE: _bindgen_ty_19 = 181;
+pub const _SC_TRACE_EVENT_FILTER: _bindgen_ty_19 = 182;
+pub const _SC_TRACE_INHERIT: _bindgen_ty_19 = 183;
+pub const _SC_TRACE_LOG: _bindgen_ty_19 = 184;
+pub const _SC_LEVEL1_ICACHE_SIZE: _bindgen_ty_19 = 185;
+pub const _SC_LEVEL1_ICACHE_ASSOC: _bindgen_ty_19 = 186;
+pub const _SC_LEVEL1_ICACHE_LINESIZE: _bindgen_ty_19 = 187;
+pub const _SC_LEVEL1_DCACHE_SIZE: _bindgen_ty_19 = 188;
+pub const _SC_LEVEL1_DCACHE_ASSOC: _bindgen_ty_19 = 189;
+pub const _SC_LEVEL1_DCACHE_LINESIZE: _bindgen_ty_19 = 190;
+pub const _SC_LEVEL2_CACHE_SIZE: _bindgen_ty_19 = 191;
+pub const _SC_LEVEL2_CACHE_ASSOC: _bindgen_ty_19 = 192;
+pub const _SC_LEVEL2_CACHE_LINESIZE: _bindgen_ty_19 = 193;
+pub const _SC_LEVEL3_CACHE_SIZE: _bindgen_ty_19 = 194;
+pub const _SC_LEVEL3_CACHE_ASSOC: _bindgen_ty_19 = 195;
+pub const _SC_LEVEL3_CACHE_LINESIZE: _bindgen_ty_19 = 196;
+pub const _SC_LEVEL4_CACHE_SIZE: _bindgen_ty_19 = 197;
+pub const _SC_LEVEL4_CACHE_ASSOC: _bindgen_ty_19 = 198;
+pub const _SC_LEVEL4_CACHE_LINESIZE: _bindgen_ty_19 = 199;
+pub const _SC_IPV6: _bindgen_ty_19 = 235;
+pub const _SC_RAW_SOCKETS: _bindgen_ty_19 = 236;
+pub const _SC_V7_ILP32_OFF32: _bindgen_ty_19 = 237;
+pub const _SC_V7_ILP32_OFFBIG: _bindgen_ty_19 = 238;
+pub const _SC_V7_LP64_OFF64: _bindgen_ty_19 = 239;
+pub const _SC_V7_LPBIG_OFFBIG: _bindgen_ty_19 = 240;
+pub const _SC_SS_REPL_MAX: _bindgen_ty_19 = 241;
+pub const _SC_TRACE_EVENT_NAME_MAX: _bindgen_ty_19 = 242;
+pub const _SC_TRACE_NAME_MAX: _bindgen_ty_19 = 243;
+pub const _SC_TRACE_SYS_MAX: _bindgen_ty_19 = 244;
+pub const _SC_TRACE_USER_EVENT_MAX: _bindgen_ty_19 = 245;
+pub const _SC_XOPEN_STREAMS: _bindgen_ty_19 = 246;
+pub const _SC_THREAD_ROBUST_PRIO_INHERIT: _bindgen_ty_19 = 247;
+pub const _SC_THREAD_ROBUST_PRIO_PROTECT: _bindgen_ty_19 = 248;
+pub const _SC_MINSIGSTKSZ: _bindgen_ty_19 = 249;
+pub const _SC_SIGSTKSZ: _bindgen_ty_19 = 250;
+pub type _bindgen_ty_19 = ::std::os::raw::c_uint;
+pub const _CS_PATH: _bindgen_ty_20 = 0;
+pub const _CS_V6_WIDTH_RESTRICTED_ENVS: _bindgen_ty_20 = 1;
+pub const _CS_GNU_LIBC_VERSION: _bindgen_ty_20 = 2;
+pub const _CS_GNU_LIBPTHREAD_VERSION: _bindgen_ty_20 = 3;
+pub const _CS_V5_WIDTH_RESTRICTED_ENVS: _bindgen_ty_20 = 4;
+pub const _CS_V7_WIDTH_RESTRICTED_ENVS: _bindgen_ty_20 = 5;
+pub const _CS_LFS_CFLAGS: _bindgen_ty_20 = 1000;
+pub const _CS_LFS_LDFLAGS: _bindgen_ty_20 = 1001;
+pub const _CS_LFS_LIBS: _bindgen_ty_20 = 1002;
+pub const _CS_LFS_LINTFLAGS: _bindgen_ty_20 = 1003;
+pub const _CS_LFS64_CFLAGS: _bindgen_ty_20 = 1004;
+pub const _CS_LFS64_LDFLAGS: _bindgen_ty_20 = 1005;
+pub const _CS_LFS64_LIBS: _bindgen_ty_20 = 1006;
+pub const _CS_LFS64_LINTFLAGS: _bindgen_ty_20 = 1007;
+pub const _CS_XBS5_ILP32_OFF32_CFLAGS: _bindgen_ty_20 = 1100;
+pub const _CS_XBS5_ILP32_OFF32_LDFLAGS: _bindgen_ty_20 = 1101;
+pub const _CS_XBS5_ILP32_OFF32_LIBS: _bindgen_ty_20 = 1102;
+pub const _CS_XBS5_ILP32_OFF32_LINTFLAGS: _bindgen_ty_20 = 1103;
+pub const _CS_XBS5_ILP32_OFFBIG_CFLAGS: _bindgen_ty_20 = 1104;
+pub const _CS_XBS5_ILP32_OFFBIG_LDFLAGS: _bindgen_ty_20 = 1105;
+pub const _CS_XBS5_ILP32_OFFBIG_LIBS: _bindgen_ty_20 = 1106;
+pub const _CS_XBS5_ILP32_OFFBIG_LINTFLAGS: _bindgen_ty_20 = 1107;
+pub const _CS_XBS5_LP64_OFF64_CFLAGS: _bindgen_ty_20 = 1108;
+pub const _CS_XBS5_LP64_OFF64_LDFLAGS: _bindgen_ty_20 = 1109;
+pub const _CS_XBS5_LP64_OFF64_LIBS: _bindgen_ty_20 = 1110;
+pub const _CS_XBS5_LP64_OFF64_LINTFLAGS: _bindgen_ty_20 = 1111;
+pub const _CS_XBS5_LPBIG_OFFBIG_CFLAGS: _bindgen_ty_20 = 1112;
+pub const _CS_XBS5_LPBIG_OFFBIG_LDFLAGS: _bindgen_ty_20 = 1113;
+pub const _CS_XBS5_LPBIG_OFFBIG_LIBS: _bindgen_ty_20 = 1114;
+pub const _CS_XBS5_LPBIG_OFFBIG_LINTFLAGS: _bindgen_ty_20 = 1115;
+pub const _CS_POSIX_V6_ILP32_OFF32_CFLAGS: _bindgen_ty_20 = 1116;
+pub const _CS_POSIX_V6_ILP32_OFF32_LDFLAGS: _bindgen_ty_20 = 1117;
+pub const _CS_POSIX_V6_ILP32_OFF32_LIBS: _bindgen_ty_20 = 1118;
+pub const _CS_POSIX_V6_ILP32_OFF32_LINTFLAGS: _bindgen_ty_20 = 1119;
+pub const _CS_POSIX_V6_ILP32_OFFBIG_CFLAGS: _bindgen_ty_20 = 1120;
+pub const _CS_POSIX_V6_ILP32_OFFBIG_LDFLAGS: _bindgen_ty_20 = 1121;
+pub const _CS_POSIX_V6_ILP32_OFFBIG_LIBS: _bindgen_ty_20 = 1122;
+pub const _CS_POSIX_V6_ILP32_OFFBIG_LINTFLAGS: _bindgen_ty_20 = 1123;
+pub const _CS_POSIX_V6_LP64_OFF64_CFLAGS: _bindgen_ty_20 = 1124;
+pub const _CS_POSIX_V6_LP64_OFF64_LDFLAGS: _bindgen_ty_20 = 1125;
+pub const _CS_POSIX_V6_LP64_OFF64_LIBS: _bindgen_ty_20 = 1126;
+pub const _CS_POSIX_V6_LP64_OFF64_LINTFLAGS: _bindgen_ty_20 = 1127;
+pub const _CS_POSIX_V6_LPBIG_OFFBIG_CFLAGS: _bindgen_ty_20 = 1128;
+pub const _CS_POSIX_V6_LPBIG_OFFBIG_LDFLAGS: _bindgen_ty_20 = 1129;
+pub const _CS_POSIX_V6_LPBIG_OFFBIG_LIBS: _bindgen_ty_20 = 1130;
+pub const _CS_POSIX_V6_LPBIG_OFFBIG_LINTFLAGS: _bindgen_ty_20 = 1131;
+pub const _CS_POSIX_V7_ILP32_OFF32_CFLAGS: _bindgen_ty_20 = 1132;
+pub const _CS_POSIX_V7_ILP32_OFF32_LDFLAGS: _bindgen_ty_20 = 1133;
+pub const _CS_POSIX_V7_ILP32_OFF32_LIBS: _bindgen_ty_20 = 1134;
+pub const _CS_POSIX_V7_ILP32_OFF32_LINTFLAGS: _bindgen_ty_20 = 1135;
+pub const _CS_POSIX_V7_ILP32_OFFBIG_CFLAGS: _bindgen_ty_20 = 1136;
+pub const _CS_POSIX_V7_ILP32_OFFBIG_LDFLAGS: _bindgen_ty_20 = 1137;
+pub const _CS_POSIX_V7_ILP32_OFFBIG_LIBS: _bindgen_ty_20 = 1138;
+pub const _CS_POSIX_V7_ILP32_OFFBIG_LINTFLAGS: _bindgen_ty_20 = 1139;
+pub const _CS_POSIX_V7_LP64_OFF64_CFLAGS: _bindgen_ty_20 = 1140;
+pub const _CS_POSIX_V7_LP64_OFF64_LDFLAGS: _bindgen_ty_20 = 1141;
+pub const _CS_POSIX_V7_LP64_OFF64_LIBS: _bindgen_ty_20 = 1142;
+pub const _CS_POSIX_V7_LP64_OFF64_LINTFLAGS: _bindgen_ty_20 = 1143;
+pub const _CS_POSIX_V7_LPBIG_OFFBIG_CFLAGS: _bindgen_ty_20 = 1144;
+pub const _CS_POSIX_V7_LPBIG_OFFBIG_LDFLAGS: _bindgen_ty_20 = 1145;
+pub const _CS_POSIX_V7_LPBIG_OFFBIG_LIBS: _bindgen_ty_20 = 1146;
+pub const _CS_POSIX_V7_LPBIG_OFFBIG_LINTFLAGS: _bindgen_ty_20 = 1147;
+pub const _CS_V6_ENV: _bindgen_ty_20 = 1148;
+pub const _CS_V7_ENV: _bindgen_ty_20 = 1149;
+pub type _bindgen_ty_20 = ::std::os::raw::c_uint;
+extern "C" {
+    pub fn pathconf(
+        __path: *const ::std::os::raw::c_char,
+        __name: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_long;
+}
+extern "C" {
+    pub fn fpathconf(
+        __fd: ::std::os::raw::c_int,
+        __name: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_long;
+}
+extern "C" {
+    pub fn sysconf(__name: ::std::os::raw::c_int) -> ::std::os::raw::c_long;
+}
+extern "C" {
+    pub fn confstr(
+        __name: ::std::os::raw::c_int,
+        __buf: *mut ::std::os::raw::c_char,
+        __len: usize,
+    ) -> usize;
+}
+extern "C" {
+    pub fn getpid() -> __pid_t;
+}
+extern "C" {
+    pub fn getppid() -> __pid_t;
+}
+extern "C" {
+    pub fn getpgrp() -> __pid_t;
+}
+extern "C" {
+    pub fn __getpgid(__pid: __pid_t) -> __pid_t;
+}
+extern "C" {
+    pub fn getpgid(__pid: __pid_t) -> __pid_t;
+}
+extern "C" {
+    pub fn setpgid(__pid: __pid_t, __pgid: __pid_t) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn setpgrp() -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn setsid() -> __pid_t;
+}
+extern "C" {
+    pub fn getsid(__pid: __pid_t) -> __pid_t;
+}
+extern "C" {
+    pub fn getuid() -> __uid_t;
+}
+extern "C" {
+    pub fn geteuid() -> __uid_t;
+}
+extern "C" {
+    pub fn getgid() -> __gid_t;
+}
+extern "C" {
+    pub fn getegid() -> __gid_t;
+}
+extern "C" {
+    pub fn getgroups(__size: ::std::os::raw::c_int, __list: *mut __gid_t) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn setuid(__uid: __uid_t) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn setreuid(__ruid: __uid_t, __euid: __uid_t) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn seteuid(__uid: __uid_t) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn setgid(__gid: __gid_t) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn setregid(__rgid: __gid_t, __egid: __gid_t) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn setegid(__gid: __gid_t) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn fork() -> __pid_t;
+}
+extern "C" {
+    pub fn vfork() -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn ttyname(__fd: ::std::os::raw::c_int) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn ttyname_r(
+        __fd: ::std::os::raw::c_int,
+        __buf: *mut ::std::os::raw::c_char,
+        __buflen: usize,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn isatty(__fd: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn ttyslot() -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn link(
+        __from: *const ::std::os::raw::c_char,
+        __to: *const ::std::os::raw::c_char,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn linkat(
+        __fromfd: ::std::os::raw::c_int,
+        __from: *const ::std::os::raw::c_char,
+        __tofd: ::std::os::raw::c_int,
+        __to: *const ::std::os::raw::c_char,
+        __flags: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn symlink(
+        __from: *const ::std::os::raw::c_char,
+        __to: *const ::std::os::raw::c_char,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn readlink(
+        __path: *const ::std::os::raw::c_char,
+        __buf: *mut ::std::os::raw::c_char,
+        __len: usize,
+    ) -> isize;
+}
+extern "C" {
+    pub fn symlinkat(
+        __from: *const ::std::os::raw::c_char,
+        __tofd: ::std::os::raw::c_int,
+        __to: *const ::std::os::raw::c_char,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn readlinkat(
+        __fd: ::std::os::raw::c_int,
+        __path: *const ::std::os::raw::c_char,
+        __buf: *mut ::std::os::raw::c_char,
+        __len: usize,
+    ) -> isize;
+}
+extern "C" {
+    pub fn unlink(__name: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn unlinkat(
+        __fd: ::std::os::raw::c_int,
+        __name: *const ::std::os::raw::c_char,
+        __flag: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn rmdir(__path: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn tcgetpgrp(__fd: ::std::os::raw::c_int) -> __pid_t;
+}
+extern "C" {
+    pub fn tcsetpgrp(__fd: ::std::os::raw::c_int, __pgrp_id: __pid_t) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn getlogin() -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn getlogin_r(
+        __name: *mut ::std::os::raw::c_char,
+        __name_len: usize,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn setlogin(__name: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub static mut optarg: *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub static mut optind: ::std::os::raw::c_int;
+}
+extern "C" {
+    pub static mut opterr: ::std::os::raw::c_int;
+}
+extern "C" {
+    pub static mut optopt: ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn getopt(
+        ___argc: ::std::os::raw::c_int,
+        ___argv: *const *mut ::std::os::raw::c_char,
+        __shortopts: *const ::std::os::raw::c_char,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn gethostname(__name: *mut ::std::os::raw::c_char, __len: usize) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn sethostname(
+        __name: *const ::std::os::raw::c_char,
+        __len: usize,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn sethostid(__id: ::std::os::raw::c_long) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn getdomainname(
+        __name: *mut ::std::os::raw::c_char,
+        __len: usize,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn setdomainname(
+        __name: *const ::std::os::raw::c_char,
+        __len: usize,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn vhangup() -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn revoke(__file: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn profil(
+        __sample_buffer: *mut ::std::os::raw::c_ushort,
+        __size: usize,
+        __offset: usize,
+        __scale: ::std::os::raw::c_uint,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn acct(__name: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn getusershell() -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn endusershell();
+}
+extern "C" {
+    pub fn setusershell();
+}
+extern "C" {
+    pub fn daemon(
+        __nochdir: ::std::os::raw::c_int,
+        __noclose: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn chroot(__path: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn getpass(__prompt: *const ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn fsync(__fd: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn gethostid() -> ::std::os::raw::c_long;
+}
+extern "C" {
+    pub fn sync();
+}
+extern "C" {
+    pub fn getpagesize() -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn getdtablesize() -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn truncate(
+        __file: *const ::std::os::raw::c_char,
+        __length: __off_t,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn ftruncate(__fd: ::std::os::raw::c_int, __length: __off_t) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn brk(__addr: *mut ::std::os::raw::c_void) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn sbrk(__delta: isize) -> *mut ::std::os::raw::c_void;
+}
+extern "C" {
+    pub fn syscall(__sysno: ::std::os::raw::c_long, ...) -> ::std::os::raw::c_long;
+}
+extern "C" {
+    pub fn lockf(
+        __fd: ::std::os::raw::c_int,
+        __cmd: ::std::os::raw::c_int,
+        __len: __off_t,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn fdatasync(__fildes: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn crypt(
+        __key: *const ::std::os::raw::c_char,
+        __salt: *const ::std::os::raw::c_char,
+    ) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn getentropy(
+        __buffer: *mut ::std::os::raw::c_void,
+        __length: usize,
+    ) -> ::std::os::raw::c_int;
+}
+pub type __gwchar_t = ::std::os::raw::c_int;
+#[repr(C)]
+#[derive(Debug, Default, Copy, Clone)]
+pub struct imaxdiv_t {
+    pub quot: ::std::os::raw::c_long,
+    pub rem: ::std::os::raw::c_long,
+}
+#[test]
+fn bindgen_test_layout_imaxdiv_t() {
+    const UNINIT: ::std::mem::MaybeUninit<imaxdiv_t> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<imaxdiv_t>(),
+        16usize,
+        concat!("Size of: ", stringify!(imaxdiv_t))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<imaxdiv_t>(),
+        8usize,
+        concat!("Alignment of ", stringify!(imaxdiv_t))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).quot) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(imaxdiv_t),
+            "::",
+            stringify!(quot)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).rem) as usize - ptr as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(imaxdiv_t),
+            "::",
+            stringify!(rem)
+        )
+    );
+}
+extern "C" {
+    pub fn imaxabs(__n: intmax_t) -> intmax_t;
+}
+extern "C" {
+    pub fn imaxdiv(__numer: intmax_t, __denom: intmax_t) -> imaxdiv_t;
+}
+extern "C" {
+    pub fn strtoimax(
+        __nptr: *const ::std::os::raw::c_char,
+        __endptr: *mut *mut ::std::os::raw::c_char,
+        __base: ::std::os::raw::c_int,
+    ) -> intmax_t;
+}
+extern "C" {
+    pub fn strtoumax(
+        __nptr: *const ::std::os::raw::c_char,
+        __endptr: *mut *mut ::std::os::raw::c_char,
+        __base: ::std::os::raw::c_int,
+    ) -> uintmax_t;
+}
+extern "C" {
+    pub fn wcstoimax(
+        __nptr: *const __gwchar_t,
+        __endptr: *mut *mut __gwchar_t,
+        __base: ::std::os::raw::c_int,
+    ) -> intmax_t;
+}
+extern "C" {
+    pub fn wcstoumax(
+        __nptr: *const __gwchar_t,
+        __endptr: *mut *mut __gwchar_t,
+        __base: ::std::os::raw::c_int,
+    ) -> uintmax_t;
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct iovec {
+    pub iov_base: *mut ::std::os::raw::c_void,
+    pub iov_len: usize,
+}
+#[test]
+fn bindgen_test_layout_iovec() {
+    const UNINIT: ::std::mem::MaybeUninit<iovec> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<iovec>(),
+        16usize,
+        concat!("Size of: ", stringify!(iovec))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<iovec>(),
+        8usize,
+        concat!("Alignment of ", stringify!(iovec))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).iov_base) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(iovec),
+            "::",
+            stringify!(iov_base)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).iov_len) as usize - ptr as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(iovec),
+            "::",
+            stringify!(iov_len)
+        )
+    );
+}
+impl Default for iovec {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+pub const SOCK_STREAM: __socket_type = 1;
+pub const SOCK_DGRAM: __socket_type = 2;
+pub const SOCK_RAW: __socket_type = 3;
+pub const SOCK_RDM: __socket_type = 4;
+pub const SOCK_SEQPACKET: __socket_type = 5;
+pub const SOCK_DCCP: __socket_type = 6;
+pub const SOCK_PACKET: __socket_type = 10;
+pub const SOCK_CLOEXEC: __socket_type = 524288;
+pub const SOCK_NONBLOCK: __socket_type = 2048;
+pub type __socket_type = ::std::os::raw::c_uint;
+pub type sa_family_t = ::std::os::raw::c_ushort;
+#[repr(C)]
+#[derive(Debug, Default, Copy, Clone)]
+pub struct sockaddr {
+    pub sa_family: sa_family_t,
+    pub sa_data: [::std::os::raw::c_char; 14usize],
+}
+#[test]
+fn bindgen_test_layout_sockaddr() {
+    const UNINIT: ::std::mem::MaybeUninit<sockaddr> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<sockaddr>(),
+        16usize,
+        concat!("Size of: ", stringify!(sockaddr))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<sockaddr>(),
+        2usize,
+        concat!("Alignment of ", stringify!(sockaddr))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).sa_family) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(sockaddr),
+            "::",
+            stringify!(sa_family)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).sa_data) as usize - ptr as usize },
+        2usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(sockaddr),
+            "::",
+            stringify!(sa_data)
+        )
+    );
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct sockaddr_storage {
+    pub ss_family: sa_family_t,
+    pub __ss_padding: [::std::os::raw::c_char; 118usize],
+    pub __ss_align: ::std::os::raw::c_ulong,
+}
+#[test]
+fn bindgen_test_layout_sockaddr_storage() {
+    const UNINIT: ::std::mem::MaybeUninit<sockaddr_storage> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<sockaddr_storage>(),
+        128usize,
+        concat!("Size of: ", stringify!(sockaddr_storage))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<sockaddr_storage>(),
+        8usize,
+        concat!("Alignment of ", stringify!(sockaddr_storage))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).ss_family) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(sockaddr_storage),
+            "::",
+            stringify!(ss_family)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).__ss_padding) as usize - ptr as usize },
+        2usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(sockaddr_storage),
+            "::",
+            stringify!(__ss_padding)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).__ss_align) as usize - ptr as usize },
+        120usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(sockaddr_storage),
+            "::",
+            stringify!(__ss_align)
+        )
+    );
+}
+impl Default for sockaddr_storage {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+pub const MSG_OOB: _bindgen_ty_21 = 1;
+pub const MSG_PEEK: _bindgen_ty_21 = 2;
+pub const MSG_DONTROUTE: _bindgen_ty_21 = 4;
+pub const MSG_CTRUNC: _bindgen_ty_21 = 8;
+pub const MSG_PROXY: _bindgen_ty_21 = 16;
+pub const MSG_TRUNC: _bindgen_ty_21 = 32;
+pub const MSG_DONTWAIT: _bindgen_ty_21 = 64;
+pub const MSG_EOR: _bindgen_ty_21 = 128;
+pub const MSG_WAITALL: _bindgen_ty_21 = 256;
+pub const MSG_FIN: _bindgen_ty_21 = 512;
+pub const MSG_SYN: _bindgen_ty_21 = 1024;
+pub const MSG_CONFIRM: _bindgen_ty_21 = 2048;
+pub const MSG_RST: _bindgen_ty_21 = 4096;
+pub const MSG_ERRQUEUE: _bindgen_ty_21 = 8192;
+pub const MSG_NOSIGNAL: _bindgen_ty_21 = 16384;
+pub const MSG_MORE: _bindgen_ty_21 = 32768;
+pub const MSG_WAITFORONE: _bindgen_ty_21 = 65536;
+pub const MSG_BATCH: _bindgen_ty_21 = 262144;
+pub const MSG_ZEROCOPY: _bindgen_ty_21 = 67108864;
+pub const MSG_FASTOPEN: _bindgen_ty_21 = 536870912;
+pub const MSG_CMSG_CLOEXEC: _bindgen_ty_21 = 1073741824;
+pub type _bindgen_ty_21 = ::std::os::raw::c_uint;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct msghdr {
+    pub msg_name: *mut ::std::os::raw::c_void,
+    pub msg_namelen: socklen_t,
+    pub msg_iov: *mut iovec,
+    pub msg_iovlen: usize,
+    pub msg_control: *mut ::std::os::raw::c_void,
+    pub msg_controllen: usize,
+    pub msg_flags: ::std::os::raw::c_int,
+}
+#[test]
+fn bindgen_test_layout_msghdr() {
+    const UNINIT: ::std::mem::MaybeUninit<msghdr> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<msghdr>(),
+        56usize,
+        concat!("Size of: ", stringify!(msghdr))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<msghdr>(),
+        8usize,
+        concat!("Alignment of ", stringify!(msghdr))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).msg_name) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(msghdr),
+            "::",
+            stringify!(msg_name)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).msg_namelen) as usize - ptr as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(msghdr),
+            "::",
+            stringify!(msg_namelen)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).msg_iov) as usize - ptr as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(msghdr),
+            "::",
+            stringify!(msg_iov)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).msg_iovlen) as usize - ptr as usize },
+        24usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(msghdr),
+            "::",
+            stringify!(msg_iovlen)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).msg_control) as usize - ptr as usize },
+        32usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(msghdr),
+            "::",
+            stringify!(msg_control)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).msg_controllen) as usize - ptr as usize },
+        40usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(msghdr),
+            "::",
+            stringify!(msg_controllen)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).msg_flags) as usize - ptr as usize },
+        48usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(msghdr),
+            "::",
+            stringify!(msg_flags)
+        )
+    );
+}
+impl Default for msghdr {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+#[repr(C)]
+#[derive(Debug, Default)]
+pub struct cmsghdr {
+    pub cmsg_len: usize,
+    pub cmsg_level: ::std::os::raw::c_int,
+    pub cmsg_type: ::std::os::raw::c_int,
+    pub __cmsg_data: __IncompleteArrayField<::std::os::raw::c_uchar>,
+}
+#[test]
+fn bindgen_test_layout_cmsghdr() {
+    const UNINIT: ::std::mem::MaybeUninit<cmsghdr> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<cmsghdr>(),
+        16usize,
+        concat!("Size of: ", stringify!(cmsghdr))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<cmsghdr>(),
+        8usize,
+        concat!("Alignment of ", stringify!(cmsghdr))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).cmsg_len) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(cmsghdr),
+            "::",
+            stringify!(cmsg_len)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).cmsg_level) as usize - ptr as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(cmsghdr),
+            "::",
+            stringify!(cmsg_level)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).cmsg_type) as usize - ptr as usize },
+        12usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(cmsghdr),
+            "::",
+            stringify!(cmsg_type)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).__cmsg_data) as usize - ptr as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(cmsghdr),
+            "::",
+            stringify!(__cmsg_data)
+        )
+    );
+}
+extern "C" {
+    pub fn __cmsg_nxthdr(__mhdr: *mut msghdr, __cmsg: *mut cmsghdr) -> *mut cmsghdr;
+}
+pub const SCM_RIGHTS: _bindgen_ty_22 = 1;
+pub type _bindgen_ty_22 = ::std::os::raw::c_uint;
+#[repr(C)]
+#[derive(Debug, Default, Copy, Clone)]
+pub struct linger {
+    pub l_onoff: ::std::os::raw::c_int,
+    pub l_linger: ::std::os::raw::c_int,
+}
+#[test]
+fn bindgen_test_layout_linger() {
+    const UNINIT: ::std::mem::MaybeUninit<linger> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<linger>(),
+        8usize,
+        concat!("Size of: ", stringify!(linger))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<linger>(),
+        4usize,
+        concat!("Alignment of ", stringify!(linger))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).l_onoff) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(linger),
+            "::",
+            stringify!(l_onoff)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).l_linger) as usize - ptr as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(linger),
+            "::",
+            stringify!(l_linger)
+        )
+    );
+}
+#[repr(C)]
+#[derive(Debug, Default, Copy, Clone)]
+pub struct osockaddr {
+    pub sa_family: ::std::os::raw::c_ushort,
+    pub sa_data: [::std::os::raw::c_uchar; 14usize],
+}
+#[test]
+fn bindgen_test_layout_osockaddr() {
+    const UNINIT: ::std::mem::MaybeUninit<osockaddr> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<osockaddr>(),
+        16usize,
+        concat!("Size of: ", stringify!(osockaddr))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<osockaddr>(),
+        2usize,
+        concat!("Alignment of ", stringify!(osockaddr))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).sa_family) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(osockaddr),
+            "::",
+            stringify!(sa_family)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).sa_data) as usize - ptr as usize },
+        2usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(osockaddr),
+            "::",
+            stringify!(sa_data)
+        )
+    );
+}
+pub const SHUT_RD: _bindgen_ty_23 = 0;
+pub const SHUT_WR: _bindgen_ty_23 = 1;
+pub const SHUT_RDWR: _bindgen_ty_23 = 2;
+pub type _bindgen_ty_23 = ::std::os::raw::c_uint;
+extern "C" {
+    pub fn socket(
+        __domain: ::std::os::raw::c_int,
+        __type: ::std::os::raw::c_int,
+        __protocol: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn socketpair(
+        __domain: ::std::os::raw::c_int,
+        __type: ::std::os::raw::c_int,
+        __protocol: ::std::os::raw::c_int,
+        __fds: *mut ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn bind(
+        __fd: ::std::os::raw::c_int,
+        __addr: *const sockaddr,
+        __len: socklen_t,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn getsockname(
+        __fd: ::std::os::raw::c_int,
+        __addr: *mut sockaddr,
+        __len: *mut socklen_t,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn connect(
+        __fd: ::std::os::raw::c_int,
+        __addr: *const sockaddr,
+        __len: socklen_t,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn getpeername(
+        __fd: ::std::os::raw::c_int,
+        __addr: *mut sockaddr,
+        __len: *mut socklen_t,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn send(
+        __fd: ::std::os::raw::c_int,
+        __buf: *const ::std::os::raw::c_void,
+        __n: usize,
+        __flags: ::std::os::raw::c_int,
+    ) -> isize;
+}
+extern "C" {
+    pub fn recv(
+        __fd: ::std::os::raw::c_int,
+        __buf: *mut ::std::os::raw::c_void,
+        __n: usize,
+        __flags: ::std::os::raw::c_int,
+    ) -> isize;
+}
+extern "C" {
+    pub fn sendto(
+        __fd: ::std::os::raw::c_int,
+        __buf: *const ::std::os::raw::c_void,
+        __n: usize,
+        __flags: ::std::os::raw::c_int,
+        __addr: *const sockaddr,
+        __addr_len: socklen_t,
+    ) -> isize;
+}
+extern "C" {
+    pub fn recvfrom(
+        __fd: ::std::os::raw::c_int,
+        __buf: *mut ::std::os::raw::c_void,
+        __n: usize,
+        __flags: ::std::os::raw::c_int,
+        __addr: *mut sockaddr,
+        __addr_len: *mut socklen_t,
+    ) -> isize;
+}
+extern "C" {
+    pub fn sendmsg(
+        __fd: ::std::os::raw::c_int,
+        __message: *const msghdr,
+        __flags: ::std::os::raw::c_int,
+    ) -> isize;
+}
+extern "C" {
+    pub fn recvmsg(
+        __fd: ::std::os::raw::c_int,
+        __message: *mut msghdr,
+        __flags: ::std::os::raw::c_int,
+    ) -> isize;
+}
+extern "C" {
+    pub fn getsockopt(
+        __fd: ::std::os::raw::c_int,
+        __level: ::std::os::raw::c_int,
+        __optname: ::std::os::raw::c_int,
+        __optval: *mut ::std::os::raw::c_void,
+        __optlen: *mut socklen_t,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn setsockopt(
+        __fd: ::std::os::raw::c_int,
+        __level: ::std::os::raw::c_int,
+        __optname: ::std::os::raw::c_int,
+        __optval: *const ::std::os::raw::c_void,
+        __optlen: socklen_t,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn listen(__fd: ::std::os::raw::c_int, __n: ::std::os::raw::c_int)
+        -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn accept(
+        __fd: ::std::os::raw::c_int,
+        __addr: *mut sockaddr,
+        __addr_len: *mut socklen_t,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn shutdown(
+        __fd: ::std::os::raw::c_int,
+        __how: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn sockatmark(__fd: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn isfdtype(
+        __fd: ::std::os::raw::c_int,
+        __fdtype: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
+}
+pub type in_addr_t = u32;
+#[repr(C)]
+#[derive(Debug, Default, Copy, Clone)]
+pub struct in_addr {
+    pub s_addr: in_addr_t,
+}
+#[test]
+fn bindgen_test_layout_in_addr() {
+    const UNINIT: ::std::mem::MaybeUninit<in_addr> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<in_addr>(),
+        4usize,
+        concat!("Size of: ", stringify!(in_addr))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<in_addr>(),
+        4usize,
+        concat!("Alignment of ", stringify!(in_addr))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).s_addr) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(in_addr),
+            "::",
+            stringify!(s_addr)
+        )
+    );
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct ip_opts {
+    pub ip_dst: in_addr,
+    pub ip_opts: [::std::os::raw::c_char; 40usize],
+}
+#[test]
+fn bindgen_test_layout_ip_opts() {
+    const UNINIT: ::std::mem::MaybeUninit<ip_opts> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<ip_opts>(),
+        44usize,
+        concat!("Size of: ", stringify!(ip_opts))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<ip_opts>(),
+        4usize,
+        concat!("Alignment of ", stringify!(ip_opts))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).ip_dst) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ip_opts),
+            "::",
+            stringify!(ip_dst)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).ip_opts) as usize - ptr as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ip_opts),
+            "::",
+            stringify!(ip_opts)
+        )
+    );
+}
+impl Default for ip_opts {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+#[repr(C)]
+#[derive(Debug, Default, Copy, Clone)]
+pub struct ip_mreqn {
+    pub imr_multiaddr: in_addr,
+    pub imr_address: in_addr,
+    pub imr_ifindex: ::std::os::raw::c_int,
+}
+#[test]
+fn bindgen_test_layout_ip_mreqn() {
+    const UNINIT: ::std::mem::MaybeUninit<ip_mreqn> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<ip_mreqn>(),
+        12usize,
+        concat!("Size of: ", stringify!(ip_mreqn))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<ip_mreqn>(),
+        4usize,
+        concat!("Alignment of ", stringify!(ip_mreqn))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).imr_multiaddr) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ip_mreqn),
+            "::",
+            stringify!(imr_multiaddr)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).imr_address) as usize - ptr as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ip_mreqn),
+            "::",
+            stringify!(imr_address)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).imr_ifindex) as usize - ptr as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ip_mreqn),
+            "::",
+            stringify!(imr_ifindex)
+        )
+    );
+}
+#[repr(C)]
+#[derive(Debug, Default, Copy, Clone)]
+pub struct in_pktinfo {
+    pub ipi_ifindex: ::std::os::raw::c_int,
+    pub ipi_spec_dst: in_addr,
+    pub ipi_addr: in_addr,
+}
+#[test]
+fn bindgen_test_layout_in_pktinfo() {
+    const UNINIT: ::std::mem::MaybeUninit<in_pktinfo> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<in_pktinfo>(),
+        12usize,
+        concat!("Size of: ", stringify!(in_pktinfo))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<in_pktinfo>(),
+        4usize,
+        concat!("Alignment of ", stringify!(in_pktinfo))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).ipi_ifindex) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(in_pktinfo),
+            "::",
+            stringify!(ipi_ifindex)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).ipi_spec_dst) as usize - ptr as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(in_pktinfo),
+            "::",
+            stringify!(ipi_spec_dst)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).ipi_addr) as usize - ptr as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(in_pktinfo),
+            "::",
+            stringify!(ipi_addr)
+        )
+    );
+}
+pub const IPPROTO_IP: _bindgen_ty_24 = 0;
+pub const IPPROTO_ICMP: _bindgen_ty_24 = 1;
+pub const IPPROTO_IGMP: _bindgen_ty_24 = 2;
+pub const IPPROTO_IPIP: _bindgen_ty_24 = 4;
+pub const IPPROTO_TCP: _bindgen_ty_24 = 6;
+pub const IPPROTO_EGP: _bindgen_ty_24 = 8;
+pub const IPPROTO_PUP: _bindgen_ty_24 = 12;
+pub const IPPROTO_UDP: _bindgen_ty_24 = 17;
+pub const IPPROTO_IDP: _bindgen_ty_24 = 22;
+pub const IPPROTO_TP: _bindgen_ty_24 = 29;
+pub const IPPROTO_DCCP: _bindgen_ty_24 = 33;
+pub const IPPROTO_IPV6: _bindgen_ty_24 = 41;
+pub const IPPROTO_RSVP: _bindgen_ty_24 = 46;
+pub const IPPROTO_GRE: _bindgen_ty_24 = 47;
+pub const IPPROTO_ESP: _bindgen_ty_24 = 50;
+pub const IPPROTO_AH: _bindgen_ty_24 = 51;
+pub const IPPROTO_MTP: _bindgen_ty_24 = 92;
+pub const IPPROTO_BEETPH: _bindgen_ty_24 = 94;
+pub const IPPROTO_ENCAP: _bindgen_ty_24 = 98;
+pub const IPPROTO_PIM: _bindgen_ty_24 = 103;
+pub const IPPROTO_COMP: _bindgen_ty_24 = 108;
+pub const IPPROTO_SCTP: _bindgen_ty_24 = 132;
+pub const IPPROTO_UDPLITE: _bindgen_ty_24 = 136;
+pub const IPPROTO_MPLS: _bindgen_ty_24 = 137;
+pub const IPPROTO_ETHERNET: _bindgen_ty_24 = 143;
+pub const IPPROTO_RAW: _bindgen_ty_24 = 255;
+pub const IPPROTO_MPTCP: _bindgen_ty_24 = 262;
+pub const IPPROTO_MAX: _bindgen_ty_24 = 263;
+pub type _bindgen_ty_24 = ::std::os::raw::c_uint;
+pub const IPPROTO_HOPOPTS: _bindgen_ty_25 = 0;
+pub const IPPROTO_ROUTING: _bindgen_ty_25 = 43;
+pub const IPPROTO_FRAGMENT: _bindgen_ty_25 = 44;
+pub const IPPROTO_ICMPV6: _bindgen_ty_25 = 58;
+pub const IPPROTO_NONE: _bindgen_ty_25 = 59;
+pub const IPPROTO_DSTOPTS: _bindgen_ty_25 = 60;
+pub const IPPROTO_MH: _bindgen_ty_25 = 135;
+pub type _bindgen_ty_25 = ::std::os::raw::c_uint;
+pub type in_port_t = u16;
+pub const IPPORT_ECHO: _bindgen_ty_26 = 7;
+pub const IPPORT_DISCARD: _bindgen_ty_26 = 9;
+pub const IPPORT_SYSTAT: _bindgen_ty_26 = 11;
+pub const IPPORT_DAYTIME: _bindgen_ty_26 = 13;
+pub const IPPORT_NETSTAT: _bindgen_ty_26 = 15;
+pub const IPPORT_FTP: _bindgen_ty_26 = 21;
+pub const IPPORT_TELNET: _bindgen_ty_26 = 23;
+pub const IPPORT_SMTP: _bindgen_ty_26 = 25;
+pub const IPPORT_TIMESERVER: _bindgen_ty_26 = 37;
+pub const IPPORT_NAMESERVER: _bindgen_ty_26 = 42;
+pub const IPPORT_WHOIS: _bindgen_ty_26 = 43;
+pub const IPPORT_MTP: _bindgen_ty_26 = 57;
+pub const IPPORT_TFTP: _bindgen_ty_26 = 69;
+pub const IPPORT_RJE: _bindgen_ty_26 = 77;
+pub const IPPORT_FINGER: _bindgen_ty_26 = 79;
+pub const IPPORT_TTYLINK: _bindgen_ty_26 = 87;
+pub const IPPORT_SUPDUP: _bindgen_ty_26 = 95;
+pub const IPPORT_EXECSERVER: _bindgen_ty_26 = 512;
+pub const IPPORT_LOGINSERVER: _bindgen_ty_26 = 513;
+pub const IPPORT_CMDSERVER: _bindgen_ty_26 = 514;
+pub const IPPORT_EFSSERVER: _bindgen_ty_26 = 520;
+pub const IPPORT_BIFFUDP: _bindgen_ty_26 = 512;
+pub const IPPORT_WHOSERVER: _bindgen_ty_26 = 513;
+pub const IPPORT_ROUTESERVER: _bindgen_ty_26 = 520;
+pub const IPPORT_RESERVED: _bindgen_ty_26 = 1024;
+pub const IPPORT_USERRESERVED: _bindgen_ty_26 = 5000;
+pub type _bindgen_ty_26 = ::std::os::raw::c_uint;
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub struct in6_addr {
+    pub __in6_u: in6_addr__bindgen_ty_1,
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union in6_addr__bindgen_ty_1 {
+    pub __u6_addr8: [u8; 16usize],
+    pub __u6_addr16: [u16; 8usize],
+    pub __u6_addr32: [u32; 4usize],
+}
+#[test]
+fn bindgen_test_layout_in6_addr__bindgen_ty_1() {
+    const UNINIT: ::std::mem::MaybeUninit<in6_addr__bindgen_ty_1> =
+        ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<in6_addr__bindgen_ty_1>(),
+        16usize,
+        concat!("Size of: ", stringify!(in6_addr__bindgen_ty_1))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<in6_addr__bindgen_ty_1>(),
+        4usize,
+        concat!("Alignment of ", stringify!(in6_addr__bindgen_ty_1))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).__u6_addr8) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(in6_addr__bindgen_ty_1),
+            "::",
+            stringify!(__u6_addr8)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).__u6_addr16) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(in6_addr__bindgen_ty_1),
+            "::",
+            stringify!(__u6_addr16)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).__u6_addr32) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(in6_addr__bindgen_ty_1),
+            "::",
+            stringify!(__u6_addr32)
+        )
+    );
+}
+impl Default for in6_addr__bindgen_ty_1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+#[test]
+fn bindgen_test_layout_in6_addr() {
+    const UNINIT: ::std::mem::MaybeUninit<in6_addr> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<in6_addr>(),
+        16usize,
+        concat!("Size of: ", stringify!(in6_addr))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<in6_addr>(),
+        4usize,
+        concat!("Alignment of ", stringify!(in6_addr))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).__in6_u) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(in6_addr),
+            "::",
+            stringify!(__in6_u)
+        )
+    );
+}
+impl Default for in6_addr {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+extern "C" {
+    pub static in6addr_any: in6_addr;
+}
+extern "C" {
+    pub static in6addr_loopback: in6_addr;
+}
+#[repr(C)]
+#[derive(Debug, Default, Copy, Clone)]
+pub struct sockaddr_in {
+    pub sin_family: sa_family_t,
+    pub sin_port: in_port_t,
+    pub sin_addr: in_addr,
+    pub sin_zero: [::std::os::raw::c_uchar; 8usize],
+}
+#[test]
+fn bindgen_test_layout_sockaddr_in() {
+    const UNINIT: ::std::mem::MaybeUninit<sockaddr_in> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<sockaddr_in>(),
+        16usize,
+        concat!("Size of: ", stringify!(sockaddr_in))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<sockaddr_in>(),
+        4usize,
+        concat!("Alignment of ", stringify!(sockaddr_in))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).sin_family) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(sockaddr_in),
+            "::",
+            stringify!(sin_family)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).sin_port) as usize - ptr as usize },
+        2usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(sockaddr_in),
+            "::",
+            stringify!(sin_port)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).sin_addr) as usize - ptr as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(sockaddr_in),
+            "::",
+            stringify!(sin_addr)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).sin_zero) as usize - ptr as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(sockaddr_in),
+            "::",
+            stringify!(sin_zero)
+        )
+    );
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub struct sockaddr_in6 {
+    pub sin6_family: sa_family_t,
+    pub sin6_port: in_port_t,
+    pub sin6_flowinfo: u32,
+    pub sin6_addr: in6_addr,
+    pub sin6_scope_id: u32,
+}
+#[test]
+fn bindgen_test_layout_sockaddr_in6() {
+    const UNINIT: ::std::mem::MaybeUninit<sockaddr_in6> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<sockaddr_in6>(),
+        28usize,
+        concat!("Size of: ", stringify!(sockaddr_in6))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<sockaddr_in6>(),
+        4usize,
+        concat!("Alignment of ", stringify!(sockaddr_in6))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).sin6_family) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(sockaddr_in6),
+            "::",
+            stringify!(sin6_family)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).sin6_port) as usize - ptr as usize },
+        2usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(sockaddr_in6),
+            "::",
+            stringify!(sin6_port)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).sin6_flowinfo) as usize - ptr as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(sockaddr_in6),
+            "::",
+            stringify!(sin6_flowinfo)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).sin6_addr) as usize - ptr as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(sockaddr_in6),
+            "::",
+            stringify!(sin6_addr)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).sin6_scope_id) as usize - ptr as usize },
+        24usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(sockaddr_in6),
+            "::",
+            stringify!(sin6_scope_id)
+        )
+    );
+}
+impl Default for sockaddr_in6 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+#[repr(C)]
+#[derive(Debug, Default, Copy, Clone)]
+pub struct ip_mreq {
+    pub imr_multiaddr: in_addr,
+    pub imr_interface: in_addr,
+}
+#[test]
+fn bindgen_test_layout_ip_mreq() {
+    const UNINIT: ::std::mem::MaybeUninit<ip_mreq> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<ip_mreq>(),
+        8usize,
+        concat!("Size of: ", stringify!(ip_mreq))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<ip_mreq>(),
+        4usize,
+        concat!("Alignment of ", stringify!(ip_mreq))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).imr_multiaddr) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ip_mreq),
+            "::",
+            stringify!(imr_multiaddr)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).imr_interface) as usize - ptr as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ip_mreq),
+            "::",
+            stringify!(imr_interface)
+        )
+    );
+}
+#[repr(C)]
+#[derive(Debug, Default, Copy, Clone)]
+pub struct ip_mreq_source {
+    pub imr_multiaddr: in_addr,
+    pub imr_interface: in_addr,
+    pub imr_sourceaddr: in_addr,
+}
+#[test]
+fn bindgen_test_layout_ip_mreq_source() {
+    const UNINIT: ::std::mem::MaybeUninit<ip_mreq_source> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<ip_mreq_source>(),
+        12usize,
+        concat!("Size of: ", stringify!(ip_mreq_source))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<ip_mreq_source>(),
+        4usize,
+        concat!("Alignment of ", stringify!(ip_mreq_source))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).imr_multiaddr) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ip_mreq_source),
+            "::",
+            stringify!(imr_multiaddr)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).imr_interface) as usize - ptr as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ip_mreq_source),
+            "::",
+            stringify!(imr_interface)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).imr_sourceaddr) as usize - ptr as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ip_mreq_source),
+            "::",
+            stringify!(imr_sourceaddr)
+        )
+    );
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub struct ipv6_mreq {
+    pub ipv6mr_multiaddr: in6_addr,
+    pub ipv6mr_interface: ::std::os::raw::c_uint,
+}
+#[test]
+fn bindgen_test_layout_ipv6_mreq() {
+    const UNINIT: ::std::mem::MaybeUninit<ipv6_mreq> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<ipv6_mreq>(),
+        20usize,
+        concat!("Size of: ", stringify!(ipv6_mreq))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<ipv6_mreq>(),
+        4usize,
+        concat!("Alignment of ", stringify!(ipv6_mreq))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).ipv6mr_multiaddr) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ipv6_mreq),
+            "::",
+            stringify!(ipv6mr_multiaddr)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).ipv6mr_interface) as usize - ptr as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ipv6_mreq),
+            "::",
+            stringify!(ipv6mr_interface)
+        )
+    );
+}
+impl Default for ipv6_mreq {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct group_req {
+    pub gr_interface: u32,
+    pub gr_group: sockaddr_storage,
+}
+#[test]
+fn bindgen_test_layout_group_req() {
+    const UNINIT: ::std::mem::MaybeUninit<group_req> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<group_req>(),
+        136usize,
+        concat!("Size of: ", stringify!(group_req))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<group_req>(),
+        8usize,
+        concat!("Alignment of ", stringify!(group_req))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).gr_interface) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(group_req),
+            "::",
+            stringify!(gr_interface)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).gr_group) as usize - ptr as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(group_req),
+            "::",
+            stringify!(gr_group)
+        )
+    );
+}
+impl Default for group_req {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct group_source_req {
+    pub gsr_interface: u32,
+    pub gsr_group: sockaddr_storage,
+    pub gsr_source: sockaddr_storage,
+}
+#[test]
+fn bindgen_test_layout_group_source_req() {
+    const UNINIT: ::std::mem::MaybeUninit<group_source_req> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<group_source_req>(),
+        264usize,
+        concat!("Size of: ", stringify!(group_source_req))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<group_source_req>(),
+        8usize,
+        concat!("Alignment of ", stringify!(group_source_req))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).gsr_interface) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(group_source_req),
+            "::",
+            stringify!(gsr_interface)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).gsr_group) as usize - ptr as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(group_source_req),
+            "::",
+            stringify!(gsr_group)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).gsr_source) as usize - ptr as usize },
+        136usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(group_source_req),
+            "::",
+            stringify!(gsr_source)
+        )
+    );
+}
+impl Default for group_source_req {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+#[repr(C)]
+#[derive(Debug, Default, Copy, Clone)]
+pub struct ip_msfilter {
+    pub imsf_multiaddr: in_addr,
+    pub imsf_interface: in_addr,
+    pub imsf_fmode: u32,
+    pub imsf_numsrc: u32,
+    pub imsf_slist: [in_addr; 1usize],
+}
+#[test]
+fn bindgen_test_layout_ip_msfilter() {
+    const UNINIT: ::std::mem::MaybeUninit<ip_msfilter> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<ip_msfilter>(),
+        20usize,
+        concat!("Size of: ", stringify!(ip_msfilter))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<ip_msfilter>(),
+        4usize,
+        concat!("Alignment of ", stringify!(ip_msfilter))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).imsf_multiaddr) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ip_msfilter),
+            "::",
+            stringify!(imsf_multiaddr)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).imsf_interface) as usize - ptr as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ip_msfilter),
+            "::",
+            stringify!(imsf_interface)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).imsf_fmode) as usize - ptr as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ip_msfilter),
+            "::",
+            stringify!(imsf_fmode)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).imsf_numsrc) as usize - ptr as usize },
+        12usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ip_msfilter),
+            "::",
+            stringify!(imsf_numsrc)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).imsf_slist) as usize - ptr as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ip_msfilter),
+            "::",
+            stringify!(imsf_slist)
+        )
+    );
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct group_filter {
+    pub gf_interface: u32,
+    pub gf_group: sockaddr_storage,
+    pub gf_fmode: u32,
+    pub gf_numsrc: u32,
+    pub gf_slist: [sockaddr_storage; 1usize],
+}
+#[test]
+fn bindgen_test_layout_group_filter() {
+    const UNINIT: ::std::mem::MaybeUninit<group_filter> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<group_filter>(),
+        272usize,
+        concat!("Size of: ", stringify!(group_filter))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<group_filter>(),
+        8usize,
+        concat!("Alignment of ", stringify!(group_filter))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).gf_interface) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(group_filter),
+            "::",
+            stringify!(gf_interface)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).gf_group) as usize - ptr as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(group_filter),
+            "::",
+            stringify!(gf_group)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).gf_fmode) as usize - ptr as usize },
+        136usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(group_filter),
+            "::",
+            stringify!(gf_fmode)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).gf_numsrc) as usize - ptr as usize },
+        140usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(group_filter),
+            "::",
+            stringify!(gf_numsrc)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).gf_slist) as usize - ptr as usize },
+        144usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(group_filter),
+            "::",
+            stringify!(gf_slist)
+        )
+    );
+}
+impl Default for group_filter {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+extern "C" {
+    pub fn ntohl(__netlong: u32) -> u32;
+}
+extern "C" {
+    pub fn ntohs(__netshort: u16) -> u16;
+}
+extern "C" {
+    pub fn htonl(__hostlong: u32) -> u32;
+}
+extern "C" {
+    pub fn htons(__hostshort: u16) -> u16;
+}
+extern "C" {
+    pub fn bindresvport(
+        __sockfd: ::std::os::raw::c_int,
+        __sock_in: *mut sockaddr_in,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn bindresvport6(
+        __sockfd: ::std::os::raw::c_int,
+        __sock_in: *mut sockaddr_in6,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn inet_addr(__cp: *const ::std::os::raw::c_char) -> in_addr_t;
+}
+extern "C" {
+    pub fn inet_lnaof(__in: in_addr) -> in_addr_t;
+}
+extern "C" {
+    pub fn inet_makeaddr(__net: in_addr_t, __host: in_addr_t) -> in_addr;
+}
+extern "C" {
+    pub fn inet_netof(__in: in_addr) -> in_addr_t;
+}
+extern "C" {
+    pub fn inet_network(__cp: *const ::std::os::raw::c_char) -> in_addr_t;
+}
+extern "C" {
+    pub fn inet_ntoa(__in: in_addr) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn inet_pton(
+        __af: ::std::os::raw::c_int,
+        __cp: *const ::std::os::raw::c_char,
+        __buf: *mut ::std::os::raw::c_void,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn inet_ntop(
+        __af: ::std::os::raw::c_int,
+        __cp: *const ::std::os::raw::c_void,
+        __buf: *mut ::std::os::raw::c_char,
+        __len: socklen_t,
+    ) -> *const ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn inet_aton(
+        __cp: *const ::std::os::raw::c_char,
+        __inp: *mut in_addr,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn inet_neta(
+        __net: in_addr_t,
+        __buf: *mut ::std::os::raw::c_char,
+        __len: usize,
+    ) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn inet_net_ntop(
+        __af: ::std::os::raw::c_int,
+        __cp: *const ::std::os::raw::c_void,
+        __bits: ::std::os::raw::c_int,
+        __buf: *mut ::std::os::raw::c_char,
+        __len: usize,
+    ) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn inet_net_pton(
+        __af: ::std::os::raw::c_int,
+        __cp: *const ::std::os::raw::c_char,
+        __buf: *mut ::std::os::raw::c_void,
+        __len: usize,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn inet_nsap_addr(
+        __cp: *const ::std::os::raw::c_char,
+        __buf: *mut ::std::os::raw::c_uchar,
+        __len: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_uint;
+}
+extern "C" {
+    pub fn inet_nsap_ntoa(
+        __len: ::std::os::raw::c_int,
+        __cp: *const ::std::os::raw::c_uchar,
+        __buf: *mut ::std::os::raw::c_char,
+    ) -> *mut ::std::os::raw::c_char;
+}
+pub const IB_SMI_CLASS: MAD_CLASSES = 1;
+pub const IB_SMI_DIRECT_CLASS: MAD_CLASSES = 129;
+pub const IB_SA_CLASS: MAD_CLASSES = 3;
+pub const IB_PERFORMANCE_CLASS: MAD_CLASSES = 4;
+pub const IB_BOARD_MGMT_CLASS: MAD_CLASSES = 5;
+pub const IB_DEVICE_MGMT_CLASS: MAD_CLASSES = 6;
+pub const IB_CM_CLASS: MAD_CLASSES = 7;
+pub const IB_SNMP_CLASS: MAD_CLASSES = 8;
+pub const IB_VENDOR_RANGE1_START_CLASS: MAD_CLASSES = 9;
+pub const IB_VENDOR_RANGE1_END_CLASS: MAD_CLASSES = 15;
+pub const IB_CC_CLASS: MAD_CLASSES = 33;
+pub const IB_VENDOR_RANGE2_START_CLASS: MAD_CLASSES = 48;
+pub const IB_VENDOR_RANGE2_END_CLASS: MAD_CLASSES = 79;
+pub type MAD_CLASSES = ::std::os::raw::c_uint;
+pub const IB_MAD_METHOD_GET: MAD_METHODS = 1;
+pub const IB_MAD_METHOD_SET: MAD_METHODS = 2;
+pub const IB_MAD_METHOD_GET_RESPONSE: MAD_METHODS = 129;
+pub const IB_MAD_METHOD_SEND: MAD_METHODS = 3;
+pub const IB_MAD_METHOD_TRAP: MAD_METHODS = 5;
+pub const IB_MAD_METHOD_TRAP_REPRESS: MAD_METHODS = 7;
+pub const IB_MAD_METHOD_REPORT: MAD_METHODS = 6;
+pub const IB_MAD_METHOD_REPORT_RESPONSE: MAD_METHODS = 134;
+pub const IB_MAD_METHOD_GET_TABLE: MAD_METHODS = 18;
+pub const IB_MAD_METHOD_GET_TABLE_RESPONSE: MAD_METHODS = 146;
+pub const IB_MAD_METHOD_GET_TRACE_TABLE: MAD_METHODS = 19;
+pub const IB_MAD_METHOD_GET_TRACE_TABLE_RESPONSE: MAD_METHODS = 147;
+pub const IB_MAD_METHOD_GETMULTI: MAD_METHODS = 20;
+pub const IB_MAD_METHOD_GETMULTI_RESPONSE: MAD_METHODS = 148;
+pub const IB_MAD_METHOD_DELETE: MAD_METHODS = 21;
+pub const IB_MAD_METHOD_DELETE_RESPONSE: MAD_METHODS = 149;
+pub const IB_MAD_RESPONSE: MAD_METHODS = 128;
+pub type MAD_METHODS = ::std::os::raw::c_uint;
+pub const CLASS_PORT_INFO: MAD_ATTR_ID = 1;
+pub const NOTICE: MAD_ATTR_ID = 2;
+pub const INFORM_INFO: MAD_ATTR_ID = 3;
+pub type MAD_ATTR_ID = ::std::os::raw::c_uint;
+pub const IB_MAD_STS_OK: MAD_STATUS = 0;
+pub const IB_MAD_STS_BUSY: MAD_STATUS = 1;
+pub const IB_MAD_STS_REDIRECT: MAD_STATUS = 2;
+pub const IB_MAD_STS_BAD_BASE_VER_OR_CLASS: MAD_STATUS = 4;
+pub const IB_MAD_STS_METHOD_NOT_SUPPORTED: MAD_STATUS = 8;
+pub const IB_MAD_STS_METHOD_ATTR_NOT_SUPPORTED: MAD_STATUS = 12;
+pub const IB_MAD_STS_INV_ATTR_VALUE: MAD_STATUS = 28;
+pub type MAD_STATUS = ::std::os::raw::c_uint;
+pub const IB_ATTR_NODE_DESC: SMI_ATTR_ID = 16;
+pub const IB_ATTR_NODE_INFO: SMI_ATTR_ID = 17;
+pub const IB_ATTR_SWITCH_INFO: SMI_ATTR_ID = 18;
+pub const IB_ATTR_GUID_INFO: SMI_ATTR_ID = 20;
+pub const IB_ATTR_PORT_INFO: SMI_ATTR_ID = 21;
+pub const IB_ATTR_PKEY_TBL: SMI_ATTR_ID = 22;
+pub const IB_ATTR_SLVL_TABLE: SMI_ATTR_ID = 23;
+pub const IB_ATTR_VL_ARBITRATION: SMI_ATTR_ID = 24;
+pub const IB_ATTR_LINEARFORWTBL: SMI_ATTR_ID = 25;
+pub const IB_ATTR_MULTICASTFORWTBL: SMI_ATTR_ID = 27;
+pub const IB_ATTR_LINKSPEEDWIDTHPAIRSTBL: SMI_ATTR_ID = 28;
+pub const IB_ATTR_VENDORMADSTBL: SMI_ATTR_ID = 29;
+pub const IB_ATTR_SMINFO: SMI_ATTR_ID = 32;
+pub const IB_ATTR_PORT_INFO_EXT: SMI_ATTR_ID = 51;
+pub const IB_ATTR_LAST: SMI_ATTR_ID = 52;
+pub const IB_ATTR_MLNX_EXT_PORT_INFO: SMI_ATTR_ID = 65424;
+pub type SMI_ATTR_ID = ::std::os::raw::c_uint;
+pub const IB_SA_ATTR_NOTICE: SA_ATTR_ID = 2;
+pub const IB_SA_ATTR_INFORMINFO: SA_ATTR_ID = 3;
+pub const IB_SA_ATTR_NODERECORD: SA_ATTR_ID = 17;
+pub const IB_SA_ATTR_PORTINFORECORD: SA_ATTR_ID = 18;
+pub const IB_SA_ATTR_SL2VLTABLERECORD: SA_ATTR_ID = 19;
+pub const IB_SA_ATTR_SWITCHINFORECORD: SA_ATTR_ID = 20;
+pub const IB_SA_ATTR_LFTRECORD: SA_ATTR_ID = 21;
+pub const IB_SA_ATTR_RFTRECORD: SA_ATTR_ID = 22;
+pub const IB_SA_ATTR_MFTRECORD: SA_ATTR_ID = 23;
+pub const IB_SA_ATTR_SMINFORECORD: SA_ATTR_ID = 24;
+pub const IB_SA_ATTR_LINKRECORD: SA_ATTR_ID = 32;
+pub const IB_SA_ATTR_GUIDINFORECORD: SA_ATTR_ID = 48;
+pub const IB_SA_ATTR_SERVICERECORD: SA_ATTR_ID = 49;
+pub const IB_SA_ATTR_PKEYTABLERECORD: SA_ATTR_ID = 51;
+pub const IB_SA_ATTR_PATHRECORD: SA_ATTR_ID = 53;
+pub const IB_SA_ATTR_VLARBTABLERECORD: SA_ATTR_ID = 54;
+pub const IB_SA_ATTR_MCRECORD: SA_ATTR_ID = 56;
+pub const IB_SA_ATTR_MULTIPATH: SA_ATTR_ID = 58;
+pub const IB_SA_ATTR_INFORMINFORECORD: SA_ATTR_ID = 243;
+pub const IB_SA_ATTR_LAST: SA_ATTR_ID = 244;
+pub type SA_ATTR_ID = ::std::os::raw::c_uint;
+pub const IB_GSI_PORT_SAMPLES_CONTROL: GSI_ATTR_ID = 16;
+pub const IB_GSI_PORT_SAMPLES_RESULT: GSI_ATTR_ID = 17;
+pub const IB_GSI_PORT_COUNTERS: GSI_ATTR_ID = 18;
+pub const IB_GSI_PORT_RCV_ERROR_DETAILS: GSI_ATTR_ID = 21;
+pub const IB_GSI_PORT_XMIT_DISCARD_DETAILS: GSI_ATTR_ID = 22;
+pub const IB_GSI_PORT_PORT_OP_RCV_COUNTERS: GSI_ATTR_ID = 23;
+pub const IB_GSI_PORT_PORT_FLOW_CTL_COUNTERS: GSI_ATTR_ID = 24;
+pub const IB_GSI_PORT_PORT_VL_OP_PACKETS: GSI_ATTR_ID = 25;
+pub const IB_GSI_PORT_PORT_VL_OP_DATA: GSI_ATTR_ID = 26;
+pub const IB_GSI_PORT_PORT_VL_XMIT_FLOW_CTL_UPDATE_ERRORS: GSI_ATTR_ID = 27;
+pub const IB_GSI_PORT_PORT_VL_XMIT_WAIT_COUNTERS: GSI_ATTR_ID = 28;
+pub const IB_GSI_PORT_COUNTERS_EXT: GSI_ATTR_ID = 29;
+pub const IB_GSI_PORT_EXT_SPEEDS_COUNTERS: GSI_ATTR_ID = 31;
+pub const IB_GSI_SW_PORT_VL_CONGESTION: GSI_ATTR_ID = 48;
+pub const IB_GSI_PORT_RCV_CON_CTRL: GSI_ATTR_ID = 49;
+pub const IB_GSI_PORT_SL_RCV_FECN: GSI_ATTR_ID = 50;
+pub const IB_GSI_PORT_SL_RCV_BECN: GSI_ATTR_ID = 51;
+pub const IB_GSI_PORT_XMIT_CON_CTRL: GSI_ATTR_ID = 52;
+pub const IB_GSI_PORT_VL_XMIT_TIME_CONG: GSI_ATTR_ID = 53;
+pub const IB_GSI_PORT_XMIT_DATA_SL: GSI_ATTR_ID = 54;
+pub const IB_GSI_PORT_RCV_DATA_SL: GSI_ATTR_ID = 55;
+pub const IB_GSI_ATTR_LAST: GSI_ATTR_ID = 56;
+pub type GSI_ATTR_ID = ::std::os::raw::c_uint;
+pub const IB_BM_ATTR_BKEYINFO: BM_ATTR_ID = 16;
+pub const IB_BM_ATTR_WRITE_VPD: BM_ATTR_ID = 32;
+pub const IB_BM_ATTR_READ_VPD: BM_ATTR_ID = 33;
+pub const IB_BM_ATTR_RESET_IBML: BM_ATTR_ID = 34;
+pub const IB_BM_ATTR_SET_MODULE_PM_CONTROL: BM_ATTR_ID = 35;
+pub const IB_BM_ATTR_GET_MODULE_PM_CONTROL: BM_ATTR_ID = 36;
+pub const IB_BM_ATTR_SET_UNIT_PM_CONTROL: BM_ATTR_ID = 37;
+pub const IB_BM_ATTR_GET_UNIT_PM_CONTROL: BM_ATTR_ID = 38;
+pub const IB_BM_ATTR_SET_IOC_PM_CONTROL: BM_ATTR_ID = 39;
+pub const IB_BM_ATTR_GET_IOC_PM_CONTROL: BM_ATTR_ID = 40;
+pub const IB_BM_ATTR_SET_MODULE_STATE: BM_ATTR_ID = 41;
+pub const IB_BM_ATTR_SET_MODULE_ATTENTION: BM_ATTR_ID = 42;
+pub const IB_BM_ATTR_GET_MODULE_STATUS: BM_ATTR_ID = 43;
+pub const IB_BM_ATTR_IB2IBML: BM_ATTR_ID = 44;
+pub const IB_BM_ATTR_IB2CME: BM_ATTR_ID = 45;
+pub const IB_BM_ATTR_IB2MME: BM_ATTR_ID = 46;
+pub const IB_BM_ATTR_OEM: BM_ATTR_ID = 47;
+pub const IB_BM_ATTR_LAST: BM_ATTR_ID = 48;
+pub type BM_ATTR_ID = ::std::os::raw::c_uint;
+pub const IB_CC_ATTR_CONGESTION_INFO: CC_ATTRI_ID = 17;
+pub const IB_CC_ATTR_CONGESTION_KEY_INFO: CC_ATTRI_ID = 18;
+pub const IB_CC_ATTR_CONGESTION_LOG: CC_ATTRI_ID = 19;
+pub const IB_CC_ATTR_SWITCH_CONGESTION_SETTING: CC_ATTRI_ID = 20;
+pub const IB_CC_ATTR_SWITCH_PORT_CONGESTION_SETTING: CC_ATTRI_ID = 21;
+pub const IB_CC_ATTR_CA_CONGESTION_SETTING: CC_ATTRI_ID = 22;
+pub const IB_CC_ATTR_CONGESTION_CONTROL_TABLE: CC_ATTRI_ID = 23;
+pub const IB_CC_ATTR_TIMESTAMP: CC_ATTRI_ID = 24;
+pub type CC_ATTRI_ID = ::std::os::raw::c_uint;
+pub type ibmad_gid_t = [u8; 16usize];
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct ib_dr_path_t {
+    pub cnt: ::std::os::raw::c_int,
+    pub p: [u8; 64usize],
+    pub drslid: u16,
+    pub drdlid: u16,
+}
+#[test]
+fn bindgen_test_layout_ib_dr_path_t() {
+    const UNINIT: ::std::mem::MaybeUninit<ib_dr_path_t> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<ib_dr_path_t>(),
+        72usize,
+        concat!("Size of: ", stringify!(ib_dr_path_t))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<ib_dr_path_t>(),
+        4usize,
+        concat!("Alignment of ", stringify!(ib_dr_path_t))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).cnt) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_dr_path_t),
+            "::",
+            stringify!(cnt)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).p) as usize - ptr as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_dr_path_t),
+            "::",
+            stringify!(p)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).drslid) as usize - ptr as usize },
+        68usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_dr_path_t),
+            "::",
+            stringify!(drslid)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).drdlid) as usize - ptr as usize },
+        70usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_dr_path_t),
+            "::",
+            stringify!(drdlid)
+        )
+    );
+}
+impl Default for ib_dr_path_t {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+#[repr(C)]
+#[derive(Debug, Default, Copy, Clone)]
+pub struct ib_attr_t {
+    pub id: ::std::os::raw::c_uint,
+    pub mod_: ::std::os::raw::c_uint,
+}
+#[test]
+fn bindgen_test_layout_ib_attr_t() {
+    const UNINIT: ::std::mem::MaybeUninit<ib_attr_t> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<ib_attr_t>(),
+        8usize,
+        concat!("Size of: ", stringify!(ib_attr_t))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<ib_attr_t>(),
+        4usize,
+        concat!("Alignment of ", stringify!(ib_attr_t))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).id) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_attr_t),
+            "::",
+            stringify!(id)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).mod_) as usize - ptr as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_attr_t),
+            "::",
+            stringify!(mod_)
+        )
+    );
+}
+#[repr(C)]
+#[derive(Debug, Default, Copy, Clone)]
+pub struct ib_rpc_t {
+    pub mgtclass: ::std::os::raw::c_int,
+    pub method: ::std::os::raw::c_int,
+    pub attr: ib_attr_t,
+    pub rstatus: u32,
+    pub dataoffs: ::std::os::raw::c_int,
+    pub datasz: ::std::os::raw::c_int,
+    pub mkey: u64,
+    pub trid: u64,
+    pub mask: u64,
+    pub recsz: ::std::os::raw::c_uint,
+    pub timeout: ::std::os::raw::c_int,
+    pub oui: u32,
+}
+#[test]
+fn bindgen_test_layout_ib_rpc_t() {
+    const UNINIT: ::std::mem::MaybeUninit<ib_rpc_t> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<ib_rpc_t>(),
+        72usize,
+        concat!("Size of: ", stringify!(ib_rpc_t))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<ib_rpc_t>(),
+        8usize,
+        concat!("Alignment of ", stringify!(ib_rpc_t))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).mgtclass) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_rpc_t),
+            "::",
+            stringify!(mgtclass)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).method) as usize - ptr as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_rpc_t),
+            "::",
+            stringify!(method)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).attr) as usize - ptr as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_rpc_t),
+            "::",
+            stringify!(attr)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).rstatus) as usize - ptr as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_rpc_t),
+            "::",
+            stringify!(rstatus)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).dataoffs) as usize - ptr as usize },
+        20usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_rpc_t),
+            "::",
+            stringify!(dataoffs)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).datasz) as usize - ptr as usize },
+        24usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_rpc_t),
+            "::",
+            stringify!(datasz)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).mkey) as usize - ptr as usize },
+        32usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_rpc_t),
+            "::",
+            stringify!(mkey)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).trid) as usize - ptr as usize },
+        40usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_rpc_t),
+            "::",
+            stringify!(trid)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).mask) as usize - ptr as usize },
+        48usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_rpc_t),
+            "::",
+            stringify!(mask)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).recsz) as usize - ptr as usize },
+        56usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_rpc_t),
+            "::",
+            stringify!(recsz)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).timeout) as usize - ptr as usize },
+        60usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_rpc_t),
+            "::",
+            stringify!(timeout)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).oui) as usize - ptr as usize },
+        64usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_rpc_t),
+            "::",
+            stringify!(oui)
+        )
+    );
+}
+#[repr(C)]
+#[derive(Debug, Default, Copy, Clone)]
+pub struct ib_rpc_v1_t {
+    pub mgtclass: ::std::os::raw::c_int,
+    pub method: ::std::os::raw::c_int,
+    pub attr: ib_attr_t,
+    pub rstatus: u32,
+    pub dataoffs: ::std::os::raw::c_int,
+    pub datasz: ::std::os::raw::c_int,
+    pub mkey: u64,
+    pub trid: u64,
+    pub mask: u64,
+    pub recsz: ::std::os::raw::c_uint,
+    pub timeout: ::std::os::raw::c_int,
+    pub oui: u32,
+    pub error: ::std::os::raw::c_int,
+}
+#[test]
+fn bindgen_test_layout_ib_rpc_v1_t() {
+    const UNINIT: ::std::mem::MaybeUninit<ib_rpc_v1_t> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<ib_rpc_v1_t>(),
+        72usize,
+        concat!("Size of: ", stringify!(ib_rpc_v1_t))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<ib_rpc_v1_t>(),
+        8usize,
+        concat!("Alignment of ", stringify!(ib_rpc_v1_t))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).mgtclass) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_rpc_v1_t),
+            "::",
+            stringify!(mgtclass)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).method) as usize - ptr as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_rpc_v1_t),
+            "::",
+            stringify!(method)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).attr) as usize - ptr as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_rpc_v1_t),
+            "::",
+            stringify!(attr)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).rstatus) as usize - ptr as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_rpc_v1_t),
+            "::",
+            stringify!(rstatus)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).dataoffs) as usize - ptr as usize },
+        20usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_rpc_v1_t),
+            "::",
+            stringify!(dataoffs)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).datasz) as usize - ptr as usize },
+        24usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_rpc_v1_t),
+            "::",
+            stringify!(datasz)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).mkey) as usize - ptr as usize },
+        32usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_rpc_v1_t),
+            "::",
+            stringify!(mkey)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).trid) as usize - ptr as usize },
+        40usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_rpc_v1_t),
+            "::",
+            stringify!(trid)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).mask) as usize - ptr as usize },
+        48usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_rpc_v1_t),
+            "::",
+            stringify!(mask)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).recsz) as usize - ptr as usize },
+        56usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_rpc_v1_t),
+            "::",
+            stringify!(recsz)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).timeout) as usize - ptr as usize },
+        60usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_rpc_v1_t),
+            "::",
+            stringify!(timeout)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).oui) as usize - ptr as usize },
+        64usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_rpc_v1_t),
+            "::",
+            stringify!(oui)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).error) as usize - ptr as usize },
+        68usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_rpc_v1_t),
+            "::",
+            stringify!(error)
+        )
+    );
+}
+#[repr(C)]
+#[derive(Debug, Default, Copy, Clone)]
+pub struct ib_rpc_cc_t {
+    pub mgtclass: ::std::os::raw::c_int,
+    pub method: ::std::os::raw::c_int,
+    pub attr: ib_attr_t,
+    pub rstatus: u32,
+    pub dataoffs: ::std::os::raw::c_int,
+    pub datasz: ::std::os::raw::c_int,
+    pub mkey: u64,
+    pub trid: u64,
+    pub mask: u64,
+    pub recsz: ::std::os::raw::c_uint,
+    pub timeout: ::std::os::raw::c_int,
+    pub oui: u32,
+    pub error: ::std::os::raw::c_int,
+    pub cckey: u64,
+}
+#[test]
+fn bindgen_test_layout_ib_rpc_cc_t() {
+    const UNINIT: ::std::mem::MaybeUninit<ib_rpc_cc_t> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<ib_rpc_cc_t>(),
+        80usize,
+        concat!("Size of: ", stringify!(ib_rpc_cc_t))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<ib_rpc_cc_t>(),
+        8usize,
+        concat!("Alignment of ", stringify!(ib_rpc_cc_t))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).mgtclass) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_rpc_cc_t),
+            "::",
+            stringify!(mgtclass)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).method) as usize - ptr as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_rpc_cc_t),
+            "::",
+            stringify!(method)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).attr) as usize - ptr as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_rpc_cc_t),
+            "::",
+            stringify!(attr)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).rstatus) as usize - ptr as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_rpc_cc_t),
+            "::",
+            stringify!(rstatus)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).dataoffs) as usize - ptr as usize },
+        20usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_rpc_cc_t),
+            "::",
+            stringify!(dataoffs)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).datasz) as usize - ptr as usize },
+        24usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_rpc_cc_t),
+            "::",
+            stringify!(datasz)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).mkey) as usize - ptr as usize },
+        32usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_rpc_cc_t),
+            "::",
+            stringify!(mkey)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).trid) as usize - ptr as usize },
+        40usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_rpc_cc_t),
+            "::",
+            stringify!(trid)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).mask) as usize - ptr as usize },
+        48usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_rpc_cc_t),
+            "::",
+            stringify!(mask)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).recsz) as usize - ptr as usize },
+        56usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_rpc_cc_t),
+            "::",
+            stringify!(recsz)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).timeout) as usize - ptr as usize },
+        60usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_rpc_cc_t),
+            "::",
+            stringify!(timeout)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).oui) as usize - ptr as usize },
+        64usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_rpc_cc_t),
+            "::",
+            stringify!(oui)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).error) as usize - ptr as usize },
+        68usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_rpc_cc_t),
+            "::",
+            stringify!(error)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).cckey) as usize - ptr as usize },
+        72usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_rpc_cc_t),
+            "::",
+            stringify!(cckey)
+        )
+    );
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct portid {
+    pub lid: ::std::os::raw::c_int,
+    pub drpath: ib_dr_path_t,
+    pub grh_present: ::std::os::raw::c_int,
+    pub gid: ibmad_gid_t,
+    pub qp: u32,
+    pub qkey: u32,
+    pub sl: u8,
+    pub pkey_idx: ::std::os::raw::c_uint,
+}
+#[test]
+fn bindgen_test_layout_portid() {
+    const UNINIT: ::std::mem::MaybeUninit<portid> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<portid>(),
+        112usize,
+        concat!("Size of: ", stringify!(portid))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<portid>(),
+        4usize,
+        concat!("Alignment of ", stringify!(portid))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).lid) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(portid),
+            "::",
+            stringify!(lid)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).drpath) as usize - ptr as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(portid),
+            "::",
+            stringify!(drpath)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).grh_present) as usize - ptr as usize },
+        76usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(portid),
+            "::",
+            stringify!(grh_present)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).gid) as usize - ptr as usize },
+        80usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(portid),
+            "::",
+            stringify!(gid)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).qp) as usize - ptr as usize },
+        96usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(portid),
+            "::",
+            stringify!(qp)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).qkey) as usize - ptr as usize },
+        100usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(portid),
+            "::",
+            stringify!(qkey)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).sl) as usize - ptr as usize },
+        104usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(portid),
+            "::",
+            stringify!(sl)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).pkey_idx) as usize - ptr as usize },
+        108usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(portid),
+            "::",
+            stringify!(pkey_idx)
+        )
+    );
+}
+impl Default for portid {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+pub type ib_portid_t = portid;
+pub type ib_mad_dump_fn = ::std::option::Option<
+    unsafe extern "C" fn(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    ),
+>;
+#[repr(C)]
+#[derive(Debug, Default, Copy, Clone)]
+pub struct ib_field {
+    pub bitoffs: ::std::os::raw::c_int,
+    pub bitlen: ::std::os::raw::c_int,
+    pub name: [::std::os::raw::c_char; 32usize],
+    pub def_dump_fn: ib_mad_dump_fn,
+}
+#[test]
+fn bindgen_test_layout_ib_field() {
+    const UNINIT: ::std::mem::MaybeUninit<ib_field> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<ib_field>(),
+        48usize,
+        concat!("Size of: ", stringify!(ib_field))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<ib_field>(),
+        8usize,
+        concat!("Alignment of ", stringify!(ib_field))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).bitoffs) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_field),
+            "::",
+            stringify!(bitoffs)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).bitlen) as usize - ptr as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_field),
+            "::",
+            stringify!(bitlen)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).name) as usize - ptr as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_field),
+            "::",
+            stringify!(name)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).def_dump_fn) as usize - ptr as usize },
+        40usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_field),
+            "::",
+            stringify!(def_dump_fn)
+        )
+    );
+}
+pub type ib_field_t = ib_field;
+pub const IB_NO_FIELD: MAD_FIELDS = 0;
+pub const IB_GID_PREFIX_F: MAD_FIELDS = 1;
+pub const IB_GID_GUID_F: MAD_FIELDS = 2;
+pub const IB_MAD_METHOD_F: MAD_FIELDS = 3;
+pub const IB_MAD_RESPONSE_F: MAD_FIELDS = 4;
+pub const IB_MAD_CLASSVER_F: MAD_FIELDS = 5;
+pub const IB_MAD_MGMTCLASS_F: MAD_FIELDS = 6;
+pub const IB_MAD_BASEVER_F: MAD_FIELDS = 7;
+pub const IB_MAD_STATUS_F: MAD_FIELDS = 8;
+pub const IB_DRSMP_HOPCNT_F: MAD_FIELDS = 9;
+pub const IB_DRSMP_HOPPTR_F: MAD_FIELDS = 10;
+pub const IB_DRSMP_STATUS_F: MAD_FIELDS = 11;
+pub const IB_DRSMP_DIRECTION_F: MAD_FIELDS = 12;
+pub const IB_MAD_TRID_F: MAD_FIELDS = 13;
+pub const IB_MAD_ATTRID_F: MAD_FIELDS = 14;
+pub const IB_MAD_ATTRMOD_F: MAD_FIELDS = 15;
+pub const IB_MAD_MKEY_F: MAD_FIELDS = 16;
+pub const IB_DRSMP_DRDLID_F: MAD_FIELDS = 17;
+pub const IB_DRSMP_DRSLID_F: MAD_FIELDS = 18;
+pub const IB_SA_MKEY_F: MAD_FIELDS = 19;
+pub const IB_SA_ATTROFFS_F: MAD_FIELDS = 20;
+pub const IB_SA_COMPMASK_F: MAD_FIELDS = 21;
+pub const IB_SA_DATA_F: MAD_FIELDS = 22;
+pub const IB_SM_DATA_F: MAD_FIELDS = 23;
+pub const IB_GS_DATA_F: MAD_FIELDS = 24;
+pub const IB_DRSMP_PATH_F: MAD_FIELDS = 25;
+pub const IB_DRSMP_RPATH_F: MAD_FIELDS = 26;
+pub const IB_PORT_FIRST_F: MAD_FIELDS = 27;
+pub const IB_PORT_MKEY_F: MAD_FIELDS = 27;
+pub const IB_PORT_GID_PREFIX_F: MAD_FIELDS = 28;
+pub const IB_PORT_LID_F: MAD_FIELDS = 29;
+pub const IB_PORT_SMLID_F: MAD_FIELDS = 30;
+pub const IB_PORT_CAPMASK_F: MAD_FIELDS = 31;
+pub const IB_PORT_DIAG_F: MAD_FIELDS = 32;
+pub const IB_PORT_MKEY_LEASE_F: MAD_FIELDS = 33;
+pub const IB_PORT_LOCAL_PORT_F: MAD_FIELDS = 34;
+pub const IB_PORT_LINK_WIDTH_ENABLED_F: MAD_FIELDS = 35;
+pub const IB_PORT_LINK_WIDTH_SUPPORTED_F: MAD_FIELDS = 36;
+pub const IB_PORT_LINK_WIDTH_ACTIVE_F: MAD_FIELDS = 37;
+pub const IB_PORT_LINK_SPEED_SUPPORTED_F: MAD_FIELDS = 38;
+pub const IB_PORT_STATE_F: MAD_FIELDS = 39;
+pub const IB_PORT_PHYS_STATE_F: MAD_FIELDS = 40;
+pub const IB_PORT_LINK_DOWN_DEF_F: MAD_FIELDS = 41;
+pub const IB_PORT_MKEY_PROT_BITS_F: MAD_FIELDS = 42;
+pub const IB_PORT_LMC_F: MAD_FIELDS = 43;
+pub const IB_PORT_LINK_SPEED_ACTIVE_F: MAD_FIELDS = 44;
+pub const IB_PORT_LINK_SPEED_ENABLED_F: MAD_FIELDS = 45;
+pub const IB_PORT_NEIGHBOR_MTU_F: MAD_FIELDS = 46;
+pub const IB_PORT_SMSL_F: MAD_FIELDS = 47;
+pub const IB_PORT_VL_CAP_F: MAD_FIELDS = 48;
+pub const IB_PORT_INIT_TYPE_F: MAD_FIELDS = 49;
+pub const IB_PORT_VL_HIGH_LIMIT_F: MAD_FIELDS = 50;
+pub const IB_PORT_VL_ARBITRATION_HIGH_CAP_F: MAD_FIELDS = 51;
+pub const IB_PORT_VL_ARBITRATION_LOW_CAP_F: MAD_FIELDS = 52;
+pub const IB_PORT_INIT_TYPE_REPLY_F: MAD_FIELDS = 53;
+pub const IB_PORT_MTU_CAP_F: MAD_FIELDS = 54;
+pub const IB_PORT_VL_STALL_COUNT_F: MAD_FIELDS = 55;
+pub const IB_PORT_HOQ_LIFE_F: MAD_FIELDS = 56;
+pub const IB_PORT_OPER_VLS_F: MAD_FIELDS = 57;
+pub const IB_PORT_PART_EN_INB_F: MAD_FIELDS = 58;
+pub const IB_PORT_PART_EN_OUTB_F: MAD_FIELDS = 59;
+pub const IB_PORT_FILTER_RAW_INB_F: MAD_FIELDS = 60;
+pub const IB_PORT_FILTER_RAW_OUTB_F: MAD_FIELDS = 61;
+pub const IB_PORT_MKEY_VIOL_F: MAD_FIELDS = 62;
+pub const IB_PORT_PKEY_VIOL_F: MAD_FIELDS = 63;
+pub const IB_PORT_QKEY_VIOL_F: MAD_FIELDS = 64;
+pub const IB_PORT_GUID_CAP_F: MAD_FIELDS = 65;
+pub const IB_PORT_CLIENT_REREG_F: MAD_FIELDS = 66;
+pub const IB_PORT_MCAST_PKEY_SUPR_ENAB_F: MAD_FIELDS = 67;
+pub const IB_PORT_SUBN_TIMEOUT_F: MAD_FIELDS = 68;
+pub const IB_PORT_RESP_TIME_VAL_F: MAD_FIELDS = 69;
+pub const IB_PORT_LOCAL_PHYS_ERR_F: MAD_FIELDS = 70;
+pub const IB_PORT_OVERRUN_ERR_F: MAD_FIELDS = 71;
+pub const IB_PORT_MAX_CREDIT_HINT_F: MAD_FIELDS = 72;
+pub const IB_PORT_LINK_ROUND_TRIP_F: MAD_FIELDS = 73;
+pub const IB_PORT_LAST_F: MAD_FIELDS = 74;
+pub const IB_NODE_FIRST_F: MAD_FIELDS = 75;
+pub const IB_NODE_BASE_VERS_F: MAD_FIELDS = 75;
+pub const IB_NODE_CLASS_VERS_F: MAD_FIELDS = 76;
+pub const IB_NODE_TYPE_F: MAD_FIELDS = 77;
+pub const IB_NODE_NPORTS_F: MAD_FIELDS = 78;
+pub const IB_NODE_SYSTEM_GUID_F: MAD_FIELDS = 79;
+pub const IB_NODE_GUID_F: MAD_FIELDS = 80;
+pub const IB_NODE_PORT_GUID_F: MAD_FIELDS = 81;
+pub const IB_NODE_PARTITION_CAP_F: MAD_FIELDS = 82;
+pub const IB_NODE_DEVID_F: MAD_FIELDS = 83;
+pub const IB_NODE_REVISION_F: MAD_FIELDS = 84;
+pub const IB_NODE_LOCAL_PORT_F: MAD_FIELDS = 85;
+pub const IB_NODE_VENDORID_F: MAD_FIELDS = 86;
+pub const IB_NODE_LAST_F: MAD_FIELDS = 87;
+pub const IB_SW_FIRST_F: MAD_FIELDS = 88;
+pub const IB_SW_LINEAR_FDB_CAP_F: MAD_FIELDS = 88;
+pub const IB_SW_RANDOM_FDB_CAP_F: MAD_FIELDS = 89;
+pub const IB_SW_MCAST_FDB_CAP_F: MAD_FIELDS = 90;
+pub const IB_SW_LINEAR_FDB_TOP_F: MAD_FIELDS = 91;
+pub const IB_SW_DEF_PORT_F: MAD_FIELDS = 92;
+pub const IB_SW_DEF_MCAST_PRIM_F: MAD_FIELDS = 93;
+pub const IB_SW_DEF_MCAST_NOT_PRIM_F: MAD_FIELDS = 94;
+pub const IB_SW_LIFE_TIME_F: MAD_FIELDS = 95;
+pub const IB_SW_STATE_CHANGE_F: MAD_FIELDS = 96;
+pub const IB_SW_OPT_SLTOVL_MAPPING_F: MAD_FIELDS = 97;
+pub const IB_SW_LIDS_PER_PORT_F: MAD_FIELDS = 98;
+pub const IB_SW_PARTITION_ENFORCE_CAP_F: MAD_FIELDS = 99;
+pub const IB_SW_PARTITION_ENF_INB_F: MAD_FIELDS = 100;
+pub const IB_SW_PARTITION_ENF_OUTB_F: MAD_FIELDS = 101;
+pub const IB_SW_FILTER_RAW_INB_F: MAD_FIELDS = 102;
+pub const IB_SW_FILTER_RAW_OUTB_F: MAD_FIELDS = 103;
+pub const IB_SW_ENHANCED_PORT0_F: MAD_FIELDS = 104;
+pub const IB_SW_MCAST_FDB_TOP_F: MAD_FIELDS = 105;
+pub const IB_SW_LAST_F: MAD_FIELDS = 106;
+pub const IB_LINEAR_FORW_TBL_F: MAD_FIELDS = 107;
+pub const IB_MULTICAST_FORW_TBL_F: MAD_FIELDS = 108;
+pub const IB_NODE_DESC_F: MAD_FIELDS = 109;
+pub const IB_NOTICE_IS_GENERIC_F: MAD_FIELDS = 110;
+pub const IB_NOTICE_TYPE_F: MAD_FIELDS = 111;
+pub const IB_NOTICE_PRODUCER_F: MAD_FIELDS = 112;
+pub const IB_NOTICE_TRAP_NUMBER_F: MAD_FIELDS = 113;
+pub const IB_NOTICE_ISSUER_LID_F: MAD_FIELDS = 114;
+pub const IB_NOTICE_TOGGLE_F: MAD_FIELDS = 115;
+pub const IB_NOTICE_COUNT_F: MAD_FIELDS = 116;
+pub const IB_NOTICE_DATA_DETAILS_F: MAD_FIELDS = 117;
+pub const IB_NOTICE_DATA_LID_F: MAD_FIELDS = 118;
+pub const IB_NOTICE_DATA_144_LID_F: MAD_FIELDS = 119;
+pub const IB_NOTICE_DATA_144_CAPMASK_F: MAD_FIELDS = 120;
+pub const IB_PC_FIRST_F: MAD_FIELDS = 121;
+pub const IB_PC_PORT_SELECT_F: MAD_FIELDS = 121;
+pub const IB_PC_COUNTER_SELECT_F: MAD_FIELDS = 122;
+pub const IB_PC_ERR_SYM_F: MAD_FIELDS = 123;
+pub const IB_PC_LINK_RECOVERS_F: MAD_FIELDS = 124;
+pub const IB_PC_LINK_DOWNED_F: MAD_FIELDS = 125;
+pub const IB_PC_ERR_RCV_F: MAD_FIELDS = 126;
+pub const IB_PC_ERR_PHYSRCV_F: MAD_FIELDS = 127;
+pub const IB_PC_ERR_SWITCH_REL_F: MAD_FIELDS = 128;
+pub const IB_PC_XMT_DISCARDS_F: MAD_FIELDS = 129;
+pub const IB_PC_ERR_XMTCONSTR_F: MAD_FIELDS = 130;
+pub const IB_PC_ERR_RCVCONSTR_F: MAD_FIELDS = 131;
+pub const IB_PC_COUNTER_SELECT2_F: MAD_FIELDS = 132;
+pub const IB_PC_ERR_LOCALINTEG_F: MAD_FIELDS = 133;
+pub const IB_PC_ERR_EXCESS_OVR_F: MAD_FIELDS = 134;
+pub const IB_PC_VL15_DROPPED_F: MAD_FIELDS = 135;
+pub const IB_PC_XMT_BYTES_F: MAD_FIELDS = 136;
+pub const IB_PC_RCV_BYTES_F: MAD_FIELDS = 137;
+pub const IB_PC_XMT_PKTS_F: MAD_FIELDS = 138;
+pub const IB_PC_RCV_PKTS_F: MAD_FIELDS = 139;
+pub const IB_PC_XMT_WAIT_F: MAD_FIELDS = 140;
+pub const IB_PC_LAST_F: MAD_FIELDS = 141;
+pub const IB_SMINFO_GUID_F: MAD_FIELDS = 142;
+pub const IB_SMINFO_KEY_F: MAD_FIELDS = 143;
+pub const IB_SMINFO_ACT_F: MAD_FIELDS = 144;
+pub const IB_SMINFO_PRIO_F: MAD_FIELDS = 145;
+pub const IB_SMINFO_STATE_F: MAD_FIELDS = 146;
+pub const IB_SA_RMPP_VERS_F: MAD_FIELDS = 147;
+pub const IB_SA_RMPP_TYPE_F: MAD_FIELDS = 148;
+pub const IB_SA_RMPP_RESP_F: MAD_FIELDS = 149;
+pub const IB_SA_RMPP_FLAGS_F: MAD_FIELDS = 150;
+pub const IB_SA_RMPP_STATUS_F: MAD_FIELDS = 151;
+pub const IB_SA_RMPP_D1_F: MAD_FIELDS = 152;
+pub const IB_SA_RMPP_SEGNUM_F: MAD_FIELDS = 153;
+pub const IB_SA_RMPP_D2_F: MAD_FIELDS = 154;
+pub const IB_SA_RMPP_LEN_F: MAD_FIELDS = 155;
+pub const IB_SA_RMPP_NEWWIN_F: MAD_FIELDS = 156;
+pub const IB_SA_MP_NPATH_F: MAD_FIELDS = 157;
+pub const IB_SA_MP_NSRC_F: MAD_FIELDS = 158;
+pub const IB_SA_MP_NDEST_F: MAD_FIELDS = 159;
+pub const IB_SA_MP_GID0_F: MAD_FIELDS = 160;
+pub const IB_SA_PR_DGID_F: MAD_FIELDS = 161;
+pub const IB_SA_PR_SGID_F: MAD_FIELDS = 162;
+pub const IB_SA_PR_DLID_F: MAD_FIELDS = 163;
+pub const IB_SA_PR_SLID_F: MAD_FIELDS = 164;
+pub const IB_SA_PR_NPATH_F: MAD_FIELDS = 165;
+pub const IB_SA_PR_SL_F: MAD_FIELDS = 166;
+pub const IB_SA_MCM_MGID_F: MAD_FIELDS = 167;
+pub const IB_SA_MCM_PORTGID_F: MAD_FIELDS = 168;
+pub const IB_SA_MCM_QKEY_F: MAD_FIELDS = 169;
+pub const IB_SA_MCM_MLID_F: MAD_FIELDS = 170;
+pub const IB_SA_MCM_SL_F: MAD_FIELDS = 171;
+pub const IB_SA_MCM_MTU_F: MAD_FIELDS = 172;
+pub const IB_SA_MCM_RATE_F: MAD_FIELDS = 173;
+pub const IB_SA_MCM_TCLASS_F: MAD_FIELDS = 174;
+pub const IB_SA_MCM_PKEY_F: MAD_FIELDS = 175;
+pub const IB_SA_MCM_FLOW_LABEL_F: MAD_FIELDS = 176;
+pub const IB_SA_MCM_JOIN_STATE_F: MAD_FIELDS = 177;
+pub const IB_SA_MCM_PROXY_JOIN_F: MAD_FIELDS = 178;
+pub const IB_SA_SR_ID_F: MAD_FIELDS = 179;
+pub const IB_SA_SR_GID_F: MAD_FIELDS = 180;
+pub const IB_SA_SR_PKEY_F: MAD_FIELDS = 181;
+pub const IB_SA_SR_LEASE_F: MAD_FIELDS = 182;
+pub const IB_SA_SR_KEY_F: MAD_FIELDS = 183;
+pub const IB_SA_SR_NAME_F: MAD_FIELDS = 184;
+pub const IB_SA_SR_DATA_F: MAD_FIELDS = 185;
+pub const IB_ATS_SM_NODE_ADDR_F: MAD_FIELDS = 186;
+pub const IB_ATS_SM_MAGIC_KEY_F: MAD_FIELDS = 187;
+pub const IB_ATS_SM_NODE_TYPE_F: MAD_FIELDS = 188;
+pub const IB_ATS_SM_NODE_NAME_F: MAD_FIELDS = 189;
+pub const IB_SLTOVL_MAPPING_TABLE_F: MAD_FIELDS = 190;
+pub const IB_VL_ARBITRATION_TABLE_F: MAD_FIELDS = 191;
+pub const IB_VEND2_OUI_F: MAD_FIELDS = 192;
+pub const IB_VEND2_DATA_F: MAD_FIELDS = 193;
+pub const IB_PC_EXT_FIRST_F: MAD_FIELDS = 194;
+pub const IB_PC_EXT_PORT_SELECT_F: MAD_FIELDS = 194;
+pub const IB_PC_EXT_COUNTER_SELECT_F: MAD_FIELDS = 195;
+pub const IB_PC_EXT_XMT_BYTES_F: MAD_FIELDS = 196;
+pub const IB_PC_EXT_RCV_BYTES_F: MAD_FIELDS = 197;
+pub const IB_PC_EXT_XMT_PKTS_F: MAD_FIELDS = 198;
+pub const IB_PC_EXT_RCV_PKTS_F: MAD_FIELDS = 199;
+pub const IB_PC_EXT_XMT_UPKTS_F: MAD_FIELDS = 200;
+pub const IB_PC_EXT_RCV_UPKTS_F: MAD_FIELDS = 201;
+pub const IB_PC_EXT_XMT_MPKTS_F: MAD_FIELDS = 202;
+pub const IB_PC_EXT_RCV_MPKTS_F: MAD_FIELDS = 203;
+pub const IB_PC_EXT_LAST_F: MAD_FIELDS = 204;
+pub const IB_GUID_GUID0_F: MAD_FIELDS = 205;
+pub const IB_CPI_BASEVER_F: MAD_FIELDS = 206;
+pub const IB_CPI_CLASSVER_F: MAD_FIELDS = 207;
+pub const IB_CPI_CAPMASK_F: MAD_FIELDS = 208;
+pub const IB_CPI_CAPMASK2_F: MAD_FIELDS = 209;
+pub const IB_CPI_RESP_TIME_VALUE_F: MAD_FIELDS = 210;
+pub const IB_CPI_REDIRECT_GID_F: MAD_FIELDS = 211;
+pub const IB_CPI_REDIRECT_TC_F: MAD_FIELDS = 212;
+pub const IB_CPI_REDIRECT_SL_F: MAD_FIELDS = 213;
+pub const IB_CPI_REDIRECT_FL_F: MAD_FIELDS = 214;
+pub const IB_CPI_REDIRECT_LID_F: MAD_FIELDS = 215;
+pub const IB_CPI_REDIRECT_PKEY_F: MAD_FIELDS = 216;
+pub const IB_CPI_REDIRECT_QP_F: MAD_FIELDS = 217;
+pub const IB_CPI_REDIRECT_QKEY_F: MAD_FIELDS = 218;
+pub const IB_CPI_TRAP_GID_F: MAD_FIELDS = 219;
+pub const IB_CPI_TRAP_TC_F: MAD_FIELDS = 220;
+pub const IB_CPI_TRAP_SL_F: MAD_FIELDS = 221;
+pub const IB_CPI_TRAP_FL_F: MAD_FIELDS = 222;
+pub const IB_CPI_TRAP_LID_F: MAD_FIELDS = 223;
+pub const IB_CPI_TRAP_PKEY_F: MAD_FIELDS = 224;
+pub const IB_CPI_TRAP_HL_F: MAD_FIELDS = 225;
+pub const IB_CPI_TRAP_QP_F: MAD_FIELDS = 226;
+pub const IB_CPI_TRAP_QKEY_F: MAD_FIELDS = 227;
+pub const IB_PC_XMT_DATA_SL_FIRST_F: MAD_FIELDS = 228;
+pub const IB_PC_XMT_DATA_SL0_F: MAD_FIELDS = 228;
+pub const IB_PC_XMT_DATA_SL1_F: MAD_FIELDS = 229;
+pub const IB_PC_XMT_DATA_SL2_F: MAD_FIELDS = 230;
+pub const IB_PC_XMT_DATA_SL3_F: MAD_FIELDS = 231;
+pub const IB_PC_XMT_DATA_SL4_F: MAD_FIELDS = 232;
+pub const IB_PC_XMT_DATA_SL5_F: MAD_FIELDS = 233;
+pub const IB_PC_XMT_DATA_SL6_F: MAD_FIELDS = 234;
+pub const IB_PC_XMT_DATA_SL7_F: MAD_FIELDS = 235;
+pub const IB_PC_XMT_DATA_SL8_F: MAD_FIELDS = 236;
+pub const IB_PC_XMT_DATA_SL9_F: MAD_FIELDS = 237;
+pub const IB_PC_XMT_DATA_SL10_F: MAD_FIELDS = 238;
+pub const IB_PC_XMT_DATA_SL11_F: MAD_FIELDS = 239;
+pub const IB_PC_XMT_DATA_SL12_F: MAD_FIELDS = 240;
+pub const IB_PC_XMT_DATA_SL13_F: MAD_FIELDS = 241;
+pub const IB_PC_XMT_DATA_SL14_F: MAD_FIELDS = 242;
+pub const IB_PC_XMT_DATA_SL15_F: MAD_FIELDS = 243;
+pub const IB_PC_XMT_DATA_SL_LAST_F: MAD_FIELDS = 244;
+pub const IB_PC_RCV_DATA_SL_FIRST_F: MAD_FIELDS = 245;
+pub const IB_PC_RCV_DATA_SL0_F: MAD_FIELDS = 245;
+pub const IB_PC_RCV_DATA_SL1_F: MAD_FIELDS = 246;
+pub const IB_PC_RCV_DATA_SL2_F: MAD_FIELDS = 247;
+pub const IB_PC_RCV_DATA_SL3_F: MAD_FIELDS = 248;
+pub const IB_PC_RCV_DATA_SL4_F: MAD_FIELDS = 249;
+pub const IB_PC_RCV_DATA_SL5_F: MAD_FIELDS = 250;
+pub const IB_PC_RCV_DATA_SL6_F: MAD_FIELDS = 251;
+pub const IB_PC_RCV_DATA_SL7_F: MAD_FIELDS = 252;
+pub const IB_PC_RCV_DATA_SL8_F: MAD_FIELDS = 253;
+pub const IB_PC_RCV_DATA_SL9_F: MAD_FIELDS = 254;
+pub const IB_PC_RCV_DATA_SL10_F: MAD_FIELDS = 255;
+pub const IB_PC_RCV_DATA_SL11_F: MAD_FIELDS = 256;
+pub const IB_PC_RCV_DATA_SL12_F: MAD_FIELDS = 257;
+pub const IB_PC_RCV_DATA_SL13_F: MAD_FIELDS = 258;
+pub const IB_PC_RCV_DATA_SL14_F: MAD_FIELDS = 259;
+pub const IB_PC_RCV_DATA_SL15_F: MAD_FIELDS = 260;
+pub const IB_PC_RCV_DATA_SL_LAST_F: MAD_FIELDS = 261;
+pub const IB_PC_XMT_INACT_DISC_F: MAD_FIELDS = 262;
+pub const IB_PC_XMT_NEIGH_MTU_DISC_F: MAD_FIELDS = 263;
+pub const IB_PC_XMT_SW_LIFE_DISC_F: MAD_FIELDS = 264;
+pub const IB_PC_XMT_SW_HOL_DISC_F: MAD_FIELDS = 265;
+pub const IB_PC_XMT_DISC_LAST_F: MAD_FIELDS = 266;
+pub const IB_PC_RCV_LOCAL_PHY_ERR_F: MAD_FIELDS = 267;
+pub const IB_PC_RCV_MALFORMED_PKT_ERR_F: MAD_FIELDS = 268;
+pub const IB_PC_RCV_BUF_OVR_ERR_F: MAD_FIELDS = 269;
+pub const IB_PC_RCV_DLID_MAP_ERR_F: MAD_FIELDS = 270;
+pub const IB_PC_RCV_VL_MAP_ERR_F: MAD_FIELDS = 271;
+pub const IB_PC_RCV_LOOPING_ERR_F: MAD_FIELDS = 272;
+pub const IB_PC_RCV_ERR_LAST_F: MAD_FIELDS = 273;
+pub const IB_PSC_OPCODE_F: MAD_FIELDS = 274;
+pub const IB_PSC_PORT_SELECT_F: MAD_FIELDS = 275;
+pub const IB_PSC_TICK_F: MAD_FIELDS = 276;
+pub const IB_PSC_COUNTER_WIDTH_F: MAD_FIELDS = 277;
+pub const IB_PSC_COUNTER_MASK0_F: MAD_FIELDS = 278;
+pub const IB_PSC_COUNTER_MASKS1TO9_F: MAD_FIELDS = 279;
+pub const IB_PSC_COUNTER_MASKS10TO14_F: MAD_FIELDS = 280;
+pub const IB_PSC_SAMPLE_MECHS_F: MAD_FIELDS = 281;
+pub const IB_PSC_SAMPLE_STATUS_F: MAD_FIELDS = 282;
+pub const IB_PSC_OPTION_MASK_F: MAD_FIELDS = 283;
+pub const IB_PSC_VENDOR_MASK_F: MAD_FIELDS = 284;
+pub const IB_PSC_SAMPLE_START_F: MAD_FIELDS = 285;
+pub const IB_PSC_SAMPLE_INTVL_F: MAD_FIELDS = 286;
+pub const IB_PSC_TAG_F: MAD_FIELDS = 287;
+pub const IB_PSC_COUNTER_SEL0_F: MAD_FIELDS = 288;
+pub const IB_PSC_COUNTER_SEL1_F: MAD_FIELDS = 289;
+pub const IB_PSC_COUNTER_SEL2_F: MAD_FIELDS = 290;
+pub const IB_PSC_COUNTER_SEL3_F: MAD_FIELDS = 291;
+pub const IB_PSC_COUNTER_SEL4_F: MAD_FIELDS = 292;
+pub const IB_PSC_COUNTER_SEL5_F: MAD_FIELDS = 293;
+pub const IB_PSC_COUNTER_SEL6_F: MAD_FIELDS = 294;
+pub const IB_PSC_COUNTER_SEL7_F: MAD_FIELDS = 295;
+pub const IB_PSC_COUNTER_SEL8_F: MAD_FIELDS = 296;
+pub const IB_PSC_COUNTER_SEL9_F: MAD_FIELDS = 297;
+pub const IB_PSC_COUNTER_SEL10_F: MAD_FIELDS = 298;
+pub const IB_PSC_COUNTER_SEL11_F: MAD_FIELDS = 299;
+pub const IB_PSC_COUNTER_SEL12_F: MAD_FIELDS = 300;
+pub const IB_PSC_COUNTER_SEL13_F: MAD_FIELDS = 301;
+pub const IB_PSC_COUNTER_SEL14_F: MAD_FIELDS = 302;
+pub const IB_PSC_SAMPLES_ONLY_OPT_MASK_F: MAD_FIELDS = 303;
+pub const IB_PSC_LAST_F: MAD_FIELDS = 304;
+pub const IB_GI_GUID0_F: MAD_FIELDS = 305;
+pub const IB_GI_GUID1_F: MAD_FIELDS = 306;
+pub const IB_GI_GUID2_F: MAD_FIELDS = 307;
+pub const IB_GI_GUID3_F: MAD_FIELDS = 308;
+pub const IB_GI_GUID4_F: MAD_FIELDS = 309;
+pub const IB_GI_GUID5_F: MAD_FIELDS = 310;
+pub const IB_GI_GUID6_F: MAD_FIELDS = 311;
+pub const IB_GI_GUID7_F: MAD_FIELDS = 312;
+pub const IB_SA_GIR_LID_F: MAD_FIELDS = 313;
+pub const IB_SA_GIR_BLOCKNUM_F: MAD_FIELDS = 314;
+pub const IB_SA_GIR_GUID0_F: MAD_FIELDS = 315;
+pub const IB_SA_GIR_GUID1_F: MAD_FIELDS = 316;
+pub const IB_SA_GIR_GUID2_F: MAD_FIELDS = 317;
+pub const IB_SA_GIR_GUID3_F: MAD_FIELDS = 318;
+pub const IB_SA_GIR_GUID4_F: MAD_FIELDS = 319;
+pub const IB_SA_GIR_GUID5_F: MAD_FIELDS = 320;
+pub const IB_SA_GIR_GUID6_F: MAD_FIELDS = 321;
+pub const IB_SA_GIR_GUID7_F: MAD_FIELDS = 322;
+pub const IB_PORT_CAPMASK2_F: MAD_FIELDS = 323;
+pub const IB_PORT_LINK_SPEED_EXT_ACTIVE_F: MAD_FIELDS = 324;
+pub const IB_PORT_LINK_SPEED_EXT_SUPPORTED_F: MAD_FIELDS = 325;
+pub const IB_PORT_LINK_SPEED_EXT_ENABLED_F: MAD_FIELDS = 326;
+pub const IB_PORT_LINK_SPEED_EXT_LAST_F: MAD_FIELDS = 327;
+pub const IB_PESC_PORT_SELECT_F: MAD_FIELDS = 328;
+pub const IB_PESC_COUNTER_SELECT_F: MAD_FIELDS = 329;
+pub const IB_PESC_SYNC_HDR_ERR_CTR_F: MAD_FIELDS = 330;
+pub const IB_PESC_UNK_BLOCK_CTR_F: MAD_FIELDS = 331;
+pub const IB_PESC_ERR_DET_CTR_LANE0_F: MAD_FIELDS = 332;
+pub const IB_PESC_ERR_DET_CTR_LANE1_F: MAD_FIELDS = 333;
+pub const IB_PESC_ERR_DET_CTR_LANE2_F: MAD_FIELDS = 334;
+pub const IB_PESC_ERR_DET_CTR_LANE3_F: MAD_FIELDS = 335;
+pub const IB_PESC_ERR_DET_CTR_LANE4_F: MAD_FIELDS = 336;
+pub const IB_PESC_ERR_DET_CTR_LANE5_F: MAD_FIELDS = 337;
+pub const IB_PESC_ERR_DET_CTR_LANE6_F: MAD_FIELDS = 338;
+pub const IB_PESC_ERR_DET_CTR_LANE7_F: MAD_FIELDS = 339;
+pub const IB_PESC_ERR_DET_CTR_LANE8_F: MAD_FIELDS = 340;
+pub const IB_PESC_ERR_DET_CTR_LANE9_F: MAD_FIELDS = 341;
+pub const IB_PESC_ERR_DET_CTR_LANE10_F: MAD_FIELDS = 342;
+pub const IB_PESC_ERR_DET_CTR_LANE11_F: MAD_FIELDS = 343;
+pub const IB_PESC_FEC_CORR_BLOCK_CTR_LANE0_F: MAD_FIELDS = 344;
+pub const IB_PESC_FEC_CORR_BLOCK_CTR_LANE1_F: MAD_FIELDS = 345;
+pub const IB_PESC_FEC_CORR_BLOCK_CTR_LANE2_F: MAD_FIELDS = 346;
+pub const IB_PESC_FEC_CORR_BLOCK_CTR_LANE3_F: MAD_FIELDS = 347;
+pub const IB_PESC_FEC_CORR_BLOCK_CTR_LANE4_F: MAD_FIELDS = 348;
+pub const IB_PESC_FEC_CORR_BLOCK_CTR_LANE5_F: MAD_FIELDS = 349;
+pub const IB_PESC_FEC_CORR_BLOCK_CTR_LANE6_F: MAD_FIELDS = 350;
+pub const IB_PESC_FEC_CORR_BLOCK_CTR_LANE7_F: MAD_FIELDS = 351;
+pub const IB_PESC_FEC_CORR_BLOCK_CTR_LANE8_F: MAD_FIELDS = 352;
+pub const IB_PESC_FEC_CORR_BLOCK_CTR_LANE9_F: MAD_FIELDS = 353;
+pub const IB_PESC_FEC_CORR_BLOCK_CTR_LANE10_F: MAD_FIELDS = 354;
+pub const IB_PESC_FEC_CORR_BLOCK_CTR_LANE11_F: MAD_FIELDS = 355;
+pub const IB_PESC_FEC_UNCORR_BLOCK_CTR_LANE0_F: MAD_FIELDS = 356;
+pub const IB_PESC_FEC_UNCORR_BLOCK_CTR_LANE1_F: MAD_FIELDS = 357;
+pub const IB_PESC_FEC_UNCORR_BLOCK_CTR_LANE2_F: MAD_FIELDS = 358;
+pub const IB_PESC_FEC_UNCORR_BLOCK_CTR_LANE3_F: MAD_FIELDS = 359;
+pub const IB_PESC_FEC_UNCORR_BLOCK_CTR_LANE4_F: MAD_FIELDS = 360;
+pub const IB_PESC_FEC_UNCORR_BLOCK_CTR_LANE5_F: MAD_FIELDS = 361;
+pub const IB_PESC_FEC_UNCORR_BLOCK_CTR_LANE6_F: MAD_FIELDS = 362;
+pub const IB_PESC_FEC_UNCORR_BLOCK_CTR_LANE7_F: MAD_FIELDS = 363;
+pub const IB_PESC_FEC_UNCORR_BLOCK_CTR_LANE8_F: MAD_FIELDS = 364;
+pub const IB_PESC_FEC_UNCORR_BLOCK_CTR_LANE9_F: MAD_FIELDS = 365;
+pub const IB_PESC_FEC_UNCORR_BLOCK_CTR_LANE10_F: MAD_FIELDS = 366;
+pub const IB_PESC_FEC_UNCORR_BLOCK_CTR_LANE11_F: MAD_FIELDS = 367;
+pub const IB_PESC_LAST_F: MAD_FIELDS = 368;
+pub const IB_PC_PORT_OP_RCV_COUNTERS_FIRST_F: MAD_FIELDS = 369;
+pub const IB_PC_PORT_OP_RCV_PKTS_F: MAD_FIELDS = 369;
+pub const IB_PC_PORT_OP_RCV_DATA_F: MAD_FIELDS = 370;
+pub const IB_PC_PORT_OP_RCV_COUNTERS_LAST_F: MAD_FIELDS = 371;
+pub const IB_PC_PORT_FLOW_CTL_COUNTERS_FIRST_F: MAD_FIELDS = 372;
+pub const IB_PC_PORT_XMIT_FLOW_PKTS_F: MAD_FIELDS = 372;
+pub const IB_PC_PORT_RCV_FLOW_PKTS_F: MAD_FIELDS = 373;
+pub const IB_PC_PORT_FLOW_CTL_COUNTERS_LAST_F: MAD_FIELDS = 374;
+pub const IB_PC_PORT_VL_OP_PACKETS_FIRST_F: MAD_FIELDS = 375;
+pub const IB_PC_PORT_VL_OP_PACKETS0_F: MAD_FIELDS = 375;
+pub const IB_PC_PORT_VL_OP_PACKETS1_F: MAD_FIELDS = 376;
+pub const IB_PC_PORT_VL_OP_PACKETS2_F: MAD_FIELDS = 377;
+pub const IB_PC_PORT_VL_OP_PACKETS3_F: MAD_FIELDS = 378;
+pub const IB_PC_PORT_VL_OP_PACKETS4_F: MAD_FIELDS = 379;
+pub const IB_PC_PORT_VL_OP_PACKETS5_F: MAD_FIELDS = 380;
+pub const IB_PC_PORT_VL_OP_PACKETS6_F: MAD_FIELDS = 381;
+pub const IB_PC_PORT_VL_OP_PACKETS7_F: MAD_FIELDS = 382;
+pub const IB_PC_PORT_VL_OP_PACKETS8_F: MAD_FIELDS = 383;
+pub const IB_PC_PORT_VL_OP_PACKETS9_F: MAD_FIELDS = 384;
+pub const IB_PC_PORT_VL_OP_PACKETS10_F: MAD_FIELDS = 385;
+pub const IB_PC_PORT_VL_OP_PACKETS11_F: MAD_FIELDS = 386;
+pub const IB_PC_PORT_VL_OP_PACKETS12_F: MAD_FIELDS = 387;
+pub const IB_PC_PORT_VL_OP_PACKETS13_F: MAD_FIELDS = 388;
+pub const IB_PC_PORT_VL_OP_PACKETS14_F: MAD_FIELDS = 389;
+pub const IB_PC_PORT_VL_OP_PACKETS15_F: MAD_FIELDS = 390;
+pub const IB_PC_PORT_VL_OP_PACKETS_LAST_F: MAD_FIELDS = 391;
+pub const IB_PC_PORT_VL_OP_DATA_FIRST_F: MAD_FIELDS = 392;
+pub const IB_PC_PORT_VL_OP_DATA0_F: MAD_FIELDS = 392;
+pub const IB_PC_PORT_VL_OP_DATA1_F: MAD_FIELDS = 393;
+pub const IB_PC_PORT_VL_OP_DATA2_F: MAD_FIELDS = 394;
+pub const IB_PC_PORT_VL_OP_DATA3_F: MAD_FIELDS = 395;
+pub const IB_PC_PORT_VL_OP_DATA4_F: MAD_FIELDS = 396;
+pub const IB_PC_PORT_VL_OP_DATA5_F: MAD_FIELDS = 397;
+pub const IB_PC_PORT_VL_OP_DATA6_F: MAD_FIELDS = 398;
+pub const IB_PC_PORT_VL_OP_DATA7_F: MAD_FIELDS = 399;
+pub const IB_PC_PORT_VL_OP_DATA8_F: MAD_FIELDS = 400;
+pub const IB_PC_PORT_VL_OP_DATA9_F: MAD_FIELDS = 401;
+pub const IB_PC_PORT_VL_OP_DATA10_F: MAD_FIELDS = 402;
+pub const IB_PC_PORT_VL_OP_DATA11_F: MAD_FIELDS = 403;
+pub const IB_PC_PORT_VL_OP_DATA12_F: MAD_FIELDS = 404;
+pub const IB_PC_PORT_VL_OP_DATA13_F: MAD_FIELDS = 405;
+pub const IB_PC_PORT_VL_OP_DATA14_F: MAD_FIELDS = 406;
+pub const IB_PC_PORT_VL_OP_DATA15_F: MAD_FIELDS = 407;
+pub const IB_PC_PORT_VL_OP_DATA_LAST_F: MAD_FIELDS = 408;
+pub const IB_PC_PORT_VL_XMIT_FLOW_CTL_UPDATE_ERRORS_FIRST_F: MAD_FIELDS = 409;
+pub const IB_PC_PORT_VL_XMIT_FLOW_CTL_UPDATE_ERRORS0_F: MAD_FIELDS = 409;
+pub const IB_PC_PORT_VL_XMIT_FLOW_CTL_UPDATE_ERRORS1_F: MAD_FIELDS = 410;
+pub const IB_PC_PORT_VL_XMIT_FLOW_CTL_UPDATE_ERRORS2_F: MAD_FIELDS = 411;
+pub const IB_PC_PORT_VL_XMIT_FLOW_CTL_UPDATE_ERRORS3_F: MAD_FIELDS = 412;
+pub const IB_PC_PORT_VL_XMIT_FLOW_CTL_UPDATE_ERRORS4_F: MAD_FIELDS = 413;
+pub const IB_PC_PORT_VL_XMIT_FLOW_CTL_UPDATE_ERRORS5_F: MAD_FIELDS = 414;
+pub const IB_PC_PORT_VL_XMIT_FLOW_CTL_UPDATE_ERRORS6_F: MAD_FIELDS = 415;
+pub const IB_PC_PORT_VL_XMIT_FLOW_CTL_UPDATE_ERRORS7_F: MAD_FIELDS = 416;
+pub const IB_PC_PORT_VL_XMIT_FLOW_CTL_UPDATE_ERRORS8_F: MAD_FIELDS = 417;
+pub const IB_PC_PORT_VL_XMIT_FLOW_CTL_UPDATE_ERRORS9_F: MAD_FIELDS = 418;
+pub const IB_PC_PORT_VL_XMIT_FLOW_CTL_UPDATE_ERRORS10_F: MAD_FIELDS = 419;
+pub const IB_PC_PORT_VL_XMIT_FLOW_CTL_UPDATE_ERRORS11_F: MAD_FIELDS = 420;
+pub const IB_PC_PORT_VL_XMIT_FLOW_CTL_UPDATE_ERRORS12_F: MAD_FIELDS = 421;
+pub const IB_PC_PORT_VL_XMIT_FLOW_CTL_UPDATE_ERRORS13_F: MAD_FIELDS = 422;
+pub const IB_PC_PORT_VL_XMIT_FLOW_CTL_UPDATE_ERRORS14_F: MAD_FIELDS = 423;
+pub const IB_PC_PORT_VL_XMIT_FLOW_CTL_UPDATE_ERRORS15_F: MAD_FIELDS = 424;
+pub const IB_PC_PORT_VL_XMIT_FLOW_CTL_UPDATE_ERRORS_LAST_F: MAD_FIELDS = 425;
+pub const IB_PC_PORT_VL_XMIT_WAIT_COUNTERS_FIRST_F: MAD_FIELDS = 426;
+pub const IB_PC_PORT_VL_XMIT_WAIT0_F: MAD_FIELDS = 426;
+pub const IB_PC_PORT_VL_XMIT_WAIT1_F: MAD_FIELDS = 427;
+pub const IB_PC_PORT_VL_XMIT_WAIT2_F: MAD_FIELDS = 428;
+pub const IB_PC_PORT_VL_XMIT_WAIT3_F: MAD_FIELDS = 429;
+pub const IB_PC_PORT_VL_XMIT_WAIT4_F: MAD_FIELDS = 430;
+pub const IB_PC_PORT_VL_XMIT_WAIT5_F: MAD_FIELDS = 431;
+pub const IB_PC_PORT_VL_XMIT_WAIT6_F: MAD_FIELDS = 432;
+pub const IB_PC_PORT_VL_XMIT_WAIT7_F: MAD_FIELDS = 433;
+pub const IB_PC_PORT_VL_XMIT_WAIT8_F: MAD_FIELDS = 434;
+pub const IB_PC_PORT_VL_XMIT_WAIT9_F: MAD_FIELDS = 435;
+pub const IB_PC_PORT_VL_XMIT_WAIT10_F: MAD_FIELDS = 436;
+pub const IB_PC_PORT_VL_XMIT_WAIT11_F: MAD_FIELDS = 437;
+pub const IB_PC_PORT_VL_XMIT_WAIT12_F: MAD_FIELDS = 438;
+pub const IB_PC_PORT_VL_XMIT_WAIT13_F: MAD_FIELDS = 439;
+pub const IB_PC_PORT_VL_XMIT_WAIT14_F: MAD_FIELDS = 440;
+pub const IB_PC_PORT_VL_XMIT_WAIT15_F: MAD_FIELDS = 441;
+pub const IB_PC_PORT_VL_XMIT_WAIT_COUNTERS_LAST_F: MAD_FIELDS = 442;
+pub const IB_PC_SW_PORT_VL_CONGESTION_FIRST_F: MAD_FIELDS = 443;
+pub const IB_PC_SW_PORT_VL_CONGESTION0_F: MAD_FIELDS = 443;
+pub const IB_PC_SW_PORT_VL_CONGESTION1_F: MAD_FIELDS = 444;
+pub const IB_PC_SW_PORT_VL_CONGESTION2_F: MAD_FIELDS = 445;
+pub const IB_PC_SW_PORT_VL_CONGESTION3_F: MAD_FIELDS = 446;
+pub const IB_PC_SW_PORT_VL_CONGESTION4_F: MAD_FIELDS = 447;
+pub const IB_PC_SW_PORT_VL_CONGESTION5_F: MAD_FIELDS = 448;
+pub const IB_PC_SW_PORT_VL_CONGESTION6_F: MAD_FIELDS = 449;
+pub const IB_PC_SW_PORT_VL_CONGESTION7_F: MAD_FIELDS = 450;
+pub const IB_PC_SW_PORT_VL_CONGESTION8_F: MAD_FIELDS = 451;
+pub const IB_PC_SW_PORT_VL_CONGESTION9_F: MAD_FIELDS = 452;
+pub const IB_PC_SW_PORT_VL_CONGESTION10_F: MAD_FIELDS = 453;
+pub const IB_PC_SW_PORT_VL_CONGESTION11_F: MAD_FIELDS = 454;
+pub const IB_PC_SW_PORT_VL_CONGESTION12_F: MAD_FIELDS = 455;
+pub const IB_PC_SW_PORT_VL_CONGESTION13_F: MAD_FIELDS = 456;
+pub const IB_PC_SW_PORT_VL_CONGESTION14_F: MAD_FIELDS = 457;
+pub const IB_PC_SW_PORT_VL_CONGESTION15_F: MAD_FIELDS = 458;
+pub const IB_PC_SW_PORT_VL_CONGESTION_LAST_F: MAD_FIELDS = 459;
+pub const IB_PC_RCV_CON_CTRL_FIRST_F: MAD_FIELDS = 460;
+pub const IB_PC_RCV_CON_CTRL_PKT_RCV_FECN_F: MAD_FIELDS = 460;
+pub const IB_PC_RCV_CON_CTRL_PKT_RCV_BECN_F: MAD_FIELDS = 461;
+pub const IB_PC_RCV_CON_CTRL_LAST_F: MAD_FIELDS = 462;
+pub const IB_PC_SL_RCV_FECN_FIRST_F: MAD_FIELDS = 463;
+pub const IB_PC_SL_RCV_FECN0_F: MAD_FIELDS = 463;
+pub const IB_PC_SL_RCV_FECN1_F: MAD_FIELDS = 464;
+pub const IB_PC_SL_RCV_FECN2_F: MAD_FIELDS = 465;
+pub const IB_PC_SL_RCV_FECN3_F: MAD_FIELDS = 466;
+pub const IB_PC_SL_RCV_FECN4_F: MAD_FIELDS = 467;
+pub const IB_PC_SL_RCV_FECN5_F: MAD_FIELDS = 468;
+pub const IB_PC_SL_RCV_FECN6_F: MAD_FIELDS = 469;
+pub const IB_PC_SL_RCV_FECN7_F: MAD_FIELDS = 470;
+pub const IB_PC_SL_RCV_FECN8_F: MAD_FIELDS = 471;
+pub const IB_PC_SL_RCV_FECN9_F: MAD_FIELDS = 472;
+pub const IB_PC_SL_RCV_FECN10_F: MAD_FIELDS = 473;
+pub const IB_PC_SL_RCV_FECN11_F: MAD_FIELDS = 474;
+pub const IB_PC_SL_RCV_FECN12_F: MAD_FIELDS = 475;
+pub const IB_PC_SL_RCV_FECN13_F: MAD_FIELDS = 476;
+pub const IB_PC_SL_RCV_FECN14_F: MAD_FIELDS = 477;
+pub const IB_PC_SL_RCV_FECN15_F: MAD_FIELDS = 478;
+pub const IB_PC_SL_RCV_FECN_LAST_F: MAD_FIELDS = 479;
+pub const IB_PC_SL_RCV_BECN_FIRST_F: MAD_FIELDS = 480;
+pub const IB_PC_SL_RCV_BECN0_F: MAD_FIELDS = 480;
+pub const IB_PC_SL_RCV_BECN1_F: MAD_FIELDS = 481;
+pub const IB_PC_SL_RCV_BECN2_F: MAD_FIELDS = 482;
+pub const IB_PC_SL_RCV_BECN3_F: MAD_FIELDS = 483;
+pub const IB_PC_SL_RCV_BECN4_F: MAD_FIELDS = 484;
+pub const IB_PC_SL_RCV_BECN5_F: MAD_FIELDS = 485;
+pub const IB_PC_SL_RCV_BECN6_F: MAD_FIELDS = 486;
+pub const IB_PC_SL_RCV_BECN7_F: MAD_FIELDS = 487;
+pub const IB_PC_SL_RCV_BECN8_F: MAD_FIELDS = 488;
+pub const IB_PC_SL_RCV_BECN9_F: MAD_FIELDS = 489;
+pub const IB_PC_SL_RCV_BECN10_F: MAD_FIELDS = 490;
+pub const IB_PC_SL_RCV_BECN11_F: MAD_FIELDS = 491;
+pub const IB_PC_SL_RCV_BECN12_F: MAD_FIELDS = 492;
+pub const IB_PC_SL_RCV_BECN13_F: MAD_FIELDS = 493;
+pub const IB_PC_SL_RCV_BECN14_F: MAD_FIELDS = 494;
+pub const IB_PC_SL_RCV_BECN15_F: MAD_FIELDS = 495;
+pub const IB_PC_SL_RCV_BECN_LAST_F: MAD_FIELDS = 496;
+pub const IB_PC_XMIT_CON_CTRL_FIRST_F: MAD_FIELDS = 497;
+pub const IB_PC_XMIT_CON_CTRL_TIME_CONG_F: MAD_FIELDS = 497;
+pub const IB_PC_XMIT_CON_CTRL_LAST_F: MAD_FIELDS = 498;
+pub const IB_PC_VL_XMIT_TIME_CONG_FIRST_F: MAD_FIELDS = 499;
+pub const IB_PC_VL_XMIT_TIME_CONG0_F: MAD_FIELDS = 499;
+pub const IB_PC_VL_XMIT_TIME_CONG1_F: MAD_FIELDS = 500;
+pub const IB_PC_VL_XMIT_TIME_CONG2_F: MAD_FIELDS = 501;
+pub const IB_PC_VL_XMIT_TIME_CONG3_F: MAD_FIELDS = 502;
+pub const IB_PC_VL_XMIT_TIME_CONG4_F: MAD_FIELDS = 503;
+pub const IB_PC_VL_XMIT_TIME_CONG5_F: MAD_FIELDS = 504;
+pub const IB_PC_VL_XMIT_TIME_CONG6_F: MAD_FIELDS = 505;
+pub const IB_PC_VL_XMIT_TIME_CONG7_F: MAD_FIELDS = 506;
+pub const IB_PC_VL_XMIT_TIME_CONG8_F: MAD_FIELDS = 507;
+pub const IB_PC_VL_XMIT_TIME_CONG9_F: MAD_FIELDS = 508;
+pub const IB_PC_VL_XMIT_TIME_CONG10_F: MAD_FIELDS = 509;
+pub const IB_PC_VL_XMIT_TIME_CONG11_F: MAD_FIELDS = 510;
+pub const IB_PC_VL_XMIT_TIME_CONG12_F: MAD_FIELDS = 511;
+pub const IB_PC_VL_XMIT_TIME_CONG13_F: MAD_FIELDS = 512;
+pub const IB_PC_VL_XMIT_TIME_CONG14_F: MAD_FIELDS = 513;
+pub const IB_PC_VL_XMIT_TIME_CONG_LAST_F: MAD_FIELDS = 514;
+pub const IB_MLNX_EXT_PORT_STATE_CHG_ENABLE_F: MAD_FIELDS = 515;
+pub const IB_MLNX_EXT_PORT_LINK_SPEED_SUPPORTED_F: MAD_FIELDS = 516;
+pub const IB_MLNX_EXT_PORT_LINK_SPEED_ENABLED_F: MAD_FIELDS = 517;
+pub const IB_MLNX_EXT_PORT_LINK_SPEED_ACTIVE_F: MAD_FIELDS = 518;
+pub const IB_MLNX_EXT_PORT_LAST_F: MAD_FIELDS = 519;
+pub const IB_CC_CCKEY_F: MAD_FIELDS = 520;
+pub const IB_CC_CONGESTION_INFO_FIRST_F: MAD_FIELDS = 521;
+pub const IB_CC_CONGESTION_INFO_F: MAD_FIELDS = 521;
+pub const IB_CC_CONGESTION_INFO_CONTROL_TABLE_CAP_F: MAD_FIELDS = 522;
+pub const IB_CC_CONGESTION_INFO_LAST_F: MAD_FIELDS = 523;
+pub const IB_CC_CONGESTION_KEY_INFO_FIRST_F: MAD_FIELDS = 524;
+pub const IB_CC_CONGESTION_KEY_INFO_CC_KEY_F: MAD_FIELDS = 524;
+pub const IB_CC_CONGESTION_KEY_INFO_CC_KEY_PROTECT_BIT_F: MAD_FIELDS = 525;
+pub const IB_CC_CONGESTION_KEY_INFO_CC_KEY_LEASE_PERIOD_F: MAD_FIELDS = 526;
+pub const IB_CC_CONGESTION_KEY_INFO_CC_KEY_VIOLATIONS_F: MAD_FIELDS = 527;
+pub const IB_CC_CONGESTION_KEY_INFO_LAST_F: MAD_FIELDS = 528;
+pub const IB_CC_CONGESTION_LOG_FIRST_F: MAD_FIELDS = 529;
+pub const IB_CC_CONGESTION_LOG_LOGTYPE_F: MAD_FIELDS = 529;
+pub const IB_CC_CONGESTION_LOG_CONGESTION_FLAGS_F: MAD_FIELDS = 530;
+pub const IB_CC_CONGESTION_LOG_LAST_F: MAD_FIELDS = 531;
+pub const IB_CC_CONGESTION_LOG_SWITCH_FIRST_F: MAD_FIELDS = 532;
+pub const IB_CC_CONGESTION_LOG_SWITCH_LOG_EVENTS_COUNTER_F: MAD_FIELDS = 532;
+pub const IB_CC_CONGESTION_LOG_SWITCH_CURRENT_TIME_STAMP_F: MAD_FIELDS = 533;
+pub const IB_CC_CONGESTION_LOG_SWITCH_PORTMAP_F: MAD_FIELDS = 534;
+pub const IB_CC_CONGESTION_LOG_SWITCH_LAST_F: MAD_FIELDS = 535;
+pub const IB_CC_CONGESTION_LOG_ENTRY_SWITCH_FIRST_F: MAD_FIELDS = 536;
+pub const IB_CC_CONGESTION_LOG_ENTRY_SWITCH_SLID_F: MAD_FIELDS = 536;
+pub const IB_CC_CONGESTION_LOG_ENTRY_SWITCH_DLID_F: MAD_FIELDS = 537;
+pub const IB_CC_CONGESTION_LOG_ENTRY_SWITCH_SL_F: MAD_FIELDS = 538;
+pub const IB_CC_CONGESTION_LOG_ENTRY_SWITCH_TIMESTAMP_F: MAD_FIELDS = 539;
+pub const IB_CC_CONGESTION_LOG_ENTRY_SWITCH_LAST_F: MAD_FIELDS = 540;
+pub const IB_CC_CONGESTION_LOG_CA_FIRST_F: MAD_FIELDS = 541;
+pub const IB_CC_CONGESTION_LOG_CA_THRESHOLD_EVENT_COUNTER_F: MAD_FIELDS = 541;
+pub const IB_CC_CONGESTION_LOG_CA_THRESHOLD_CONGESTION_EVENT_MAP_F: MAD_FIELDS = 542;
+pub const IB_CC_CONGESTION_LOG_CA_CURRENT_TIMESTAMP_F: MAD_FIELDS = 543;
+pub const IB_CC_CONGESTION_LOG_CA_LAST_F: MAD_FIELDS = 544;
+pub const IB_CC_CONGESTION_LOG_ENTRY_CA_FIRST_F: MAD_FIELDS = 545;
+pub const IB_CC_CONGESTION_LOG_ENTRY_CA_LOCAL_QP_CN_ENTRY_F: MAD_FIELDS = 545;
+pub const IB_CC_CONGESTION_LOG_ENTRY_CA_SL_CN_ENTRY_F: MAD_FIELDS = 546;
+pub const IB_CC_CONGESTION_LOG_ENTRY_CA_SERVICE_TYPE_CN_ENTRY_F: MAD_FIELDS = 547;
+pub const IB_CC_CONGESTION_LOG_ENTRY_CA_REMOTE_QP_NUMBER_CN_ENTRY_F: MAD_FIELDS = 548;
+pub const IB_CC_CONGESTION_LOG_ENTRY_CA_LOCAL_LID_CN_F: MAD_FIELDS = 549;
+pub const IB_CC_CONGESTION_LOG_ENTRY_CA_REMOTE_LID_CN_ENTRY_F: MAD_FIELDS = 550;
+pub const IB_CC_CONGESTION_LOG_ENTRY_CA_TIMESTAMP_CN_ENTRY_F: MAD_FIELDS = 551;
+pub const IB_CC_CONGESTION_LOG_ENTRY_CA_LAST_F: MAD_FIELDS = 552;
+pub const IB_CC_SWITCH_CONGESTION_SETTING_FIRST_F: MAD_FIELDS = 553;
+pub const IB_CC_SWITCH_CONGESTION_SETTING_CONTROL_MAP_F: MAD_FIELDS = 553;
+pub const IB_CC_SWITCH_CONGESTION_SETTING_VICTIM_MASK_F: MAD_FIELDS = 554;
+pub const IB_CC_SWITCH_CONGESTION_SETTING_CREDIT_MASK_F: MAD_FIELDS = 555;
+pub const IB_CC_SWITCH_CONGESTION_SETTING_THRESHOLD_F: MAD_FIELDS = 556;
+pub const IB_CC_SWITCH_CONGESTION_SETTING_PACKET_SIZE_F: MAD_FIELDS = 557;
+pub const IB_CC_SWITCH_CONGESTION_SETTING_CS_THRESHOLD_F: MAD_FIELDS = 558;
+pub const IB_CC_SWITCH_CONGESTION_SETTING_CS_RETURN_DELAY_F: MAD_FIELDS = 559;
+pub const IB_CC_SWITCH_CONGESTION_SETTING_MARKING_RATE_F: MAD_FIELDS = 560;
+pub const IB_CC_SWITCH_CONGESTION_SETTING_LAST_F: MAD_FIELDS = 561;
+pub const IB_CC_SWITCH_PORT_CONGESTION_SETTING_ELEMENT_FIRST_F: MAD_FIELDS = 562;
+pub const IB_CC_SWITCH_PORT_CONGESTION_SETTING_ELEMENT_VALID_F: MAD_FIELDS = 562;
+pub const IB_CC_SWITCH_PORT_CONGESTION_SETTING_ELEMENT_CONTROL_TYPE_F: MAD_FIELDS = 563;
+pub const IB_CC_SWITCH_PORT_CONGESTION_SETTING_ELEMENT_THRESHOLD_F: MAD_FIELDS = 564;
+pub const IB_CC_SWITCH_PORT_CONGESTION_SETTING_ELEMENT_PACKET_SIZE_F: MAD_FIELDS = 565;
+pub const IB_CC_SWITCH_PORT_CONGESTION_SETTING_ELEMENT_CONG_PARM_MARKING_RATE_F: MAD_FIELDS = 566;
+pub const IB_CC_SWITCH_PORT_CONGESTION_SETTING_ELEMENT_LAST_F: MAD_FIELDS = 567;
+pub const IB_CC_CA_CONGESTION_SETTING_FIRST_F: MAD_FIELDS = 568;
+pub const IB_CC_CA_CONGESTION_SETTING_PORT_CONTROL_F: MAD_FIELDS = 568;
+pub const IB_CC_CA_CONGESTION_SETTING_CONTROL_MAP_F: MAD_FIELDS = 569;
+pub const IB_CC_CA_CONGESTION_SETTING_LAST_F: MAD_FIELDS = 570;
+pub const IB_CC_CA_CONGESTION_ENTRY_FIRST_F: MAD_FIELDS = 571;
+pub const IB_CC_CA_CONGESTION_ENTRY_CCTI_TIMER_F: MAD_FIELDS = 571;
+pub const IB_CC_CA_CONGESTION_ENTRY_CCTI_INCREASE_F: MAD_FIELDS = 572;
+pub const IB_CC_CA_CONGESTION_ENTRY_TRIGGER_THRESHOLD_F: MAD_FIELDS = 573;
+pub const IB_CC_CA_CONGESTION_ENTRY_CCTI_MIN_F: MAD_FIELDS = 574;
+pub const IB_CC_CA_CONGESTION_ENTRY_LAST_F: MAD_FIELDS = 575;
+pub const IB_CC_CONGESTION_CONTROL_TABLE_FIRST_F: MAD_FIELDS = 576;
+pub const IB_CC_CONGESTION_CONTROL_TABLE_CCTI_LIMIT_F: MAD_FIELDS = 576;
+pub const IB_CC_CONGESTION_CONTROL_TABLE_LAST_F: MAD_FIELDS = 577;
+pub const IB_CC_CONGESTION_CONTROL_TABLE_ENTRY_FIRST_F: MAD_FIELDS = 578;
+pub const IB_CC_CONGESTION_CONTROL_TABLE_ENTRY_CCT_SHIFT_F: MAD_FIELDS = 578;
+pub const IB_CC_CONGESTION_CONTROL_TABLE_ENTRY_CCT_MULTIPLIER_F: MAD_FIELDS = 579;
+pub const IB_CC_CONGESTION_CONTROL_TABLE_ENTRY_LAST_F: MAD_FIELDS = 580;
+pub const IB_CC_TIMESTAMP_FIRST_F: MAD_FIELDS = 581;
+pub const IB_CC_TIMESTAMP_F: MAD_FIELDS = 581;
+pub const IB_CC_TIMESTAMP_LAST_F: MAD_FIELDS = 582;
+pub const IB_SA_NR_FIRST_F: MAD_FIELDS = 583;
+pub const IB_SA_NR_LID_F: MAD_FIELDS = 583;
+pub const IB_SA_NR_BASEVER_F: MAD_FIELDS = 584;
+pub const IB_SA_NR_CLASSVER_F: MAD_FIELDS = 585;
+pub const IB_SA_NR_TYPE_F: MAD_FIELDS = 586;
+pub const IB_SA_NR_NPORTS_F: MAD_FIELDS = 587;
+pub const IB_SA_NR_SYSTEM_GUID_F: MAD_FIELDS = 588;
+pub const IB_SA_NR_GUID_F: MAD_FIELDS = 589;
+pub const IB_SA_NR_PORT_GUID_F: MAD_FIELDS = 590;
+pub const IB_SA_NR_PARTITION_CAP_F: MAD_FIELDS = 591;
+pub const IB_SA_NR_DEVID_F: MAD_FIELDS = 592;
+pub const IB_SA_NR_REVISION_F: MAD_FIELDS = 593;
+pub const IB_SA_NR_LOCAL_PORT_F: MAD_FIELDS = 594;
+pub const IB_SA_NR_VENDORID_F: MAD_FIELDS = 595;
+pub const IB_SA_NR_NODEDESC_F: MAD_FIELDS = 596;
+pub const IB_SA_NR_LAST_F: MAD_FIELDS = 597;
+pub const IB_PSR_TAG_F: MAD_FIELDS = 598;
+pub const IB_PSR_SAMPLE_STATUS_F: MAD_FIELDS = 599;
+pub const IB_PSR_COUNTER0_F: MAD_FIELDS = 600;
+pub const IB_PSR_COUNTER1_F: MAD_FIELDS = 601;
+pub const IB_PSR_COUNTER2_F: MAD_FIELDS = 602;
+pub const IB_PSR_COUNTER3_F: MAD_FIELDS = 603;
+pub const IB_PSR_COUNTER4_F: MAD_FIELDS = 604;
+pub const IB_PSR_COUNTER5_F: MAD_FIELDS = 605;
+pub const IB_PSR_COUNTER6_F: MAD_FIELDS = 606;
+pub const IB_PSR_COUNTER7_F: MAD_FIELDS = 607;
+pub const IB_PSR_COUNTER8_F: MAD_FIELDS = 608;
+pub const IB_PSR_COUNTER9_F: MAD_FIELDS = 609;
+pub const IB_PSR_COUNTER10_F: MAD_FIELDS = 610;
+pub const IB_PSR_COUNTER11_F: MAD_FIELDS = 611;
+pub const IB_PSR_COUNTER12_F: MAD_FIELDS = 612;
+pub const IB_PSR_COUNTER13_F: MAD_FIELDS = 613;
+pub const IB_PSR_COUNTER14_F: MAD_FIELDS = 614;
+pub const IB_PSR_LAST_F: MAD_FIELDS = 615;
+pub const IB_PORT_EXT_FIRST_F: MAD_FIELDS = 616;
+pub const IB_PORT_EXT_CAPMASK_F: MAD_FIELDS = 616;
+pub const IB_PORT_EXT_FEC_MODE_ACTIVE_F: MAD_FIELDS = 617;
+pub const IB_PORT_EXT_FDR_FEC_MODE_SUPPORTED_F: MAD_FIELDS = 618;
+pub const IB_PORT_EXT_FDR_FEC_MODE_ENABLED_F: MAD_FIELDS = 619;
+pub const IB_PORT_EXT_EDR_FEC_MODE_SUPPORTED_F: MAD_FIELDS = 620;
+pub const IB_PORT_EXT_EDR_FEC_MODE_ENABLED_F: MAD_FIELDS = 621;
+pub const IB_PORT_EXT_LAST_F: MAD_FIELDS = 622;
+pub const IB_PESC_RSFEC_FIRST_F: MAD_FIELDS = 623;
+pub const IB_PESC_RSFEC_PORT_SELECT_F: MAD_FIELDS = 623;
+pub const IB_PESC_RSFEC_COUNTER_SELECT_F: MAD_FIELDS = 624;
+pub const IB_PESC_RSFEC_SYNC_HDR_ERR_CTR_F: MAD_FIELDS = 625;
+pub const IB_PESC_RSFEC_UNK_BLOCK_CTR_F: MAD_FIELDS = 626;
+pub const IB_PESC_RSFEC_FEC_CORR_SYMBOL_CTR_LANE0_F: MAD_FIELDS = 627;
+pub const IB_PESC_RSFEC_FEC_CORR_SYMBOL_CTR_LANE1_F: MAD_FIELDS = 628;
+pub const IB_PESC_RSFEC_FEC_CORR_SYMBOL_CTR_LANE2_F: MAD_FIELDS = 629;
+pub const IB_PESC_RSFEC_FEC_CORR_SYMBOL_CTR_LANE3_F: MAD_FIELDS = 630;
+pub const IB_PESC_RSFEC_FEC_CORR_SYMBOL_CTR_LANE4_F: MAD_FIELDS = 631;
+pub const IB_PESC_RSFEC_FEC_CORR_SYMBOL_CTR_LANE5_F: MAD_FIELDS = 632;
+pub const IB_PESC_RSFEC_FEC_CORR_SYMBOL_CTR_LANE6_F: MAD_FIELDS = 633;
+pub const IB_PESC_RSFEC_FEC_CORR_SYMBOL_CTR_LANE7_F: MAD_FIELDS = 634;
+pub const IB_PESC_RSFEC_FEC_CORR_SYMBOL_CTR_LANE8_F: MAD_FIELDS = 635;
+pub const IB_PESC_RSFEC_FEC_CORR_SYMBOL_CTR_LANE9_F: MAD_FIELDS = 636;
+pub const IB_PESC_RSFEC_FEC_CORR_SYMBOL_CTR_LANE10_F: MAD_FIELDS = 637;
+pub const IB_PESC_RSFEC_FEC_CORR_SYMBOL_CTR_LANE11_F: MAD_FIELDS = 638;
+pub const IB_PESC_PORT_FEC_CORR_BLOCK_CTR_F: MAD_FIELDS = 639;
+pub const IB_PESC_PORT_FEC_UNCORR_BLOCK_CTR_F: MAD_FIELDS = 640;
+pub const IB_PESC_PORT_FEC_CORR_SYMBOL_CTR_F: MAD_FIELDS = 641;
+pub const IB_PESC_RSFEC_LAST_F: MAD_FIELDS = 642;
+pub const IB_PC_EXT_COUNTER_SELECT2_F: MAD_FIELDS = 643;
+pub const IB_PC_EXT_ERR_SYM_F: MAD_FIELDS = 644;
+pub const IB_PC_EXT_LINK_RECOVERS_F: MAD_FIELDS = 645;
+pub const IB_PC_EXT_LINK_DOWNED_F: MAD_FIELDS = 646;
+pub const IB_PC_EXT_ERR_RCV_F: MAD_FIELDS = 647;
+pub const IB_PC_EXT_ERR_PHYSRCV_F: MAD_FIELDS = 648;
+pub const IB_PC_EXT_ERR_SWITCH_REL_F: MAD_FIELDS = 649;
+pub const IB_PC_EXT_XMT_DISCARDS_F: MAD_FIELDS = 650;
+pub const IB_PC_EXT_ERR_XMTCONSTR_F: MAD_FIELDS = 651;
+pub const IB_PC_EXT_ERR_RCVCONSTR_F: MAD_FIELDS = 652;
+pub const IB_PC_EXT_ERR_LOCALINTEG_F: MAD_FIELDS = 653;
+pub const IB_PC_EXT_ERR_EXCESS_OVR_F: MAD_FIELDS = 654;
+pub const IB_PC_EXT_VL15_DROPPED_F: MAD_FIELDS = 655;
+pub const IB_PC_EXT_XMT_WAIT_F: MAD_FIELDS = 656;
+pub const IB_PC_EXT_QP1_DROP_F: MAD_FIELDS = 657;
+pub const IB_PC_EXT_ERR_LAST_F: MAD_FIELDS = 658;
+pub const IB_PC_QP1_DROP_F: MAD_FIELDS = 659;
+pub const IB_PORT_EXT_HDR_FEC_MODE_SUPPORTED_F: MAD_FIELDS = 660;
+pub const IB_PORT_EXT_HDR_FEC_MODE_ENABLED_F: MAD_FIELDS = 661;
+pub const IB_PORT_EXT_HDR_FEC_MODE_LAST_F: MAD_FIELDS = 662;
+pub const IB_PORT_EXT_NDR_FEC_MODE_SUPPORTED_F: MAD_FIELDS = 663;
+pub const IB_PORT_EXT_NDR_FEC_MODE_ENABLED_F: MAD_FIELDS = 664;
+pub const IB_PORT_EXT_NDR_FEC_MODE_LAST_F: MAD_FIELDS = 665;
+pub const IB_FIELD_LAST_: MAD_FIELDS = 666;
+pub type MAD_FIELDS = ::std::os::raw::c_uint;
+pub const IB_RMPP_TYPE_NONE: RMPP_TYPE_ENUM = 0;
+pub const IB_RMPP_TYPE_DATA: RMPP_TYPE_ENUM = 1;
+pub const IB_RMPP_TYPE_ACK: RMPP_TYPE_ENUM = 2;
+pub const IB_RMPP_TYPE_STOP: RMPP_TYPE_ENUM = 3;
+pub const IB_RMPP_TYPE_ABORT: RMPP_TYPE_ENUM = 4;
+pub type RMPP_TYPE_ENUM = ::std::os::raw::c_uint;
+pub const IB_RMPP_FLAG_ACTIVE: RMPP_FLAGS_ENUM = 1;
+pub const IB_RMPP_FLAG_FIRST: RMPP_FLAGS_ENUM = 2;
+pub const IB_RMPP_FLAG_LAST: RMPP_FLAGS_ENUM = 4;
+pub type RMPP_FLAGS_ENUM = ::std::os::raw::c_uint;
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub struct ib_rmpp_hdr_t {
+    pub type_: ::std::os::raw::c_int,
+    pub flags: ::std::os::raw::c_int,
+    pub status: ::std::os::raw::c_int,
+    pub d1: ib_rmpp_hdr_t__bindgen_ty_1,
+    pub d2: ib_rmpp_hdr_t__bindgen_ty_2,
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union ib_rmpp_hdr_t__bindgen_ty_1 {
+    pub u: u32,
+    pub segnum: u32,
+}
+#[test]
+fn bindgen_test_layout_ib_rmpp_hdr_t__bindgen_ty_1() {
+    const UNINIT: ::std::mem::MaybeUninit<ib_rmpp_hdr_t__bindgen_ty_1> =
+        ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<ib_rmpp_hdr_t__bindgen_ty_1>(),
+        4usize,
+        concat!("Size of: ", stringify!(ib_rmpp_hdr_t__bindgen_ty_1))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<ib_rmpp_hdr_t__bindgen_ty_1>(),
+        4usize,
+        concat!("Alignment of ", stringify!(ib_rmpp_hdr_t__bindgen_ty_1))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).u) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_rmpp_hdr_t__bindgen_ty_1),
+            "::",
+            stringify!(u)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).segnum) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_rmpp_hdr_t__bindgen_ty_1),
+            "::",
+            stringify!(segnum)
+        )
+    );
+}
+impl Default for ib_rmpp_hdr_t__bindgen_ty_1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union ib_rmpp_hdr_t__bindgen_ty_2 {
+    pub u: u32,
+    pub len: u32,
+    pub newwin: u32,
+}
+#[test]
+fn bindgen_test_layout_ib_rmpp_hdr_t__bindgen_ty_2() {
+    const UNINIT: ::std::mem::MaybeUninit<ib_rmpp_hdr_t__bindgen_ty_2> =
+        ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<ib_rmpp_hdr_t__bindgen_ty_2>(),
+        4usize,
+        concat!("Size of: ", stringify!(ib_rmpp_hdr_t__bindgen_ty_2))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<ib_rmpp_hdr_t__bindgen_ty_2>(),
+        4usize,
+        concat!("Alignment of ", stringify!(ib_rmpp_hdr_t__bindgen_ty_2))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).u) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_rmpp_hdr_t__bindgen_ty_2),
+            "::",
+            stringify!(u)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).len) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_rmpp_hdr_t__bindgen_ty_2),
+            "::",
+            stringify!(len)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).newwin) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_rmpp_hdr_t__bindgen_ty_2),
+            "::",
+            stringify!(newwin)
+        )
+    );
+}
+impl Default for ib_rmpp_hdr_t__bindgen_ty_2 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+#[test]
+fn bindgen_test_layout_ib_rmpp_hdr_t() {
+    const UNINIT: ::std::mem::MaybeUninit<ib_rmpp_hdr_t> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<ib_rmpp_hdr_t>(),
+        20usize,
+        concat!("Size of: ", stringify!(ib_rmpp_hdr_t))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<ib_rmpp_hdr_t>(),
+        4usize,
+        concat!("Alignment of ", stringify!(ib_rmpp_hdr_t))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).type_) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_rmpp_hdr_t),
+            "::",
+            stringify!(type_)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).flags) as usize - ptr as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_rmpp_hdr_t),
+            "::",
+            stringify!(flags)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).status) as usize - ptr as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_rmpp_hdr_t),
+            "::",
+            stringify!(status)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).d1) as usize - ptr as usize },
+        12usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_rmpp_hdr_t),
+            "::",
+            stringify!(d1)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).d2) as usize - ptr as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_rmpp_hdr_t),
+            "::",
+            stringify!(d2)
+        )
+    );
+}
+impl Default for ib_rmpp_hdr_t {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+pub const SA_HEADER_SZ: SA_SIZES_ENUM = 20;
+pub type SA_SIZES_ENUM = ::std::os::raw::c_uint;
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub struct ib_sa_call {
+    pub attrid: ::std::os::raw::c_uint,
+    pub mod_: ::std::os::raw::c_uint,
+    pub mask: u64,
+    pub method: ::std::os::raw::c_uint,
+    pub trid: u64,
+    pub recsz: ::std::os::raw::c_uint,
+    pub rmpp: ib_rmpp_hdr_t,
+}
+#[test]
+fn bindgen_test_layout_ib_sa_call() {
+    const UNINIT: ::std::mem::MaybeUninit<ib_sa_call> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<ib_sa_call>(),
+        56usize,
+        concat!("Size of: ", stringify!(ib_sa_call))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<ib_sa_call>(),
+        8usize,
+        concat!("Alignment of ", stringify!(ib_sa_call))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).attrid) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_sa_call),
+            "::",
+            stringify!(attrid)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).mod_) as usize - ptr as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_sa_call),
+            "::",
+            stringify!(mod_)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).mask) as usize - ptr as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_sa_call),
+            "::",
+            stringify!(mask)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).method) as usize - ptr as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_sa_call),
+            "::",
+            stringify!(method)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).trid) as usize - ptr as usize },
+        24usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_sa_call),
+            "::",
+            stringify!(trid)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).recsz) as usize - ptr as usize },
+        32usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_sa_call),
+            "::",
+            stringify!(recsz)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).rmpp) as usize - ptr as usize },
+        36usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_sa_call),
+            "::",
+            stringify!(rmpp)
+        )
+    );
+}
+impl Default for ib_sa_call {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+pub type ib_sa_call_t = ib_sa_call;
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub struct ib_vendor_call {
+    pub method: ::std::os::raw::c_uint,
+    pub mgmt_class: ::std::os::raw::c_uint,
+    pub attrid: ::std::os::raw::c_uint,
+    pub mod_: ::std::os::raw::c_uint,
+    pub oui: u32,
+    pub timeout: ::std::os::raw::c_uint,
+    pub rmpp: ib_rmpp_hdr_t,
+}
+#[test]
+fn bindgen_test_layout_ib_vendor_call() {
+    const UNINIT: ::std::mem::MaybeUninit<ib_vendor_call> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<ib_vendor_call>(),
+        44usize,
+        concat!("Size of: ", stringify!(ib_vendor_call))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<ib_vendor_call>(),
+        4usize,
+        concat!("Alignment of ", stringify!(ib_vendor_call))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).method) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_vendor_call),
+            "::",
+            stringify!(method)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).mgmt_class) as usize - ptr as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_vendor_call),
+            "::",
+            stringify!(mgmt_class)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).attrid) as usize - ptr as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_vendor_call),
+            "::",
+            stringify!(attrid)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).mod_) as usize - ptr as usize },
+        12usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_vendor_call),
+            "::",
+            stringify!(mod_)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).oui) as usize - ptr as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_vendor_call),
+            "::",
+            stringify!(oui)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).timeout) as usize - ptr as usize },
+        20usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_vendor_call),
+            "::",
+            stringify!(timeout)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).rmpp) as usize - ptr as usize },
+        24usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_vendor_call),
+            "::",
+            stringify!(rmpp)
+        )
+    );
+}
+impl Default for ib_vendor_call {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+pub type ib_vendor_call_t = ib_vendor_call;
+#[repr(C)]
+#[derive(Debug, Default, Copy, Clone)]
+pub struct ib_bm_call {
+    pub method: ::std::os::raw::c_uint,
+    pub attrid: ::std::os::raw::c_uint,
+    pub mod_: ::std::os::raw::c_uint,
+    pub timeout: ::std::os::raw::c_uint,
+    pub bkey: u64,
+}
+#[test]
+fn bindgen_test_layout_ib_bm_call() {
+    const UNINIT: ::std::mem::MaybeUninit<ib_bm_call> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<ib_bm_call>(),
+        24usize,
+        concat!("Size of: ", stringify!(ib_bm_call))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<ib_bm_call>(),
+        8usize,
+        concat!("Alignment of ", stringify!(ib_bm_call))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).method) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_bm_call),
+            "::",
+            stringify!(method)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).attrid) as usize - ptr as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_bm_call),
+            "::",
+            stringify!(attrid)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).mod_) as usize - ptr as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_bm_call),
+            "::",
+            stringify!(mod_)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).timeout) as usize - ptr as usize },
+        12usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_bm_call),
+            "::",
+            stringify!(timeout)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).bkey) as usize - ptr as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_bm_call),
+            "::",
+            stringify!(bkey)
+        )
+    );
+}
+pub type ib_bm_call_t = ib_bm_call;
+pub const IB_DEST_LID: MAD_DEST = 0;
+pub const IB_DEST_DRPATH: MAD_DEST = 1;
+pub const IB_DEST_GUID: MAD_DEST = 2;
+pub const IB_DEST_DRSLID: MAD_DEST = 3;
+pub const IB_DEST_GID: MAD_DEST = 4;
+pub type MAD_DEST = ::std::os::raw::c_uint;
+pub const IB_NODE_CA: MAD_NODE_TYPE = 1;
+pub const IB_NODE_SWITCH: MAD_NODE_TYPE = 2;
+pub const IB_NODE_ROUTER: MAD_NODE_TYPE = 3;
+pub const NODE_RNIC: MAD_NODE_TYPE = 4;
+pub const IB_NODE_MAX: MAD_NODE_TYPE = 4;
+pub type MAD_NODE_TYPE = ::std::os::raw::c_uint;
+extern "C" {
+    pub fn portid2str(portid: *mut ib_portid_t) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn portid2portnum(portid: *mut ib_portid_t) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn str2drpath(
+        path: *mut ib_dr_path_t,
+        routepath: *mut ::std::os::raw::c_char,
+        drslid: ::std::os::raw::c_int,
+        drdlid: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn drpath2str(
+        path: *mut ib_dr_path_t,
+        dstr: *mut ::std::os::raw::c_char,
+        dstr_size: usize,
+    ) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn mad_get_field(
+        buf: *mut ::std::os::raw::c_void,
+        base_offs: ::std::os::raw::c_int,
+        field: MAD_FIELDS,
+    ) -> u32;
+}
+extern "C" {
+    pub fn mad_set_field(
+        buf: *mut ::std::os::raw::c_void,
+        base_offs: ::std::os::raw::c_int,
+        field: MAD_FIELDS,
+        val: u32,
+    );
+}
+extern "C" {
+    pub fn mad_get_field64(
+        buf: *mut ::std::os::raw::c_void,
+        base_offs: ::std::os::raw::c_int,
+        field: MAD_FIELDS,
+    ) -> u64;
+}
+extern "C" {
+    pub fn mad_set_field64(
+        buf: *mut ::std::os::raw::c_void,
+        base_offs: ::std::os::raw::c_int,
+        field: MAD_FIELDS,
+        val: u64,
+    );
+}
+extern "C" {
+    pub fn mad_set_array(
+        buf: *mut ::std::os::raw::c_void,
+        base_offs: ::std::os::raw::c_int,
+        field: MAD_FIELDS,
+        val: *mut ::std::os::raw::c_void,
+    );
+}
+extern "C" {
+    pub fn mad_get_array(
+        buf: *mut ::std::os::raw::c_void,
+        base_offs: ::std::os::raw::c_int,
+        field: MAD_FIELDS,
+        val: *mut ::std::os::raw::c_void,
+    );
+}
+extern "C" {
+    pub fn mad_decode_field(buf: *mut u8, field: MAD_FIELDS, val: *mut ::std::os::raw::c_void);
+}
+extern "C" {
+    pub fn mad_encode_field(buf: *mut u8, field: MAD_FIELDS, val: *mut ::std::os::raw::c_void);
+}
+extern "C" {
+    pub fn mad_print_field(
+        field: MAD_FIELDS,
+        name: *const ::std::os::raw::c_char,
+        val: *mut ::std::os::raw::c_void,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn mad_dump_field(
+        field: MAD_FIELDS,
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+    ) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn mad_dump_val(
+        field: MAD_FIELDS,
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+    ) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn mad_field_name(field: MAD_FIELDS) -> *const ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn mad_encode(
+        buf: *mut ::std::os::raw::c_void,
+        rpc: *mut ib_rpc_t,
+        drpath: *mut ib_dr_path_t,
+        data: *mut ::std::os::raw::c_void,
+    ) -> *mut ::std::os::raw::c_void;
+}
+extern "C" {
+    pub fn mad_trid() -> u64;
+}
+extern "C" {
+    pub fn mad_build_pkt(
+        umad: *mut ::std::os::raw::c_void,
+        rpc: *mut ib_rpc_t,
+        dport: *mut ib_portid_t,
+        rmpp: *mut ib_rmpp_hdr_t,
+        data: *mut ::std::os::raw::c_void,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn madrpc_show_errors(set: ::std::os::raw::c_int);
+}
+extern "C" {
+    pub fn madrpc_set_retries(retries: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn madrpc_set_timeout(timeout: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct ibmad_port {
+    _unused: [u8; 0],
+}
+extern "C" {
+    pub fn mad_rpc_open_port(
+        dev_name: *mut ::std::os::raw::c_char,
+        dev_port: ::std::os::raw::c_int,
+        mgmt_classes: *mut ::std::os::raw::c_int,
+        num_classes: ::std::os::raw::c_int,
+    ) -> *mut ibmad_port;
+}
+extern "C" {
+    pub fn mad_rpc_close_port(srcport: *mut ibmad_port);
+}
+extern "C" {
+    pub fn mad_rpc(
+        srcport: *const ibmad_port,
+        rpc: *mut ib_rpc_t,
+        dport: *mut ib_portid_t,
+        payload: *mut ::std::os::raw::c_void,
+        rcvdata: *mut ::std::os::raw::c_void,
+    ) -> *mut ::std::os::raw::c_void;
+}
+extern "C" {
+    pub fn mad_rpc_rmpp(
+        srcport: *const ibmad_port,
+        rpc: *mut ib_rpc_t,
+        dport: *mut ib_portid_t,
+        rmpp: *mut ib_rmpp_hdr_t,
+        data: *mut ::std::os::raw::c_void,
+    ) -> *mut ::std::os::raw::c_void;
+}
+extern "C" {
+    pub fn mad_rpc_portid(srcport: *mut ibmad_port) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn mad_rpc_set_retries(port: *mut ibmad_port, retries: ::std::os::raw::c_int);
+}
+extern "C" {
+    pub fn mad_rpc_set_timeout(port: *mut ibmad_port, timeout: ::std::os::raw::c_int);
+}
+extern "C" {
+    pub fn mad_rpc_class_agent(
+        srcport: *mut ibmad_port,
+        cls: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn mad_get_timeout(
+        srcport: *const ibmad_port,
+        override_ms: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn mad_get_retries(srcport: *const ibmad_port) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn mad_register_port_client(
+        port_id: ::std::os::raw::c_int,
+        mgmt: ::std::os::raw::c_int,
+        rmpp_version: u8,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn mad_register_client(
+        mgmt: ::std::os::raw::c_int,
+        rmpp_version: u8,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn mad_register_server(
+        mgmt: ::std::os::raw::c_int,
+        rmpp_version: u8,
+        method_mask: *mut ::std::os::raw::c_long,
+        class_oui: u32,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn mad_register_client_via(
+        mgmt: ::std::os::raw::c_int,
+        rmpp_version: u8,
+        srcport: *mut ibmad_port,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn mad_register_server_via(
+        mgmt: ::std::os::raw::c_int,
+        rmpp_version: u8,
+        method_mask: *mut ::std::os::raw::c_long,
+        class_oui: u32,
+        srcport: *mut ibmad_port,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn mad_class_agent(mgmt: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn mad_send(
+        rpc: *mut ib_rpc_t,
+        dport: *mut ib_portid_t,
+        rmpp: *mut ib_rmpp_hdr_t,
+        data: *mut ::std::os::raw::c_void,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn mad_receive(
+        umad: *mut ::std::os::raw::c_void,
+        timeout: ::std::os::raw::c_int,
+    ) -> *mut ::std::os::raw::c_void;
+}
+extern "C" {
+    pub fn mad_respond(
+        umad: *mut ::std::os::raw::c_void,
+        portid: *mut ib_portid_t,
+        rstatus: u32,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn mad_send_via(
+        rpc: *mut ib_rpc_t,
+        dport: *mut ib_portid_t,
+        rmpp: *mut ib_rmpp_hdr_t,
+        data: *mut ::std::os::raw::c_void,
+        srcport: *mut ibmad_port,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn mad_receive_via(
+        umad: *mut ::std::os::raw::c_void,
+        timeout: ::std::os::raw::c_int,
+        srcport: *mut ibmad_port,
+    ) -> *mut ::std::os::raw::c_void;
+}
+extern "C" {
+    pub fn mad_respond_via(
+        umad: *mut ::std::os::raw::c_void,
+        portid: *mut ib_portid_t,
+        rstatus: u32,
+        srcport: *mut ibmad_port,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn mad_alloc() -> *mut ::std::os::raw::c_void;
+}
+extern "C" {
+    pub fn mad_free(umad: *mut ::std::os::raw::c_void);
+}
+extern "C" {
+    pub fn ib_vendor_call(
+        data: *mut ::std::os::raw::c_void,
+        portid: *mut ib_portid_t,
+        call: *mut ib_vendor_call_t,
+    ) -> *mut u8;
+}
+extern "C" {
+    pub fn ib_vendor_call_via(
+        data: *mut ::std::os::raw::c_void,
+        portid: *mut ib_portid_t,
+        call: *mut ib_vendor_call_t,
+        srcport: *mut ibmad_port,
+    ) -> *mut u8;
+}
+extern "C" {
+    pub fn madrpc_portid() -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn madrpc(
+        rpc: *mut ib_rpc_t,
+        dport: *mut ib_portid_t,
+        payload: *mut ::std::os::raw::c_void,
+        rcvdata: *mut ::std::os::raw::c_void,
+    ) -> *mut ::std::os::raw::c_void;
+}
+extern "C" {
+    pub fn madrpc_rmpp(
+        rpc: *mut ib_rpc_t,
+        dport: *mut ib_portid_t,
+        rmpp: *mut ib_rmpp_hdr_t,
+        data: *mut ::std::os::raw::c_void,
+    ) -> *mut ::std::os::raw::c_void;
+}
+extern "C" {
+    pub fn madrpc_init(
+        dev_name: *mut ::std::os::raw::c_char,
+        dev_port: ::std::os::raw::c_int,
+        mgmt_classes: *mut ::std::os::raw::c_int,
+        num_classes: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn madrpc_save_mad(madbuf: *mut ::std::os::raw::c_void, len: ::std::os::raw::c_int);
+}
+extern "C" {
+    pub fn smp_query(
+        buf: *mut ::std::os::raw::c_void,
+        id: *mut ib_portid_t,
+        attrid: ::std::os::raw::c_uint,
+        mod_: ::std::os::raw::c_uint,
+        timeout: ::std::os::raw::c_uint,
+    ) -> *mut u8;
+}
+extern "C" {
+    pub fn smp_set(
+        buf: *mut ::std::os::raw::c_void,
+        id: *mut ib_portid_t,
+        attrid: ::std::os::raw::c_uint,
+        mod_: ::std::os::raw::c_uint,
+        timeout: ::std::os::raw::c_uint,
+    ) -> *mut u8;
+}
+extern "C" {
+    pub fn smp_query_via(
+        buf: *mut ::std::os::raw::c_void,
+        id: *mut ib_portid_t,
+        attrid: ::std::os::raw::c_uint,
+        mod_: ::std::os::raw::c_uint,
+        timeout: ::std::os::raw::c_uint,
+        srcport: *const ibmad_port,
+    ) -> *mut u8;
+}
+extern "C" {
+    pub fn smp_set_via(
+        buf: *mut ::std::os::raw::c_void,
+        id: *mut ib_portid_t,
+        attrid: ::std::os::raw::c_uint,
+        mod_: ::std::os::raw::c_uint,
+        timeout: ::std::os::raw::c_uint,
+        srcport: *const ibmad_port,
+    ) -> *mut u8;
+}
+extern "C" {
+    pub fn smp_query_status_via(
+        rcvbuf: *mut ::std::os::raw::c_void,
+        portid: *mut ib_portid_t,
+        attrid: ::std::os::raw::c_uint,
+        mod_: ::std::os::raw::c_uint,
+        timeout: ::std::os::raw::c_uint,
+        rstatus: *mut ::std::os::raw::c_int,
+        srcport: *const ibmad_port,
+    ) -> *mut u8;
+}
+extern "C" {
+    pub fn smp_set_status_via(
+        data: *mut ::std::os::raw::c_void,
+        portid: *mut ib_portid_t,
+        attrid: ::std::os::raw::c_uint,
+        mod_: ::std::os::raw::c_uint,
+        timeout: ::std::os::raw::c_uint,
+        rstatus: *mut ::std::os::raw::c_int,
+        srcport: *const ibmad_port,
+    ) -> *mut u8;
+}
+extern "C" {
+    pub fn smp_mkey_set(srcport: *mut ibmad_port, mkey: u64);
+}
+extern "C" {
+    pub fn smp_mkey_get(srcport: *const ibmad_port) -> u64;
+}
+extern "C" {
+    pub fn cc_query_status_via(
+        rcvbuf: *mut ::std::os::raw::c_void,
+        portid: *mut ib_portid_t,
+        attrid: ::std::os::raw::c_uint,
+        mod_: ::std::os::raw::c_uint,
+        timeout: ::std::os::raw::c_uint,
+        rstatus: *mut ::std::os::raw::c_int,
+        srcport: *const ibmad_port,
+        cckey: u64,
+    ) -> *mut ::std::os::raw::c_void;
+}
+extern "C" {
+    pub fn cc_config_status_via(
+        payload: *mut ::std::os::raw::c_void,
+        rcvbuf: *mut ::std::os::raw::c_void,
+        portid: *mut ib_portid_t,
+        attrid: ::std::os::raw::c_uint,
+        mod_: ::std::os::raw::c_uint,
+        timeout: ::std::os::raw::c_uint,
+        rstatus: *mut ::std::os::raw::c_int,
+        srcport: *const ibmad_port,
+        cckey: u64,
+    ) -> *mut ::std::os::raw::c_void;
+}
+extern "C" {
+    pub fn sa_call(
+        rcvbuf: *mut ::std::os::raw::c_void,
+        portid: *mut ib_portid_t,
+        sa: *mut ib_sa_call_t,
+        timeout: ::std::os::raw::c_uint,
+    ) -> *mut u8;
+}
+extern "C" {
+    pub fn ib_path_query(
+        srcgid: *mut u8,
+        destgid: *mut u8,
+        sm_id: *mut ib_portid_t,
+        buf: *mut ::std::os::raw::c_void,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn sa_rpc_call(
+        srcport: *const ibmad_port,
+        rcvbuf: *mut ::std::os::raw::c_void,
+        portid: *mut ib_portid_t,
+        sa: *mut ib_sa_call_t,
+        timeout: ::std::os::raw::c_uint,
+    ) -> *mut u8;
+}
+extern "C" {
+    pub fn ib_path_query_via(
+        srcport: *const ibmad_port,
+        srcgid: *mut u8,
+        destgid: *mut u8,
+        sm_id: *mut ib_portid_t,
+        buf: *mut ::std::os::raw::c_void,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn ib_node_query_via(
+        srcport: *const ibmad_port,
+        guid: u64,
+        sm_id: *mut ib_portid_t,
+        buf: *mut ::std::os::raw::c_void,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn ib_resolve_smlid(
+        sm_id: *mut ib_portid_t,
+        timeout: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn ib_resolve_portid_str(
+        portid: *mut ib_portid_t,
+        addr_str: *mut ::std::os::raw::c_char,
+        dest: MAD_DEST,
+        sm_id: *mut ib_portid_t,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn ib_resolve_self(
+        portid: *mut ib_portid_t,
+        portnum: *mut ::std::os::raw::c_int,
+        gid: *mut ibmad_gid_t,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn ib_resolve_smlid_via(
+        sm_id: *mut ib_portid_t,
+        timeout: ::std::os::raw::c_int,
+        srcport: *const ibmad_port,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn ib_resolve_guid_via(
+        portid: *mut ib_portid_t,
+        guid: *mut u64,
+        sm_id: *mut ib_portid_t,
+        timeout: ::std::os::raw::c_int,
+        srcport: *const ibmad_port,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn ib_resolve_gid_via(
+        portid: *mut ib_portid_t,
+        gid: *mut u8,
+        sm_id: *mut ib_portid_t,
+        timeout: ::std::os::raw::c_int,
+        srcport: *const ibmad_port,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn ib_resolve_portid_str_via(
+        portid: *mut ib_portid_t,
+        addr_str: *mut ::std::os::raw::c_char,
+        dest: MAD_DEST,
+        sm_id: *mut ib_portid_t,
+        srcport: *const ibmad_port,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn ib_resolve_self_via(
+        portid: *mut ib_portid_t,
+        portnum: *mut ::std::os::raw::c_int,
+        gid: *mut ibmad_gid_t,
+        srcport: *const ibmad_port,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn pma_query_via(
+        rcvbuf: *mut ::std::os::raw::c_void,
+        dest: *mut ib_portid_t,
+        port: ::std::os::raw::c_int,
+        timeout: ::std::os::raw::c_uint,
+        id: ::std::os::raw::c_uint,
+        srcport: *const ibmad_port,
+    ) -> *mut u8;
+}
+extern "C" {
+    pub fn performance_reset_via(
+        rcvbuf: *mut ::std::os::raw::c_void,
+        dest: *mut ib_portid_t,
+        port: ::std::os::raw::c_int,
+        mask: ::std::os::raw::c_uint,
+        timeout: ::std::os::raw::c_uint,
+        id: ::std::os::raw::c_uint,
+        srcport: *const ibmad_port,
+    ) -> *mut u8;
+}
+extern "C" {
+    pub fn bm_call_via(
+        data: *mut ::std::os::raw::c_void,
+        portid: *mut ib_portid_t,
+        call: *mut ib_bm_call_t,
+        srcport: *mut ibmad_port,
+    ) -> *mut u8;
+}
+extern "C" {
+    pub fn mad_dump_int(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_uint(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_hex(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_rhex(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_bitfield(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_array(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_string(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_linkwidth(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_linkwidthsup(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_linkwidthen(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_linkdowndefstate(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_linkspeed(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_linkspeedsup(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_linkspeeden(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_linkspeedext(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_linkspeedextsup(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_linkspeedexten(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_portstate(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_portstates(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_physportstate(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_portcapmask(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_portcapmask2(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_mtu(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_vlcap(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_opervls(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_node_type(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_sltovl(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_vlarbitration(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_nodedesc(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_nodeinfo(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_portinfo(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_switchinfo(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_perfcounters(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_perfcounters_ext(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_perfcounters_xmt_sl(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_perfcounters_rcv_sl(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_perfcounters_xmt_disc(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_perfcounters_rcv_err(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_portsamples_control(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_port_ext_speeds_counters(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_perfcounters_port_op_rcv_counters(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_perfcounters_port_flow_ctl_counters(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_perfcounters_port_vl_op_packet(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_perfcounters_port_vl_op_data(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_perfcounters_port_vl_xmit_flow_ctl_update_errors(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_perfcounters_port_vl_xmit_wait_counters(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_perfcounters_sw_port_vl_congestion(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_perfcounters_rcv_con_ctrl(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_perfcounters_sl_rcv_fecn(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_perfcounters_sl_rcv_becn(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_perfcounters_xmit_con_ctrl(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_perfcounters_vl_xmit_time_cong(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_mlnx_ext_port_info(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_cc_congestioninfo(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_cc_congestionkeyinfo(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_cc_congestionlog(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_cc_congestionlogswitch(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_cc_congestionlogentryswitch(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_cc_congestionlogca(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_cc_congestionlogentryca(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_cc_switchcongestionsetting(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_cc_switchportcongestionsettingelement(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_cc_cacongestionsetting(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_cc_cacongestionentry(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_cc_congestioncontroltable(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_cc_congestioncontroltableentry(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_cc_timestamp(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_classportinfo(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_portsamples_result(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_portinfo_ext(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_port_ext_speeds_counters_rsfec_active(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub fn mad_dump_fields(
+        buf: *mut ::std::os::raw::c_char,
+        bufsz: ::std::os::raw::c_int,
+        val: *mut ::std::os::raw::c_void,
+        valsz: ::std::os::raw::c_int,
+        start: ::std::os::raw::c_int,
+        end: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    pub static mut ibdebug: ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn xdump(
+        file: *mut FILE,
+        msg: *const ::std::os::raw::c_char,
+        p: *mut ::std::os::raw::c_void,
+        size: ::std::os::raw::c_int,
+    );
+}
+pub type be16_t = __be16;
+pub type be32_t = __be32;
+pub type be64_t = __be64;
+#[repr(C, packed(4))]
+#[derive(Copy, Clone)]
+pub union umad_gid {
+    pub raw: [u8; 16usize],
+    pub raw_be16: [__be16; 8usize],
+    pub global: umad_gid__bindgen_ty_1,
+}
+#[repr(C)]
+#[derive(Debug, Default, Copy, Clone)]
+pub struct umad_gid__bindgen_ty_1 {
+    pub subnet_prefix: __be64,
+    pub interface_id: __be64,
+}
+#[test]
+fn bindgen_test_layout_umad_gid__bindgen_ty_1() {
+    const UNINIT: ::std::mem::MaybeUninit<umad_gid__bindgen_ty_1> =
+        ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<umad_gid__bindgen_ty_1>(),
+        16usize,
+        concat!("Size of: ", stringify!(umad_gid__bindgen_ty_1))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<umad_gid__bindgen_ty_1>(),
+        8usize,
+        concat!("Alignment of ", stringify!(umad_gid__bindgen_ty_1))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).subnet_prefix) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(umad_gid__bindgen_ty_1),
+            "::",
+            stringify!(subnet_prefix)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).interface_id) as usize - ptr as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(umad_gid__bindgen_ty_1),
+            "::",
+            stringify!(interface_id)
+        )
+    );
+}
+#[test]
+fn bindgen_test_layout_umad_gid() {
+    const UNINIT: ::std::mem::MaybeUninit<umad_gid> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<umad_gid>(),
+        16usize,
+        concat!("Size of: ", stringify!(umad_gid))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<umad_gid>(),
+        4usize,
+        concat!("Alignment of ", stringify!(umad_gid))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).raw) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(umad_gid),
+            "::",
+            stringify!(raw)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).raw_be16) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(umad_gid),
+            "::",
+            stringify!(raw_be16)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).global) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(umad_gid),
+            "::",
+            stringify!(global)
+        )
+    );
+}
+impl Default for umad_gid {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub struct ib_mad_addr {
+    pub qpn: __be32,
+    pub qkey: __be32,
+    pub lid: __be16,
+    pub sl: u8,
+    pub path_bits: u8,
+    pub grh_present: u8,
+    pub gid_index: u8,
+    pub hop_limit: u8,
+    pub traffic_class: u8,
+    pub __bindgen_anon_1: ib_mad_addr__bindgen_ty_1,
+    pub flow_label: __be32,
+    pub pkey_index: u16,
+    pub reserved: [u8; 6usize],
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union ib_mad_addr__bindgen_ty_1 {
+    pub gid: [u8; 16usize],
+    pub ib_gid: umad_gid,
+}
+#[test]
+fn bindgen_test_layout_ib_mad_addr__bindgen_ty_1() {
+    const UNINIT: ::std::mem::MaybeUninit<ib_mad_addr__bindgen_ty_1> =
+        ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<ib_mad_addr__bindgen_ty_1>(),
+        16usize,
+        concat!("Size of: ", stringify!(ib_mad_addr__bindgen_ty_1))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<ib_mad_addr__bindgen_ty_1>(),
+        4usize,
+        concat!("Alignment of ", stringify!(ib_mad_addr__bindgen_ty_1))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).gid) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_mad_addr__bindgen_ty_1),
+            "::",
+            stringify!(gid)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).ib_gid) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_mad_addr__bindgen_ty_1),
+            "::",
+            stringify!(ib_gid)
+        )
+    );
+}
+impl Default for ib_mad_addr__bindgen_ty_1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+#[test]
+fn bindgen_test_layout_ib_mad_addr() {
+    const UNINIT: ::std::mem::MaybeUninit<ib_mad_addr> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<ib_mad_addr>(),
+        44usize,
+        concat!("Size of: ", stringify!(ib_mad_addr))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<ib_mad_addr>(),
+        4usize,
+        concat!("Alignment of ", stringify!(ib_mad_addr))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).qpn) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_mad_addr),
+            "::",
+            stringify!(qpn)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).qkey) as usize - ptr as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_mad_addr),
+            "::",
+            stringify!(qkey)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).lid) as usize - ptr as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_mad_addr),
+            "::",
+            stringify!(lid)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).sl) as usize - ptr as usize },
+        10usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_mad_addr),
+            "::",
+            stringify!(sl)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).path_bits) as usize - ptr as usize },
+        11usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_mad_addr),
+            "::",
+            stringify!(path_bits)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).grh_present) as usize - ptr as usize },
+        12usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_mad_addr),
+            "::",
+            stringify!(grh_present)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).gid_index) as usize - ptr as usize },
+        13usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_mad_addr),
+            "::",
+            stringify!(gid_index)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).hop_limit) as usize - ptr as usize },
+        14usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_mad_addr),
+            "::",
+            stringify!(hop_limit)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).traffic_class) as usize - ptr as usize },
+        15usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_mad_addr),
+            "::",
+            stringify!(traffic_class)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).flow_label) as usize - ptr as usize },
+        32usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_mad_addr),
+            "::",
+            stringify!(flow_label)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).pkey_index) as usize - ptr as usize },
+        36usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_mad_addr),
+            "::",
+            stringify!(pkey_index)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).reserved) as usize - ptr as usize },
+        38usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_mad_addr),
+            "::",
+            stringify!(reserved)
+        )
+    );
+}
+impl Default for ib_mad_addr {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+pub type ib_mad_addr_t = ib_mad_addr;
+#[repr(C)]
+pub struct ib_user_mad {
+    pub agent_id: u32,
+    pub status: u32,
+    pub timeout_ms: u32,
+    pub retries: u32,
+    pub length: u32,
+    pub addr: ib_mad_addr_t,
+    pub data: __IncompleteArrayField<u8>,
+}
+#[test]
+fn bindgen_test_layout_ib_user_mad() {
+    const UNINIT: ::std::mem::MaybeUninit<ib_user_mad> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<ib_user_mad>(),
+        64usize,
+        concat!("Size of: ", stringify!(ib_user_mad))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<ib_user_mad>(),
+        4usize,
+        concat!("Alignment of ", stringify!(ib_user_mad))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).agent_id) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_user_mad),
+            "::",
+            stringify!(agent_id)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).status) as usize - ptr as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_user_mad),
+            "::",
+            stringify!(status)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).timeout_ms) as usize - ptr as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_user_mad),
+            "::",
+            stringify!(timeout_ms)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).retries) as usize - ptr as usize },
+        12usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_user_mad),
+            "::",
+            stringify!(retries)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).length) as usize - ptr as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_user_mad),
+            "::",
+            stringify!(length)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).addr) as usize - ptr as usize },
+        20usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_user_mad),
+            "::",
+            stringify!(addr)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).data) as usize - ptr as usize },
+        64usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ib_user_mad),
+            "::",
+            stringify!(data)
+        )
+    );
+}
+impl Default for ib_user_mad {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+pub type ib_user_mad_t = ib_user_mad;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct umad_port {
+    pub ca_name: [::std::os::raw::c_char; 20usize],
+    pub portnum: ::std::os::raw::c_int,
+    pub base_lid: ::std::os::raw::c_uint,
+    pub lmc: ::std::os::raw::c_uint,
+    pub sm_lid: ::std::os::raw::c_uint,
+    pub sm_sl: ::std::os::raw::c_uint,
+    pub state: ::std::os::raw::c_uint,
+    pub phys_state: ::std::os::raw::c_uint,
+    pub rate: ::std::os::raw::c_uint,
+    pub capmask: __be32,
+    pub gid_prefix: __be64,
+    pub port_guid: __be64,
+    pub pkeys_size: ::std::os::raw::c_uint,
+    pub pkeys: *mut u16,
+    pub link_layer: [::std::os::raw::c_char; 20usize],
+}
+#[test]
+fn bindgen_test_layout_umad_port() {
+    const UNINIT: ::std::mem::MaybeUninit<umad_port> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<umad_port>(),
+        112usize,
+        concat!("Size of: ", stringify!(umad_port))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<umad_port>(),
+        8usize,
+        concat!("Alignment of ", stringify!(umad_port))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).ca_name) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(umad_port),
+            "::",
+            stringify!(ca_name)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).portnum) as usize - ptr as usize },
+        20usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(umad_port),
+            "::",
+            stringify!(portnum)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).base_lid) as usize - ptr as usize },
+        24usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(umad_port),
+            "::",
+            stringify!(base_lid)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).lmc) as usize - ptr as usize },
+        28usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(umad_port),
+            "::",
+            stringify!(lmc)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).sm_lid) as usize - ptr as usize },
+        32usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(umad_port),
+            "::",
+            stringify!(sm_lid)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).sm_sl) as usize - ptr as usize },
+        36usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(umad_port),
+            "::",
+            stringify!(sm_sl)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).state) as usize - ptr as usize },
+        40usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(umad_port),
+            "::",
+            stringify!(state)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).phys_state) as usize - ptr as usize },
+        44usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(umad_port),
+            "::",
+            stringify!(phys_state)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).rate) as usize - ptr as usize },
+        48usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(umad_port),
+            "::",
+            stringify!(rate)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).capmask) as usize - ptr as usize },
+        52usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(umad_port),
+            "::",
+            stringify!(capmask)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).gid_prefix) as usize - ptr as usize },
+        56usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(umad_port),
+            "::",
+            stringify!(gid_prefix)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).port_guid) as usize - ptr as usize },
+        64usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(umad_port),
+            "::",
+            stringify!(port_guid)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).pkeys_size) as usize - ptr as usize },
+        72usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(umad_port),
+            "::",
+            stringify!(pkeys_size)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).pkeys) as usize - ptr as usize },
+        80usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(umad_port),
+            "::",
+            stringify!(pkeys)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).link_layer) as usize - ptr as usize },
+        88usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(umad_port),
+            "::",
+            stringify!(link_layer)
+        )
+    );
+}
+impl Default for umad_port {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+pub type umad_port_t = umad_port;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct umad_ca {
+    pub ca_name: [::std::os::raw::c_char; 20usize],
+    pub node_type: ::std::os::raw::c_uint,
+    pub numports: ::std::os::raw::c_int,
+    pub fw_ver: [::std::os::raw::c_char; 20usize],
+    pub ca_type: [::std::os::raw::c_char; 40usize],
+    pub hw_ver: [::std::os::raw::c_char; 20usize],
+    pub node_guid: __be64,
+    pub system_guid: __be64,
+    pub ports: [*mut umad_port_t; 10usize],
+}
+#[test]
+fn bindgen_test_layout_umad_ca() {
+    const UNINIT: ::std::mem::MaybeUninit<umad_ca> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<umad_ca>(),
+        208usize,
+        concat!("Size of: ", stringify!(umad_ca))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<umad_ca>(),
+        8usize,
+        concat!("Alignment of ", stringify!(umad_ca))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).ca_name) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(umad_ca),
+            "::",
+            stringify!(ca_name)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).node_type) as usize - ptr as usize },
+        20usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(umad_ca),
+            "::",
+            stringify!(node_type)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).numports) as usize - ptr as usize },
+        24usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(umad_ca),
+            "::",
+            stringify!(numports)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).fw_ver) as usize - ptr as usize },
+        28usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(umad_ca),
+            "::",
+            stringify!(fw_ver)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).ca_type) as usize - ptr as usize },
+        48usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(umad_ca),
+            "::",
+            stringify!(ca_type)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).hw_ver) as usize - ptr as usize },
+        88usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(umad_ca),
+            "::",
+            stringify!(hw_ver)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).node_guid) as usize - ptr as usize },
+        112usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(umad_ca),
+            "::",
+            stringify!(node_guid)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).system_guid) as usize - ptr as usize },
+        120usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(umad_ca),
+            "::",
+            stringify!(system_guid)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).ports) as usize - ptr as usize },
+        128usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(umad_ca),
+            "::",
+            stringify!(ports)
+        )
+    );
+}
+impl Default for umad_ca {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+pub type umad_ca_t = umad_ca;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct umad_device_node {
+    pub next: *mut umad_device_node,
+    pub ca_name: *const ::std::os::raw::c_char,
+}
+#[test]
+fn bindgen_test_layout_umad_device_node() {
+    const UNINIT: ::std::mem::MaybeUninit<umad_device_node> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<umad_device_node>(),
+        16usize,
+        concat!("Size of: ", stringify!(umad_device_node))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<umad_device_node>(),
+        8usize,
+        concat!("Alignment of ", stringify!(umad_device_node))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).next) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(umad_device_node),
+            "::",
+            stringify!(next)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).ca_name) as usize - ptr as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(umad_device_node),
+            "::",
+            stringify!(ca_name)
+        )
+    );
+}
+impl Default for umad_device_node {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+extern "C" {
+    pub fn umad_init() -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn umad_done() -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn umad_get_cas_names(
+        cas: *mut [::std::os::raw::c_char; 20usize],
+        max: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn umad_get_ca_portguids(
+        ca_name: *const ::std::os::raw::c_char,
+        portguids: *mut __be64,
+        max: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn umad_get_ca(
+        ca_name: *const ::std::os::raw::c_char,
+        ca: *mut umad_ca_t,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn umad_release_ca(ca: *mut umad_ca_t) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn umad_get_port(
+        ca_name: *const ::std::os::raw::c_char,
+        portnum: ::std::os::raw::c_int,
+        port: *mut umad_port_t,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn umad_release_port(port: *mut umad_port_t) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn umad_get_issm_path(
+        ca_name: *const ::std::os::raw::c_char,
+        portnum: ::std::os::raw::c_int,
+        path: *mut ::std::os::raw::c_char,
+        max: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn umad_open_port(
+        ca_name: *const ::std::os::raw::c_char,
+        portnum: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn umad_close_port(portid: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn umad_get_mad(umad: *mut ::std::os::raw::c_void) -> *mut ::std::os::raw::c_void;
+}
+extern "C" {
+    pub fn umad_size() -> usize;
+}
+extern "C" {
+    pub fn umad_status(umad: *mut ::std::os::raw::c_void) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn umad_get_mad_addr(umad: *mut ::std::os::raw::c_void) -> *mut ib_mad_addr_t;
+}
+extern "C" {
+    pub fn umad_set_grh_net(
+        umad: *mut ::std::os::raw::c_void,
+        mad_addr: *mut ::std::os::raw::c_void,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn umad_set_grh(
+        umad: *mut ::std::os::raw::c_void,
+        mad_addr: *mut ::std::os::raw::c_void,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn umad_set_addr_net(
+        umad: *mut ::std::os::raw::c_void,
+        dlid: __be16,
+        dqp: __be32,
+        sl: ::std::os::raw::c_int,
+        qkey: __be32,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn umad_set_addr(
+        umad: *mut ::std::os::raw::c_void,
+        dlid: ::std::os::raw::c_int,
+        dqp: ::std::os::raw::c_int,
+        sl: ::std::os::raw::c_int,
+        qkey: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn umad_set_pkey(
+        umad: *mut ::std::os::raw::c_void,
+        pkey_index: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn umad_get_pkey(umad: *mut ::std::os::raw::c_void) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn umad_send(
+        portid: ::std::os::raw::c_int,
+        agentid: ::std::os::raw::c_int,
+        umad: *mut ::std::os::raw::c_void,
+        length: ::std::os::raw::c_int,
+        timeout_ms: ::std::os::raw::c_int,
+        retries: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn umad_recv(
+        portid: ::std::os::raw::c_int,
+        umad: *mut ::std::os::raw::c_void,
+        length: *mut ::std::os::raw::c_int,
+        timeout_ms: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn umad_poll(
+        portid: ::std::os::raw::c_int,
+        timeout_ms: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn umad_get_fd(portid: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn umad_register(
+        portid: ::std::os::raw::c_int,
+        mgmt_class: ::std::os::raw::c_int,
+        mgmt_version: ::std::os::raw::c_int,
+        rmpp_version: u8,
+        method_mask: *mut ::std::os::raw::c_long,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn umad_register_oui(
+        portid: ::std::os::raw::c_int,
+        mgmt_class: ::std::os::raw::c_int,
+        rmpp_version: u8,
+        oui: *mut u8,
+        method_mask: *mut ::std::os::raw::c_long,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn umad_unregister(
+        portid: ::std::os::raw::c_int,
+        agentid: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn umad_sort_ca_device_list(
+        head: *mut *mut umad_device_node,
+        size: usize,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn umad_get_ca_device_list() -> *mut umad_device_node;
+}
+extern "C" {
+    pub fn umad_free_ca_device_list(head: *mut umad_device_node);
+}
+pub const UMAD_USER_RMPP: _bindgen_ty_27 = 1;
+pub type _bindgen_ty_27 = ::std::os::raw::c_uint;
+#[repr(C)]
+#[derive(Debug, Default, Copy, Clone)]
+pub struct umad_reg_attr {
+    pub mgmt_class: u8,
+    pub mgmt_class_version: u8,
+    pub flags: u32,
+    pub method_mask: [u64; 2usize],
+    pub oui: u32,
+    pub rmpp_version: u8,
+}
+#[test]
+fn bindgen_test_layout_umad_reg_attr() {
+    const UNINIT: ::std::mem::MaybeUninit<umad_reg_attr> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<umad_reg_attr>(),
+        32usize,
+        concat!("Size of: ", stringify!(umad_reg_attr))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<umad_reg_attr>(),
+        8usize,
+        concat!("Alignment of ", stringify!(umad_reg_attr))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).mgmt_class) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(umad_reg_attr),
+            "::",
+            stringify!(mgmt_class)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).mgmt_class_version) as usize - ptr as usize },
+        1usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(umad_reg_attr),
+            "::",
+            stringify!(mgmt_class_version)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).flags) as usize - ptr as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(umad_reg_attr),
+            "::",
+            stringify!(flags)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).method_mask) as usize - ptr as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(umad_reg_attr),
+            "::",
+            stringify!(method_mask)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).oui) as usize - ptr as usize },
+        24usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(umad_reg_attr),
+            "::",
+            stringify!(oui)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).rmpp_version) as usize - ptr as usize },
+        28usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(umad_reg_attr),
+            "::",
+            stringify!(rmpp_version)
+        )
+    );
+}
+extern "C" {
+    pub fn umad_register2(
+        port_fd: ::std::os::raw::c_int,
+        attr: *mut umad_reg_attr,
+        agent_id: *mut u32,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn umad_debug(level: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn umad_addr_dump(addr: *mut ib_mad_addr_t);
+}
+extern "C" {
+    pub fn umad_dump(umad: *mut ::std::os::raw::c_void);
+}
+#[repr(C)]
 #[derive(Debug, Default, Copy, Clone)]
 pub struct __locale_data {
     pub _address: u8,
@@ -27166,4 +37410,77 @@ pub struct __locale_data {
 #[derive(Debug, Default, Copy, Clone)]
 pub struct verbs_ex_private {
     pub _address: u8,
+}
+pub type __builtin_va_list = [__va_list_tag; 1usize];
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct __va_list_tag {
+    pub gp_offset: ::std::os::raw::c_uint,
+    pub fp_offset: ::std::os::raw::c_uint,
+    pub overflow_arg_area: *mut ::std::os::raw::c_void,
+    pub reg_save_area: *mut ::std::os::raw::c_void,
+}
+#[test]
+fn bindgen_test_layout___va_list_tag() {
+    const UNINIT: ::std::mem::MaybeUninit<__va_list_tag> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<__va_list_tag>(),
+        24usize,
+        concat!("Size of: ", stringify!(__va_list_tag))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<__va_list_tag>(),
+        8usize,
+        concat!("Alignment of ", stringify!(__va_list_tag))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).gp_offset) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__va_list_tag),
+            "::",
+            stringify!(gp_offset)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).fp_offset) as usize - ptr as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__va_list_tag),
+            "::",
+            stringify!(fp_offset)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).overflow_arg_area) as usize - ptr as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__va_list_tag),
+            "::",
+            stringify!(overflow_arg_area)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).reg_save_area) as usize - ptr as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__va_list_tag),
+            "::",
+            stringify!(reg_save_area)
+        )
+    );
+}
+impl Default for __va_list_tag {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }

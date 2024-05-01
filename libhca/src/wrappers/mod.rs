@@ -1,2 +1,2 @@
-pub mod ibverbs;
+pub mod ib;
 pub mod pci;
