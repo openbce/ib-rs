@@ -10,38 +10,33 @@ MyHCA dependent on `libverbs` and `libudev` to provide tools &amp; lib for the i
 
 ```
 $ sudo apt install -y libclang-dev libibverbs-dev libudev-dev libpci-dev pkg-config
-$ cargo install --git https://github.com/xflops/myhca
+$ cargo install --git https://github.com/openbce/ib-rs hcactl
 ```
-
 
 ## Example
 
 ```
-$ lshca
+$ hcactl list
 ----------------------------------------------
-ID             : 15B3:0001
-Model          : MT27800 Family [ConnectX-5]
+ID             : 15B3:0009
+Model          : MT43244 BlueField-3 integrated ConnectX-7 network controller
 Vendor         : Mellanox Technologies
-FW             : 16.35.3006
-Board          : MT_0000000008
+FW             : 32.38.1002
+Board          : MT_0000000884
 
-    Name           Slot           Node GUID                Port GUID                LID            LinkType       State          PhysState
-    mlx5_2         0000:b1:00.0   1070:fd03:0017:660c      -                        0              Eth            Down           Disabled
-    mlx5_3         0000:b1:00.1   1070:fd03:0017:660d      1070:fd03:0017:660d      3              IB             Active         LinkUp
-    mlx5_4         0000:b1:00.4   0000:0000:0000:0000      0000:0000:0000:0000      65535          IB             Down           LinkUp
-    mlx5_5         0000:b1:00.5   0000:0000:0000:0000      0000:0000:0000:0000      65535          IB             Down           LinkUp
+    Name           Slot           Node GUID                Port GUID                LID            Subnet                   LinkType       State          PhysState      
+    mlx5_2         0000:02:00.0   946d:ae03:0051:9774      -                        0              -                        Eth            Active         LinkUp         
+    mlx5_3         0000:02:00.1   946d:ae03:0051:9775      -                        0              -                        Eth            Active         LinkUp         
 
 
 ----------------------------------------------
-ID             : 15B3:0116
-Model          : MT42822 BlueField-2 integrated ConnectX-6 Dx network controller
+ID             : 15B3:0054
+Model          : MT2910 Family [ConnectX-7]
 Vendor         : Mellanox Technologies
-FW             : 24.36.0356
-Board          : MT_0000000732
+FW             : 28.98.2400
+Board          : MT_0000000894
 
-    Name           Slot           Node GUID                Port GUID                LID            LinkType       State          PhysState
-    mlx5_0         0000:4b:00.0   b83f:d203:006a:e616      b83f:d203:006a:e616      65535          IB             Down           Polling
-    mlx5_1         0000:4b:00.1   b83f:d203:006a:e617      b83f:d203:006a:e617      4              IB             Active         LinkUp
-
-
+    Name           Slot           Node GUID                Port GUID                LID            Subnet                   LinkType       State          PhysState      
+    mlx5_0         0000:c1:00.0   e8eb:d303:0098:2ebc      e8eb:d303:0098:2ebc      65535          fe80:0000:0000:0000      IB             Down           Disabled       
+    mlx5_1         0000:c1:00.1   e8eb:d303:0098:2ebd      e8eb:d303:0098:2ebd      65535          fe80:0000:0000:0000      IB             Down           Disabled       
 ```

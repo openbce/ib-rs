@@ -9,17 +9,17 @@ export UFM_TOKEN=$ufm_server_token
 ```
 ### Version
 ```
-./ufm version
+./ufmctl version
 6.11.1-2
 ```
 ### Create a Partition Key
 ```
-./ufm create --pkey 5 --mtu 2 --membership full --service-level 0 --rate-limit 2.5 --guids 0011223344560200 --guids 1070fd0300176625 --guids 0011223344560201
+./ufmctl create --pkey 5 --mtu 2 --membership full --service-level 0 --rate-limit 2.5 --guids 0011223344560200 --guids 1070fd0300176625 --guids 0011223344560201
 ```
 
 ### View a Partition Key
 ```
-./ufm view --pkey 0x5
+./ufmctl view --pkey 0x5
 Name           : api_pkey_0x5
 Pkey           : 0x5
 IPoIB          : false
@@ -36,7 +36,7 @@ Ports          :
 
 ### List Partition Keys
 ```
-./ufm list
+./ufmctl list
 Name           Pkey      IPoIB     MTU       Rate      Level     
 api_pkey_0x5   0x5       false     2         2.5       0         
 api_pkey_0x2   0x2       false     2         2.5       0         
@@ -47,5 +47,5 @@ api_pkey_0x4   0x4       false     2         2.5       0
 
 ### Delete a Partition Key
 ```
-./ufm delete --pkey 0x2
+./ufmctl delete --pkey 0x2
 ```
