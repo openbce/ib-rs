@@ -5,10 +5,12 @@ use thiserror::Error;
 use url::Url;
 
 use self::rest::{RestClient, RestClientConfig, RestError, RestScheme};
-use self::types::{Configuration, PhysicalPort, Port, VirtualPort};
+use self::types::{Configuration, PhysicalPort, Port};
 
 mod rest;
 mod types;
+
+pub use types::PortType;
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct PartitionQoS {
@@ -44,7 +46,7 @@ pub struct PortConfig {
 pub struct PartitionKey(i32);
 
 impl PartitionKey {
-    pub fn is_default_pkey(&self) -> bool {
+    pub fn is_default(&self) -> bool {
         self.0 == 0x7fff
     }
 }
@@ -356,11 +358,8 @@ impl Ufm {
         for pport in physical_ports {
             port_map.insert(pport.guid.clone(), Port::from(pport));
         }
-        // for vport in virtual_ports {
-        //     port_map.insert(vport.virtual_port_guid.clone(), Port::from(vport));
-        // }
 
-        if !pkey.is_default_pkey() {
+        if !pkey.is_default() {
             for port_config in pkeywithguids.guids {
                 let guid = port_config.guid;
                 match port_map.get(&guid) {
@@ -368,17 +367,10 @@ impl Ufm {
                         res.push(p.clone());
                     }
                     None => {
-                        let p = Port {
+                        res.push(Port {
                             guid,
-                            name: None,
-                            system_id: "".to_string(),
-                            lid: 65535,
-                            system_name: "".to_string(),
-                            logical_state: "Unknown".to_string(),
-                            parent_guid: None,
-                            port_type: None,
-                        };
-                        res.push(p);
+                            ..Port::default()
+                        });
                     }
                 }
             }

@@ -1,5 +1,3 @@
-use std::fmt::Display;
-
 use serde::{Deserialize, Serialize};
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
@@ -22,33 +20,18 @@ pub struct Port {
     pub port_type: Option<PortType>,
 }
 
-impl Display for Port {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        let name = match self.name.clone() {
-            Some(n) => n,
-            None => "".to_string(),
-        };
-        let parent_guid = match self.parent_guid.clone() {
-            Some(p) => p,
-            None => "".to_string(),
-        };
-        let port_type = match self.port_type {
-            Some(PortType::Physical) => "physical".to_string(),
-            Some(PortType::Virtual) => "virtual".to_string(),
-            None => "".to_string(),
-        };
-        write!(
-            f,
-            "    {:<20}{:<20}{:<10}{:<20}{:<10}{:<15}{:<10}{:<20}",
-            self.guid,
-            parent_guid,
-            port_type,
-            self.system_id,
-            self.lid,
-            self.system_name,
-            self.logical_state,
-            name,
-        )
+impl Default for Port {
+    fn default() -> Self {
+        Self {
+            guid: "".to_string(),
+            name: None,
+            system_id: "".to_string(),
+            lid: 65535,
+            system_name: "".to_string(),
+            logical_state: "Unknown".to_string(),
+            parent_guid: None,
+            port_type: None,
+        }
     }
 }
 

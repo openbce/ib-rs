@@ -1,4 +1,4 @@
-use libufm::{UFMConfig, UFMError};
+use libufm::{PortType, UFMConfig, UFMError};
 
 pub async fn run(conf: UFMConfig, pkey: &String) -> Result<(), UFMError> {
     let ufm = libufm::connect(conf)?;
@@ -14,11 +14,34 @@ pub async fn run(conf: UFMConfig, pkey: &String) -> Result<(), UFMError> {
     println!("{:15}: ", "Ports");
 
     println!(
-        "    {:<20}{:<20}{:<10}{:<20}{:<10}{:<15}{:<10}{:<20}",
-        "GUID", "ParentGUID", "PortType", "SystemID", "LID", "SystemName", "LogState", "Name",
+        "    {:<20}{:<20}{:<10}{:<20}{:<10}{:<10}{:<20}{:<15}",
+        "GUID", "ParentGUID", "PortType", "SystemID", "LID", "LogState", "Name", "SystemName",
     );
     for port in ps {
-        println!("{}", port.to_string());
+        let name = match port.name.clone() {
+            Some(n) => n,
+            None => "-".to_string(),
+        };
+        let parent_guid = match port.parent_guid.clone() {
+            Some(p) => p,
+            None => "-".to_string(),
+        };
+        let port_type = match port.port_type {
+            Some(PortType::Physical) => "pf".to_string(),
+            Some(PortType::Virtual) => "vf".to_string(),
+            None => "-".to_string(),
+        };
+        println!(
+            "    {:<20}{:<20}{:<10}{:<20}{:<10}{:<10}{:<20}{:<15}",
+            port.guid,
+            parent_guid,
+            port_type,
+            port.system_id,
+            port.lid,
+            port.logical_state,
+            name,
+            port.system_name,
+        )
     }
 
     Ok(())
