@@ -1,6 +1,4 @@
-use libufm::{
-    Partition, PartitionKey, PartitionQoS, PortConfig, PortMembership, UFMConfig, UFMError,
-};
+use libufm::{Partition, PartitionKey, PortConfig, PortMembership, UFMConfig, UFMError};
 
 pub struct CreateOptions {
     pub pkey: String,
