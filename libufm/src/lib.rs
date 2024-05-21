@@ -25,7 +25,7 @@ pub struct PartitionQoS {
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct PKeyQoS {
     /// The pkey of Partition.
-    pub pkey: PartitionKey,
+    pub pkey: String,
     // Default 2k; one of 2k or 4k; the MTU of the services.
     pub mtu_limit: u16,
     // Default is None, value can be range from 0-15
@@ -248,7 +248,7 @@ impl Ufm {
             .ok_or(UFMError::InvalidConfig("no partition qos".to_string()))?;
 
         let data = serde_json::to_string(&PKeyQoS {
-            pkey: p.pkey,
+            pkey: p.pkey.to_string(),
             mtu_limit: qos.mtu_limit,
             rate_limit: qos.rate_limit,
             service_level: qos.service_level,
