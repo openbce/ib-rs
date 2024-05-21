@@ -23,6 +23,18 @@ pub struct PartitionQoS {
 }
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
+pub struct PKeyQoS {
+    /// The pkey of Partition.
+    pub pkey: PartitionKey,
+    // Default 2k; one of 2k or 4k; the MTU of the services.
+    pub mtu_limit: u16,
+    // Default is None, value can be range from 0-15
+    pub service_level: u8,
+    // Default is None, can be one of the following: 2.5, 10, 30, 5, 20, 40, 60, 80, 120, 14, 56, 112, 168, 25, 100, 200, or 300
+    pub rate_limit: f64,
+}
+
+#[derive(Serialize, Deserialize, Debug, Clone)]
 #[serde(rename_all = "lowercase")]
 pub enum PortMembership {
     Limited,
@@ -60,7 +72,7 @@ pub struct Partition {
     /// Default false
     pub ipoib: bool,
     /// The QoS of Partition.
-    pub qos: PartitionQoS,
+    pub qos: Option<PartitionQoS>,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -69,9 +81,6 @@ struct Pkey {
     ip_over_ib: bool,
     membership: PortMembership,
     index0: bool,
-    service_level: u8,
-    rate_limit: u32,
-    mtu_limit: u16,
     guids: Vec<String>,
 }
 
@@ -232,6 +241,25 @@ impl Ufm {
         Ok(config)
     }
 
+    pub async fn update_partition_qos(&self, p: Partition) -> Result<(), UFMError> {
+        let path = String::from("/resources/pkeys/qos_conf");
+        let qos = p
+            .qos
+            .ok_or(UFMError::InvalidConfig("no partition qos".to_string()))?;
+
+        let data = serde_json::to_string(&PKeyQoS {
+            pkey: p.pkey,
+            mtu_limit: qos.mtu_limit,
+            rate_limit: qos.rate_limit,
+            service_level: qos.service_level,
+        })
+        .map_err(|_| UFMError::InvalidConfig("invalid partition".to_string()))?;
+
+        self.client.put(&path, data).await?;
+
+        Ok(())
+    }
+
     pub async fn bind_ports(&self, p: Partition, ports: Vec<PortConfig>) -> Result<(), UFMError> {
         let path = String::from("/resources/pkeys");
 
@@ -249,9 +277,6 @@ impl Ufm {
             pkey: p.pkey.clone().to_string(),
             ip_over_ib: p.ipoib,
             membership,
-            service_level: p.qos.service_level,
-            rate_limit: p.qos.rate_limit as u32,
-            mtu_limit: p.qos.mtu_limit,
             index0,
             guids,
         };
@@ -307,7 +332,7 @@ impl Ufm {
             name: pk.partition,
             pkey,
             ipoib: pk.ip_over_ib,
-            qos: pk.qos_conf,
+            qos: Some(pk.qos_conf),
         })
     }
 
@@ -329,7 +354,7 @@ impl Ufm {
                 name: v.partition,
                 pkey: PartitionKey::try_from(&k)?,
                 ipoib: v.ip_over_ib,
-                qos: v.qos_conf.clone(),
+                qos: Some(v.qos_conf.clone()),
             });
         }
 

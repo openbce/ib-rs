@@ -195,6 +195,12 @@ impl RestClient {
         Ok(())
     }
 
+    pub async fn put(&self, path: &str, data: String) -> Result<(), RestError> {
+        self.execute_request(Method::PUT, path, Some(data)).await?;
+
+        Ok(())
+    }
+
     pub async fn delete(&self, path: &str) -> Result<(), RestError> {
         self.execute_request(Method::DELETE, path, None).await?;
 

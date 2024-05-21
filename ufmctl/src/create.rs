@@ -4,12 +4,9 @@ use libufm::{
 
 pub struct CreateOptions {
     pub pkey: String,
-    pub mtu: u16,
     pub ipoib: bool,
     pub index0: bool,
     pub membership: String,
-    pub service_level: u8,
-    pub rate_limit: f64,
     pub guids: Vec<String>,
 }
 
@@ -29,11 +26,7 @@ pub async fn run(conf: UFMConfig, opt: &CreateOptions) -> Result<(), UFMError> {
         name: "".to_string(),
         pkey: PartitionKey::try_from(opt.pkey.clone())?,
         ipoib: opt.ipoib,
-        qos: PartitionQoS {
-            mtu_limit: opt.mtu,
-            service_level: opt.service_level,
-            rate_limit: opt.rate_limit,
-        },
+        qos: None,
     };
 
     ufm.bind_ports(p, pbs).await?;

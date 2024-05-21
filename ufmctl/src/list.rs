@@ -10,14 +10,18 @@ pub async fn run(conf: UFMConfig) -> Result<(), UFMError> {
     );
 
     for p in ps {
+        let qos = p
+            .qos
+            .ok_or(UFMError::InvalidConfig("no partition qos".to_string()))?;
+
         println!(
             "{:<15}{:<10}{:<10}{:<10}{:<10}{:<10}",
             p.name,
             p.pkey.to_string(),
             p.ipoib,
-            p.qos.mtu_limit,
-            p.qos.rate_limit,
-            p.qos.service_level
+            qos.mtu_limit,
+            qos.rate_limit,
+            qos.service_level
         )
     }
 

@@ -6,6 +6,7 @@ mod create;
 mod delete;
 mod info;
 mod list;
+mod update;
 mod version;
 mod view;
 
@@ -52,9 +53,6 @@ enum Commands {
         /// The pkey for the new partition
         #[arg(short, long)]
         pkey: String,
-        /// The MTU of the new partition
-        #[arg(long, default_value_t = 4)]
-        mtu: u16,
         /// The IPOverIB of the new partition
         #[arg(long, default_value_t = true)]
         ipoib: bool,
@@ -64,15 +62,28 @@ enum Commands {
         /// The Membership of the new partition
         #[arg(short, long, default_value_t = String::from("full"))]
         membership: String,
+
+        /// The GUIDs of the new partition
+        #[arg(short, long)]
+        guids: Vec<String>,
+    },
+    /// Update the partition
+    Update {
+        /// The pkey for the new partition
+        #[arg(short, long)]
+        pkey: String,
+        /// The IPOverIB of the new partition
+        #[arg(long, default_value_t = true)]
+        ipoib: bool,
+        /// The MTU of the new partition
+        #[arg(long, default_value_t = 4)]
+        mtu: u16,
         /// The ServiceLevel of the new partition
         #[arg(short, long, default_value_t = 0)]
         service_level: u8,
         /// The RateLimit of the new partition
         #[arg(short, long, default_value_t = 100f64)]
         rate_limit: f64,
-        /// The GUIDs of the new partition
-        #[arg(short, long)]
-        guids: Vec<String>,
     },
 }
 
@@ -89,24 +100,36 @@ async fn main() -> Result<(), UFMError> {
         Some(Commands::Info) => info::run(conf).await?,
         Some(Commands::List) => list::run(conf).await?,
         Some(Commands::View { pkey }) => view::run(conf, pkey).await?,
-        Some(Commands::Create {
+        Some(Commands::Update {
             pkey,
             mtu,
             ipoib,
-            index0,
-            membership,
             service_level,
             rate_limit,
+        }) => {
+            let opt = update::UpdateOptions {
+                pkey: pkey.to_string(),
+                mtu: *mtu,
+                service_level: *service_level,
+                rate_limit: *rate_limit,
+                ipoib: *ipoib,
+                guids: vec![],
+            };
+            update::run(conf, &opt).await?
+        }
+
+        Some(Commands::Create {
+            pkey,
+            ipoib,
+            index0,
+            membership,
             guids,
         }) => {
             let opt = create::CreateOptions {
                 pkey: pkey.to_string(),
-                mtu: *mtu,
                 ipoib: *ipoib,
                 index0: *index0,
                 membership: membership.to_string(),
-                service_level: *service_level,
-                rate_limit: *rate_limit,
                 guids: guids.to_vec(),
             };
             create::run(conf, &opt).await?
