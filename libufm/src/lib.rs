@@ -70,7 +70,7 @@ struct Pkey {
     membership: PortMembership,
     index0: bool,
     service_level: u8,
-    rate_limit: f64,
+    rate_limit: u32,
     mtu_limit: u16,
     guids: Vec<String>,
 }
@@ -250,7 +250,7 @@ impl Ufm {
             ip_over_ib: p.ipoib,
             membership,
             service_level: p.qos.service_level,
-            rate_limit: p.qos.rate_limit,
+            rate_limit: p.qos.rate_limit as u32,
             mtu_limit: p.qos.mtu_limit,
             index0,
             guids,
