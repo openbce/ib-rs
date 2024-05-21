@@ -69,7 +69,9 @@ struct Pkey {
     ip_over_ib: bool,
     membership: PortMembership,
     index0: bool,
+    service_level: u8,
     rate_limit: f64,
+    mtu_limit: u16,
     guids: Vec<String>,
 }
 
@@ -247,7 +249,9 @@ impl Ufm {
             pkey: p.pkey.clone().to_string(),
             ip_over_ib: p.ipoib,
             membership,
+            service_level: p.qos.service_level,
             rate_limit: p.qos.rate_limit,
+            mtu_limit: p.qos.mtu_limit,
             index0,
             guids,
         };

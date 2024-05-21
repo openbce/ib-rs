@@ -53,7 +53,7 @@ enum Commands {
         #[arg(short, long)]
         pkey: String,
         /// The MTU of the new partition
-        #[arg(long, default_value_t = 2048)]
+        #[arg(long, default_value_t = 4096)]
         mtu: u16,
         /// The IPOverIB of the new partition
         #[arg(long, default_value_t = true)]
