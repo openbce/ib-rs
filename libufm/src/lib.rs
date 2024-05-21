@@ -69,8 +69,11 @@ struct Pkey {
     ip_over_ib: bool,
     membership: PortMembership,
     index0: bool,
+    rate_limit: f64,
     guids: Vec<String>,
 }
+
+const HEX_PRE: &str = "0x";
 
 impl TryFrom<i32> for PartitionKey {
     type Error = UFMError;
@@ -88,8 +91,10 @@ impl TryFrom<String> for PartitionKey {
     type Error = UFMError;
 
     fn try_from(pkey: String) -> Result<Self, Self::Error> {
-        let p = pkey.trim_start_matches("0x");
-        let k = i32::from_str_radix(p, 16);
+        let pkey = pkey.to_lowercase();
+        let base = if pkey.starts_with(HEX_PRE) { 16 } else { 10 };
+        let p = pkey.trim_start_matches(HEX_PRE);
+        let k = i32::from_str_radix(p, base);
 
         match k {
             Ok(v) => Ok(PartitionKey(v)),
@@ -242,6 +247,7 @@ impl Ufm {
             pkey: p.pkey.clone().to_string(),
             ip_over_ib: p.ipoib,
             membership,
+            rate_limit: p.qos.rate_limit,
             index0,
             guids,
         };
