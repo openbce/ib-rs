@@ -2,10 +2,12 @@ use clap::{Parser, Subcommand};
 
 use libufm::{UFMConfig, UFMError};
 
+mod bind;
 mod create;
 mod delete;
 mod info;
 mod list;
+mod unbind;
 mod update;
 mod version;
 mod view;
@@ -85,6 +87,26 @@ enum Commands {
         #[arg(short, long, default_value_t = 100f64)]
         rate_limit: f64,
     },
+
+    /// Bind ports to the partition
+    Bind {
+        /// The pkey of the partition
+        #[arg(short, long)]
+        pkey: String,
+        /// A list of GUID to bind
+        #[arg(short, long)]
+        guids: Vec<String>,
+    },
+
+    /// Unbind ports from the partition
+    Unbind {
+        /// The pkey of the partition
+        #[arg(short, long)]
+        pkey: String,
+        /// A list of GUID to unbind
+        #[arg(short, long)]
+        guids: Vec<String>,
+    },
 }
 
 #[tokio::main]
@@ -100,6 +122,8 @@ async fn main() -> Result<(), UFMError> {
         Some(Commands::Info) => info::run(conf).await?,
         Some(Commands::List) => list::run(conf).await?,
         Some(Commands::View { pkey }) => view::run(conf, pkey).await?,
+        Some(Commands::Bind { pkey, guids }) => bind::run(conf, pkey, guids).await?,
+        Some(Commands::Unbind { pkey, guids }) => unbind::run(conf, pkey, guids).await?,
         Some(Commands::Update {
             pkey,
             mtu,
