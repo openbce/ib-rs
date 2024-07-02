@@ -5,7 +5,7 @@ use serde::{Deserialize, Serialize};
 use thiserror::Error;
 use url::Url;
 
-use self::rest::{RestClient, RestClientConfig, RestError, RestScheme};
+use self::rest::{Cert, RestClient, RestClientConfig, RestError, RestScheme};
 use self::types::{Configuration, PhysicalPort, Port};
 
 mod rest;
@@ -195,6 +195,7 @@ pub struct UFMConfig {
     pub username: Option<String>,
     pub password: Option<String>,
     pub token: Option<String>,
+    pub cert: Option<Cert>,
 }
 
 pub fn connect(conf: UFMConfig) -> Result<Ufm, UFMError> {
@@ -205,6 +206,13 @@ pub fn connect(conf: UFMConfig) -> Result<Ufm, UFMError> {
         .ok_or(UFMError::InvalidConfig("invalid UFM host".to_string()))?;
 
     let (base_path, auth_info) = match &conf.token {
+        None if conf.cert.is_some() => {
+            let auth_cert = conf.cert.unwrap().clone();
+            (
+                "/ufmRest".to_string(),
+                format!("{}\n{}\n{}", auth_cert.ca_crt, auth_cert.tls_key, auth_cert.tls_crt),
+            )
+        }
         None => {
             let password = conf
                 .password

@@ -175,5 +175,6 @@ fn load_conf(opt: &Options) -> UFMConfig {
         username: opt.ufm_username.clone(),
         password: opt.ufm_password.clone(),
         token: opt.ufm_token.clone(),
+        cert: None,
     }
 }

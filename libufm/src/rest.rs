@@ -14,6 +14,13 @@ use tokio_rustls::rustls;
 use tokio_rustls::rustls::client::{ServerCertVerified, ServerCertVerifier};
 use tokio_rustls::rustls::{ClientConfig, ServerName};
 
+#[derive(Clone, Debug)]
+pub struct Cert {
+    pub ca_crt: String,
+    pub tls_key: String,
+    pub tls_crt: String,
+}
+
 struct NoCertificateVerification;
 
 impl ServerCertVerifier for NoCertificateVerification {
@@ -97,7 +104,20 @@ pub struct RestClient {
 
 impl RestClient {
     pub fn new(conf: &RestClientConfig) -> Result<RestClient, RestError> {
-        let auth_info = format!("Basic {}", conf.auth_info.clone().trim());
+        let mut auth_info = conf.auth_info.clone().trim().to_string();
+        let mut auto_cert : Option<Cert> = None;
+
+        if auth_info.chars().filter(|c| *c == '\n').count() == 2 {
+            auth_info = "".to_string();
+            let mut v = auth_info.split(':');
+            auto_cert = Some(Cert {
+                ca_crt: v.next().unwrap_or("").to_string(),
+                tls_key: v.next().unwrap_or("").to_string(),
+                tls_crt: v.next().unwrap_or("").to_string(),
+            })
+        } else {
+            auth_info = format!("Basic {}", conf.auth_info.clone().trim());
+        }
 
         let base_url = match &conf.port {
             None => format!(
@@ -136,11 +156,19 @@ impl RestClient {
         //         )
         //     }));
 
-        let config = ClientConfig::builder()
-            .with_safe_defaults()
-            // .with_root_certificates(root_store)
-            .with_custom_certificate_verifier(std::sync::Arc::new(NoCertificateVerification))
-            .with_no_client_auth();
+        let config = if auto_cert.is_none() {
+            ClientConfig::builder()
+                .with_safe_defaults()
+                // .with_root_certificates(root_store)
+                .with_custom_certificate_verifier(std::sync::Arc::new(NoCertificateVerification))
+                .with_no_client_auth()
+        } else {
+            ClientConfig::builder()
+                .with_safe_defaults()
+                // .with_root_certificates(root_store)
+                .with_custom_certificate_verifier(std::sync::Arc::new(NoCertificateVerification))
+                .with_no_client_auth()
+        };
 
         let mut https_connector = TimeoutConnector::new(
             hyper_rustls::HttpsConnectorBuilder::new()
