@@ -5,7 +5,7 @@ use serde::{Deserialize, Serialize};
 use thiserror::Error;
 use url::Url;
 
-use self::rest::{Cert, RestClient, RestClientConfig, RestError, RestScheme};
+use self::rest::{RestClient, RestClientConfig, RestError, RestScheme};
 use self::types::{Configuration, PhysicalPort, Port};
 
 mod rest;
@@ -190,12 +190,19 @@ impl From<RestError> for UFMError {
     }
 }
 
+#[derive(Clone, Debug)]
+pub struct UFMCert {
+    pub ca_crt: String,
+    pub tls_key: String,
+    pub tls_crt: String,
+}
+
 pub struct UFMConfig {
     pub address: String,
     pub username: Option<String>,
     pub password: Option<String>,
     pub token: Option<String>,
-    pub cert: Option<Cert>,
+    pub cert: Option<UFMCert>,
 }
 
 pub fn connect(conf: UFMConfig) -> Result<Ufm, UFMError> {

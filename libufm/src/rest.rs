@@ -14,12 +14,7 @@ use tokio_rustls::rustls;
 use tokio_rustls::rustls::client::{ServerCertVerified, ServerCertVerifier};
 use tokio_rustls::rustls::{ClientConfig, ServerName};
 
-#[derive(Clone, Debug)]
-pub struct Cert {
-    pub ca_crt: String,
-    pub tls_key: String,
-    pub tls_crt: String,
-}
+use crate::UFMCert;
 
 struct NoCertificateVerification;
 
@@ -105,16 +100,16 @@ pub struct RestClient {
 impl RestClient {
     pub fn new(conf: &RestClientConfig) -> Result<RestClient, RestError> {
         let mut auth_info = conf.auth_info.clone().trim().to_string();
-        let mut auto_cert : Option<Cert> = None;
+        let mut auto_cert : Option<UFMCert> = None;
 
         if auth_info.chars().filter(|c| *c == '\n').count() == 2 {
-            auth_info = "".to_string();
-            let mut v = auth_info.split(':');
-            auto_cert = Some(Cert {
+            let mut v = auth_info.split('\n');
+            auto_cert = Some(UFMCert {
                 ca_crt: v.next().unwrap_or("").to_string(),
                 tls_key: v.next().unwrap_or("").to_string(),
                 tls_crt: v.next().unwrap_or("").to_string(),
-            })
+            });
+            auth_info = "".to_string();
         } else {
             auth_info = format!("Basic {}", conf.auth_info.clone().trim());
         }
