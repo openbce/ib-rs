@@ -217,7 +217,10 @@ pub fn connect(conf: UFMConfig) -> Result<Ufm, UFMError> {
             let auth_cert = conf.cert.unwrap().clone();
             (
                 "/ufmRest".to_string(),
-                format!("{}\n{}\n{}", auth_cert.ca_crt, auth_cert.tls_key, auth_cert.tls_crt),
+                format!(
+                    "{}\n{}\n{}",
+                    auth_cert.ca_crt, auth_cert.tls_key, auth_cert.tls_crt
+                ),
             )
         }
         None => {

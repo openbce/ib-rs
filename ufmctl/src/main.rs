@@ -175,8 +175,9 @@ fn load_conf(opt: &Options) -> UFMConfig {
         Some(s) => s,
         None => panic!("UFM_ADDRESS environment or ufm_address parameter not found"),
     };
-    
-    let cert = if opt.ufm_ca_crt.is_some() && opt.ufm_tls_key.is_some() && opt.ufm_tls_crt.is_some() {
+
+    let cert = if opt.ufm_ca_crt.is_some() && opt.ufm_tls_key.is_some() && opt.ufm_tls_crt.is_some()
+    {
         Some(UFMCert {
             ca_crt: opt.ufm_ca_crt.clone().unwrap(),
             tls_key: opt.ufm_tls_key.clone().unwrap(),
