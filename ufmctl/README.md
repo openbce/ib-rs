@@ -7,6 +7,16 @@ The rust client of UFM
 export UFM_ADDRESS=$ufm_server_address
 export UFM_TOKEN=$ufm_server_token
 ```
+### Using user token Authentication
+```
+env UFM_TOKEN=XlojlA7zgotVegyIEIP5vnw5C7ZYT9 UFM_ADDRESS=https://ufm ./ufmctl version
+6.11.1-2
+```
+### Using Client Authentication
+```
+env UFM_CA_CRT=ca.crt UFM_TLS_CRT=client.crt UFM_TLS_KEY=client.key UFM_ADDRESS=https://ufm ./ufmctl version
+6.11.1-2
+```
 ### Version
 ```
 ./ufmctl version
