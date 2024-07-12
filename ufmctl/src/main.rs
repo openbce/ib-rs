@@ -1,6 +1,6 @@
 use clap::{Parser, Subcommand};
 
-use libufm::{UFMConfig, UFMError};
+use libufm::{UFMCert, UFMConfig, UFMError};
 
 mod bind;
 mod create;
@@ -26,6 +26,12 @@ struct Options {
     ufm_password: Option<String>,
     #[clap(long, env = "UFM_TOKEN")]
     ufm_token: Option<String>,
+    #[clap(long, env = "UFM_CA_CRT")]
+    ufm_ca_crt: Option<String>,
+    #[clap(long, env = "UFM_TLS_KEY")]
+    ufm_tls_key: Option<String>,
+    #[clap(long, env = "UFM_TLS_CRT")]
+    ufm_tls_crt: Option<String>,
     #[clap(subcommand)]
     command: Option<Commands>,
 }
@@ -170,10 +176,22 @@ fn load_conf(opt: &Options) -> UFMConfig {
         None => panic!("UFM_ADDRESS environment or ufm_address parameter not found"),
     };
 
+    let cert = if opt.ufm_ca_crt.is_some() && opt.ufm_tls_key.is_some() && opt.ufm_tls_crt.is_some()
+    {
+        Some(UFMCert {
+            ca_crt: opt.ufm_ca_crt.clone().unwrap(),
+            tls_key: opt.ufm_tls_key.clone().unwrap(),
+            tls_crt: opt.ufm_tls_crt.clone().unwrap(),
+        })
+    } else {
+        None
+    };
+
     UFMConfig {
         address: ufm_address,
         username: opt.ufm_username.clone(),
         password: opt.ufm_password.clone(),
         token: opt.ufm_token.clone(),
+        cert,
     }
 }

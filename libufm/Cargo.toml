@@ -11,7 +11,7 @@ readme = "../README.md"
 [dependencies]
 hyper = { version = "0.14", features = ["full"] }
 
-hyper-rustls = "0.24"
+hyper-rustls = { version = "0.24", features = ["http1", "http2"] }
 tokio-rustls = { version = "0.24", features = ["dangerous_configuration"] }
 hyper-timeout = "0.4"
 
