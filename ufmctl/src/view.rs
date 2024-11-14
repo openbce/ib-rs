@@ -5,16 +5,12 @@ pub async fn run(conf: UFMConfig, pkey: &str) -> Result<(), UFMError> {
     let p = ufm.get_partition(pkey).await?;
     let ps = ufm.list_port(p.pkey).await?;
 
-    let qos = p
-        .qos
-        .ok_or(UFMError::InvalidConfig("no partition qos".to_string()))?;
-
     println!("{:15}: {}", "Name", p.name);
-    println!("{:15}: {}", "Pkey", p.pkey.to_string());
+    println!("{:15}: {}", "Pkey", pkey);
     println!("{:15}: {}", "IPoIB", p.ipoib);
-    println!("{:15}: {}", "MTU", qos.mtu_limit);
-    println!("{:15}: {}", "Rate Limit", qos.rate_limit);
-    println!("{:15}: {}", "Service Level", qos.service_level);
+    println!("{:15}: {}", "MTU", p.qos.mtu_limit);
+    println!("{:15}: {}", "Rate Limit", p.qos.rate_limit);
+    println!("{:15}: {}", "Service Level", p.qos.service_level);
     println!("{:15}: ", "Ports");
 
     println!(

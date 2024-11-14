@@ -24,7 +24,7 @@ pub async fn run(conf: UFMConfig, opt: &CreateOptions) -> Result<(), UFMError> {
         name: "".to_string(),
         pkey: PartitionKey::try_from(opt.pkey.clone())?,
         ipoib: opt.ipoib,
-        qos: None,
+        qos: Default::default(),
     };
 
     ufm.bind_ports(p, pbs).await?;

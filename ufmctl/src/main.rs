@@ -143,7 +143,6 @@ async fn main() -> Result<(), UFMError> {
                 service_level: *service_level,
                 rate_limit: *rate_limit,
                 ipoib: *ipoib,
-                guids: vec![],
             };
             update::run(conf, &opt).await?
         }

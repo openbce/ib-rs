@@ -1,6 +1,7 @@
 use std::fmt;
 use std::fmt::{Display, Formatter};
 use std::time::Duration;
+use std::time::SystemTime;
 
 use hyper::client::HttpConnector;
 use hyper::header::{AUTHORIZATION, CONTENT_TYPE, USER_AGENT};
@@ -8,7 +9,6 @@ use hyper::http::StatusCode;
 use hyper::{Body, Client, Method, Uri};
 use hyper_rustls::HttpsConnector;
 use hyper_timeout::TimeoutConnector;
-use std::time::SystemTime;
 use thiserror::Error;
 use tokio_rustls::rustls;
 use tokio_rustls::rustls::client::{ServerCertVerified, ServerCertVerifier};
@@ -37,7 +37,7 @@ const REST_TIME_OUT: Duration = Duration::from_secs(10);
 #[derive(Error, Debug)]
 pub enum RestError {
     #[error("{0}")]
-    Unknown(String),
+    Internal(String),
     #[error("'{0}' not found")]
     NotFound(String),
     #[error("failed to auth '{0}'")]
@@ -52,7 +52,7 @@ impl From<hyper::Error> for RestError {
             return RestError::AuthFailure(value.message().to_string());
         }
 
-        RestError::Unknown(value.message().to_string())
+        RestError::Internal(value.message().to_string())
     }
 }
 
@@ -139,15 +139,15 @@ impl RestClient {
         http_connector.set_read_timeout(Some(REST_TIME_OUT));
         http_connector.set_write_timeout(Some(REST_TIME_OUT));
 
-        let config = if auto_cert.is_some() {
+        let config = if let Some(auto_cert) = &auto_cert {
             // Get CA root
             let mut roots = RootCertStore::empty();
-            let fd = match std::fs::File::open(auto_cert.clone().unwrap().ca_crt) {
+            let fd = match std::fs::File::open(auto_cert.ca_crt.clone()) {
                 Ok(fd) => fd,
                 Err(_) => {
                     return Err(RestError::NotFound(format!(
                         "Root CA file not found at '{}'",
-                        auto_cert.clone().unwrap().ca_crt
+                        auto_cert.ca_crt.clone()
                     )));
                 }
             };
@@ -157,19 +157,19 @@ impl RestClient {
                 Err(_) => {
                     return Err(RestError::NotFound(format!(
                         "Root CA file not found at '{}'",
-                        auto_cert.clone().unwrap().tls_crt
+                        auto_cert.tls_crt.clone()
                     )));
                 }
             };
 
             // Get client certificate
             let certs = {
-                let fd = match std::fs::File::open(auto_cert.clone().unwrap().tls_crt) {
+                let fd = match std::fs::File::open(auto_cert.tls_crt.clone()) {
                     Ok(fd) => fd,
                     Err(_) => {
                         return Err(RestError::NotFound(format!(
                             "Client Cert file not found at '{}'",
-                            auto_cert.clone().unwrap().tls_crt
+                            auto_cert.tls_crt.clone()
                         )));
                     }
                 };
@@ -179,7 +179,7 @@ impl RestClient {
                     Err(_) => {
                         return Err(RestError::NotFound(format!(
                             "Client Cert file not found at '{}'",
-                            auto_cert.clone().unwrap().tls_crt
+                            auto_cert.tls_crt.clone()
                         )));
                     }
                 }
@@ -187,12 +187,12 @@ impl RestClient {
 
             // Get client private key
             let key = {
-                let fd = match std::fs::File::open(auto_cert.clone().unwrap().tls_key) {
+                let fd = match std::fs::File::open(auto_cert.tls_key.clone()) {
                     Ok(fd) => fd,
                     Err(_) => {
                         return Err(RestError::NotFound(format!(
                             "Client Private Key file not found at '{}'",
-                            auto_cert.clone().unwrap().tls_key
+                            auto_cert.tls_key.clone()
                         )));
                     }
                 };
@@ -206,23 +206,23 @@ impl RestClient {
                         Item::X509Certificate(_) => {
                             return Err(RestError::NotFound(format!(
                                 "Expected Client Private Key but certificate is found '{}'",
-                                auto_cert.clone().unwrap().tls_key
+                                auto_cert.tls_key.clone()
                             )));
                         }
                         Item::Crl(_) => {
-                            return Err(RestError::NotFound(format!("Expected Client Private Key but certificate revocation list is found '{}'", auto_cert.clone().unwrap().tls_key)));
+                            return Err(RestError::NotFound(format!("Expected Client Private Key but certificate revocation list is found '{}'", auto_cert.tls_key)));
                         }
                         _ => {
                             return Err(RestError::NotFound(format!(
                                 "Client Private Key is corrupted '{}'",
-                                auto_cert.clone().unwrap().tls_key
+                                auto_cert.tls_key.clone()
                             )));
                         }
                     },
                     _ => {
                         return Err(RestError::NotFound(format!(
                             "Client Private Key file not found at '{}'",
-                            auto_cert.clone().unwrap().tls_key
+                            auto_cert.tls_key.clone()
                         )));
                     }
                 }
@@ -252,7 +252,6 @@ impl RestClient {
                 build_no_client_auth_config()
             }
         } else {
-            // No TLS flow
             ClientConfig::builder()
                 .with_safe_defaults()
                 .with_custom_certificate_verifier(std::sync::Arc::new(NoCertificateVerification))
@@ -287,7 +286,7 @@ impl RestClient {
     ) -> Result<T, RestError> {
         let resp = self.execute_request(Method::GET, path, None).await?;
         if resp.eq("{}") {
-            return Err(RestError::NotFound("not found".to_string()));
+            return Err(RestError::NotFound(path.to_string()));
         }
 
         let data = serde_json::from_str(&resp)
@@ -353,12 +352,12 @@ impl RestClient {
                 .http_client
                 .request(req)
                 .await
-                .map_err(|e| RestError::Unknown(format!("rest request failure: {:?}", e)))?,
+                .map_err(|e: hyper::Error| RestError::Internal(format!("rest request failure: {:?}", e)))?,
             RestScheme::Https => self
                 .https_client
                 .request(req)
                 .await
-                .map_err(|e| RestError::Unknown(format!("rest request failure: {:?}", e)))?,
+                .map_err(|e| RestError::Internal(format!("rest request failure: {:?}", e)))?,
         };
 
         let status = body.status();
@@ -367,7 +366,7 @@ impl RestClient {
 
         match status {
             StatusCode::OK => Ok(data),
-            _ => Err(RestError::Unknown(data)),
+            _ => Err(RestError::Internal(data)),
         }
     }
 }
