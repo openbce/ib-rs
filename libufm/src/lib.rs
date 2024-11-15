@@ -18,9 +18,9 @@ pub use types::PortType;
 pub struct PartitionQoS {
     // Default 2k; one of 2k or 4k; the MTU of the services.
     pub mtu_limit: u16,
-    // Default is None, value can be range from 0-15
+    // Default is 0, value can be range from 0-15
     pub service_level: u8,
-    // Default is None, can be one of the following: 2.5, 10, 30, 5, 20, 40, 60, 80, 120, 14, 56, 112, 168, 25, 100, 200, or 300
+    // Default is 2.5, can be one of the following: 2.5, 10, 30, 5, 20, 40, 60, 80, 120, 14, 56, 112, 168, 25, 100, 200, or 300
     pub rate_limit: f64,
 }
 
@@ -29,7 +29,7 @@ impl Default for PartitionQoS {
         Self {
             mtu_limit: 2,
             service_level: 0,
-            rate_limit: 0_f64,
+            rate_limit: 2.5_f64,
         }
     }
 }
@@ -252,17 +252,58 @@ impl Ufm {
         Ok(sm_config)
     }
 
+    pub async fn set_partition(&self, p: Partition, ports: Vec<PortConfig>) -> Result<(), UFMError> {
+        let path = String::from("/resources/pkeys");
+
+        let mut membership = PortMembership::Full;
+        let mut index0 = true;
+
+        let mut guids = Vec::with_capacity(ports.len());
+        for pb in ports {
+            membership = pb.membership.clone();
+            index0 = pb.index0;
+            guids.push(pb.guid.to_string());
+        }
+
+        #[derive(Serialize, Deserialize, Debug)]
+        struct Pkey {
+            pkey: String,
+            ip_over_ib: bool,
+            membership: PortMembership,
+            index0: bool,
+            guids: Vec<String>,
+            mtu_limit: u16,
+            service_level: u8,
+            rate_limit: f64,
+        }
+
+        let pkey = Pkey {
+            pkey: p.pkey.clone().to_string(),
+            ip_over_ib: p.ipoib,
+            membership,
+            index0,
+            guids,
+            mtu_limit: p.qos.mtu_limit,
+            rate_limit: p.qos.rate_limit,
+            service_level: p.qos.service_level,
+        };
+
+        let data = serde_json::to_string(&pkey)
+            .map_err(|_| UFMError::InvalidConfig("invalid partition".to_string()))?;
+
+        self.client.put(&path, data).await?;
+
+        Ok(())
+    }
+
     pub async fn update_partition_qos(&self, p: Partition) -> Result<(), UFMError> {
         let path = String::from("/resources/pkeys/qos_conf");
 
         #[derive(Serialize, Deserialize, Debug)]
         struct PkeyQoS {
             pkey: String,
-            // Default 2k; one of 2k or 4k; the MTU of the services.
             mtu_limit: u16,
-            // Default is None, value can be range from 0-15
             service_level: u8,
-            // Default is None, can be one of the following: 2.5, 10, 30, 5, 20, 40, 60, 80, 120, 14, 56, 112, 168, 25, 100, 200, or 300
             rate_limit: f64,
         }
 
