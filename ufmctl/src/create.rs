@@ -1,4 +1,6 @@
-use libufm::{Partition, PartitionKey, PartitionQoS, PortConfig, PortMembership, UFMConfig, UFMError};
+use libufm::{
+    Partition, PartitionKey, PartitionQoS, PortConfig, PortMembership, UFMConfig, UFMError,
+};
 
 pub struct CreateOptions {
     pub pkey: String,
@@ -34,7 +36,11 @@ pub async fn run(conf: UFMConfig, opt: &CreateOptions) -> Result<(), UFMError> {
         },
     };
 
-    ufm.set_partition(p, pbs).await?;
+    if pbs.is_empty() {
+        ufm.add_partition(p).await?
+    } else {
+        ufm.set_partition(p, pbs).await?;
+    }
 
     Ok(())
 }

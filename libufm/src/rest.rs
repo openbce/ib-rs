@@ -348,11 +348,14 @@ impl RestClient {
             .map_err(|_| RestError::InvalidConfig("invalid rest request".to_string()))?;
 
         let body = match &self.scheme {
-            RestScheme::Http => self
-                .http_client
-                .request(req)
-                .await
-                .map_err(|e: hyper::Error| RestError::Internal(format!("rest request failure: {:?}", e)))?,
+            RestScheme::Http => {
+                self.http_client
+                    .request(req)
+                    .await
+                    .map_err(|e: hyper::Error| {
+                        RestError::Internal(format!("rest request failure: {:?}", e))
+                    })?
+            }
             RestScheme::Https => self
                 .https_client
                 .request(req)
@@ -366,6 +369,7 @@ impl RestClient {
 
         match status {
             StatusCode::OK => Ok(data),
+            StatusCode::CREATED => Ok(data),
             _ => Err(RestError::Internal(data)),
         }
     }
