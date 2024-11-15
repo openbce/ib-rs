@@ -252,7 +252,46 @@ impl Ufm {
         Ok(sm_config)
     }
 
-    pub async fn set_partition(&self, p: Partition, ports: Vec<PortConfig>) -> Result<(), UFMError> {
+    pub async fn add_partition(&self, p: Partition) -> Result<(), UFMError> {
+        let path = String::from("/resources/pkeys/add");
+
+        let membership = PortMembership::Full;
+        let index0 = true;
+
+        #[derive(Serialize, Deserialize, Debug)]
+        struct Pkey {
+            pkey: String,
+            ip_over_ib: bool,
+            membership: PortMembership,
+            index0: bool,
+            mtu_limit: u16,
+            service_level: u8,
+            rate_limit: f64,
+        }
+
+        let pkey = Pkey {
+            pkey: p.pkey.clone().to_string(),
+            ip_over_ib: p.ipoib,
+            membership,
+            index0,
+            mtu_limit: p.qos.mtu_limit,
+            rate_limit: p.qos.rate_limit,
+            service_level: p.qos.service_level,
+        };
+
+        let data = serde_json::to_string(&pkey)
+            .map_err(|_| UFMError::InvalidConfig("invalid partition".to_string()))?;
+
+        self.client.post(&path, data).await?;
+
+        Ok(())
+    }
+
+    pub async fn set_partition(
+        &self,
+        p: Partition,
+        ports: Vec<PortConfig>,
+    ) -> Result<(), UFMError> {
         let path = String::from("/resources/pkeys");
 
         let mut membership = PortMembership::Full;
