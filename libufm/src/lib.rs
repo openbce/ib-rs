@@ -1,4 +1,5 @@
 use std::collections::HashMap;
+use std::fmt;
 
 use base64::prelude::*;
 use serde::{Deserialize, Serialize};
@@ -17,22 +18,20 @@ pub use types::PortType;
 pub struct PartitionQoS {
     // Default 2k; one of 2k or 4k; the MTU of the services.
     pub mtu_limit: u16,
-    // Default is None, value can be range from 0-15
+    // Default is 0, value can be range from 0-15
     pub service_level: u8,
-    // Default is None, can be one of the following: 2.5, 10, 30, 5, 20, 40, 60, 80, 120, 14, 56, 112, 168, 25, 100, 200, or 300
+    // Default is 2.5, can be one of the following: 2.5, 10, 30, 5, 20, 40, 60, 80, 120, 14, 56, 112, 168, 25, 100, 200, or 300
     pub rate_limit: f64,
 }
 
-#[derive(Serialize, Deserialize, Debug, Clone)]
-pub struct PKeyQoS {
-    /// The pkey of Partition.
-    pub pkey: String,
-    // Default 2k; one of 2k or 4k; the MTU of the services.
-    pub mtu_limit: u16,
-    // Default is None, value can be range from 0-15
-    pub service_level: u8,
-    // Default is None, can be one of the following: 2.5, 10, 30, 5, 20, 40, 60, 80, 120, 14, 56, 112, 168, 25, 100, 200, or 300
-    pub rate_limit: f64,
+impl Default for PartitionQoS {
+    fn default() -> Self {
+        Self {
+            mtu_limit: 2,
+            service_level: 0,
+            rate_limit: 2.5_f64,
+        }
+    }
 }
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
@@ -55,8 +54,8 @@ pub struct PortConfig {
     pub membership: PortMembership,
 }
 
-#[derive(Serialize, Deserialize, Debug, Clone, Copy)]
-pub struct PartitionKey(i32);
+#[derive(Serialize, Deserialize, Debug, Clone)]
+pub struct PartitionKey(u16);
 
 impl PartitionKey {
     pub fn is_default(&self) -> bool {
@@ -73,24 +72,16 @@ pub struct Partition {
     /// Default false
     pub ipoib: bool,
     /// The QoS of Partition.
-    pub qos: Option<PartitionQoS>,
-}
-
-#[derive(Serialize, Deserialize, Debug)]
-struct Pkey {
-    pkey: String,
-    ip_over_ib: bool,
-    membership: PortMembership,
-    index0: bool,
-    guids: Vec<String>,
+    #[serde(default)]
+    pub qos: PartitionQoS,
 }
 
 const HEX_PRE: &str = "0x";
 
-impl TryFrom<i32> for PartitionKey {
+impl TryFrom<u16> for PartitionKey {
     type Error = UFMError;
 
-    fn try_from(pkey: i32) -> Result<Self, Self::Error> {
+    fn try_from(pkey: u16) -> Result<Self, Self::Error> {
         if pkey != (pkey & 0x7fff) {
             return Err(UFMError::InvalidPKey(pkey.to_string()));
         }
@@ -106,7 +97,7 @@ impl TryFrom<String> for PartitionKey {
         let pkey = pkey.to_lowercase();
         let base = if pkey.starts_with(HEX_PRE) { 16 } else { 10 };
         let p = pkey.trim_start_matches(HEX_PRE);
-        let k = i32::from_str_radix(p, base);
+        let k = u16::from_str_radix(p, base);
 
         match k {
             Ok(v) => Ok(PartitionKey(v)),
@@ -131,14 +122,14 @@ impl TryFrom<&str> for PartitionKey {
     }
 }
 
-impl ToString for PartitionKey {
-    fn to_string(&self) -> String {
-        format!("0x{:x}", self.0)
+impl fmt::Display for PartitionKey {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> Result<(), fmt::Error> {
+        write!(f, "{HEX_PRE}{:x}", self.0)
     }
 }
 
-impl From<PartitionKey> for i32 {
-    fn from(v: PartitionKey) -> i32 {
+impl From<PartitionKey> for u16 {
+    fn from(v: PartitionKey) -> u16 {
         v.0
     }
 }
@@ -170,7 +161,7 @@ pub struct Ufm {
 #[derive(Error, Debug)]
 pub enum UFMError {
     #[error("{0}")]
-    Unknown(String),
+    Internal(String),
     #[error("'{0}' not found")]
     NotFound(String),
     #[error("invalid pkey '{0}'")]
@@ -182,7 +173,7 @@ pub enum UFMError {
 impl From<RestError> for UFMError {
     fn from(e: RestError) -> Self {
         match e {
-            RestError::Unknown(msg) => UFMError::Unknown(msg),
+            RestError::Internal(msg) => UFMError::Internal(msg),
             RestError::NotFound(msg) => UFMError::NotFound(msg),
             RestError::AuthFailure(msg) => UFMError::InvalidConfig(msg),
             RestError::InvalidConfig(msg) => UFMError::InvalidConfig(msg),
@@ -207,10 +198,11 @@ pub struct UFMConfig {
 
 pub fn connect(conf: UFMConfig) -> Result<Ufm, UFMError> {
     let addr = Url::parse(&conf.address)
-        .map_err(|_| UFMError::InvalidConfig("invalid UFM url".to_string()))?;
-    let address = addr
-        .host_str()
-        .ok_or(UFMError::InvalidConfig("invalid UFM host".to_string()))?;
+        .map_err(|_| UFMError::InvalidConfig(format!("invalid UFM url: {}", conf.address)))?;
+    let address = addr.host_str().ok_or(UFMError::InvalidConfig(format!(
+        "invalid UFM host; url: {}",
+        addr
+    )))?;
 
     let (base_path, auth_info) = match &conf.token {
         None if conf.cert.is_some() => {
@@ -255,24 +247,112 @@ pub fn connect(conf: UFMConfig) -> Result<Ufm, UFMError> {
 impl Ufm {
     pub async fn get_configuration(&self) -> Result<Configuration, UFMError> {
         let path = String::from("/app/smconf");
-        let config = self.client.get(&path).await?;
+        let sm_config = self.client.get(&path).await?;
 
-        Ok(config)
+        Ok(sm_config)
+    }
+
+    pub async fn add_partition(&self, p: Partition) -> Result<(), UFMError> {
+        let path = String::from("/resources/pkeys/add");
+
+        let membership = PortMembership::Full;
+        let index0 = true;
+
+        #[derive(Serialize, Deserialize, Debug)]
+        struct Pkey {
+            pkey: String,
+            ip_over_ib: bool,
+            membership: PortMembership,
+            index0: bool,
+            mtu_limit: u16,
+            service_level: u8,
+            rate_limit: f64,
+        }
+
+        let pkey = Pkey {
+            pkey: p.pkey.clone().to_string(),
+            ip_over_ib: p.ipoib,
+            membership,
+            index0,
+            mtu_limit: p.qos.mtu_limit,
+            rate_limit: p.qos.rate_limit,
+            service_level: p.qos.service_level,
+        };
+
+        let data = serde_json::to_string(&pkey)
+            .map_err(|_| UFMError::InvalidConfig("invalid partition".to_string()))?;
+
+        self.client.post(&path, data).await?;
+
+        Ok(())
+    }
+
+    pub async fn set_partition(
+        &self,
+        p: Partition,
+        ports: Vec<PortConfig>,
+    ) -> Result<(), UFMError> {
+        let path = String::from("/resources/pkeys");
+
+        let mut membership = PortMembership::Full;
+        let mut index0 = true;
+
+        let mut guids = Vec::with_capacity(ports.len());
+        for pb in ports {
+            membership = pb.membership.clone();
+            index0 = pb.index0;
+            guids.push(pb.guid.to_string());
+        }
+
+        #[derive(Serialize, Deserialize, Debug)]
+        struct Pkey {
+            pkey: String,
+            ip_over_ib: bool,
+            membership: PortMembership,
+            index0: bool,
+            guids: Vec<String>,
+            mtu_limit: u16,
+            service_level: u8,
+            rate_limit: f64,
+        }
+
+        let pkey = Pkey {
+            pkey: p.pkey.clone().to_string(),
+            ip_over_ib: p.ipoib,
+            membership,
+            index0,
+            guids,
+            mtu_limit: p.qos.mtu_limit,
+            rate_limit: p.qos.rate_limit,
+            service_level: p.qos.service_level,
+        };
+
+        let data = serde_json::to_string(&pkey)
+            .map_err(|_| UFMError::InvalidConfig("invalid partition".to_string()))?;
+
+        self.client.put(&path, data).await?;
+
+        Ok(())
     }
 
     pub async fn update_partition_qos(&self, p: Partition) -> Result<(), UFMError> {
         let path = String::from("/resources/pkeys/qos_conf");
-        let qos = p
-            .qos
-            .ok_or(UFMError::InvalidConfig("no partition qos".to_string()))?;
 
-        let data = serde_json::to_string(&PKeyQoS {
+        #[derive(Serialize, Deserialize, Debug)]
+        struct PkeyQoS {
+            pkey: String,
+            mtu_limit: u16,
+            service_level: u8,
+            rate_limit: f64,
+        }
+
+        let data = serde_json::to_string(&PkeyQoS {
             pkey: p.pkey.to_string(),
-            mtu_limit: qos.mtu_limit,
-            rate_limit: qos.rate_limit,
-            service_level: qos.service_level,
+            mtu_limit: p.qos.mtu_limit,
+            rate_limit: p.qos.rate_limit,
+            service_level: p.qos.service_level,
         })
-        .map_err(|_| UFMError::InvalidConfig("invalid partition".to_string()))?;
+        .map_err(|_| UFMError::InvalidConfig("invalid partition qos".to_string()))?;
 
         self.client.put(&path, data).await?;
 
@@ -285,11 +365,20 @@ impl Ufm {
         let mut membership = PortMembership::Full;
         let mut index0 = true;
 
-        let mut guids = vec![];
+        let mut guids = Vec::with_capacity(ports.len());
         for pb in ports {
             membership = pb.membership.clone();
             index0 = pb.index0;
             guids.push(pb.guid.to_string());
+        }
+
+        #[derive(Serialize, Deserialize, Debug)]
+        struct Pkey {
+            pkey: String,
+            ip_over_ib: bool,
+            membership: PortMembership,
+            index0: bool,
+            guids: Vec<String>,
         }
 
         let pkey = Pkey {
@@ -337,7 +426,7 @@ impl Ufm {
     pub async fn get_partition(&self, pkey: &str) -> Result<Partition, UFMError> {
         let pkey = PartitionKey::try_from(pkey)?;
 
-        let path = format!("/resources/pkeys/{}?qos_conf=true", pkey.to_string());
+        let path = format!("/resources/pkeys/{pkey}?qos_conf=true");
 
         #[derive(Serialize, Deserialize, Debug)]
         struct Pkey {
@@ -351,7 +440,7 @@ impl Ufm {
             name: pk.partition,
             pkey,
             ipoib: pk.ip_over_ib,
-            qos: Some(pk.qos_conf),
+            qos: pk.qos_conf,
         })
     }
 
@@ -373,7 +462,7 @@ impl Ufm {
                 name: v.partition,
                 pkey: PartitionKey::try_from(&k)?,
                 ipoib: v.ip_over_ib,
-                qos: Some(v.qos_conf.clone()),
+                qos: v.qos_conf.clone(),
             });
         }
 

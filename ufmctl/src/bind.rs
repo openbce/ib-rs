@@ -16,7 +16,7 @@ pub async fn run(conf: UFMConfig, pkey: &str, guids: &Vec<String>) -> Result<(),
         name: "".to_string(),
         pkey: PartitionKey::try_from(pkey.to_owned())?,
         ipoib: false,
-        qos: None,
+        qos: Default::default(),
     };
 
     ufm.bind_ports(p, pbs).await?;

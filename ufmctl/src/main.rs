@@ -70,10 +70,18 @@ enum Commands {
         /// The Membership of the new partition
         #[arg(short, long, default_value_t = String::from("full"))]
         membership: String,
-
         /// The GUIDs of the new partition
         #[arg(short, long)]
         guids: Vec<String>,
+        /// The MTU of the new partition
+        #[arg(long, default_value_t = 4)]
+        mtu: u16,
+        /// The ServiceLevel of the new partition
+        #[arg(short, long, default_value_t = 0)]
+        service_level: u8,
+        /// The RateLimit of the new partition
+        #[arg(short, long, default_value_t = 100f64)]
+        rate_limit: f64,
     },
     /// Update the partition
     Update {
@@ -143,7 +151,6 @@ async fn main() -> Result<(), UFMError> {
                 service_level: *service_level,
                 rate_limit: *rate_limit,
                 ipoib: *ipoib,
-                guids: vec![],
             };
             update::run(conf, &opt).await?
         }
@@ -154,6 +161,9 @@ async fn main() -> Result<(), UFMError> {
             index0,
             membership,
             guids,
+            mtu,
+            service_level,
+            rate_limit,
         }) => {
             let opt = create::CreateOptions {
                 pkey: pkey.to_string(),
@@ -161,6 +171,9 @@ async fn main() -> Result<(), UFMError> {
                 index0: *index0,
                 membership: membership.to_string(),
                 guids: guids.to_vec(),
+                mtu: *mtu,
+                service_level: *service_level,
+                rate_limit: *rate_limit,
             };
             create::run(conf, &opt).await?
         }
